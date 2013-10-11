@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<database-connection>
+		<connection-type>连接数据库的类型,1-用Spring集成的方式(也就是不用下面两种方式了),2-DataSource（就是使用JNDI）,3-使用JDBC自己来连接数据库</connection-type>
+		<jndi>DataSource的方式用，服务器数据源的JNDI名称</jndi>
+		<jdbc>跟上面一样，省略了</jdbc>
+	</database-connection>
+	<system-operator>系统管理员ID</system-operator>
+	<log>
+		<operate-type>记录日志的方式,1-数据库，2-文件</operate-type>
+		<file-name>记录日志的文件名称</file-name>
+	</log>
+	<thread-interval>缓存线程的间隔时长</thread-interval>
+	<spring-default>
+		<application-xmls>
+			<application-xml>缺省读取的Spring配置的文件名称</application-xml>
+			<application-xml>其它需要读取的Spring配置的文件名称</application-xml>
+		</application-xmls>
+	</spring-default>
+</root>

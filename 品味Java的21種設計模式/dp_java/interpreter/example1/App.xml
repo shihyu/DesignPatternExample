@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<jdbc>
+		<driver-class>驱动类名</driver-class>
+		<url>连接数据库的URL</url>
+		<user>连接数据库的用户名</user>
+		<password>连接数据库的密码</password>
+	</jdbc>
+	<application-xml>缺省读取的Spring配置的文件名称</application-xml>
+</root>
