@@ -18,7 +18,7 @@ namespace cn
 
 					bool ArrayIteratorImpl::hasNext()
 					{
-						//ÅĞ¶ÏÊÇ·ñ»¹ÓĞÏÂÒ»¸öÔªËØ
+						//åˆ¤æ–­æ˜¯å¦è¿˜æœ‰ä¸‹ä¸€ä¸ªå…ƒç´ 
 						if(aggregate!=0 && index<aggregate->size())
 						{
 							return true;
@@ -32,7 +32,7 @@ namespace cn
 						if(hasNext())
 						{
 							retObj = aggregate->get(index);
-							//Ã¿È¡×ßÒ»¸öÖµ£¬¾Í°ÑÒÑ·ÃÎÊË÷Òı¼Ó1
+							//æ¯å–èµ°ä¸€ä¸ªå€¼ï¼Œå°±æŠŠå·²è®¿é—®ç´¢å¼•åŠ 1
 							index++;
 						}
 						return retObj;
@@ -40,7 +40,7 @@ namespace cn
 
 					void ArrayIteratorImpl::remove()
 					{
-						//ÔİÊ±¿ÉÒÔ²»ÊµÏÖ		
+						//æš‚æ—¶å¯ä»¥ä¸å®ç°		
 					}
 				}
 			}

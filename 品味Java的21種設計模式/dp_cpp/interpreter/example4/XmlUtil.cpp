@@ -17,13 +17,13 @@ namespace cn
 					Document *XmlUtil::getRoot(std::string filePathName) throw(Exception)
 					{
 						Document *doc = 0;
-						  //½¨Á¢Ò»¸ö½âÎöÆ÷¹¤³§
+						  //å»ºç«‹ä¸€ä¸ªè§£æžå™¨å·¥åŽ‚
 						  DocumentBuilderFactory *factory = DocumentBuilderFactory::newInstance();
-						  //»ñµÃÒ»¸öDocumentBuilder¶ÔÏó£¬Õâ¸ö¶ÔÏó´ú±íÁË¾ßÌåµÄDOM½âÎöÆ÷
+						  //èŽ·å¾—ä¸€ä¸ªDocumentBuilderå¯¹è±¡ï¼Œè¿™ä¸ªå¯¹è±¡ä»£è¡¨äº†å…·ä½“çš„DOMè§£æžå™¨
 						  DocumentBuilder *builder=factory->newDocumentBuilder();
-						  //µÃµ½Ò»¸ö±íÊ¾XMLÎÄµµµÄDocument¶ÔÏó
+						  //å¾—åˆ°ä¸€ä¸ªè¡¨ç¤ºXMLæ–‡æ¡£çš„Documentå¯¹è±¡
 						  doc=builder->parse(filePathName);
-						  //È¥µôXMLÎÄµµÖÐ×÷Îª¸ñÊ½»¯ÄÚÈÝµÄ¿Õ°×¶øÓ³ÉäÔÚDOMÊ÷ÖÐµÄ²»±ØÒªµÄText Node¶ÔÏó
+						  //åŽ»æŽ‰XMLæ–‡æ¡£ä¸­ä½œä¸ºæ ¼å¼åŒ–å†…å®¹çš„ç©ºç™½è€Œæ˜ å°„åœ¨DOMæ ‘ä¸­çš„ä¸å¿…è¦çš„Text Nodeå¯¹è±¡
 						  doc->normalize();
 						  return doc;
 					}

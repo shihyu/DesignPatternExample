@@ -33,14 +33,14 @@ namespace cn
 
 					std::string *ElementExpression::interpret(Context *c)
 					{
-						//ÏÈÈ¡³öÉÏÏÂÎÄÀïµÄ¸¸¼¶ÔªËØ
+						//å…ˆå–å‡ºä¸Šä¸‹æ–‡é‡Œçš„çˆ¶çº§å…ƒç´ 
 						std::vector<Element*> pEles = c->getPreEles();
 						Element *ele = 0;
-						//°Ñµ±Ç°»ñÈ¡µÄÔªËØ·Åµ½ÉÏÏÂÎÄÀïÃæ
+						//æŠŠå½“å‰è·å–çš„å…ƒç´ æ”¾åˆ°ä¸Šä¸‹æ–‡é‡Œé¢
 						std::vector<Element*> nowEles = std::vector<Element*>();
 						if(pEles.empty())
 						{
-							//ËµÃ÷ÏÖÔÚ»ñÈ¡µÄÊÇ¸ùÔªËØ
+							//è¯´æ˜ç°åœ¨è·å–çš„æ˜¯æ ¹å…ƒç´ 
 							ele = c->getDocument()->getDocumentElement();
 							pEles.push_back(ele);
 							c->setPreEles(pEles);
@@ -52,7 +52,7 @@ namespace cn
 								nowEles.addAll(c->getNowEles(*tempEle, eleName));
 								if(nowEles.size()>0)
 								{
-									//ÕÒµ½Ò»¸ö¾ÍÍ£Ö¹
+									//æ‰¾åˆ°ä¸€ä¸ªå°±åœæ­¢
 									break;
 								}
 							}
@@ -61,7 +61,7 @@ namespace cn
 							c->setPreEles(tempList);
 						}
 
-						//Ñ­»·µ÷ÓÃ×ÓÔªËØµÄinterpret·½·¨
+						//å¾ªç¯è°ƒç”¨å­å…ƒç´ çš„interpretæ–¹æ³•
 //ORIGINAL LINE: String [] ss = nullptr;
 //JAVA TO C++ CONVERTER WARNING: Since the array size is not known in this declaration, Java to C++ Converter has converted this array to a pointer.  You will need to call 'delete[]' where appropriate:
 						std::string *ss = 0;

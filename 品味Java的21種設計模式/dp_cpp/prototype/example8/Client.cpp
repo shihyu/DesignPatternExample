@@ -15,31 +15,31 @@ namespace cn
 					{
 						try
 						{
-							// ³õÊ¼»¯Ô­ÐÍ¹ÜÀíÆ÷
+							// åˆå§‹åŒ–åŽŸåž‹ç®¡ç†å™¨
 							Prototype *p1 = new ConcretePrototype1();
 							PrototypeManager::setPrototype("Prototype1", p1);
 
-							// »ñÈ¡Ô­ÐÍÀ´´´½¨¶ÔÏó
+							// èŽ·å–åŽŸåž‹æ¥åˆ›å»ºå¯¹è±¡
 							Prototype *p3 = PrototypeManager::getPrototype("Prototype1")->clone();
-							p3->setName("ÕÅÈý");
-							puts("µÚÒ»¸öÊµÀý£º" + p3);
+							p3->setName("å¼ ä¸‰");
+							puts("ç¬¬ä¸€ä¸ªå®žä¾‹ï¼š" + p3);
 
-							// ÓÐÈË¶¯Ì¬µÄÇÐ»»ÁËÊµÏÖ
+							// æœ‰äººåŠ¨æ€çš„åˆ‡æ¢äº†å®žçŽ°
 							Prototype *p2 = new ConcretePrototype2();
 							PrototypeManager::setPrototype("Prototype1", p2);
 
-							// ÖØÐÂ»ñÈ¡Ô­ÐÍÀ´´´½¨¶ÔÏó
+							// é‡æ–°èŽ·å–åŽŸåž‹æ¥åˆ›å»ºå¯¹è±¡
 							Prototype *p4 = PrototypeManager::getPrototype("Prototype1")->clone();
-							p4->setName("ÀîËÄ");
-							puts("µÚ¶þ¸öÊµÀý£º" + p4);
+							p4->setName("æŽå››");
+							puts("ç¬¬äºŒä¸ªå®žä¾‹ï¼š" + p4);
 
-							// ÓÐÈË×¢ÏúÁËÕâ¸öÔ­ÐÍ
+							// æœ‰äººæ³¨é”€äº†è¿™ä¸ªåŽŸåž‹
 							PrototypeManager::removePrototype("Prototype1");
 
-							// ÔÙ´Î»ñÈ¡Ô­ÐÍÀ´´´½¨¶ÔÏó
+							// å†æ¬¡èŽ·å–åŽŸåž‹æ¥åˆ›å»ºå¯¹è±¡
 							Prototype *p5 = PrototypeManager::getPrototype("Prototype1")->clone();
-							p5->setName("ÍõÎå");
-							puts("µÚÈý¸öÊµÀý£º" + p5);
+							p5->setName("çŽ‹äº”");
+							puts("ç¬¬ä¸‰ä¸ªå®žä¾‹ï¼š" + p5);
 						}
 						catch (Exception *err)
 						{

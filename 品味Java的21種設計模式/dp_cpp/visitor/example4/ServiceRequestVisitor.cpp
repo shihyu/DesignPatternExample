@@ -13,14 +13,14 @@ namespace cn
 
 					void ServiceRequestVisitor::visitEnterpriseCustomer(EnterpriseCustomer *ec)
 					{
-						//ÆóÒµ¿Í»§Ìá³öµÄ¾ßÌå·þÎñÇëÇó
-						puts(ec->getName()+"ÆóÒµÌá³ö·þÎñÇëÇó");
+						//ä¼ä¸šå®¢æˆ·æå‡ºçš„å…·ä½“æœåŠ¡è¯·æ±‚
+						puts(ec->getName()+"ä¼ä¸šæå‡ºæœåŠ¡è¯·æ±‚");
 					}
 
 					void ServiceRequestVisitor::visitPersonalCustomer(PersonalCustomer *pc)
 					{
-						//¸öÈË¿Í»§Ìá³öµÄ¾ßÌå·þÎñÇëÇó
-						puts("¿Í»§"+pc->getName()+"Ìá³ö·þÎñÇëÇó");
+						//ä¸ªäººå®¢æˆ·æå‡ºçš„å…·ä½“æœåŠ¡è¯·æ±‚
+						puts("å®¢æˆ·"+pc->getName()+"æå‡ºæœåŠ¡è¯·æ±‚");
 					}
 				}
 			}

@@ -13,7 +13,7 @@ namespace cn
 
 					void TerminalExpression::interpret(Context *ctx)
 					{
-						//实现与语法规则中的终结符相关联的解释操作
+						//瀹炵幇涓庤娉曡鍒欎腑鐨勭粓缁撶鐩稿叧鑱旂殑瑙ｉ噴鎿嶄綔
 					}
 				}
 			}

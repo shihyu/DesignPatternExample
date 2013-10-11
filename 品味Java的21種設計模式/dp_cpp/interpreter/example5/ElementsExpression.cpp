@@ -21,9 +21,9 @@ namespace cn
 
 					std::string *ElementsExpression::interpret(Context *c)
 					{
-						//ÏÈÈ¡³öÉÏÏÂÎÄÀïµÄ¸¸¼¶ÔªËØ
+						//å…ˆå–å‡ºä¸Šä¸‹æ–‡é‡Œçš„çˆ¶çº§å…ƒç´ 
 						std::vector<Element*> pEles = c->getPreEles();
-						//°Ñµ±Ç°»ñÈ¡µÄÔªËØ·Åµ½ÉÏÏÂÎÄÀïÃæ£¬Õâ´ÎÊÇ»ñÈ¡¶à¸öÔªËØ
+						//æŠŠå½“å‰è·å–çš„å…ƒç´ æ”¾åˆ°ä¸Šä¸‹æ–‡é‡Œé¢ï¼Œè¿™æ¬¡æ˜¯è·å–å¤šä¸ªå…ƒç´ 
 						std::vector<Element*> nowEles = std::vector<Element*>();
 
 						for (std::vector<Element*>::const_iterator ele = pEles.begin(); ele != pEles.end(); ++ele)
@@ -32,7 +32,7 @@ namespace cn
 						}
 						c->setPreEles(nowEles);
 
-						//Ñ­»·µ÷ÓÃ×ÓÔªËØµÄinterpret·½·¨
+						//å¾ªç¯è°ƒç”¨å­å…ƒç´ çš„interpretæ–¹æ³•
 //ORIGINAL LINE: String [] ss = nullptr;
 //JAVA TO C++ CONVERTER WARNING: Since the array size is not known in this declaration, Java to C++ Converter has converted this array to a pointer.  You will need to call 'delete[]' where appropriate:
 						std::string *ss = 0;

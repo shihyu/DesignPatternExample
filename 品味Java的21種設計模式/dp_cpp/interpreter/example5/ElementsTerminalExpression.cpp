@@ -20,9 +20,9 @@ namespace cn
 
 					std::string *ElementsTerminalExpression::interpret(Context *c)
 					{
-						//ÏÈÈ¡³öÉÏÏÂÎÄÀïµÄ¸¸¼¶ÔªËØ
+						//å…ˆå–å‡ºä¸Šä¸‹æ–‡é‡Œçš„çˆ¶çº§å…ƒç´ 
 						std::vector<Element*> pEles = c->getPreEles();
-						//»ñÈ¡µ±Ç°µÄ¶à¸öÔªËØ
+						//è·å–å½“å‰çš„å¤šä¸ªå…ƒç´ 
 						std::vector<Element*> nowEles = std::vector<Element*>();
 
 						for (std::vector<Element*>::const_iterator ele = pEles.begin(); ele != pEles.end(); ++ele)
@@ -30,7 +30,7 @@ namespace cn
 							nowEles.addAll(c->getNowEles(*ele, eleName));
 						}
 
-						//È»ºóĞèÒªÈ¥»ñÈ¡ÕâĞ©ÔªËØµÄÖµ
+						//ç„¶åéœ€è¦å»è·å–è¿™äº›å…ƒç´ çš„å€¼
 						std::string ss[nowEles.size()];
 						for(int i=0;i<sizeof(ss) / sizeof(ss[0]);i++)
 						{

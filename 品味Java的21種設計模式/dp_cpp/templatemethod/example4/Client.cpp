@@ -13,31 +13,31 @@ namespace cn
 
 					void Client::main(std::string args[])
 					{
-						//×¼±¸µÇÂ¼ÈËµÄĞÅÏ¢
+						//å‡†å¤‡ç™»å½•äººçš„ä¿¡æ¯
 						LoginModel *lm = new LoginModel();
 						lm->setLoginId("admin");
 						lm->setPwd("workerpwd");
-						//×¼±¸ÓÃÀ´½øĞĞÅĞ¶ÏµÄ¶ÔÏó
+						//å‡†å¤‡ç”¨æ¥è¿›è¡Œåˆ¤æ–­çš„å¯¹è±¡
 						LoginTemplate *lt = new WorkerLogin();
 						LoginTemplate *lt2 = new NormalLogin();
-						//½øĞĞµÇÂ¼²âÊÔ
+						//è¿›è¡Œç™»å½•æµ‹è¯•
 						bool flag = lt->login(lm);
-						puts("¿ÉÒÔµÇÂ¼¹¤×÷Æ½Ì¨="+flag);
+						puts("å¯ä»¥ç™»å½•å·¥ä½œå¹³å°="+flag);
 
 						bool flag2 = lt2->login(lm);
-						puts("¿ÉÒÔ½øĞĞÆÕÍ¨ÈËÔ±µÇÂ¼="+flag2);
+						puts("å¯ä»¥è¿›è¡Œæ™®é€šäººå‘˜ç™»å½•="+flag2);
 
-						//×¼±¸µÇÂ¼ÈËµÄĞÅÏ¢
+						//å‡†å¤‡ç™»å½•äººçš„ä¿¡æ¯
 						NormalLoginModel *nlm = new NormalLoginModel();
 						nlm->setLoginId("testUser");
 						nlm->setPwd("testpwd");
 						nlm->setQuestion("testQuestion");
 						nlm->setAnswer("testAnswer");
-						//×¼±¸ÓÃÀ´½øĞĞÅĞ¶ÏµÄ¶ÔÏó
+						//å‡†å¤‡ç”¨æ¥è¿›è¡Œåˆ¤æ–­çš„å¯¹è±¡
 						LoginTemplate *lt3 = new NormalLogin2();
-						//½øĞĞµÇÂ¼²âÊÔ
+						//è¿›è¡Œç™»å½•æµ‹è¯•
 						bool flag3 = lt3->login(nlm);
-						puts("¿ÉÒÔ½øĞĞÆÕÍ¨ÈËÔ±¼ÓÇ¿°æµÇÂ¼="+flag3);
+						puts("å¯ä»¥è¿›è¡Œæ™®é€šäººå‘˜åŠ å¼ºç‰ˆç™»å½•="+flag3);
 					}
 				}
 			}

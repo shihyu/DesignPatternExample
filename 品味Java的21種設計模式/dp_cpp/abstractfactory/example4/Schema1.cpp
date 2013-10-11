@@ -14,7 +14,7 @@ namespace cn
 					object *Schema1::createProduct(int type)
 					{
 						object *retObj = 0;
-						//typeÎª1±íÊ¾´´½¨CPU£¬typeÎª2±íÊ¾´´½¨Ö÷°å
+						//typeä¸º1è¡¨ç¤ºåˆ›å»ºCPUï¼Œtypeä¸º2è¡¨ç¤ºåˆ›å»ºä¸»æ¿
 						if(type==1)
 						{
 							retObj = new IntelCPU(1156);

@@ -13,26 +13,26 @@ namespace cn
 
 					void OrderBusiness::saveOrder(OrderApi *order)
 					{
-						//¸ù¾ÝÒµÎñÒªÇó£¬µ±¶©µ¥µÄÔ¤¶¨µÄ²úÆ·ÊýÁ¿³¬¹ý1000µÄÊ±ºò£¬¾ÍÐèÒª°Ñ¶©µ¥²ð³ÉÁ½·Ý¶©µ¥
-						//µ±È»Èç¹ûÒª×öºÃ£¬ÕâÀïµÄ1000Ó¦¸Ã×ö³É³£Á¿£¬ÕâÃ´×öÊÇÎªÁËÑÝÊ¾¼òµ¥
+						//æ ¹æ®ä¸šåŠ¡è¦æ±‚ï¼Œå½“è®¢å•çš„é¢„å®šçš„äº§å“æ•°é‡è¶…è¿‡1000çš„æ—¶å€™ï¼Œå°±éœ€è¦æŠŠè®¢å•æ‹†æˆä¸¤ä»½è®¢å•
+						//å½“ç„¶å¦‚æžœè¦åšå¥½ï¼Œè¿™é‡Œçš„1000åº”è¯¥åšæˆå¸¸é‡ï¼Œè¿™ä¹ˆåšæ˜¯ä¸ºäº†æ¼”ç¤ºç®€å•
 
-						//1£ºÅÐ¶Ïµ±Ç°µÄÔ¤¶¨²úÆ·ÊýÁ¿ÊÇ·ñ´óÓÚ1000
+						//1ï¼šåˆ¤æ–­å½“å‰çš„é¢„å®šäº§å“æ•°é‡æ˜¯å¦å¤§äºŽ1000
 						while(order->getOrderProductNum() > 1000)
 						{
-							//2£ºÈç¹û´óÓÚ£¬»¹ÐèÒª¼ÌÐø²ð·Ö
-							//2.1ÔÙÐÂ½¨Ò»·Ý¶©µ¥£¬¸ú´«ÈëµÄ¶©µ¥³ýÁËÊýÁ¿²»Ò»ÑùÍâ£¬ÆäËû¶¼ÏàÍ¬
+							//2ï¼šå¦‚æžœå¤§äºŽï¼Œè¿˜éœ€è¦ç»§ç»­æ‹†åˆ†
+							//2.1å†æ–°å»ºä¸€ä»½è®¢å•ï¼Œè·Ÿä¼ å…¥çš„è®¢å•é™¤äº†æ•°é‡ä¸ä¸€æ ·å¤–ï¼Œå…¶ä»–éƒ½ç›¸åŒ
 							OrderApi *newOrder = order->cloneOrder();
-							//È»ºó½øÐÐ¸³Öµ£¬²úÆ·ÊýÁ¿Îª1000
+							//ç„¶åŽè¿›è¡Œèµ‹å€¼ï¼Œäº§å“æ•°é‡ä¸º1000
 							newOrder->setOrderProductNum(1000);
 
-							//2.2Ô­À´µÄ¶©µ¥±£Áô£¬°ÑÊýÁ¿ÉèÖÃ³É¼õÉÙ1000
+							//2.2åŽŸæ¥çš„è®¢å•ä¿ç•™ï¼ŒæŠŠæ•°é‡è®¾ç½®æˆå‡å°‘1000
 							order->setOrderProductNum(order->getOrderProductNum()-1000);
 
-							//È»ºóÊÇÒµÎñ¹¦ÄÜ´¦Àí£¬Ê¡ÂÔÁË£¬´òÓ¡Êä³ö£¬¿´Ò»ÏÂ
-							puts("²ð·ÖÉú³É¶©µ¥=="+newOrder);
+							//ç„¶åŽæ˜¯ä¸šåŠ¡åŠŸèƒ½å¤„ç†ï¼Œçœç•¥äº†ï¼Œæ‰“å°è¾“å‡ºï¼Œçœ‹ä¸€ä¸‹
+							puts("æ‹†åˆ†ç”Ÿæˆè®¢å•=="+newOrder);
 						}
-						//3£º²»³¬¹ý£¬ÄÇ¾ÍÖ±½ÓÒµÎñ¹¦ÄÜ´¦Àí£¬Ê¡ÂÔÁË£¬´òÓ¡Êä³ö£¬¿´Ò»ÏÂ
-						puts("¶©µ¥=="+order);
+						//3ï¼šä¸è¶…è¿‡ï¼Œé‚£å°±ç›´æŽ¥ä¸šåŠ¡åŠŸèƒ½å¤„ç†ï¼Œçœç•¥äº†ï¼Œæ‰“å°è¾“å‡ºï¼Œçœ‹ä¸€ä¸‹
+						puts("è®¢å•=="+order);
 
 					}
 				}

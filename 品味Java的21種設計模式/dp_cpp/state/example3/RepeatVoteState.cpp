@@ -13,9 +13,9 @@ namespace cn
 
 					void RepeatVoteState::vote(std::string user, std::string voteItem, VoteManager *voteManager)
 					{
-						//ÖØ¸´Í¶Æ±
-						//ÔİÊ±²»×ö´¦Àí
-						puts("Çë²»ÒªÖØ¸´Í¶Æ±");
+						//é‡å¤æŠ•ç¥¨
+						//æš‚æ—¶ä¸åšå¤„ç†
+						puts("è¯·ä¸è¦é‡å¤æŠ•ç¥¨");
 					}
 				}
 			}

@@ -18,7 +18,7 @@ namespace cn
 
 					void ConcreteFlyweight::operation(std::string extrinsicState)
 					{
-						//¾ßÌåµÄ¹¦ÄÜ´¦Àí£¬¿ÉÄÜ»áÓÃµ½ÏíÔªÄÚ²¿¡¢Íâ²¿µÄ×´Ì¬
+						//å…·ä½“çš„åŠŸèƒ½å¤„ç†ï¼Œå¯èƒ½ä¼šç”¨åˆ°äº«å…ƒå†…éƒ¨ã€å¤–éƒ¨çš„çŠ¶æ€
 					}
 				}
 			}

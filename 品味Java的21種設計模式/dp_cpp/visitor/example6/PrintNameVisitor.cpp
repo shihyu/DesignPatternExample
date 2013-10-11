@@ -13,14 +13,14 @@ namespace cn
 
 					void PrintNameVisitor::visitComposite(Composite *composite)
 					{
-						//·ÃÎÊµ½×éºÏ¶ÔÏóµÄÊý¾Ý
-						puts("½Úµã£º"+composite->getName());
+						//è®¿é—®åˆ°ç»„åˆå¯¹è±¡çš„æ•°æ®
+						puts("èŠ‚ç‚¹ï¼š"+composite->getName());
 					}
 
 					void PrintNameVisitor::visitLeaf(Leaf *leaf)
 					{
-						//·ÃÎÊµ½Ò¶×Ó¶ÔÏóµÄÊý¾Ý		
-						puts("Ò¶×Ó£º"+leaf->getName());
+						//è®¿é—®åˆ°å¶å­å¯¹è±¡çš„æ•°æ®		
+						puts("å¶å­ï¼š"+leaf->getName());
 					}
 				}
 			}

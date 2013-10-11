@@ -13,14 +13,14 @@ namespace cn
 
 					void Client::main(std::string args[])
 					{
-						//×¼±¸µã²âÊÔÊı¾İ
+						//å‡†å¤‡ç‚¹æµ‹è¯•æ•°æ®
 						Collection<Customer*> *colCustomer = preparedTestData();
-						//Ñ­»·¶Ô¿Í»§½øĞĞ²Ù×÷
+						//å¾ªç¯å¯¹å®¢æˆ·è¿›è¡Œæ“ä½œ
 						for (Collection<Customer*>::const_iterator cm = colCustomer->begin(); cm != colCustomer->end(); ++cm)
 						{
-							//½øĞĞÆ«ºÃ·ÖÎö
+							//è¿›è¡Œåå¥½åˆ†æ
 							(*cm)->predilectionAnalyze();
-							//½øĞĞ¼ÛÖµ·ÖÎö
+							//è¿›è¡Œä»·å€¼åˆ†æ
 							(*cm)->worthAnalyze();
 						}
 					}
@@ -28,17 +28,17 @@ namespace cn
 					Collection<Customer*> *Client::preparedTestData()
 					{
 						Collection<Customer*> *colCustomer = std::vector<Customer*>();
-						//ÎªÁË²âÊÔ·½±ã£¬×¼±¸µãÊı¾İ
+						//ä¸ºäº†æµ‹è¯•æ–¹ä¾¿ï¼Œå‡†å¤‡ç‚¹æ•°æ®
 						Customer *cm1 = new EnterpriseCustomer();
-						cm1->setName("ABC¼¯ÍÅ");
+						cm1->setName("ABCé›†å›¢");
 						colCustomer->add(cm1);
 
 						Customer *cm2 = new EnterpriseCustomer();
-						cm2->setName("CDE¹«Ë¾");
+						cm2->setName("CDEå…¬å¸");
 						colCustomer->add(cm2);
 
 						Customer *cm3 = new PersonalCustomer();
-						cm3->setName("ÕÅÈı");
+						cm3->setName("å¼ ä¸‰");
 						colCustomer->add(cm3);
 
 						return colCustomer;

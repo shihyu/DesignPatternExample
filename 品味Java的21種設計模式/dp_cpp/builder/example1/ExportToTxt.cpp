@@ -13,27 +13,27 @@ namespace cn
 
 					void ExportToTxt::export(ExportHeaderModel *ehm, Map<std::string, Collection<ExportDataModel*>*> *mapData, ExportFooterModel *efm)
 					{
-						//ÓÃÀ´¼ÇÂ¼×îÖÕÊä³öµÄÎÄ¼þÄÚÈÝ
+						//ç”¨æ¥è®°å½•æœ€ç»ˆè¾“å‡ºçš„æ–‡ä»¶å†…å®¹
 						StringBuffer *buffer = new StringBuffer();
-						//1£ºÏÈÀ´Æ´½ÓÎÄ¼þÍ·µÄÄÚÈÝ
+						//1ï¼šå…ˆæ¥æ‹¼æŽ¥æ–‡ä»¶å¤´çš„å†…å®¹
 						buffer->append(ehm->getDepId()+","+ehm->getExportDate()+"\n");
-						//2£º½Ó×ÅÀ´Æ´½ÓÎÄ¼þÌåµÄÄÚÈÝ
+						//2ï¼šæŽ¥ç€æ¥æ‹¼æŽ¥æ–‡ä»¶ä½“çš„å†…å®¹
 						for (Map<std::string, Collection<ExportDataModel*>*>::const_iterator tblName = mapData->begin(); tblName != mapData->end(); ++tblName)
 						{
-							//ÏÈÆ´½Ó±íÃû³Æ
+							//å…ˆæ‹¼æŽ¥è¡¨åç§°
 							buffer->append(tblName->first+"\n");
-							//È»ºóÑ­»·Æ´½Ó¾ßÌåÊý¾Ý
+							//ç„¶åŽå¾ªçŽ¯æ‹¼æŽ¥å…·ä½“æ•°æ®
 							for (unknown::const_iterator edm = mapData->get(tblName).begin(); edm != mapData->get(tblName).end(); ++edm)
 							{
 								buffer->append((*edm)->getProductId()+","+(*edm)->getPrice()+","+(*edm)->getAmount()+"\n");
 							}
 						}
-						//3£º½Ó×ÅÀ´Æ´½ÓÎÄ¼þÎ²µÄÄÚÈÝ
+						//3ï¼šæŽ¥ç€æ¥æ‹¼æŽ¥æ–‡ä»¶å°¾çš„å†…å®¹
 						buffer->append(efm->getExportUser());
 
-						//ÎªÁËÑÝÊ¾¼ò½àÐÔ£¬ÕâÀï¾Í²»È¥Ð´Êä³öÎÄ¼þµÄ´úÂëÁË
-						//°ÑÒªÊä³öµÄÄÚÈÝÊä³öµ½¿ØÖÆÌ¨¿´¿´
-						puts("Êä³öµ½ÎÄ±¾ÎÄ¼þµÄÄÚÈÝ£º\n"+buffer);
+						//ä¸ºäº†æ¼”ç¤ºç®€æ´æ€§ï¼Œè¿™é‡Œå°±ä¸åŽ»å†™è¾“å‡ºæ–‡ä»¶çš„ä»£ç äº†
+						//æŠŠè¦è¾“å‡ºçš„å†…å®¹è¾“å‡ºåˆ°æŽ§åˆ¶å°çœ‹çœ‹
+						puts("è¾“å‡ºåˆ°æ–‡æœ¬æ–‡ä»¶çš„å†…å®¹ï¼š\n"+buffer);
 					}
 				}
 			}

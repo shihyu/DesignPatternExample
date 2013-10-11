@@ -13,15 +13,15 @@ namespace cn
 
 					void ConcreteVisitor1::visitConcreteElementA(ConcreteElementA *element)
 					{
-						//°ÑÈ¥·ÃÎÊConcreteElementAÊ±£¬ÐèÒªÖ´ÐÐµÄ¹¦ÄÜÊµÏÖÔÚÕâÀï
-						//¿ÉÄÜÐèÒª·ÃÎÊÔªËØÒÑÓÐµÄ¹¦ÄÜ£¬±ÈÈç£º
+						//æŠŠåŽ»è®¿é—®ConcreteElementAæ—¶ï¼Œéœ€è¦æ‰§è¡Œçš„åŠŸèƒ½å®žçŽ°åœ¨è¿™é‡Œ
+						//å¯èƒ½éœ€è¦è®¿é—®å…ƒç´ å·²æœ‰çš„åŠŸèƒ½ï¼Œæ¯”å¦‚ï¼š
 						element->opertionA();
 					}
 
 					void ConcreteVisitor1::visitConcreteElementB(ConcreteElementB *element)
 					{
-						//°ÑÈ¥·ÃÎÊConcreteElementBÊ±£¬ÐèÒªÖ´ÐÐµÄ¹¦ÄÜÊµÏÖÔÚÕâÀï
-						//¿ÉÄÜÐèÒª·ÃÎÊÔªËØÒÑÓÐµÄ¹¦ÄÜ£¬±ÈÈç£º
+						//æŠŠåŽ»è®¿é—®ConcreteElementBæ—¶ï¼Œéœ€è¦æ‰§è¡Œçš„åŠŸèƒ½å®žçŽ°åœ¨è¿™é‡Œ
+						//å¯èƒ½éœ€è¦è®¿é—®å…ƒç´ å·²æœ‰çš„åŠŸèƒ½ï¼Œæ¯”å¦‚ï¼š
 						element->opertionB();
 					}
 				}

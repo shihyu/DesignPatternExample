@@ -23,7 +23,7 @@ namespace cn
 
 					void SecurityMgr::login(std::string user)
 					{
-						//µÇÂ¼µÄÊ±ºò¾ÍĞèÒª°Ñ¸ÃÓÃ»§ËùÓµÓĞµÄÈ¨ÏŞ£¬´ÓÊı¾İ¿âÖĞÈ¡³öÀ´£¬·Åµ½»º´æÖĞÈ¥
+						//ç™»å½•çš„æ—¶å€™å°±éœ€è¦æŠŠè¯¥ç”¨æˆ·æ‰€æ‹¥æœ‰çš„æƒé™ï¼Œä»æ•°æ®åº“ä¸­å–å‡ºæ¥ï¼Œæ”¾åˆ°ç¼“å­˜ä¸­å»
 						Collection<Flyweight*> *col = queryByUser(user);
 						map->put(user, col);
 					}
@@ -31,15 +31,15 @@ namespace cn
 					bool SecurityMgr::hasPermit(std::string user, std::string securityEntity, std::string permit)
 					{
 						Collection<Flyweight*> *col = map->get(user);
-						puts("ÏÖÔÚ²âÊÔ"+securityEntity+"µÄ"+permit+"È¨ÏŞ£¬map.size="+map->size());
+						puts("ç°åœ¨æµ‹è¯•"+securityEntity+"çš„"+permit+"æƒé™ï¼Œmap.size="+map->size());
 						if(col==0 || col->size() == 0)
 						{
-							puts(user+"Ã»ÓĞµÇÂ¼»òÊÇÃ»ÓĞ±»·ÖÅäÈÎºÎÈ¨ÏŞ");
+							puts(user+"æ²¡æœ‰ç™»å½•æˆ–æ˜¯æ²¡æœ‰è¢«åˆ†é…ä»»ä½•æƒé™");
 							return false;
 						}
 						for (Collection<Flyweight*>::const_iterator fm = col->begin(); fm != col->end(); ++fm)
 						{
-							//Êä³öµ±Ç°ÊµÀı£¬¿´¿´ÊÇ·ñÍ¬Ò»¸öÊµÀı¶ÔÏó
+							//è¾“å‡ºå½“å‰å®ä¾‹ï¼Œçœ‹çœ‹æ˜¯å¦åŒä¸€ä¸ªå®ä¾‹å¯¹è±¡
 							puts("fm=="+*fm);
 							if((*fm)->match(securityEntity, permit))
 							{
@@ -64,16 +64,16 @@ namespace cn
 								Flyweight *fm = 0;
 								if(ss[3].equals("2"))
 								{
-									//±íÊ¾ÊÇ×éºÏ
+									//è¡¨ç¤ºæ˜¯ç»„åˆ
 									fm = new UnsharedConcreteFlyweight();
-									//»ñÈ¡ĞèÒª×éºÏµÄÊı¾İ
+									//è·å–éœ€è¦ç»„åˆçš„æ•°æ®
 //ORIGINAL LINE: String tempSs[] = TestDB.mapDB.get(ss[1]);
 //JAVA TO C++ CONVERTER WARNING: Since the array size is not known in this declaration, Java to C++ Converter has converted this array to a pointer.  You will need to call 'delete[]' where appropriate:
 									std::string *tempSs = TestDB::mapDB->get(ss[1]);
 									for (std::string::const_iterator tempS = tempSs->begin(); tempS != tempSs->end(); ++tempS)
 									{
 										Flyweight *tempFm = FlyweightFactory::getInstance()->getFlyweight(*tempS);
-										//°ÑÕâ¸ö¶ÔÏó¼ÓÈëµ½×éºÏ¶ÔÏóÖĞ
+										//æŠŠè¿™ä¸ªå¯¹è±¡åŠ å…¥åˆ°ç»„åˆå¯¹è±¡ä¸­
 										fm->add(tempFm);
 									}
 								}

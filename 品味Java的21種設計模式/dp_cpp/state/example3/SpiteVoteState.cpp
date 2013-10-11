@@ -13,14 +13,14 @@ namespace cn
 
 					void SpiteVoteState::vote(std::string user, std::string voteItem, VoteManager *voteManager)
 					{
-						//����ͶƱ
-						//ȡ���û���ͶƱ�ʸ񣬲�ȡ��ͶƱ��¼
+						//恶意投票
+						//取消用户的投票资格，并取消投票记录
 						std::string s = voteManager->getMapVote()->get(user);
 						if(s!="")
 						{
 							voteManager->getMapVote()->remove(user);
 						}
-						puts("���ж���ˢƱ��Ϊ��ȡ��ͶƱ�ʸ�");
+						puts("你有恶意刷票行为，取消投票资格");
 					}
 				}
 			}

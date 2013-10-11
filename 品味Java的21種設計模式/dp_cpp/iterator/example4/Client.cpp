@@ -13,12 +13,12 @@ namespace cn
 
 					void Client::main(std::string args[])
 					{
-						//·ÃÎÊ¼¯ÍÅµÄ¹¤×ÊÁĞ±í
+						//è®¿é—®é›†å›¢çš„å·¥èµ„åˆ—è¡¨
 						PayManager *payManager= new PayManager();
-						//ÏÈ¼ÆËãÔÙ»ñÈ¡
+						//å…ˆè®¡ç®—å†è·å–
 						payManager->calcPay();
 						Collection<PayModel*> *payList = payManager->getPayList();
-						puts("¼¯ÍÅ¹¤×ÊÁĞ±í£º");
+						puts("é›†å›¢å·¥èµ„åˆ—è¡¨ï¼š");
 										//		Iterator it = payList.iterator();
 										//		while(it.hasNext()){
 										//			PayModel pm = (PayModel)it.next();
@@ -28,14 +28,14 @@ namespace cn
 						{
 							puts(*pm);
 						}
-						//·ÃÎÊĞÂÊÕ¹º¹«Ë¾µÄ¹¤×ÊÁĞ±í
+						//è®¿é—®æ–°æ”¶è´­å…¬å¸çš„å·¥èµ„åˆ—è¡¨
 						SalaryManager *salaryManager = new SalaryManager();
-						//ÏÈ¼ÆËãÔÙ»ñÈ¡
+						//å…ˆè®¡ç®—å†è·å–
 						salaryManager->calcSalary();
 //ORIGINAL LINE: PayModel[] pms = salaryManager.getPays();
 //JAVA TO C++ CONVERTER WARNING: Since the array size is not known in this declaration, Java to C++ Converter has converted this array to a pointer.  You will need to call 'delete[]' where appropriate:
 						PayModel *pms = salaryManager->getPays();
-						puts("ĞÂÊÕ¹ºµÄ¹«Ë¾¹¤×ÊÁĞ±í£º");
+						puts("æ–°æ”¶è´­çš„å…¬å¸å·¥èµ„åˆ—è¡¨ï¼š");
 										//		for(int i=0;i<pms.length;i++){
 										//			System.out.println(pms[i]);
 										//		}

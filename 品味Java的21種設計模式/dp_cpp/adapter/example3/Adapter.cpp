@@ -18,11 +18,11 @@ namespace cn
 
 					void Adapter::createLog(LogModel *lm)
 					{
-						//1£ºÏÈ¶ÁÈ¡ÎÄ¼şµÄÄÚÈİ
+						//1ï¼šå…ˆè¯»å–æ–‡ä»¶çš„å†…å®¹
 						std::vector<LogModel*> list = adaptee->readLogFile();
-						//2£º¼ÓÈëĞÂµÄÈÕÖ¾¶ÔÏó
+						//2ï¼šåŠ å…¥æ–°çš„æ—¥å¿—å¯¹è±¡
 						list.push_back(lm);
-						//3£ºÖØĞÂĞ´ÈëÎÄ¼ş
+						//3ï¼šé‡æ–°å†™å…¥æ–‡ä»¶
 						adaptee->writeLogFile(list);
 					}
 
@@ -33,19 +33,19 @@ namespace cn
 
 					void Adapter::removeLog(LogModel *lm)
 					{
-						//1£ºÏÈ¶ÁÈ¡ÎÄ¼şµÄÄÚÈİ
+						//1ï¼šå…ˆè¯»å–æ–‡ä»¶çš„å†…å®¹
 						std::vector<LogModel*> list = adaptee->readLogFile();
-						//2£ºÉ¾³ıÏàÓ¦µÄÈÕÖ¾¶ÔÏó
+						//2ï¼šåˆ é™¤ç›¸åº”çš„æ—¥å¿—å¯¹è±¡
 						list.remove(lm);
-						//3£ºÖØĞÂĞ´ÈëÎÄ¼ş
+						//3ï¼šé‡æ–°å†™å…¥æ–‡ä»¶
 						adaptee->writeLogFile(list);
 					}
 
 					void Adapter::updateLog(LogModel *lm)
 					{
-						//1£ºÏÈ¶ÁÈ¡ÎÄ¼şµÄÄÚÈİ
+						//1ï¼šå…ˆè¯»å–æ–‡ä»¶çš„å†…å®¹
 						std::vector<LogModel*> list = adaptee->readLogFile();
-						//2£ºĞŞ¸ÄÏàÓ¦µÄÈÕÖ¾¶ÔÏó
+						//2ï¼šä¿®æ”¹ç›¸åº”çš„æ—¥å¿—å¯¹è±¡
 						for(int i=0;i<list.size();i++)
 						{
 							if(list.at(i)->getLogId()->equals(lm->getLogId()))
@@ -54,7 +54,7 @@ namespace cn
 								break;
 							}
 						}
-						//3£ºÖØĞÂĞ´ÈëÎÄ¼ş
+						//3ï¼šé‡æ–°å†™å…¥æ–‡ä»¶
 						adaptee->writeLogFile(list);
 					}
 				}

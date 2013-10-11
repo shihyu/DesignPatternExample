@@ -42,7 +42,7 @@ namespace cn
 
 					void AuthorizationFlyweight::add(Flyweight *f)
 					{
-						throw new UnsupportedOperationException("¶ÔÏó²»Ö§³ÖÕâ¸ö¹¦ÄÜ");
+						throw new UnsupportedOperationException("å¯¹è±¡ä¸æ”¯æŒè¿™ä¸ªåŠŸèƒ½");
 					}
 				}
 			}

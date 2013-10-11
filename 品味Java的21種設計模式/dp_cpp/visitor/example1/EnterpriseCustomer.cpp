@@ -43,8 +43,8 @@ namespace cn
 
 					void EnterpriseCustomer::serviceRequest()
 					{
-						//ÆóÒµ¿Í»§Ìá³öµÄ¾ßÌå·þÎñÇëÇó
-						puts(this->getName()+"ÆóÒµÌá³ö·þÎñÇëÇó");
+						//ä¼ä¸šå®¢æˆ·æå‡ºçš„å…·ä½“æœåŠ¡è¯·æ±‚
+						puts(this->getName()+"ä¼ä¸šæå‡ºæœåŠ¡è¯·æ±‚");
 					}
 				}
 			}

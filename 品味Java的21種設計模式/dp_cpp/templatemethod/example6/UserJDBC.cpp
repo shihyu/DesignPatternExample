@@ -13,7 +13,7 @@ namespace cn
 
 					std::string UserJDBC::getMainSql(int type)
 					{
-						//¸ù¾Ý²Ù×÷ÀàÐÍ£¬·µ»ØÏàÓ¦µÄÖ÷¸ÉsqlÓï¾ä
+						//æ ¹æ®æ“ä½œç±»åž‹ï¼Œè¿”å›žç›¸åº”çš„ä¸»å¹²sqlè¯­å¥
 						std::string sql = "";
 						if(type == TYPE_CREATE)
 						{
@@ -36,7 +36,7 @@ namespace cn
 
 					void UserJDBC::setUpdateSqlValue(int type, PreparedStatement *pstmt, object *obj) throw(Exception)
 					{
-						//ÉèÖÃÔö¡¢É¾¡¢¸Ä²Ù×÷µÄsqlÖÐ"?"¶ÔÓ¦µÄÖµ
+						//è®¾ç½®å¢žã€åˆ ã€æ”¹æ“ä½œçš„sqlä¸­"?"å¯¹åº”çš„å€¼
 						if(type == TYPE_CREATE)
 						{
 							this->setCreateValue(pstmt, static_cast<UserModel*>(obj));
@@ -70,19 +70,19 @@ namespace cn
 						UserQueryModel *uqm = static_cast<UserQueryModel*>(qm);
 						StringBuffer *buffer = new StringBuffer();
 						buffer->append(sql);
-						//¾ø¶ÔÆ¥Åä
+						//ç»å¯¹åŒ¹é…
 //JAVA TO C++ CONVERTER TODO TASK: There is no direct native C++ equivalent to the Java String 'trim' method:
 						if(uqm->getUuid()!="" && uqm->getUuid().trim()->length()>0)
 						{
 							buffer->append(" and uuid=? ");
 						}
-						//Ä£ºýÆ¥Åä
+						//æ¨¡ç³ŠåŒ¹é…
 //JAVA TO C++ CONVERTER TODO TASK: There is no direct native C++ equivalent to the Java String 'trim' method:
 						if(uqm->getName()!="" && uqm->getName().trim()->length()>0)
 						{
 							buffer->append(" and name like ? ");
 						}
-						//Çø¼äÆ¥Åä
+						//åŒºé—´åŒ¹é…
 						if(uqm->getAge() > 0)
 						{
 							buffer->append(" and age >=? ");

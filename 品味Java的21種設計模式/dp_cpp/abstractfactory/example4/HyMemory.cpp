@@ -13,7 +13,7 @@ namespace cn
 
 					void HyMemory::cacheData()
 					{
-						puts("现在正在使用现代内存");
+						puts("鐜板湪姝ｅ湪浣跨敤鐜颁唬鍐呭瓨");
 					}
 				}
 			}

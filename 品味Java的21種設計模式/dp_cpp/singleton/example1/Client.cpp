@@ -13,7 +13,7 @@ namespace cn
 
 					void Client::main(std::string args[])
 					{
-						//´´½¨¶ÁÈ¡Ó¦ÓÃÅäÖÃµÄ¶ÔÏó
+						//åˆ›å»ºè¯»å–åº”ç”¨é…ç½®çš„å¯¹è±¡
 						AppConfig *config = new AppConfig();
 
 						std::string paramA = config->getParameterA();

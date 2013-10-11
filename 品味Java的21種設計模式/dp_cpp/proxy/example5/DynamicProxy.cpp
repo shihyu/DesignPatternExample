@@ -13,33 +13,33 @@ namespace cn
 
 					OrderApi *DynamicProxy::getProxyInterface(Order *order)
 					{
-						//ÉèÖÃ±»´úÀíµÄ¶ÔÏó£¬ºÃ·½±ãinvokeÀïÃæµÄ²Ù×÷
+						//è®¾ç½®è¢«ä»£ç†çš„å¯¹è±¡ï¼Œå¥½æ–¹ä¾¿invokeé‡Œé¢çš„æ“ä½œ
 						this->order = order;
-						//°ÑÕæÕıµÄ¶©µ¥¶ÔÏóºÍ¶¯Ì¬´úÀí¹ØÁªÆğÀ´
+						//æŠŠçœŸæ­£çš„è®¢å•å¯¹è±¡å’ŒåŠ¨æ€ä»£ç†å…³è”èµ·æ¥
 						OrderApi *orderApi = static_cast<OrderApi*>(Proxy::newProxyInstance(order->getClass()->getClassLoader(), order->getClass()->getInterfaces(), this));
 						return orderApi;
 					}
 
 					object *DynamicProxy::invoke(object *proxy, Method *method, object args[]) throw(Throwable)
 					{
-						//Èç¹ûÊÇµ÷ÓÃsetter·½·¨¾ÍĞèÒª¼ì²éÈ¨ÏŞ
+						//å¦‚æœæ˜¯è°ƒç”¨setteræ–¹æ³•å°±éœ€è¦æ£€æŸ¥æƒé™
 //JAVA TO C++ CONVERTER TODO TASK: There is no direct native C++ equivalent to the Java String 'startsWith' method:
 						if(method->getName()->startsWith("set"))
 						{
-							//Èç¹û²»ÊÇ´´½¨ÈË£¬ÄÇ¾Í²»ÄÜĞŞ¸Ä
+							//å¦‚æœä¸æ˜¯åˆ›å»ºäººï¼Œé‚£å°±ä¸èƒ½ä¿®æ”¹
 							if(order->getOrderUser()!=0 && order->getOrderUser()->equals(args[1]))
 							{
-								//¿ÉÒÔ²Ù×÷
+								//å¯ä»¥æ“ä½œ
 								return method->invoke(order, args);
 							}
 							else
 							{
-								puts("¶Ô²»Æğ£¬"+args[1]+"£¬ÄúÎŞÈ¨ĞŞ¸Ä±¾¶©µ¥ÖĞµÄÊı¾İ");
+								puts("å¯¹ä¸èµ·ï¼Œ"+args[1]+"ï¼Œæ‚¨æ— æƒä¿®æ”¹æœ¬è®¢å•ä¸­çš„æ•°æ®");
 							}
 						}
 						else
 						{
-							//²»ÊÇµ÷ÓÃµÄsetter·½·¨¾Í¼ÌĞøÔËĞĞ
+							//ä¸æ˜¯è°ƒç”¨çš„setteræ–¹æ³•å°±ç»§ç»­è¿è¡Œ
 							return method->invoke(order, args);
 						}
 						return 0;

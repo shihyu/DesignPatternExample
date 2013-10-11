@@ -13,7 +13,7 @@ namespace cn
 
 					void RMBCash::pay(PaymentContext *ctx)
 					{
-						puts("ÏÖÔÚ¸ø"+ctx->getUserName()+"ÈËÃñ±ÒÏÖ½ðÖ§¸¶"+ctx->getMoney()+"Ôª");
+						puts("çŽ°åœ¨ç»™"+ctx->getUserName()+"äººæ°‘å¸çŽ°é‡‘æ”¯ä»˜"+ctx->getMoney()+"å…ƒ");
 					}
 				}
 			}

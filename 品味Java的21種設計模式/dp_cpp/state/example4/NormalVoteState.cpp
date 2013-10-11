@@ -13,12 +13,12 @@ namespace cn
 
 					void NormalVoteState::vote(std::string user, std::string voteItem, VoteManager *voteManager)
 					{
-						//Õý³£Í¶Æ±
-						//¼ÇÂ¼µ½Í¶Æ±¼ÇÂ¼ÖÐ
+						//æ­£å¸¸æŠ•ç¥¨
+						//è®°å½•åˆ°æŠ•ç¥¨è®°å½•ä¸­
 						voteManager->getMapVote()->put(user, voteItem);
-						puts("¹§Ï²ÄãÍ¶Æ±³É¹¦");
+						puts("æ­å–œä½ æŠ•ç¥¨æˆåŠŸ");
 
-						//Õý³£Í¶Æ±Íê³É£¬Î¬»¤ÏÂÒ»¸ö×´Ì¬£¬Í¬Ò»¸öÈËÔÙÍ¶Æ±¾ÍÖØ¸´ÁË
+						//æ­£å¸¸æŠ•ç¥¨å®Œæˆï¼Œç»´æŠ¤ä¸‹ä¸€ä¸ªçŠ¶æ€ï¼ŒåŒä¸€ä¸ªäººå†æŠ•ç¥¨å°±é‡å¤äº†
 						voteManager->getMapState()->put(user, new RepeatVoteState());
 					}
 				}

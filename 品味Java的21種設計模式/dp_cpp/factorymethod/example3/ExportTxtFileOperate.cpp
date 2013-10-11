@@ -13,7 +13,7 @@ namespace cn
 
 					ExportFileApi *ExportTxtFileOperate::factoryMethod()
 					{
-						//创建导出成文本文件格式的对象
+						//鍒涘缓瀵煎嚭鎴愭枃鏈枃浠舵牸寮忕殑瀵硅薄
 						return new ExportTxtFile();
 					}
 				}

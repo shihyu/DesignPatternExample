@@ -33,8 +33,8 @@ namespace cn
 
 					void PersonalCustomer::serviceRequest()
 					{
-						//¸öÈË¿Í»§Ìá³öµÄ¾ßÌå·þÎñÇëÇó
-						puts("¿Í»§"+this->getName()+"Ìá³ö·þÎñÇëÇó");
+						//ä¸ªäººå®¢æˆ·æå‡ºçš„å…·ä½“æœåŠ¡è¯·æ±‚
+						puts("å®¢æˆ·"+this->getName()+"æå‡ºæœåŠ¡è¯·æ±‚");
 					}
 				}
 			}

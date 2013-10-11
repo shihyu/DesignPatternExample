@@ -16,11 +16,11 @@ namespace cn
 						if(!runFlag)
 						{
 							runFlag = true;
-							//´´½¨ÈıÎ»³øÊ¦
-							HotCook *cook1 = new HotCook("ÕÅÈı");
-							HotCook *cook2 = new HotCook("ÀîËÄ");
-							HotCook *cook3 = new HotCook("ÍõÎå");
-							//Æô¶¯ËûÃÇµÄÏß³Ì
+							//åˆ›å»ºä¸‰ä½å¨å¸ˆ
+							HotCook *cook1 = new HotCook("å¼ ä¸‰");
+							HotCook *cook2 = new HotCook("æå››");
+							HotCook *cook3 = new HotCook("ç‹äº”");
+							//å¯åŠ¨ä»–ä»¬çš„çº¿ç¨‹
 							Thread *t1 = new Thread(cook1);
 							t1->start();
 							Thread *t2 = new Thread(cook2);

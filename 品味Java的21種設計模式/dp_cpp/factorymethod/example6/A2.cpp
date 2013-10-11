@@ -13,7 +13,7 @@ namespace cn
 
 					C1 *A2::createC1()
 					{
-						//真正的选择具体实现，并创建对象
+						//鐪熸鐨勯�夋嫨鍏蜂綋瀹炵幇锛屽苟鍒涘缓瀵硅薄
 						return new C2();
 					}
 				}

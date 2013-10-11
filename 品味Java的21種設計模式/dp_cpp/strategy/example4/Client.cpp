@@ -13,14 +13,14 @@ namespace cn
 
 					void Client::main(std::string args[])
 					{
-						//1£ºÑ¡Ôñ²¢´´½¨ĞèÒªÊ¹ÓÃµÄ²ßÂÔ¶ÔÏó
+						//1ï¼šé€‰æ‹©å¹¶åˆ›å»ºéœ€è¦ä½¿ç”¨çš„ç­–ç•¥å¯¹è±¡
 						Strategy *strategy = new LargeCustomerStrategy();
-						//2£º´´½¨ÉÏÏÂÎÄ
+						//2ï¼šåˆ›å»ºä¸Šä¸‹æ–‡
 						Price *ctx = new Price(strategy);
 
-						//3£º¼ÆËã±¨¼Û
+						//3ï¼šè®¡ç®—æŠ¥ä»·
 						double quote = ctx->quote(1000);
-						puts("Ïò¿Í»§±¨¼Û£º"+quote);
+						puts("å‘å®¢æˆ·æŠ¥ä»·ï¼š"+quote);
 					}
 				}
 			}

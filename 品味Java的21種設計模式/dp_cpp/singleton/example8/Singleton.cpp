@@ -18,15 +18,15 @@ namespace cn
 
 					Singleton Singleton::getInstance()
 					{
-						//ÏÈ´Ó»º´æÖĞ»ñÈ¡
+						//å…ˆä»ç¼“å­˜ä¸­è·å–
 						Singleton instance = static_cast<Singleton>(map->get(DEFAULT_KEY));
-						//Èç¹ûÃ»ÓĞ£¬¾ÍĞÂ½¨Ò»¸ö£¬È»ºóÉèÖÃ»Ø»º´æÖĞ
+						//å¦‚æœæ²¡æœ‰ï¼Œå°±æ–°å»ºä¸€ä¸ªï¼Œç„¶åè®¾ç½®å›ç¼“å­˜ä¸­
 						if(instance==0)
 						{
 							instance = new Singleton();
 							map->put(DEFAULT_KEY, instance);
 						}
-						//Èç¹ûÓĞ¾ÍÖ±½ÓÊ¹ÓÃ
+						//å¦‚æœæœ‰å°±ç›´æ¥ä½¿ç”¨
 						return instance;
 					}
 				}

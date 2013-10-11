@@ -13,7 +13,7 @@ namespace cn
 
 					bool GoodsSaleEbo::sale(std::string user, std::string customer, SaleModel *saleModel)
 					{
-						puts(user+"±£´æÁË"+customer+"¹ºÂò "+saleModel+" µÄÏúÊÛÊı¾İ");
+						puts(user+"ä¿å­˜äº†"+customer+"è´­ä¹° "+saleModel+" çš„é”€å”®æ•°æ®");
 						return true;
 					}
 				}

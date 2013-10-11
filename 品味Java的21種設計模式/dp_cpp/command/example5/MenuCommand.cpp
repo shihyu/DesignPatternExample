@@ -18,7 +18,7 @@ namespace cn
 
 					void MenuCommand::execute()
 					{
-						//执行菜单其实就是循环执行菜单里面的每个菜
+						//鎵ц鑿滃崟鍏跺疄灏辨槸寰幆鎵ц鑿滃崟閲岄潰鐨勬瘡涓彍
 						for (Collection<Command*>::const_iterator cmd = col->begin(); cmd != col->end(); ++cmd)
 						{
 							(*cmd)->execute();

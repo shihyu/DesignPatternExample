@@ -1,26 +1,12 @@
 #include "Client.h"
+using namespace cn::javass::dp::bridge::example1;
 
-namespace cn
+int main(std::string args[])
 {
-	namespace javass
-	{
-		namespace dp
-		{
-			namespace bridge
-			{
-				namespace example1
-				{
+    Message *m = new CommonMessageSMS();
+    m->send("aa", "au");
 
-					void Client::main(std::string args[])
-					{
-						Message *m = new CommonMessageSMS();
-						m->send("aa", "au");
-
-						m = new CommonMessageEmail();
-						m->send("aa", "au");
-					}
-				}
-			}
-		}
-	}
+    m = new CommonMessageEmail();
+    m->send("aa", "au");
+    return 0;
 }

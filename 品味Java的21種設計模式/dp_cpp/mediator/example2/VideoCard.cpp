@@ -17,7 +17,7 @@ namespace cn
 
 					void VideoCard::showData(std::string data)
 					{
-						puts("ÄúÕı¹Û¿´µÄÊÇ£º"+data);
+						puts("æ‚¨æ­£è§‚çœ‹çš„æ˜¯ï¼š"+data);
 					}
 				}
 			}

@@ -13,7 +13,7 @@ namespace cn
 
 					void Creator::someOperation()
 					{
-						//通常在这些方法实现中，需要调用工厂方法来获取Product对象
+						//閫氬父鍦ㄨ繖浜涙柟娉曞疄鐜颁腑锛岄渶瑕佽皟鐢ㄥ伐鍘傛柟娉曟潵鑾峰彇Product瀵硅薄
 						Product *product = factoryMethod();
 					}
 				}

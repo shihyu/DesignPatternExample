@@ -17,17 +17,17 @@ namespace cn
 
 					double GroupPrizeDecorator::calcPrize(std::string user, Date *begin, Date *end)
 					{
-						//1£ºÏÈ»ñÈ¡Ç°ÃæÔËËã³öÀ´µÄ½±½ğ
+						//1ï¼šå…ˆè·å–å‰é¢è¿ç®—å‡ºæ¥çš„å¥–é‡‘
 						double money = Decorator::calcPrize(user, begin, end);
-						//2£ºÈ»ºó¼ÆËãµ±ÔÂÍÅ¶ÓÒµÎñ½±½ğ£¬ÏÈ¼ÆËã³öÍÅ¶Ó×ÜµÄÒµÎñ¶î£¬È»ºóÔÙ³ËÒÔ1%
-						//¼ÙÉè¶¼ÊÇÒ»¸öÍÅ¶ÓµÄ
+						//2ï¼šç„¶åè®¡ç®—å½“æœˆå›¢é˜Ÿä¸šåŠ¡å¥–é‡‘ï¼Œå…ˆè®¡ç®—å‡ºå›¢é˜Ÿæ€»çš„ä¸šåŠ¡é¢ï¼Œç„¶åå†ä¹˜ä»¥1%
+						//å‡è®¾éƒ½æ˜¯ä¸€ä¸ªå›¢é˜Ÿçš„
 						double group = 0.0;
 						for (Map<std::string, double>::const_iterator d = TempDB::mapMonthSaleMoney->begin(); d != TempDB::mapMonthSaleMoney->end(); ++d)
 						{
 							group += d->second;
 						}
 						double prize = group * 0.01;
-						puts(user+"µ±ÔÂÍÅ¶ÓÒµÎñ½±½ğ"+prize);
+						puts(user+"å½“æœˆå›¢é˜Ÿä¸šåŠ¡å¥–é‡‘"+prize);
 						return money + prize;
 					}
 				}

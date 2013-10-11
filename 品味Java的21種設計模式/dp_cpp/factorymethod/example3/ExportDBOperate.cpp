@@ -13,7 +13,7 @@ namespace cn
 
 					ExportFileApi *ExportDBOperate::factoryMethod()
 					{
-						//´´½¨µ¼³ö³ÉÊı¾İ¿â±¸·İÎÄ¼şĞÎÊ½µÄ¶ÔÏó
+						//åˆ›å»ºå¯¼å‡ºæˆæ•°æ®åº“å¤‡ä»½æ–‡ä»¶å½¢å¼çš„å¯¹è±¡
 						return new ExportDB();
 					}
 				}

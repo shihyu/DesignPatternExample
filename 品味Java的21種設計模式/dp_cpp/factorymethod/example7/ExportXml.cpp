@@ -13,8 +13,8 @@ namespace cn
 
 					bool ExportXml::export(std::string data)
 					{
-						//¼òµ¥Ê¾ÒâÒ»ÏÂ
-						puts("µ¼³öÊı¾İ"+data+"µ½XMLÎÄ¼ş");
+						//ç®€å•ç¤ºæ„ä¸€ä¸‹
+						puts("å¯¼å‡ºæ•°æ®"+data+"åˆ°XMLæ–‡ä»¶");
 						return true;
 					}
 				}

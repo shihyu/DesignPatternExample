@@ -13,7 +13,7 @@ namespace cn
 
 					LoginModel *NormalLogin::findLoginUser(std::string loginId)
 					{
-						// ÕâÀïÊ¡ÂÔ¾ßÌåµÄ´¦Àí£¬½ö×öÊ¾Òâ£¬·µ»ØÒ»¸öÓÐÄ¬ÈÏÊý¾ÝµÄ¶ÔÏó
+						// è¿™é‡Œçœç•¥å…·ä½“çš„å¤„ç†ï¼Œä»…åšç¤ºæ„ï¼Œè¿”å›žä¸€ä¸ªæœ‰é»˜è®¤æ•°æ®çš„å¯¹è±¡
 						LoginModel *lm = new LoginModel();
 						lm->setLoginId(loginId);
 						lm->setPwd("testpwd");

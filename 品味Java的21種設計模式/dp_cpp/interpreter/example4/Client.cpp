@@ -18,56 +18,56 @@ namespace cn
 
 					void Client::main(std::string args[]) throw(Exception)
 					{
-						//×¼±¸ÉÏÏÂÎÄ
+						//å‡†å¤‡ä¸Šä¸‹æ–‡
 						Context *c = new Context("InterpreterTest.xml");
 
-						//ÏëÒª»ñÈ¡¶à¸ödÔªËØµÄÖµ£¬Ò²¾ÍÊÇÈçÏÂ±í´ïÊ½µÄÖµ£º"root/a/b/d$"
+						//æƒ³è¦è·å–å¤šä¸ªdå…ƒç´ çš„å€¼ï¼Œä¹Ÿå°±æ˜¯å¦‚ä¸‹è¡¨è¾¾å¼çš„å€¼ï¼š"root/a/b/d$"
 
-										//		//Ê×ÏÈÒª¹¹½¨½âÊÍÆ÷µÄ³éÏóÓï·¨Ê÷
+										//		//é¦–å…ˆè¦æ„å»ºè§£é‡Šå™¨çš„æŠ½è±¡è¯­æ³•æ ‘
 										//		ElementExpression root = new ElementExpression("root");
 										//		ElementExpression aEle = new ElementExpression("a");
 										//		ElementExpression bEle = new ElementExpression("b");
 										//		ElementsTerminalExpression dEle = new ElementsTerminalExpression("d");
-										//		//×éºÏÆğÀ´
+										//		//ç»„åˆèµ·æ¥
 										//		root.addEle(aEle);
 										//		aEle.addEle(bEle);
 										//		bEle.addEle(dEle);
-										//		//µ÷ÓÃ
+										//		//è°ƒç”¨
 										//		String ss[] = root.interpret(c);
 										//		for(String s : ss){
-										//			System.out.println("dµÄÖµÊÇ="+s);	
+										//			System.out.println("dçš„å€¼æ˜¯="+s);	
 										//		}
 
-						//ÏëÒª»ñÈ¡dÔªËØµÄidÊôĞÔ£¬Ò²¾ÍÊÇÈçÏÂ±í´ïÊ½µÄÖµ£º"a/b/d$.id$"
+						//æƒ³è¦è·å–då…ƒç´ çš„idå±æ€§ï¼Œä¹Ÿå°±æ˜¯å¦‚ä¸‹è¡¨è¾¾å¼çš„å€¼ï¼š"a/b/d$.id$"
 						ElementExpression *root = new ElementExpression("root");
 						ElementExpression *aEle = new ElementExpression("a");
 						ElementExpression *bEle = new ElementExpression("b");
 						ElementsExpression *dEle = new ElementsExpression("d");
 						PropertysTerminalExpression *prop = new PropertysTerminalExpression("id");
-						//×éºÏ
+						//ç»„åˆ
 						root->addEle(aEle);
 						aEle->addEle(bEle);
 						bEle->addEle(dEle);
 						dEle->addEle(prop);
-						//µ÷ÓÃ
+						//è°ƒç”¨
 //ORIGINAL LINE: String ss[] = root.interpret(c);
 //JAVA TO C++ CONVERTER WARNING: Since the array size is not known in this declaration, Java to C++ Converter has converted this array to a pointer.  You will need to call 'delete[]' where appropriate:
 						std::string *ss = root->interpret(c);
 						for (std::string::const_iterator s = ss->begin(); s != ss->end(); ++s)
 						{
-							puts("dµÄÊôĞÔidÖµÊÇ=" + *s);
+							puts("dçš„å±æ€§idå€¼æ˜¯=" + *s);
 						}
 
-						//Èç¹ûÒªÊ¹ÓÃÍ¬Ò»¸öÉÏÏÂÎÄ£¬Á¬Ğø½øĞĞ½âÎö£¬ĞèÒªÖØĞÂ³õÊ¼»¯ÉÏÏÂÎÄ¶ÔÏó
-						//±ÈÈçÒªÁ¬ĞøµÄÖØĞÂÔÙ»ñÈ¡Ò»´ÎÊôĞÔidµÄÖµ£¬µ±È»Äã¿ÉÒÔÖØĞÂ×éºÏÔªËØ£¬
-						//ÖØĞÂ½âÎö£¬Ö»ÒªÊÇÔÚÊ¹ÓÃÍ¬Ò»¸öÉÏÏÂÎÄ£¬¾ÍĞèÒªÖØĞÂ³õÊ¼»¯ÉÏÏÂÎÄ¶ÔÏó
+						//å¦‚æœè¦ä½¿ç”¨åŒä¸€ä¸ªä¸Šä¸‹æ–‡ï¼Œè¿ç»­è¿›è¡Œè§£æï¼Œéœ€è¦é‡æ–°åˆå§‹åŒ–ä¸Šä¸‹æ–‡å¯¹è±¡
+						//æ¯”å¦‚è¦è¿ç»­çš„é‡æ–°å†è·å–ä¸€æ¬¡å±æ€§idçš„å€¼ï¼Œå½“ç„¶ä½ å¯ä»¥é‡æ–°ç»„åˆå…ƒç´ ï¼Œ
+						//é‡æ–°è§£æï¼Œåªè¦æ˜¯åœ¨ä½¿ç”¨åŒä¸€ä¸ªä¸Šä¸‹æ–‡ï¼Œå°±éœ€è¦é‡æ–°åˆå§‹åŒ–ä¸Šä¸‹æ–‡å¯¹è±¡
 						c->reInit();
 //ORIGINAL LINE: String ss2[] = root.interpret(c);
 //JAVA TO C++ CONVERTER WARNING: Since the array size is not known in this declaration, Java to C++ Converter has converted this array to a pointer.  You will need to call 'delete[]' where appropriate:
 						std::string *ss2 = root->interpret(c);
 						for (std::string::const_iterator s = ss2->begin(); s != ss2->end(); ++s)
 						{
-							puts("ÖØĞÂ»ñÈ¡dµÄÊôĞÔidÖµÊÇ=" + *s);
+							puts("é‡æ–°è·å–dçš„å±æ€§idå€¼æ˜¯=" + *s);
 						}
 					}
 				}

@@ -19,7 +19,7 @@ namespace cn
 
 					void Composite::addChild(Component *child)
 					{
-						//ÑÓ³Ù³õÊ¼»¯
+						//å»¶è¿Ÿåˆå§‹åŒ–
 						if (childComponents == 0)
 						{
 							childComponents = std::vector<Component*>();
@@ -29,17 +29,17 @@ namespace cn
 
 					void Composite::printStruct(std::string preStr)
 					{
-						//ÏÈ°Ñ×Ô¼ºÊä³öÈ¥
+						//å…ˆæŠŠè‡ªå·±è¾“å‡ºå»
 						puts(preStr+"+"+this->name);
-						//Èç¹û»¹°üº¬ÓĞ×Ó×é¼ş£¬ÄÇÃ´¾ÍÊä³öÕâĞ©×Ó×é¼ş¶ÔÏó
+						//å¦‚æœè¿˜åŒ…å«æœ‰å­ç»„ä»¶ï¼Œé‚£ä¹ˆå°±è¾“å‡ºè¿™äº›å­ç»„ä»¶å¯¹è±¡
 						if(this->childComponents!=0)
 						{
-							//È»ºóÌí¼ÓÒ»¸ö¿Õ¸ñ£¬±íÊ¾ÏòºóËõ½øÒ»¸ö¿Õ¸ñ
+							//ç„¶åæ·»åŠ ä¸€ä¸ªç©ºæ ¼ï¼Œè¡¨ç¤ºå‘åç¼©è¿›ä¸€ä¸ªç©ºæ ¼
 							preStr+=" ";
-							//Êä³öµ±Ç°¶ÔÏóµÄ×Ó¶ÔÏóÁË
+							//è¾“å‡ºå½“å‰å¯¹è±¡çš„å­å¯¹è±¡äº†
 							for (std::vector<Component*>::const_iterator c = childComponents.begin(); c != childComponents.end(); ++c)
 							{
-								//µİ¹éÊä³öÃ¿¸ö×Ó¶ÔÏó
+								//é€’å½’è¾“å‡ºæ¯ä¸ªå­å¯¹è±¡
 								(*c)->printStruct(preStr);
 							}
 						}

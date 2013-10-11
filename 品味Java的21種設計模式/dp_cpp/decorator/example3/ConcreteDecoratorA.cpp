@@ -27,8 +27,8 @@ namespace cn
 
 					void ConcreteDecoratorA::operation()
 					{
-						//���ø���ķ����������ڵ���ǰ��ִ��һЩ���Ӷ���
-						//��������д�����ʱ�򣬿���ʹ�����ӵ�״̬
+						//调用父类的方法，可以在调用前后执行一些附加动作
+						//在这里进行处理的时候，可以使用添加的状态
 						Decorator::operation();
 					}
 				}

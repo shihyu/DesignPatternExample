@@ -18,7 +18,7 @@ namespace cn
 
 					void Director::construct()
 					{
-						//通过使用构建器接口来构建最终的产品对象
+						//閫氳繃浣跨敤鏋勫缓鍣ㄦ帴鍙ｆ潵鏋勫缓鏈�缁堢殑浜у搧瀵硅薄
 						builder->buildPart();
 					}
 				}

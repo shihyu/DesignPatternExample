@@ -13,7 +13,7 @@ namespace cn
 
 					double ConcreteComponent::calcPrize(std::string user, Date *begin, Date *end)
 					{
-						//Ö»ÊÇÒ»¸öÄ¬ÈÏµÄÊµÏÖ£¬Ä¬ÈÏÃ»ÓĞ½±½ğ
+						//åªæ˜¯ä¸€ä¸ªé»˜è®¤çš„å®ç°ï¼Œé»˜è®¤æ²¡æœ‰å¥–é‡‘
 						return 0;
 					}
 				}

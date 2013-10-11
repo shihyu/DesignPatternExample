@@ -13,9 +13,9 @@ namespace cn
 
 					void Invoker::startPrint(Command *cmd)
 					{
-						puts("ÔÚInvokerÖĞ£¬Êä³ö·şÎñÇ°");
+						puts("åœ¨Invokerä¸­ï¼Œè¾“å‡ºæœåŠ¡å‰");
 						cmd->execute();
-						puts("Êä³ö·şÎñ½áÊø");
+						puts("è¾“å‡ºæœåŠ¡ç»“æŸ");
 					}
 				}
 			}

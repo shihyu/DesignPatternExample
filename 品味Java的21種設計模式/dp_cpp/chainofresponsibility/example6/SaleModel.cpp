@@ -33,7 +33,7 @@ namespace cn
 
 					std::string SaleModel::ToString()
 					{
-						return "ÉÌÆ·Ãû³Æ="+goods+",ÏúÊÛÊıÁ¿="+saleNum;
+						return "å•†å“åç§°="+goods+",é”€å”®æ•°é‡="+saleNum;
 					}
 				}
 			}

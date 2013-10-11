@@ -18,7 +18,7 @@ namespace cn
 
 					void Invoker::runCommand()
 					{
-						//µ÷ÓÃÃüÁî¶ÔÏóµÄÖ´ÐÐ·½·¨
+						//è°ƒç”¨å‘½ä»¤å¯¹è±¡çš„æ‰§è¡Œæ–¹æ³•
 						command->execute();
 					}
 				}

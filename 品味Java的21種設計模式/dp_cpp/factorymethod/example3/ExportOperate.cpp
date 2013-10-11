@@ -13,7 +13,7 @@ namespace cn
 
 					bool ExportOperate::export(std::string data)
 					{
-						//使用工厂方法
+						//浣跨敤宸ュ巶鏂规硶
 						ExportFileApi *api = factoryMethod();
 						return api->export(data);
 					}

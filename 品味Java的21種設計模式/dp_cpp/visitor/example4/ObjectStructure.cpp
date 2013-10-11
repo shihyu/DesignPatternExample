@@ -13,7 +13,7 @@ namespace cn
 
 					void ObjectStructure::handleRequest(Visitor *visitor)
 					{
-						//Ñ­»·¶ÔÏó½á¹¹ÖĞµÄÔªËØ£¬½ÓÊÜ·ÃÎÊ
+						//å¾ªç¯å¯¹è±¡ç»“æ„ä¸­çš„å…ƒç´ ï¼Œæ¥å—è®¿é—®
 						for (Collection<Customer*>::const_iterator cm = col->begin(); cm != col->end(); ++cm)
 						{
 							(*cm)->accept(visitor);

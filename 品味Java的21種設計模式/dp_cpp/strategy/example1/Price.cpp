@@ -13,22 +13,22 @@ namespace cn
 
 					double Price::quote(double goodsPrice, std::string customerType)
 					{
-						if((new std::string("ÆÕÍ¨¿Í»§"))->equals(customerType))
+						if((new std::string("æ™®é€šå®¢æˆ·"))->equals(customerType))
 						{
-							puts("¶ÔÓÚĞÂ¿Í»§»òÕßÊÇÆÕÍ¨¿Í»§£¬Ã»ÓĞÕÛ¿Û");
+							puts("å¯¹äºæ–°å®¢æˆ·æˆ–è€…æ˜¯æ™®é€šå®¢æˆ·ï¼Œæ²¡æœ‰æŠ˜æ‰£");
 							return goodsPrice;
 						}
-						else if((new std::string("ÀÏ¿Í»§"))->equals(customerType))
+						else if((new std::string("è€å®¢æˆ·"))->equals(customerType))
 						{
-							puts("¶ÔÓÚÀÏ¿Í»§£¬Í³Ò»ÕÛ¿Û5%");
+							puts("å¯¹äºè€å®¢æˆ·ï¼Œç»Ÿä¸€æŠ˜æ‰£5%");
 							return goodsPrice*(1-0.05);
 						}
-						else if((new std::string("´ó¿Í»§"))->equals(customerType))
+						else if((new std::string("å¤§å®¢æˆ·"))->equals(customerType))
 						{
-							puts("¶ÔÓÚ´ó¿Í»§£¬Í³Ò»ÕÛ¿Û10%");
+							puts("å¯¹äºå¤§å®¢æˆ·ï¼Œç»Ÿä¸€æŠ˜æ‰£10%");
 							return goodsPrice*(1-0.1);
 						}
-						//ÆäÓàÈËÔ±¶¼ÊÇ±¨Ô­¼Û
+						//å…¶ä½™äººå‘˜éƒ½æ˜¯æŠ¥åŸä»·
 						return goodsPrice;
 					}
 				}

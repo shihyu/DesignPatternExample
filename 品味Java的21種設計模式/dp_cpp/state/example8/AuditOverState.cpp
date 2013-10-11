@@ -13,9 +13,9 @@ namespace cn
 
 					void AuditOverState::doWork(StateMachine *request)
 					{
-						//先把业务对象造型回来
+						//鍏堟妸涓氬姟瀵硅薄閫犲瀷鍥炴潵
 						LeaveRequestModel *lrm = static_cast<LeaveRequestModel*>(request->getBusinessVO());
-						puts(lrm->getUser()+"，你的请假申请已经审核结束，结果是："+lrm->getResult());
+						puts(lrm->getUser()+"锛屼綘鐨勮鍋囩敵璇峰凡缁忓鏍哥粨鏉燂紝缁撴灉鏄細"+lrm->getResult());
 					}
 				}
 			}

@@ -48,12 +48,12 @@ namespace cn
 
 					std::string Proxy::getDepId()
 					{
-						//ÐèÒªÅÐ¶ÏÊÇ·ñÒÑ¾­×°ÔØ¹ýÁË
+						//éœ€è¦åˆ¤æ–­æ˜¯å¦å·²ç»è£…è½½è¿‡äº†
 						if(!this->loaded)
 						{
-							//´ÓÊý¾Ý¿âÖÐÖØÐÂ×°ÔØ
+							//ä»Žæ•°æ®åº“ä¸­é‡æ–°è£…è½½
 							reload();
-							//ÉèÖÃÖØÐÂ×°ÔØµÄ±êÖ¾Îªtrue
+							//è®¾ç½®é‡æ–°è£…è½½çš„æ ‡å¿—ä¸ºtrue
 							this->loaded = true;
 						}
 						return realSubject->getDepId();
@@ -71,7 +71,7 @@ namespace cn
 
 					void Proxy::reload()
 					{
-						puts("ÖØÐÂ²éÑ¯Êý¾Ý¿â»ñÈ¡ÍêÕûµÄÓÃ»§Êý¾Ý£¬userId=="+realSubject->getUserId());
+						puts("é‡æ–°æŸ¥è¯¢æ•°æ®åº“èŽ·å–å®Œæ•´çš„ç”¨æˆ·æ•°æ®ï¼ŒuserId=="+realSubject->getUserId());
 						Connection *conn = 0;
 						try
 						{
@@ -84,7 +84,7 @@ namespace cn
 							ResultSet *rs = pstmt->executeQuery();
 							if(rs->next())
 							{
-								//Ö»ÐèÒªÖØÐÂ»ñÈ¡³ýÁËuserIdºÍnameÍâµÄÊý¾Ý
+								//åªéœ€è¦é‡æ–°èŽ·å–é™¤äº†userIdå’Œnameå¤–çš„æ•°æ®
 								realSubject->setDepId(rs->getString("depId"));
 								realSubject->setSex(rs->getString("sex"));
 							}

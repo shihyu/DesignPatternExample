@@ -17,7 +17,7 @@ namespace cn
 
 					void ConcreteColleagueB::someOperation()
 					{
-						//ÔÚÐèÒª¸úÆäËûÍ¬ÊÂÍ¨ÐÅµÄÊ±ºò£¬Í¨ÖªÖÐ½éÕß¶ÔÏó
+						//åœ¨éœ€è¦è·Ÿå…¶ä»–åŒäº‹é€šä¿¡çš„æ—¶å€™ï¼Œé€šçŸ¥ä¸­ä»‹è€…å¯¹è±¡
 						getMediator()->changed(this);
 					}
 				}

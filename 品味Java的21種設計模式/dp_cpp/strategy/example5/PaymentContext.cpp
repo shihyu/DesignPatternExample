@@ -21,7 +21,7 @@ namespace cn
 
 					void PaymentContext::payNow()
 					{
-						//使用客户希望的支付策略来支付工资
+						//浣跨敤瀹㈡埛甯屾湜鐨勬敮浠樼瓥鐣ユ潵鏀粯宸ヨ祫
 						this->strategy->pay(this);
 					}
 

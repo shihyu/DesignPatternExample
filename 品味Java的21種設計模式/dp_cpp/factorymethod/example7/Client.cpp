@@ -13,14 +13,14 @@ namespace cn
 
 					void Client::main(std::string args[])
 					{
-										//		//´´½¨ÐèÒªÊ¹ÓÃµÄCreator¶ÔÏó
+										//		//åˆ›å»ºéœ€è¦ä½¿ç”¨çš„Creatorå¯¹è±¡
 										//		ExportOperate operate = new ExportOperate();
-										//		//µ÷ÓÃÊä³öÊý¾ÝµÄ¹¦ÄÜ·½·¨£¬´«ÈëÑ¡Ôñµ½´¦ÀàÐÍµÄ²ÎÊý
-										//		operate.export(1,"²âÊÔÊý¾Ý");
+										//		//è°ƒç”¨è¾“å‡ºæ•°æ®çš„åŠŸèƒ½æ–¹æ³•ï¼Œä¼ å…¥é€‰æ‹©åˆ°å¤„ç±»åž‹çš„å‚æ•°
+										//		operate.export(1,"æµ‹è¯•æ•°æ®");
 
-						//´´½¨ÐèÒªÊ¹ÓÃµÄCreator¶ÔÏó
+						//åˆ›å»ºéœ€è¦ä½¿ç”¨çš„Creatorå¯¹è±¡
 						ExportOperate *operate = new ExportOperate2();
-						//ÏÂÃæ±ä»»´«ÈëµÄ²ÎÊýÀ´²âÊÔ²ÎÊý»¯¹¤³§·½·¨
+						//ä¸‹é¢å˜æ¢ä¼ å…¥çš„å‚æ•°æ¥æµ‹è¯•å‚æ•°åŒ–å·¥åŽ‚æ–¹æ³•
 						operate->export(1,"Test1");
 						operate->export(2,"Test2");
 						operate->export(3,"Test3");

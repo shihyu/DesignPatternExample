@@ -13,36 +13,36 @@ namespace cn
 
 					bool SaleDataCheck::sale(std::string user, std::string customer, SaleModel *saleModel)
 					{
-						//½øÐÐÊý¾ÝÍ¨ÓÃ¼ì²é£¬ÉÔÂé·³µã£¬Ã¿¸öÊý¾Ý¶¼Òª¼ì²â
+						//è¿›è¡Œæ•°æ®é€šç”¨æ£€æŸ¥ï¼Œç¨éº»çƒ¦ç‚¹ï¼Œæ¯ä¸ªæ•°æ®éƒ½è¦æ£€æµ‹
 //JAVA TO C++ CONVERTER TODO TASK: There is no direct native C++ equivalent to the Java String 'trim' method:
 						if(user == "" || user.trim()->length()==0)
 						{
-							puts("ÉêÇëÈË²»ÄÜÎª¿Õ");
+							puts("ç”³è¯·äººä¸èƒ½ä¸ºç©º");
 							return false;
 						}
 //JAVA TO C++ CONVERTER TODO TASK: There is no direct native C++ equivalent to the Java String 'trim' method:
 						if(customer == "" || customer.trim()->length()==0)
 						{
-							puts("¿Í»§²»ÄÜÎª¿Õ");
+							puts("å®¢æˆ·ä¸èƒ½ä¸ºç©º");
 							return false;
 						}
 						if(saleModel==0)
 						{
-							puts("ÏúÊÛÉÌÆ·µÄÊý¾Ý²»ÄÜÎª¿Õ");
+							puts("é”€å”®å•†å“çš„æ•°æ®ä¸èƒ½ä¸ºç©º");
 							return false;
 						}
 //JAVA TO C++ CONVERTER TODO TASK: There is no direct native C++ equivalent to the Java String 'trim' method:
 						if(saleModel->getGoods() == "" ||saleModel->getGoods().trim()->length()==0)
 						{
-							puts("ÏúÊÛµÄÉÌÆ·²»ÄÜÎª¿Õ");
+							puts("é”€å”®çš„å•†å“ä¸èƒ½ä¸ºç©º");
 							return false;
 						}
 						if(saleModel->getSaleNum()==0)
 						{
-							puts("ÏúÊÛÉÌÆ·µÄÊýÁ¿²»ÄÜÎª0");
+							puts("é”€å”®å•†å“çš„æ•°é‡ä¸èƒ½ä¸º0");
 							return false;
 						}
-						//Èç¹ûÍ¨¹ýÁËÉÏÃæµÄ¼ì²â£¬ÄÇ¾ÍÏòÏÂ¼ÌÐøÖ´ÐÐ
+						//å¦‚æžœé€šè¿‡äº†ä¸Šé¢çš„æ£€æµ‹ï¼Œé‚£å°±å‘ä¸‹ç»§ç»­æ‰§è¡Œ
 						return this->successor->sale(user, customer, saleModel);
 					}
 				}

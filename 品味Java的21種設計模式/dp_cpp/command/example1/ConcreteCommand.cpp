@@ -18,7 +18,7 @@ namespace cn
 
 					void ConcreteCommand::execute()
 					{
-						//通常会转调接受者对象的相应方法，让接受者来真正执行功能
+						//閫氬父浼氳浆璋冩帴鍙楄�呭璞＄殑鐩稿簲鏂规硶锛岃鎺ュ彈鑰呮潵鐪熸鎵ц鍔熻兘
 						receiver->action();
 					}
 				}

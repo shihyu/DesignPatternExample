@@ -13,9 +13,9 @@ namespace cn
 
 					void Client::main(std::string args[])
 					{
-						//创建抽象工厂对象
+						//鍒涘缓鎶借薄宸ュ巶瀵硅薄
 						AbstractFactory *af = new ConcreteFactory1();
-						//通过抽象工厂来获取一系列的对象，如产品A和产品B
+						//閫氳繃鎶借薄宸ュ巶鏉ヨ幏鍙栦竴绯诲垪鐨勫璞★紝濡備骇鍝丄鍜屼骇鍝丅
 						af->createProductA();
 						af->createProductB();
 					}

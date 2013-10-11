@@ -13,11 +13,11 @@ namespace cn
 
 					void Client::assemble()
 					{
-						//´´½¨½ÓÊÜÕß
+						//åˆ›å»ºæŽ¥å—è€…
 						Receiver *receiver = new Receiver();
-						//´´½¨ÃüÁî¶ÔÏó£¬Éè¶¨ËüµÄ½ÓÊÕÕß
+						//åˆ›å»ºå‘½ä»¤å¯¹è±¡ï¼Œè®¾å®šå®ƒçš„æŽ¥æ”¶è€…
 						Command *command = new ConcreteCommand(receiver);
-						//´´½¨Invoker£¬°ÑÃüÁî¶ÔÏóÉèÖÃ½øÈ¥
+						//åˆ›å»ºInvokerï¼ŒæŠŠå‘½ä»¤å¯¹è±¡è®¾ç½®è¿›åŽ»
 						Invoker *invoker = new Invoker();
 						invoker->setCommand(command);
 					}

@@ -29,18 +29,18 @@ namespace cn
 
 					void Composite::printStruct(std::string preStr)
 					{
-						//ох╟явт╪╨йДЁЖх╔
+						//Е┘┬Ф┼┼Х┤╙Е╥╠Х╬⌠Е┤╨Е▌╩
 						puts(preStr+"+"+this->name);
-						//х╩╨СлМ╪ср╩╦Ж©у╦Яё╛╠Мй╬оР╨СкУ╫Ьр╩╦Ж©у╦Яё╛йДЁЖвт╪╨╟Э╨╛╣др╤вс╤тоС
+						//Г└╤Е░▌Ф╥╩Е┼═Д╦─Д╦╙Г╘╨Ф═╪О╪▄Х║╗Г╓╨Е░▒Е░▌Г╪╘Х©⌡Д╦─Д╦╙Г╘╨Ф═╪О╪▄Х╬⌠Е┤╨Х┤╙Е╥╠Е▄┘Е░╚Г └Е▐╤Е╜░Е╞╧Х╠║
 						preStr+=" ";
 						for (Collection<Leaf*>::const_iterator leaf = childLeaf->begin(); leaf != childLeaf->end(); ++leaf)
 						{
 							(*leaf)->printStruct(preStr);
 						}
-						//йДЁЖ╣╠г╟╤тоС╣двс╤тоСак
+						//Х╬⌠Е┤╨Е╫⌠Е┴█Е╞╧Х╠║Г └Е╜░Е╞╧Х╠║Д╨├
 						for (Collection<Composite*>::const_iterator c = childComposite->begin(); c != childComposite->end(); ++c)
 						{
-							//╣щ╧ИйДЁЖц©╦Жвс╤тоС
+							//И─▓Е╫▓Х╬⌠Е┤╨Ф╞▐Д╦╙Е╜░Е╞╧Х╠║
 							(*c)->printStruct(preStr);
 						}
 					}

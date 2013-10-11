@@ -13,25 +13,25 @@ namespace cn
 
 					void ComputerEngineer::makeComputer(int cpuType, int mainboardType)
 					{
-						//1£ºÊ×ÏÈ×¼±¸ºÃ×°»úËùÐèÒªµÄÅä¼þ
+						//1ï¼šé¦–å…ˆå‡†å¤‡å¥½è£…æœºæ‰€éœ€è¦çš„é…ä»¶
 						prepareHardwares(cpuType,mainboardType);
-						//2£º×é×°»úÆ÷
+						//2ï¼šç»„è£…æœºå™¨
 
-						//3£º²âÊÔ»úÆ÷
+						//3ï¼šæµ‹è¯•æœºå™¨
 
-						//4£º½»¸¶¿Í»§
+						//4ï¼šäº¤ä»˜å®¢æˆ·
 					}
 
 					void ComputerEngineer::prepareHardwares(int cpuType, int mainboardType)
 					{
-						//ÕâÀïÒªÈ¥×¼±¸CPUºÍÖ÷°åµÄ¾ßÌåÊµÏÖ£¬ÎªÁËÊ¾Àý¼òµ¥£¬ÕâÀïÖ»×¼±¸ÕâÁ½¸ö
-						//¿ÉÊÇ£¬×°»ú¹¤³ÌÊ¦²¢²»ÖªµÀÈçºÎÈ¥´´½¨£¬ÔõÃ´°ìÄØ£¿
+						//è¿™é‡Œè¦åŽ»å‡†å¤‡CPUå’Œä¸»æ¿çš„å…·ä½“å®žçŽ°ï¼Œä¸ºäº†ç¤ºä¾‹ç®€å•ï¼Œè¿™é‡Œåªå‡†å¤‡è¿™ä¸¤ä¸ª
+						//å¯æ˜¯ï¼Œè£…æœºå·¥ç¨‹å¸ˆå¹¶ä¸çŸ¥é“å¦‚ä½•åŽ»åˆ›å»ºï¼Œæ€Žä¹ˆåŠžå‘¢ï¼Ÿ
 
-						//Ö±½ÓÕÒÏàÓ¦µÄ¹¤³§»ñÈ¡
+						//ç›´æŽ¥æ‰¾ç›¸åº”çš„å·¥åŽ‚èŽ·å–
 						this->cpu = CPUFactory::createCPUApi(cpuType);
 						this->mainboard = MainboardFactory::createMainboardApi(mainboardType);
 
-						//²âÊÔÒ»ÏÂÅä¼þÊÇ·ñºÃÓÃ
+						//æµ‹è¯•ä¸€ä¸‹é…ä»¶æ˜¯å¦å¥½ç”¨
 						this->cpu->calculate();
 						this->mainboard->installCPU();
 					}

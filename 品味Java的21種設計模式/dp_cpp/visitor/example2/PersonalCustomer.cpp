@@ -33,18 +33,18 @@ namespace cn
 
 					void PersonalCustomer::serviceRequest()
 					{
-						//���˿ͻ�����ľ����������
-						puts("�ͻ�"+this->getName()+"�����������");
+						//个人客户提出的具体服务请求
+						puts("客户"+this->getName()+"提出服务请求");
 					}
 
 					void PersonalCustomer::predilectionAnalyze()
 					{
-						puts("���ڶԸ��˿ͻ�"+this->getName()+"���в�Ʒƫ�÷���");
+						puts("现在对个人客户"+this->getName()+"进行产品偏好分析");
 					}
 
 					void PersonalCustomer::worthAnalyze()
 					{
-						puts("���ڶԸ��˿ͻ�"+this->getName()+"���м�ֵ����");
+						puts("现在对个人客户"+this->getName()+"进行价值分析");
 					}
 				}
 			}

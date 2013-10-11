@@ -13,7 +13,7 @@ namespace cn
 
 					AbstractMessage3::AbstractMessage3()
 					{
-						//创建一个默认的实现
+						//鍒涘缓涓�涓粯璁ょ殑瀹炵幇
 						this->impl = new MessageSMS();
 					}
 

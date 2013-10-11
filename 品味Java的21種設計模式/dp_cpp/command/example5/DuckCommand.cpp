@@ -18,7 +18,7 @@ namespace cn
 
 					void DuckCommand::execute()
 					{
-						this->cookApi->cook("±±¾©¿¾Ñ¼");
+						this->cookApi->cook("åŒ—äº¬çƒ¤é¸­");
 					}
 				}
 			}

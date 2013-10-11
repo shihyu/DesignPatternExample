@@ -13,8 +13,8 @@ namespace cn
 
 					void Watcher::update(WaterQualitySubject *subject)
 					{
-						//ÕâÀï²ÉÓÃµÄÊÇÀ­µÄ·½Ê½
-						puts(job+"»ñÈ¡µ½Í¨Öª£¬µ±Ç°ÎÛÈ¾¼¶±ðÎª£º"+subject->getPolluteLevel());
+						//è¿™é‡Œé‡‡ç”¨çš„æ˜¯æ‹‰çš„æ–¹å¼
+						puts(job+"èŽ·å–åˆ°é€šçŸ¥ï¼Œå½“å‰æ±¡æŸ“çº§åˆ«ä¸ºï¼š"+subject->getPolluteLevel());
 					}
 
 					std::string Watcher::getJob()

@@ -13,7 +13,7 @@ namespace cn
 
 					double NormalCustomerStrategy::calcPrice(double goodsPrice)
 					{
-						puts("对于新客户或者是普通客户，没有折扣");
+						puts("瀵逛簬鏂板鎴锋垨鑰呮槸鏅�氬鎴凤紝娌℃湁鎶樻墸");
 						return goodsPrice;
 					}
 				}

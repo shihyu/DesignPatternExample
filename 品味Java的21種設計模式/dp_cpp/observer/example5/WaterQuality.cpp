@@ -19,36 +19,36 @@ namespace cn
 					void WaterQuality::setPolluteLevel(int polluteLevel)
 					{
 						this->polluteLevel = polluteLevel;
-						//Í¨ÖªÏàÓ¦µÄ¹Û²ìÕß
+						//é€šçŸ¥ç›¸åº”çš„è§‚å¯Ÿè€…
 						this->notifyWatchers();
 					}
 
 					void WaterQuality::notifyWatchers()
 					{
-						//Ñ­»·ËùÓÐ×¢²áµÄ¹Û²ìÕß
+						//å¾ªçŽ¯æ‰€æœ‰æ³¨å†Œçš„è§‚å¯Ÿè€…
 						for (std::vector<WatcherObserver*>::const_iterator watcher = observers.begin(); watcher != observers.end(); ++watcher)
 						{
-										//¿ªÊ¼¸ù¾ÝÎÛÈ¾¼¶±ðÅÐ¶ÏÊÇ·ñÐèÒªÍ¨Öª£¬ÓÉÕâÀï×Ü¿Ø
+										//å¼€å§‹æ ¹æ®æ±¡æŸ“çº§åˆ«åˆ¤æ–­æ˜¯å¦éœ€è¦é€šçŸ¥ï¼Œç”±è¿™é‡Œæ€»æŽ§
 										if(this->polluteLevel >= 0)
 										{
-											//Í¨Öª¼à²âÔ±×ö¼ÇÂ¼
-											if((new std::string("¼à²âÈËÔ±"))->equals((*watcher)->getJob()))
+											//é€šçŸ¥ç›‘æµ‹å‘˜åšè®°å½•
+											if((new std::string("ç›‘æµ‹äººå‘˜"))->equals((*watcher)->getJob()))
 											{
 												(*watcher)->update(this);
 											}
 										}
 										if(this->polluteLevel >= 1)
 										{
-											//Í¨ÖªÔ¤¾¯ÈËÔ±
-											if((new std::string("Ô¤¾¯ÈËÔ±"))->equals((*watcher)->getJob()))
+											//é€šçŸ¥é¢„è­¦äººå‘˜
+											if((new std::string("é¢„è­¦äººå‘˜"))->equals((*watcher)->getJob()))
 											{
 												(*watcher)->update(this);
 											}
 										}
 										if(this->polluteLevel >= 2)
 										{
-											//Í¨Öª¼à²â²¿ÃÅÁìµ¼
-											if((new std::string("¼à²â²¿ÃÅÁìµ¼"))->equals((*watcher)->getJob()))
+											//é€šçŸ¥ç›‘æµ‹éƒ¨é—¨é¢†å¯¼
+											if((new std::string("ç›‘æµ‹éƒ¨é—¨é¢†å¯¼"))->equals((*watcher)->getJob()))
 											{
 												(*watcher)->update(this);
 											}

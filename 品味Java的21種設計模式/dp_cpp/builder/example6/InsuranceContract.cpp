@@ -51,7 +51,7 @@ namespace cn
 //JAVA TO C++ CONVERTER TODO TASK: There is no direct native C++ equivalent to the Java String 'trim' method:
 						if(contractId == "" || contractId.trim()->length()==0)
 						{
-							throw new IllegalArgumentException("ºÏÍ¬±àºÅ²»ÄÜÎª¿Õ");
+							throw new IllegalArgumentException("åˆåŒç¼–å·ä¸èƒ½ä¸ºç©º");
 						}
 //JAVA TO C++ CONVERTER TODO TASK: There is no direct native C++ equivalent to the Java String 'trim' method:
 						bool signPerson = personName!="" && personName.trim()->length()>0;
@@ -59,23 +59,23 @@ namespace cn
 						bool signCompany = companyName!="" && companyName.trim()->length()>0;
 						if(signPerson && signCompany)
 						{
-							throw new IllegalArgumentException("Ò»·İ±£ÏÕºÏÍ¬²»ÄÜÍ¬Ê±ÓëÈËºÍ¹«Ë¾Ç©¶©");
+							throw new IllegalArgumentException("ä¸€ä»½ä¿é™©åˆåŒä¸èƒ½åŒæ—¶ä¸äººå’Œå…¬å¸ç­¾è®¢");
 						}
 						if(signPerson==false && signCompany==false)
 						{
-							throw new IllegalArgumentException("Ò»·İ±£ÏÕºÏÍ¬²»ÄÜÃ»ÓĞÇ©¶©¶ÔÏó");
+							throw new IllegalArgumentException("ä¸€ä»½ä¿é™©åˆåŒä¸èƒ½æ²¡æœ‰ç­¾è®¢å¯¹è±¡");
 						}
 						if(beginDate<=0)
 						{
-							throw new IllegalArgumentException("ºÏÍ¬±ØĞëÓĞ±£ÏÕ¿ªÊ¼ÉúĞ§µÄÈÕÆÚ");
+							throw new IllegalArgumentException("åˆåŒå¿…é¡»æœ‰ä¿é™©å¼€å§‹ç”Ÿæ•ˆçš„æ—¥æœŸ");
 						}
 						if(endDate<=0)
 						{
-							throw new IllegalArgumentException("ºÏÍ¬±ØĞëÓĞ±£ÏÕÊ§Ğ§µÄÈÕÆÚ");
+							throw new IllegalArgumentException("åˆåŒå¿…é¡»æœ‰ä¿é™©å¤±æ•ˆçš„æ—¥æœŸ");
 						}
 						if(endDate<=beginDate)
 						{
-							throw new IllegalArgumentException("±£ÏÕÊ§Ğ§µÄÈÕÆÚ±ØĞë´óÓÚ±£ÏÕÉúĞ§ÈÕÆÚ");
+							throw new IllegalArgumentException("ä¿é™©å¤±æ•ˆçš„æ—¥æœŸå¿…é¡»å¤§äºä¿é™©ç”Ÿæ•ˆæ—¥æœŸ");
 						}
 
 						return new InsuranceContract(this);

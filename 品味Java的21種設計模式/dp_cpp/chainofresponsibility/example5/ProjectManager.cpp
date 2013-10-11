@@ -15,39 +15,39 @@ namespace cn
 					{
 						if(FeeRequestModel::FEE_TYPE.equals(rm->getType()))
 						{
-							//±íÊ¾¾Û²Í·ÑÓÃÉêÇë
+							//è¡¨ç¤ºèšé¤è´¹ç”¨ç”³è¯·
 							return handleFeeRequest(rm);
 						}
 						else
 						{
-							//ÆäËûµÄÏîÄ¿¾­ÀíÔİÊ±²»Ïë´¦Àí
+							//å…¶ä»–çš„é¡¹ç›®ç»ç†æš‚æ—¶ä¸æƒ³å¤„ç†
 							return Handler::handleRequest(rm);
 						}
 					}
 
 					object *ProjectManager::handleFeeRequest(RequestModel *rm)
 					{
-						//ÏÈ°ÑÍ¨ÓÃµÄ¶ÔÏóÔìĞÍ»ØÀ´
+						//å…ˆæŠŠé€šç”¨çš„å¯¹è±¡é€ å‹å›æ¥
 						FeeRequestModel *frm = static_cast<FeeRequestModel*>(rm);
 						std::string str = "";
-						//ÏîÄ¿¾­ÀíµÄÈ¨ÏŞ±È½ÏĞ¡£¬Ö»ÄÜÔÚ500ÒÔÄÚ
+						//é¡¹ç›®ç»ç†çš„æƒé™æ¯”è¾ƒå°ï¼Œåªèƒ½åœ¨500ä»¥å†…
 						if(frm->getFee() < 500)
 						{
-							//ÎªÁË²âÊÔ£¬¼òµ¥µã£¬Ö»Í¬ÒâĞ¡ÀîµÄ
-							if((new std::string("Ğ¡Àî"))->equals(frm->getUser()))
+							//ä¸ºäº†æµ‹è¯•ï¼Œç®€å•ç‚¹ï¼ŒåªåŒæ„å°æçš„
+							if((new std::string("å°æ"))->equals(frm->getUser()))
 							{
-								str = "ÏîÄ¿¾­ÀíÍ¬Òâ"+frm->getUser()+"¾Û²Í·ÑÓÃ"+frm->getFee()+"ÔªµÄÇëÇó";
+								str = "é¡¹ç›®ç»ç†åŒæ„"+frm->getUser()+"èšé¤è´¹ç”¨"+frm->getFee()+"å…ƒçš„è¯·æ±‚";
 							}
 							else
 							{
-								//ÆäËûÈËÒ»ÂÉ²»Í¬Òâ
-								str = "ÏîÄ¿¾­Àí²»Í¬Òâ"+frm->getUser()+"¾Û²Í·ÑÓÃ"+frm->getFee()+"ÔªµÄÇëÇó";
+								//å…¶ä»–äººä¸€å¾‹ä¸åŒæ„
+								str = "é¡¹ç›®ç»ç†ä¸åŒæ„"+frm->getUser()+"èšé¤è´¹ç”¨"+frm->getFee()+"å…ƒçš„è¯·æ±‚";
 							}
 							return str;
 						}
 						else
 						{
-							//³¬¹ı500£¬¼ÌĞø´«µİ¸ø¼¶±ğ¸ü¸ßµÄÈË´¦Àí
+							//è¶…è¿‡500ï¼Œç»§ç»­ä¼ é€’ç»™çº§åˆ«æ›´é«˜çš„äººå¤„ç†
 							if(this->successor!=0)
 							{
 								return successor->handleRequest(rm);

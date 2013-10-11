@@ -1,4 +1,5 @@
 #include "MSIMainboard.h"
+#include <iostream>
 
 namespace cn
 {
@@ -18,7 +19,7 @@ namespace cn
 
 					void MSIMainboard::installCPU()
 					{
-						puts("now in MSIMainboard,cpuHoles="+cpuHoles);
+                        std::cout << "now in MSIMainboard,cpuHoles=" << cpuHoles << std::endl;
 					}
 				}
 			}

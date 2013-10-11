@@ -13,7 +13,7 @@ namespace cn
 
 					void DollarCash::pay(PaymentContext *ctx)
 					{
-						puts("ÏÖÔÚ¸ø"+ctx->getUserName()+"ÃÀÔªÏÖ½ðÖ§¸¶"+ctx->getMoney()+"Ôª");
+						puts("çŽ°åœ¨ç»™"+ctx->getUserName()+"ç¾Žå…ƒçŽ°é‡‘æ”¯ä»˜"+ctx->getMoney()+"å…ƒ");
 					}
 				}
 			}

@@ -13,16 +13,16 @@ namespace cn
 
 					void OrderClient::main(std::string args[])
 					{
-						//´´½¨¶©µ¥¶ÔÏó£¬ÕâÀïÎªÁËÑÝÊ¾¼òµ¥£¬Ö±½ÓnewÁË
+						//åˆ›å»ºè®¢å•å¯¹è±¡ï¼Œè¿™é‡Œä¸ºäº†æ¼”ç¤ºç®€å•ï¼Œç›´æŽ¥newäº†
 						PersonalOrder *op = new PersonalOrder();
-						//ÉèÖÃ¶©µ¥Êý¾Ý
+						//è®¾ç½®è®¢å•æ•°æ®
 						op->setOrderProductNum(2925);
-						op->setCustomerName("ÕÅÈý");
+						op->setCustomerName("å¼ ä¸‰");
 						op->setProductId("P0001");
 
-						//ÕâÀï»ñÈ¡ÒµÎñ´¦ÀíµÄÀà£¬Ò²Ö±½ÓnewÁË£¬ÎªÁË¼òµ¥£¬Á¬ÒµÎñ½Ó¿Ú¶¼Ã»ÓÐ×ö
+						//è¿™é‡ŒèŽ·å–ä¸šåŠ¡å¤„ç†çš„ç±»ï¼Œä¹Ÿç›´æŽ¥newäº†ï¼Œä¸ºäº†ç®€å•ï¼Œè¿žä¸šåŠ¡æŽ¥å£éƒ½æ²¡æœ‰åš
 						OrderBusiness *ob = new OrderBusiness();
-						//µ÷ÓÃÒµÎñÀ´±£´æ¶©µ¥¶ÔÏó
+						//è°ƒç”¨ä¸šåŠ¡æ¥ä¿å­˜è®¢å•å¯¹è±¡
 						ob->saveOrder(op);
 					}
 				}

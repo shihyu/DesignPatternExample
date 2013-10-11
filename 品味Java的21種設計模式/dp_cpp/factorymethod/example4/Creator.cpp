@@ -13,7 +13,7 @@ namespace cn
 
 					void Creator::someOperation()
 					{
-						//ÔÚÕâÀïÊ¹ÓÃ¹¤³§·½·¨
+						//åœ¨è¿™é‡Œä½¿ç”¨å·¥å‚æ–¹æ³•
 						Product *p = factoryMethod();
 					}
 				}

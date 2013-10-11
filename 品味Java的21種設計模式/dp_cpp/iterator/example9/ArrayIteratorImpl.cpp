@@ -18,7 +18,7 @@ namespace cn
 
 					bool ArrayIteratorImpl::hasNext()
 					{
-						//ÅĞ¶ÏÊÇ·ñ»¹ÓĞÏÂÒ»¸öÔªËØ
+						//åˆ¤æ–­æ˜¯å¦è¿˜æœ‰ä¸‹ä¸€ä¸ªå…ƒç´ 
 						if(pms!=0 && index<=(sizeof(pms) / sizeof(pms[0])-1))
 						{
 							return true;
@@ -38,20 +38,20 @@ namespace cn
 					Collection *ArrayIteratorImpl::getPage(int pageNum, int pageShow)
 					{
 						Collection *col = std::vector();
-						//ĞèÒªÔÚÕâÀïÏÈ¼ÆËãĞèÒª»ñÈ¡µÄÊı¾İµÄ¿ªÊ¼ÌõÊıºÍ½áÊøÌõÊı
+						//éœ€è¦åœ¨è¿™é‡Œå…ˆè®¡ç®—éœ€è¦è·å–çš„æ•°æ®çš„å¼€å§‹æ¡æ•°å’Œç»“æŸæ¡æ•°
 						int start = (pageNum-1)*pageShow;
 						int end = start + pageShow-1;
-						//¿ØÖÆstartµÄ±ß½ç£¬×îĞ¡ÊÇ0
+						//æ§åˆ¶startçš„è¾¹ç•Œï¼Œæœ€å°æ˜¯0
 						if(start < 0)
 						{
 							start = 0;
 						}
-						//¿ØÖÆendµÄ±ß½ç£¬×î´óÊÇÊı×éµÄ×î´óË÷Òı
+						//æ§åˆ¶endçš„è¾¹ç•Œï¼Œæœ€å¤§æ˜¯æ•°ç»„çš„æœ€å¤§ç´¢å¼•
 						if(end > sizeof(this->pms) / sizeof(this->pms[0])-1)
 						{
 							end = sizeof(this->pms) / sizeof(this->pms[0]) - 1;
 						}
-						//Ã¿´ÎÈ¡Öµ¶¼ÊÇ´ÓÍ·¿ªÊ¼Ñ­»·£¬ËùÒÔÉèÖÃindexÎª0
+						//æ¯æ¬¡å–å€¼éƒ½æ˜¯ä»å¤´å¼€å§‹å¾ªç¯ï¼Œæ‰€ä»¥è®¾ç½®indexä¸º0
 						index = 0;
 						while(hasNext() && index<=end)
 						{
@@ -59,7 +59,7 @@ namespace cn
 							{
 								col->add(pms[index]);
 							}
-							//°ÑÒÑ·ÃÎÊË÷Òı¼Ó1
+							//æŠŠå·²è®¿é—®ç´¢å¼•åŠ 1
 							index++;
 						}
 						return col;

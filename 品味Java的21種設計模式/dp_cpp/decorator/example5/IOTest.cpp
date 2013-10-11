@@ -13,16 +13,16 @@ namespace cn
 
 					void IOTest::main(std::string args[]) throw(Exception)
 					{
-						//流式读取文件
+						//娴佸紡璇诲彇鏂囦欢
 						DataInputStream *din = 0;
 						try
 						{
 							din = new DataInputStream(new BufferedInputStream(new FileInputStream("IOTest.txt")));
-							//然后就可以获取文件内容了
+							//鐒跺悗灏卞彲浠ヨ幏鍙栨枃浠跺唴瀹逛簡
 							char bs[din->available()];
 							din->read(bs);
 							std::string content = std::string(bs);
-							puts("文件内容===="+content);
+							puts("鏂囦欢鍐呭===="+content);
 						}
 //JAVA TO C++ CONVERTER TODO TASK: There is no native C++ equivalent to the exception 'finally' clause:
 						finally

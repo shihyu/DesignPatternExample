@@ -17,40 +17,40 @@ namespace cn
 
 					void OrderProxy::setProductName(std::string productName, std::string user)
 					{
-						//¿ØÖÆ·ÃÎÊÈ¨ÏŞ£¬Ö»ÓĞ´´½¨¶©µ¥µÄÈËÔ±²ÅÄÜ¹»ĞŞ¸Ä
+						//æ§åˆ¶è®¿é—®æƒé™ï¼Œåªæœ‰åˆ›å»ºè®¢å•çš„äººå‘˜æ‰èƒ½å¤Ÿä¿®æ”¹
 						if(user!="" && user.equals(this->getOrderUser()))
 						{
 							Order::setProductName(productName, user);
 						}
 						else
 						{
-							puts("¶Ô²»Æğ"+user+"£¬ÄúÎŞÈ¨ĞŞ¸Ä¶©µ¥ÖĞµÄ²úÆ·Ãû³Æ¡£");
+							puts("å¯¹ä¸èµ·"+user+"ï¼Œæ‚¨æ— æƒä¿®æ”¹è®¢å•ä¸­çš„äº§å“åç§°ã€‚");
 						}
 					}
 
 					void OrderProxy::setOrderNum(int orderNum, std::string user)
 					{
-						//¿ØÖÆ·ÃÎÊÈ¨ÏŞ£¬Ö»ÓĞ´´½¨¶©µ¥µÄÈËÔ±²ÅÄÜ¹»ĞŞ¸Ä
+						//æ§åˆ¶è®¿é—®æƒé™ï¼Œåªæœ‰åˆ›å»ºè®¢å•çš„äººå‘˜æ‰èƒ½å¤Ÿä¿®æ”¹
 						if(user!="" && user.equals(this->getOrderUser()))
 						{
 							Order::setOrderNum(orderNum, user);
 						}
 						else
 						{
-							puts("¶Ô²»Æğ"+user+"£¬ÄúÎŞÈ¨ĞŞ¸Ä¶©µ¥ÖĞµÄ¶©¹ºÊıÁ¿¡£");
+							puts("å¯¹ä¸èµ·"+user+"ï¼Œæ‚¨æ— æƒä¿®æ”¹è®¢å•ä¸­çš„è®¢è´­æ•°é‡ã€‚");
 						}
 					}
 
 					void OrderProxy::setOrderUser(std::string orderUser, std::string user)
 					{
-						//¿ØÖÆ·ÃÎÊÈ¨ÏŞ£¬Ö»ÓĞ´´½¨¶©µ¥µÄÈËÔ±²ÅÄÜ¹»ĞŞ¸Ä
+						//æ§åˆ¶è®¿é—®æƒé™ï¼Œåªæœ‰åˆ›å»ºè®¢å•çš„äººå‘˜æ‰èƒ½å¤Ÿä¿®æ”¹
 						if(user!="" && user.equals(this->getOrderUser()))
 						{
 							Order::setOrderUser(orderUser, user);
 						}
 						else
 						{
-							puts("¶Ô²»Æğ"+user+"£¬ÄúÎŞÈ¨ĞŞ¸Ä¶©µ¥ÖĞµÄ¶©¹ºÈË¡£");
+							puts("å¯¹ä¸èµ·"+user+"ï¼Œæ‚¨æ— æƒä¿®æ”¹è®¢å•ä¸­çš„è®¢è´­äººã€‚");
 						}
 					}
 

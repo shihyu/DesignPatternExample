@@ -13,26 +13,26 @@ namespace cn
 
 					void Client::main(std::string args[])
 					{
-						//×¼±¸ÈÕÖ¾ÄÚÈİ£¬Ò²¾ÍÊÇ²âÊÔµÄÊı¾İ
+						//å‡†å¤‡æ—¥å¿—å†…å®¹ï¼Œä¹Ÿå°±æ˜¯æµ‹è¯•çš„æ•°æ®
 						LogModel *lm1 = new LogModel();
 						lm1->setLogId("001");
 						lm1->setOperateUser("admin");
 						lm1->setOperateTime("2010-03-02 10:08:18");
-						lm1->setLogContent("ÕâÊÇÒ»¸ö²âÊÔ");
+						lm1->setLogContent("è¿™æ˜¯ä¸€ä¸ªæµ‹è¯•");
 
 						std::vector<LogModel*> list = std::vector<LogModel*>();
 						list.push_back(lm1);
 
-						//´´½¨²Ù×÷ÈÕÖ¾ÎÄ¼şµÄ¶ÔÏó
+						//åˆ›å»ºæ“ä½œæ—¥å¿—æ–‡ä»¶çš„å¯¹è±¡
 						LogFileOperateApi *logFileApi = new LogFileOperate("");
 
-						//´´½¨ĞÂ°æµÄ²Ù×÷ÈÕÖ¾µÄ½Ó¿Ú¶ÔÏó
+						//åˆ›å»ºæ–°ç‰ˆçš„æ“ä½œæ—¥å¿—çš„æ¥å£å¯¹è±¡
 						LogDbOperateApi *api = new Adapter(logFileApi);
 
-						//±£´æÈÕÖ¾ÎÄ¼ş
+						//ä¿å­˜æ—¥å¿—æ–‡ä»¶
 						api->createLog(lm1);
 
-						//¶ÁÈ¡ÈÕÖ¾ÎÄ¼şµÄÄÚÈİ
+						//è¯»å–æ—¥å¿—æ–‡ä»¶çš„å†…å®¹
 						std::vector<LogModel*> allLog = api->getAllLog();
 						puts("allLog="+allLog);
 					}

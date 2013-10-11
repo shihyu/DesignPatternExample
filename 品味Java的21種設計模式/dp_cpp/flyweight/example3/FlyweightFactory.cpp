@@ -25,7 +25,7 @@ namespace cn
 					Flyweight *FlyweightFactory::getFlyweight(std::string key)
 					{
 						Flyweight *f = fsMap->get(key);
-						//»»Ò»¸ö¸ü¼òµ¥µãµÄĞ´·¨
+						//æ¢ä¸€ä¸ªæ›´ç®€å•ç‚¹çš„å†™æ³•
 						if(f==0)
 						{
 							f = new AuthorizationFlyweight(key);

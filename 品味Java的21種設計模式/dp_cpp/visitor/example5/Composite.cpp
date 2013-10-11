@@ -13,12 +13,12 @@ namespace cn
 
 					void Composite::accept(Visitor *visitor)
 					{
-						//�ص������߶������Ӧ����
+						//回调访问者对象的相应方法
 						visitor->visitComposite(this);
-						//ѭ����Ԫ�أ�����Ԫ��Ҳ���ܷ���
+						//循环子元素，让子元素也接受访问
 						for (std::vector<Component*>::const_iterator c = childComponents.begin(); c != childComponents.end(); ++c)
 						{
-							//�����Ӷ�����ܷ��ʣ�����ʵ�ֵݹ�
+							//调用子对象接受访问，变相实现递归
 							(*c)->accept(visitor);
 						}
 					}

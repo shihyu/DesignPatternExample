@@ -17,11 +17,11 @@ namespace cn
 
 					bool CheckDecorator::sale(std::string user, std::string customer, SaleModel *saleModel)
 					{
-						//¼òµ¥µã£¬Ö»ÈÃÕÅÈıÖ´ĞĞÕâ¸ö¹¦ÄÜ
-						if(!(new std::string("ÕÅÈı"))->equals(user))
+						//ç®€å•ç‚¹ï¼Œåªè®©å¼ ä¸‰æ‰§è¡Œè¿™ä¸ªåŠŸèƒ½
+						if(!(new std::string("å¼ ä¸‰"))->equals(user))
 						{
-							puts("¶Ô²»Æğ"+user+"£¬ÄãÃ»ÓĞ±£´æÏúÊÛµ¥µÄÈ¨ÏŞ");
-							//¾Í²»ÔÙµ÷ÓÃ±»×°ÊÎ¶ÔÏóµÄ¹¦ÄÜÁË
+							puts("å¯¹ä¸èµ·"+user+"ï¼Œä½ æ²¡æœ‰ä¿å­˜é”€å”®å•çš„æƒé™");
+							//å°±ä¸å†è°ƒç”¨è¢«è£…é¥°å¯¹è±¡çš„åŠŸèƒ½äº†
 							return false;
 						}
 						else

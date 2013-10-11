@@ -13,32 +13,32 @@ namespace cn
 
 					void Client::main(std::string args[])
 					{
-						//´´½¨¾ßÌåµÄÊµÏÖ¶ÔÏó
+						//åˆ›å»ºå…·ä½“çš„å®ç°å¯¹è±¡
 						MessageImplementor *impl = new MessageSMS();
 
-						//´´½¨Ò»¸öÆÕÍ¨ÏûÏ¢¶ÔÏó
+						//åˆ›å»ºä¸€ä¸ªæ™®é€šæ¶ˆæ¯å¯¹è±¡
 						AbstractMessage *m = new CommonMessage(impl);
-						m->sendMessage("ÇëºÈÒ»±­²è", "Ğ¡Àî");
+						m->sendMessage("è¯·å–ä¸€æ¯èŒ¶", "å°æ");
 
-						//´´½¨Ò»¸ö½ô¼±ÏûÏ¢¶ÔÏó
+						//åˆ›å»ºä¸€ä¸ªç´§æ€¥æ¶ˆæ¯å¯¹è±¡
 						m = new UrgencyMessage(impl);
-						m->sendMessage("ÇëºÈÒ»±­²è", "Ğ¡Àî");
+						m->sendMessage("è¯·å–ä¸€æ¯èŒ¶", "å°æ");
 
-						//´´½¨Ò»¸öÌØ¼±ÏûÏ¢¶ÔÏó
+						//åˆ›å»ºä¸€ä¸ªç‰¹æ€¥æ¶ˆæ¯å¯¹è±¡
 						m = new SpecialUrgencyMessage(impl);
-						m->sendMessage("ÇëºÈÒ»±­²è", "Ğ¡Àî");
+						m->sendMessage("è¯·å–ä¸€æ¯èŒ¶", "å°æ");
 
-						//°ÑÊµÏÖ·½Ê½ÇĞ»»³ÉÊÖ»ú¶ÌÏûÏ¢£¬È»ºóÔÙÊµÏÖÒ»±é
+						//æŠŠå®ç°æ–¹å¼åˆ‡æ¢æˆæ‰‹æœºçŸ­æ¶ˆæ¯ï¼Œç„¶åå†å®ç°ä¸€é
 						impl = new MessageMobile();
 
 						m = new CommonMessage(impl);
-						m->sendMessage("ÇëºÈÒ»±­²è", "Ğ¡Àî");
+						m->sendMessage("è¯·å–ä¸€æ¯èŒ¶", "å°æ");
 
 						m = new UrgencyMessage(impl);
-						m->sendMessage("ÇëºÈÒ»±­²è", "Ğ¡Àî");
+						m->sendMessage("è¯·å–ä¸€æ¯èŒ¶", "å°æ");
 
 						m = new SpecialUrgencyMessage(impl);
-						m->sendMessage("ÇëºÈÒ»±­²è", "Ğ¡Àî");
+						m->sendMessage("è¯·å–ä¸€æ¯èŒ¶", "å°æ");
 					}
 				}
 			}

@@ -13,7 +13,7 @@ namespace cn
 
 					void ConcreteImplementorB::operationImpl()
 					{
-						//ÕæÕıµÄÊµÏÖ
+						//çœŸæ­£çš„å®ç°
 					}
 				}
 			}

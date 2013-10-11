@@ -17,10 +17,10 @@ namespace cn
 
 					TempDB::TempDB()
 					{
-						//填充测试数据
-						mapMonthSaleMoney->put("张三",10000.0);
-						mapMonthSaleMoney->put("李四",20000.0);
-						mapMonthSaleMoney->put("王五",30000.0);
+						//濉厖娴嬭瘯鏁版嵁
+						mapMonthSaleMoney->put("寮犱笁",10000.0);
+						mapMonthSaleMoney->put("鏉庡洓",20000.0);
+						mapMonthSaleMoney->put("鐜嬩簲",30000.0);
 					}
 				}
 			}

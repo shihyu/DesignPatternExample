@@ -13,8 +13,8 @@ namespace cn
 
 					bool ExportTxtFile::export(std::string data)
 					{
-						//¼òµ¥Ê¾ÒâÒ»ÏÂ£¬ÕâÀïĞèÒª²Ù×÷ÎÄ¼ş
-						puts("µ¼³öÊı¾İ"+data+"µ½ÎÄ±¾ÎÄ¼ş");
+						//ç®€å•ç¤ºæ„ä¸€ä¸‹ï¼Œè¿™é‡Œéœ€è¦æ“ä½œæ–‡ä»¶
+						puts("å¯¼å‡ºæ•°æ®"+data+"åˆ°æ–‡æœ¬æ–‡ä»¶");
 						return true;
 					}
 				}

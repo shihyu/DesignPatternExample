@@ -23,10 +23,10 @@ namespace cn
 
 					void Reader::update(Observable *o, object *obj)
 					{
-						//这是采用推的方式
-						puts(name+"收到报纸了，阅读先。目标推过来的内容是==="+obj);
-						//这是获取拉的数据
-						puts(name+"收到报纸了，阅读先。主动到目标对象去拉的内容是===" +(static_cast<NewsPaper*>(o))->getContent());
+						//杩欐槸閲囩敤鎺ㄧ殑鏂瑰紡
+						puts(name+"鏀跺埌鎶ョ焊浜嗭紝闃呰鍏堛�傜洰鏍囨帹杩囨潵鐨勫唴瀹规槸==="+obj);
+						//杩欐槸鑾峰彇鎷夌殑鏁版嵁
+						puts(name+"鏀跺埌鎶ョ焊浜嗭紝闃呰鍏堛�備富鍔ㄥ埌鐩爣瀵硅薄鍘绘媺鐨勫唴瀹规槸===" +(static_cast<NewsPaper*>(o))->getContent());
 					}
 				}
 			}

@@ -13,7 +13,7 @@ namespace cn
 
 					void HotCook::cook(std::string name)
 					{
-						puts("±¾³øÊ¦ÕıÔÚ×ö£º"+name);
+						puts("æœ¬å¨å¸ˆæ­£åœ¨åšï¼š"+name);
 					}
 				}
 			}

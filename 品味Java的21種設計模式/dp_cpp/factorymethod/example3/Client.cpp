@@ -13,10 +13,10 @@ namespace cn
 
 					void Client::main(std::string args[])
 					{
-						//´´½¨ÐèÒªÊ¹ÓÃµÄCreator¶ÔÏó
+						//åˆ›å»ºéœ€è¦ä½¿ç”¨çš„Creatorå¯¹è±¡
 						ExportOperate *operate = new ExportDBOperate();
-						//µ÷ÓÃÊä³öÊý¾ÝµÄ¹¦ÄÜ·½·¨
-						operate->export("²âÊÔÊý¾Ý");
+						//è°ƒç”¨è¾“å‡ºæ•°æ®çš„åŠŸèƒ½æ–¹æ³•
+						operate->export("æµ‹è¯•æ•°æ®");
 					}
 				}
 			}

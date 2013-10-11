@@ -17,14 +17,14 @@ namespace cn
 
 					void SpecialUrgencyMessage::hurry(std::string messageId)
 					{
-						//Ö´ĞĞ´ß´ÙµÄÒµÎñ£¬·¢³ö´ß´ÙµÄĞÅÏ¢
+						//æ‰§è¡Œå‚¬ä¿ƒçš„ä¸šåŠ¡ï¼Œå‘å‡ºå‚¬ä¿ƒçš„ä¿¡æ¯
 					}
 
 					void SpecialUrgencyMessage::sendMessage(std::string message, std::string toUser)
 					{
-						message = "ÌØ¼±£º"+message;
+						message = "ç‰¹æ€¥ï¼š"+message;
 						AbstractMessage::sendMessage(message, toUser);
-						//»¹ĞèÒªÔö¼ÓÒ»Ìõ´ı´ß´ÙµÄĞÅÏ¢
+						//è¿˜éœ€è¦å¢åŠ ä¸€æ¡å¾…å‚¬ä¿ƒçš„ä¿¡æ¯
 					}
 				}
 			}

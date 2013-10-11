@@ -13,19 +13,19 @@ namespace cn
 
 					void Client::main(std::string args[])
 					{
-						//´´½¨ObjectStructure
+						//åˆ›å»ºObjectStructure
 						ObjectStructure *os = new ObjectStructure();
-						//´´½¨Òª¼ÓÈë¶ÔÏó½á¹¹µÄÔªËØ
+						//åˆ›å»ºè¦åŠ å…¥å¯¹è±¡ç»“æž„çš„å…ƒç´ 
 						Element *eleA = new ConcreteElementA();
 						Element *eleB = new ConcreteElementB();
-						//°ÑÔªËØ¼ÓÈë¶ÔÏó½á¹¹
+						//æŠŠå…ƒç´ åŠ å…¥å¯¹è±¡ç»“æž„
 						os->addElement(eleA);
 						os->addElement(eleB);
 
-						//´´½¨·ÃÎÊÕß
+						//åˆ›å»ºè®¿é—®è€…
 						Visitor *visitor = new ConcreteVisitor1();
 
-						//µ÷ÓÃÒµÎñ´¦ÀíµÄ·½·¨
+						//è°ƒç”¨ä¸šåŠ¡å¤„ç†çš„æ–¹æ³•
 						os->handleRequest(visitor);
 					}
 				}

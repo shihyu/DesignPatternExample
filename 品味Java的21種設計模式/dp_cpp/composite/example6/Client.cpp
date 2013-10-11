@@ -13,16 +13,16 @@ namespace cn
 
 					void Client::main(std::string args[])
 					{
-						//¶¨ÒåËùÓÐµÄ×éºÏ¶ÔÏó
-						Component *root = new Composite("·þ×°");
-						Component *c1 = new Composite("ÄÐ×°");
-						Component *c2 = new Composite("Å®×°");
-						//¶¨ÒåËùÓÐµÄÒ¶×Ó¶ÔÏó
-						Component *leaf1 = new Leaf("³ÄÒÂ");
-						Component *leaf2 = new Leaf("¼Ð¿Ë");
-						Component *leaf3 = new Leaf("È¹×Ó");
-						Component *leaf4 = new Leaf("Ì××°");
-						//°´ÕÕÊ÷µÄ½á¹¹À´×éºÏ×éºÏ¶ÔÏóºÍÒ¶×Ó¶ÔÏó
+						//å®šä¹‰æ‰€æœ‰çš„ç»„åˆå¯¹è±¡
+						Component *root = new Composite("æœè£…");
+						Component *c1 = new Composite("ç”·è£…");
+						Component *c2 = new Composite("å¥³è£…");
+						//å®šä¹‰æ‰€æœ‰çš„å¶å­å¯¹è±¡
+						Component *leaf1 = new Leaf("è¡¬è¡£");
+						Component *leaf2 = new Leaf("å¤¹å…‹");
+						Component *leaf3 = new Leaf("è£™å­");
+						Component *leaf4 = new Leaf("å¥—è£…");
+						//æŒ‰ç…§æ ‘çš„ç»“æž„æ¥ç»„åˆç»„åˆå¯¹è±¡å’Œå¶å­å¯¹è±¡
 						root->addChild(c1);
 						root->addChild(c2);
 						c1->addChild(leaf1);
@@ -30,14 +30,14 @@ namespace cn
 						c2->addChild(leaf3);
 						c2->addChild(leaf4);
 
-						//µ÷ÓÃ¸ù¶ÔÏóµÄÊä³ö¹¦ÄÜÀ´Êä³öÕû¿ÃÊ÷
+						//è°ƒç”¨æ ¹å¯¹è±¡çš„è¾“å‡ºåŠŸèƒ½æ¥è¾“å‡ºæ•´æ£µæ ‘
 						root->printStruct("");
 
 						puts("---------------------------->");
 
-						//È»ºóÉ¾³ýÒ»¸ö½Úµã
+						//ç„¶åŽåˆ é™¤ä¸€ä¸ªèŠ‚ç‚¹
 						root->removeChild(c1);
-						//ÖØÐÂÊä³öÕû¿ÃÊ÷
+						//é‡æ–°è¾“å‡ºæ•´æ£µæ ‘
 						root->printStruct("");
 					}
 				}

@@ -13,8 +13,8 @@ namespace cn
 
 					void Reader::update(std::string content)
 					{
-						//这是采用推的方式
-						puts(name+"收到报纸了，阅读先。内容是==="+content);
+						//杩欐槸閲囩敤鎺ㄧ殑鏂瑰紡
+						puts(name+"鏀跺埌鎶ョ焊浜嗭紝闃呰鍏堛�傚唴瀹规槸==="+content);
 					}
 
 					std::string Reader::getName()

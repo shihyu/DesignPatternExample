@@ -13,7 +13,7 @@ namespace cn
 
 					FlyweightFactory::FlyweightFactory()
 					{
-						//Æô¶¯Çå³ı»º´æÖµµÄÏß³Ì
+						//å¯åŠ¨æ¸…é™¤ç¼“å­˜å€¼çš„çº¿ç¨‹
 						InitializeInstanceFields();
 						Thread *t = new ClearCache();
 						t->start();
@@ -37,14 +37,14 @@ namespace cn
 					Flyweight *FlyweightFactory::getFlyweight(std::string key)
 					{
 						Flyweight *f = fsMap->get(key);
-						//»»Ò»¸ö¸ü¼òµ¥µãµÄĞ´·¨
+						//æ¢ä¸€ä¸ªæ›´ç®€å•ç‚¹çš„å†™æ³•
 						if(f==0)
 						{
 							f = new AuthorizationFlyweight(key);
 							fsMap->put(key,f);
-							//Í¬Ê±ÉèÖÃÒıÓÃ¼ÆÊı
+							//åŒæ—¶è®¾ç½®å¼•ç”¨è®¡æ•°
 							countMap->put(key, 1);
-							//Í¬Ê±ÉèÖÃ»º´æÅäÖÃÊı¾İ
+							//åŒæ—¶è®¾ç½®ç¼“å­˜é…ç½®æ•°æ®
 							CacheConfModel *cm = new CacheConfModel();
 							cm->setBeginTime(System::currentTimeMillis());
 							cm->setForever(false);
@@ -54,12 +54,12 @@ namespace cn
 						}
 						else
 						{
-							//±íÊ¾»¹ÔÚÊ¹ÓÃ£¬ÄÇÃ´Ó¦¸ÃÖØĞÂÉèÖÃ»º´æÅäÖÃ
+							//è¡¨ç¤ºè¿˜åœ¨ä½¿ç”¨ï¼Œé‚£ä¹ˆåº”è¯¥é‡æ–°è®¾ç½®ç¼“å­˜é…ç½®
 							CacheConfModel *cm = cacheConfMap->get(key);
 							cm->setBeginTime(System::currentTimeMillis());
-							//ÉèÖÃ»ØÈ¥
+							//è®¾ç½®å›å»
 							this->cacheConfMap->put(key, cm);
-							//Í¬Ê±¼ÆÊı¼Ó1
+							//åŒæ—¶è®¡æ•°åŠ 1
 							int count = countMap->get(key);
 							count++;
 							countMap->put(key, count);
@@ -86,21 +86,21 @@ namespace cn
 							{
 //JAVA TO C++ CONVERTER TODO TASK: C++ doesn't allow accessing outer class instance members within a nested class:
 								CacheConfModel *ccm = cacheConfMap->get(*key);
-								//±È½ÏÊÇ·ñĞèÒªÇå³ı
+								//æ¯”è¾ƒæ˜¯å¦éœ€è¦æ¸…é™¤
 								if((System::currentTimeMillis()-ccm->getBeginTime())>= ccm->getDurableTime())
 								{
-									//¿ÉÒÔÇå³ı£¬ÏÈ¼ÇÂ¼ÏÂÀ´
+									//å¯ä»¥æ¸…é™¤ï¼Œå…ˆè®°å½•ä¸‹æ¥
 									tempSet->add(*key);
 								}
 							}
-							//ÕæÕıÇå³ı
+							//çœŸæ­£æ¸…é™¤
 							for (Set<std::string>::const_iterator key = tempSet->begin(); key != tempSet->end(); ++key)
 							{
 								FlyweightFactory::getInstance()->removeFlyweight(*key);
 							}
 //JAVA TO C++ CONVERTER TODO TASK: C++ doesn't allow accessing outer class instance members within a nested class:
 							puts("now thread="+fsMap->size()+",fsMap=="+fsMap::keySet());
-							//ĞİÏ¢1ÃëÔÙÖØĞÂÅĞ¶Ï
+							//ä¼‘æ¯1ç§’å†é‡æ–°åˆ¤æ–­
 							try
 							{
 								delay(1000L);

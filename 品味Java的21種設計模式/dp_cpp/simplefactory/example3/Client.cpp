@@ -1,24 +1,11 @@
 #include "Client.h"
 
-namespace cn
-{
-	namespace javass
-	{
-		namespace dp
-		{
-			namespace simplefactory
-			{
-				namespace example3
-				{
+using namespace cn::javass::dp::simplefactory::example3;
 
-					void Client::main(std::string args[])
-					{
-						//ÖØÒª¸Ä±ä£¬Ã»ÓĞnew Impl()ÁË£¬È¡¶ø´úÖ®Factory.createApi()
-						Api *api = Factory::createApi();
-						api->test1("¹ş¹ş£¬²»Òª½ôÕÅ£¬Ö»ÊÇ¸ö²âÊÔ¶øÒÑ£¡");
-					}
-				}
-			}
-		}
-	}
+int main(std::string args[])
+{
+    //é‡è¦æ”¹å˜ï¼Œæ²¡æœ‰new Impl()äº†ï¼Œå–è€Œä»£ä¹‹Factory.createApi()
+    Api *api = Factory::createApi();
+    api->test1("å“ˆå“ˆï¼Œä¸è¦ç´§å¼ ï¼Œåªæ˜¯ä¸ªæµ‹è¯•è€Œå·²ï¼");
+    return 0;
 }

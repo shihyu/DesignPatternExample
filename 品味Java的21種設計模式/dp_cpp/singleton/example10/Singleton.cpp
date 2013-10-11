@@ -18,14 +18,14 @@ namespace cn
 
 					Singleton Singleton::getInstance()
 					{
-						//ÏÈ¼ì²éÊµÀıÊÇ·ñ´æÔÚ£¬Èç¹û²»´æÔÚ²Å½øÈëÏÂÃæµÄÍ¬²½¿é
+						//å…ˆæ£€æŸ¥å®ä¾‹æ˜¯å¦å­˜åœ¨ï¼Œå¦‚æœä¸å­˜åœ¨æ‰è¿›å…¥ä¸‹é¢çš„åŒæ­¥å—
 						if(instance == 0)
 						{
-							//Í¬²½¿é£¬Ïß³Ì°²È«µÄ´´½¨ÊµÀı
+							//åŒæ­¥å—ï¼Œçº¿ç¨‹å®‰å…¨çš„åˆ›å»ºå®ä¾‹
 //JAVA TO C++ CONVERTER TODO TASK: There is no built-in support for multithreading in native C++:
 							synchronized(Singleton::typeid)
 							{
-								//ÔÙ´Î¼ì²éÊµÀıÊÇ·ñ´æÔÚ£¬Èç¹û²»´æÔÚ²ÅÕæµÄ´´½¨ÊµÀı
+								//å†æ¬¡æ£€æŸ¥å®ä¾‹æ˜¯å¦å­˜åœ¨ï¼Œå¦‚æœä¸å­˜åœ¨æ‰çœŸçš„åˆ›å»ºå®ä¾‹
 								if(instance == 0)
 								{
 									instance = new Singleton();

@@ -43,7 +43,7 @@ namespace cn
 
 					std::string PersonalOrder::ToString()
 					{
-						return "本个人订单的订购人是="+this->customerName+"，订购产品是="+this->productId+"，订购数量为="+this->orderProductNum;
+						return "鏈釜浜鸿鍗曠殑璁㈣喘浜烘槸="+this->customerName+"锛岃璐骇鍝佹槸="+this->productId+"锛岃璐暟閲忎负="+this->orderProductNum;
 					}
 				}
 			}

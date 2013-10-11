@@ -13,16 +13,16 @@ namespace cn
 
 					void Client::main(std::string args[])
 					{
-						//定义所有的组合对象
-						Composite *root = new Composite("服装");
-						Composite *c1 = new Composite("男装");
-						Composite *c2 = new Composite("女装");
-						//定义所有的叶子对象
-						Leaf *leaf1 = new Leaf("衬衣");
-						Leaf *leaf2 = new Leaf("夹克");
-						Leaf *leaf3 = new Leaf("裙子");
-						Leaf *leaf4 = new Leaf("套装");
-						//按照树的结构来组合组合对象和叶子对象
+						//瀹氫箟鎵�鏈夌殑缁勫悎瀵硅薄
+						Composite *root = new Composite("鏈嶈");
+						Composite *c1 = new Composite("鐢疯");
+						Composite *c2 = new Composite("濂宠");
+						//瀹氫箟鎵�鏈夌殑鍙跺瓙瀵硅薄
+						Leaf *leaf1 = new Leaf("琛。");
+						Leaf *leaf2 = new Leaf("澶瑰厠");
+						Leaf *leaf3 = new Leaf("瑁欏瓙");
+						Leaf *leaf4 = new Leaf("濂楄");
+						//鎸夌収鏍戠殑缁撴瀯鏉ョ粍鍚堢粍鍚堝璞″拰鍙跺瓙瀵硅薄
 						root->addComposite(c1);
 						root->addComposite(c2);
 
@@ -32,7 +32,7 @@ namespace cn
 						c2->addLeaf(leaf3);
 						c2->addLeaf(leaf4);
 
-						//调用根对象的输出功能来输出整棵树
+						//璋冪敤鏍瑰璞＄殑杈撳嚭鍔熻兘鏉ヨ緭鍑烘暣妫垫爲
 						root->printStruct("");
 					}
 				}

@@ -13,7 +13,7 @@ namespace cn
 
 					void NonterminalExpression::interpret(Context *ctx)
 					{
-						//ÊµÏÖÓëÓï·¨¹æÔòÖĞµÄ·ÇÖÕ½á·ûÏà¹ØÁªµÄ½âÊÍ²Ù×÷
+						//å®ç°ä¸è¯­æ³•è§„åˆ™ä¸­çš„éç»ˆç»“ç¬¦ç›¸å…³è”çš„è§£é‡Šæ“ä½œ
 					}
 				}
 			}

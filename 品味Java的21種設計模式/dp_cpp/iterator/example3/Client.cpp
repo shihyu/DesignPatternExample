@@ -13,32 +13,32 @@ namespace cn
 
 					void Client::main(std::string args[])
 					{
-						//·ÃÎÊ¼¯ÍÅµÄ¹¤×ÊÁÐ±í
+						//è®¿é—®é›†å›¢çš„å·¥èµ„åˆ—è¡¨
 						PayManager *payManager= new PayManager();
-						//ÏÈ¼ÆËãÔÙ»ñÈ¡
+						//å…ˆè®¡ç®—å†èŽ·å–
 						payManager->calcPay();
-						puts("¼¯ÍÅ¹¤×ÊÁÐ±í£º");
+						puts("é›†å›¢å·¥èµ„åˆ—è¡¨ï¼š");
 						test(payManager->createIterator());
 
-						//·ÃÎÊÐÂÊÕ¹º¹«Ë¾µÄ¹¤×ÊÁÐ±í
+						//è®¿é—®æ–°æ”¶è´­å…¬å¸çš„å·¥èµ„åˆ—è¡¨
 						SalaryManager *salaryManager = new SalaryManager();
-						//ÏÈ¼ÆËãÔÙ»ñÈ¡
+						//å…ˆè®¡ç®—å†èŽ·å–
 						salaryManager->calcSalary();
-						puts("ÐÂÊÕ¹ºµÄ¹«Ë¾¹¤×ÊÁÐ±í£º");
+						puts("æ–°æ”¶è´­çš„å…¬å¸å·¥èµ„åˆ—è¡¨ï¼š");
 						test(salaryManager->createIterator());
 					}
 
 					void Client::test(Iterator *it)
 					{
-						//Ñ­»·Êä³ö¾ÛºÏ¶ÔÏóÖÐµÄÖµ
-						//Ê×ÏÈÉèÖÃµü´úÆ÷µ½µÚÒ»¸öÔªËØ
+						//å¾ªçŽ¯è¾“å‡ºèšåˆå¯¹è±¡ä¸­çš„å€¼
+						//é¦–å…ˆè®¾ç½®è¿­ä»£å™¨åˆ°ç¬¬ä¸€ä¸ªå…ƒç´ 
 						it->first();
 						while(!it->isDone())
 						{
-							//È¡³öµ±Ç°µÄÔªËØÀ´
+							//å–å‡ºå½“å‰çš„å…ƒç´ æ¥
 							object *obj = it->currentItem();
 							puts("the obj=="+obj);
-							//Èç¹û»¹Ã»ÓÐµü´úµ½×îºó£¬ÄÇÃ´¾ÍÏòÏÂµü´úÒ»¸ö
+							//å¦‚æžœè¿˜æ²¡æœ‰è¿­ä»£åˆ°æœ€åŽï¼Œé‚£ä¹ˆå°±å‘ä¸‹è¿­ä»£ä¸€ä¸ª
 							it->next();
 						}
 					}

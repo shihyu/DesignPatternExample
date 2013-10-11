@@ -14,7 +14,7 @@ namespace cn
 					void Client::main(std::string args[])
 					{
 						Api *api = new Impl();
-						api->test1("╧Ч╧Чё╛╡╩р╙╫Туеё╛ж╩йг╦Ж╡Бйт╤Ьряё║");
+						api->test1("Е⌠┬Е⌠┬О╪▄Д╦█Х╕│Г╢╖Е╪═О╪▄Е▐╙Ф≤╞Д╦╙Ф╣▀Х╞∙Х─▄Е╥╡О╪│");
 					}
 				}
 			}

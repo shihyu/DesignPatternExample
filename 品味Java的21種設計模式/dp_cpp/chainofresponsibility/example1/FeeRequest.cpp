@@ -1,87 +1,92 @@
 #include "FeeRequest.h"
+#include <iostream>
+#include<sstream>
 
-namespace cn
-{
-	namespace javass
-	{
-		namespace dp
-		{
-			namespace chainofresponsibility
-			{
-				namespace example1
-				{
 
-					std::string FeeRequest::requestToProjectManager(std::string user, double fee)
-					{
-						std::string str = "";
-						if(fee < 500)
-						{
-							//ÏîÄ¿¾­ÀíµÄÈ¨ÏŞ±È½ÏĞ¡£¬Ö»ÄÜÔÚ500ÒÔÄÚ
-							str = this->projectHandle(user, fee);
-						}
-						else if(fee < 1000)
-						{
-							//²¿ÃÅ¾­ÀíµÄÈ¨ÏŞÖ»ÄÜÔÚ1000ÒÔÄÚ
-							str = this->depManagerHandle(user, fee);
-						}
-						else if(fee >= 1000)
-						{
-							//×Ü¾­ÀíµÄÈ¨ÏŞºÜ´ó£¬Ö»ÒªÇëÇóµ½ÁËÕâÀï£¬Ëû¶¼¿ÉÒÔ´¦Àí
-							str = this->generalManagerHandle(user, fee);
-						}
-						return str;
-					}
 
-					std::string FeeRequest::projectHandle(std::string user, double fee)
-					{
-						std::string str = "";
-						//ÎªÁË²âÊÔ£¬¼òµ¥µã£¬Ö»Í¬ÒâĞ¡ÀîµÄ
-						if((new std::string("Ğ¡Àî"))->equals(user))
-						{
-							str = "ÏîÄ¿¾­ÀíÍ¬Òâ"+user+"¾Û²Í·ÑÓÃ"+fee+"ÔªµÄÇëÇó";
-						}
-						else
-						{
-							//ÆäËûÈËÒ»ÂÉ²»Í¬Òâ
-							str = "ÏîÄ¿¾­Àí²»Í¬Òâ"+user+"¾Û²Í·ÑÓÃ"+fee+"ÔªµÄÇëÇó";
-						}
-						return str;
-					}
+namespace cn {
+    namespace javass {
+        namespace dp {
+            namespace chainofresponsibility {
+                namespace example1 {
+                    template <class T>
+                    std::string ConvertToString(T);
 
-					std::string FeeRequest::depManagerHandle(std::string user, double fee)
-					{
-						std::string str = "";
-						//ÎªÁË²âÊÔ£¬¼òµ¥µã£¬Ö»Í¬ÒâĞ¡ÀîÉêÇëµÄ
-						if((new std::string("Ğ¡Àî"))->equals(user))
-						{
-							str = "²¿ÃÅ¾­ÀíÍ¬Òâ"+user+"¾Û²Í·ÑÓÃ"+fee+"ÔªµÄÇëÇó";
-						}
-						else
-						{
-							//ÆäËûÈËÒ»ÂÉ²»Í¬Òâ
-							str = "²¿ÃÅ¾­Àí²»Í¬Òâ"+user+"¾Û²Í·ÑÓÃ"+fee+"ÔªµÄÇëÇó";
-						}
-						return str;
-					}
+                    std::string FeeRequest::requestToProjectManager(std::string user, double fee) {
+                        std::string str = "";
 
-					std::string FeeRequest::generalManagerHandle(std::string user, double fee)
-					{
-						std::string str = "";
+                        if (fee < 500) {
+                            //é¡¹ç›®ç»ç†çš„æƒé™æ¯”è¾ƒå°ï¼Œåªèƒ½åœ¨500ä»¥å†…
+                            str = this->projectHandle(user, fee);
+                        } else if (fee < 1000) {
+                            //éƒ¨é—¨ç»ç†çš„æƒé™åªèƒ½åœ¨1000ä»¥å†…
+                            str = this->depManagerHandle(user, fee);
+                        } else if (fee >= 1000) {
+                            //æ€»ç»ç†çš„æƒé™å¾ˆå¤§ï¼Œåªè¦è¯·æ±‚åˆ°äº†è¿™é‡Œï¼Œä»–éƒ½å¯ä»¥å¤„ç†
+                            str = this->generalManagerHandle(user, fee);
+                        }
 
-						//ÎªÁË²âÊÔ£¬¼òµ¥µã£¬Ö»Í¬ÒâĞ¡ÀîµÄ
-						if((new std::string("Ğ¡Àî"))->equals(user))
-						{
-							str = "×Ü¾­ÀíÍ¬Òâ"+user+"¾Û²Í·ÑÓÃ"+fee+"ÔªµÄÇëÇó";
-						}
-						else
-						{
-							//ÆäËûÈËÒ»ÂÉ²»Í¬Òâ
-							str = "×Ü¾­Àí²»Í¬Òâ"+user+"¾Û²Í·ÑÓÃ"+fee+"ÔªµÄÇëÇó";
-						}
-						return str;
-					}
-				}
-			}
-		}
-	}
+                        return str;
+                    }
+
+                    std::string FeeRequest::projectHandle(std::string user, double fee) {
+                        std::string str = "";
+                        std::string s;
+
+                        //ä¸ºäº†æµ‹è¯•ï¼Œç®€å•ç‚¹ï¼ŒåªåŒæ„å°æçš„
+                        if ((new std::string("å°æ"))->compare(user)) {
+                            s = ConvertToString(fee);
+                            str = std::string("é¡¹ç›®ç»ç†åŒæ„") + user + std::string("èšé¤è´¹ç”¨") + s + std::string("å…ƒçš„è¯·æ±‚");
+                        } else {
+                            //å…¶ä»–äººä¸€å¾‹ä¸åŒæ„
+                            s = ConvertToString(fee);
+                            str = "é¡¹ç›®ç»ç†ä¸åŒæ„" + user + "èšé¤è´¹ç”¨" + s + "å…ƒçš„è¯·æ±‚";
+                        }
+
+                        return str;
+                    }
+
+                    std::string FeeRequest::depManagerHandle(std::string user, double fee) {
+                        std::string str = "";
+                        std::string s;
+
+                        //ä¸ºäº†æµ‹è¯•ï¼Œç®€å•ç‚¹ï¼ŒåªåŒæ„å°æç”³è¯·çš„
+                        if ((new std::string("å°æ"))->compare(user)) {
+                            s = ConvertToString(fee);
+                            str = "éƒ¨é—¨ç»ç†åŒæ„" + user + "èšé¤è´¹ç”¨" + s + "å…ƒçš„è¯·æ±‚";
+                        } else {
+                            //å…¶ä»–äººä¸€å¾‹ä¸åŒæ„
+                            s = ConvertToString(fee);
+                            str = "éƒ¨é—¨ç»ç†ä¸åŒæ„" + user + "èšé¤è´¹ç”¨" + s + "å…ƒçš„è¯·æ±‚";
+                        }
+
+                        return str;
+                    }
+
+                    std::string FeeRequest::generalManagerHandle(std::string user, double fee) {
+                        std::string str = "";
+                        std::string s;
+
+                        //ä¸ºäº†æµ‹è¯•ï¼Œç®€å•ç‚¹ï¼ŒåªåŒæ„å°æçš„
+                        if ((new std::string("å°æ"))->compare(user)) {
+                            s = ConvertToString(fee);
+                            str = "æ€»ç»ç†åŒæ„" + user + "èšé¤è´¹ç”¨" + s + "å…ƒçš„è¯·æ±‚";
+                        } else {
+                            //å…¶ä»–äººä¸€å¾‹ä¸åŒæ„
+                            s = ConvertToString(fee);
+                            str = "æ€»ç»ç†ä¸åŒæ„" + user + "èšé¤è´¹ç”¨" + s + "å…ƒçš„è¯·æ±‚";
+                        }
+
+                        return str;
+                    }
+                    template <class T>
+                    std::string ConvertToString(T value) {
+                        std::stringstream ss;
+                        ss << value;
+                        return ss.str();
+                    }
+                }
+            }
+        }
+    }
 }

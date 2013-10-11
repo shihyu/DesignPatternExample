@@ -17,7 +17,7 @@ namespace cn
 						{
 							for (std::vector<Component*>::const_iterator c = childComponents.begin(); c != childComponents.end(); ++c)
 							{
-								//µİ¹éµÄ½øĞĞ×Ó×é¼şÏàÓ¦·½·¨µÄµ÷ÓÃ
+								//é€’å½’çš„è¿›è¡Œå­ç»„ä»¶ç›¸åº”æ–¹æ³•çš„è°ƒç”¨
 								(*c)->someOperation();
 							}
 						}
@@ -25,7 +25,7 @@ namespace cn
 
 					void Composite::addChild(Component *child)
 					{
-						//ÑÓ³Ù³õÊ¼»¯
+						//å»¶è¿Ÿåˆå§‹åŒ–
 						if (childComponents == 0)
 						{
 							childComponents = std::vector<Component*>();

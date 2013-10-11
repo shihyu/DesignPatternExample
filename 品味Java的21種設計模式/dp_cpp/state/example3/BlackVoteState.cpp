@@ -13,9 +13,9 @@ namespace cn
 
 					void BlackVoteState::vote(std::string user, std::string voteItem, VoteManager *voteManager)
 					{
-						//ºÚÃûµ¥
-						//¼ÇÈëºÚÃûµ¥ÖĞ£¬½ûÖ¹µÇÂ¼ÏµÍ³ÁË
-						puts("½øÈëºÚÃûµ¥£¬½«½ûÖ¹µÇÂ¼ºÍÊ¹ÓÃ±¾ÏµÍ³");
+						//é»‘åå•
+						//è®°å…¥é»‘åå•ä¸­ï¼Œç¦æ­¢ç™»å½•ç³»ç»Ÿäº†
+						puts("è¿›å…¥é»‘åå•ï¼Œå°†ç¦æ­¢ç™»å½•å’Œä½¿ç”¨æœ¬ç³»ç»Ÿ");
 					}
 				}
 			}

@@ -17,7 +17,7 @@ namespace cn
 
 					Singleton Singleton::getInstance()
 					{
-						//5£ºÖ±½ÓÊ¹ÓÃÒÑ¾­´´½¨ºÃµÄÊµÀı
+						//5ï¼šç›´æ¥ä½¿ç”¨å·²ç»åˆ›å»ºå¥½çš„å®ä¾‹
 						return instance;
 					}
 				}

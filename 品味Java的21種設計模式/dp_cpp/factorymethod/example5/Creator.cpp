@@ -13,10 +13,10 @@ namespace cn
 
 					Product *Creator::createProduct()
 					{
-						//ÔÚÕâÀïÊ¹ÓÃ¹¤³§·½·¨£¬µÃµ½¿Í»§¶ËËùÐè¶ÔÏóµÄ²¿¼þ¶ÔÏó
+						//åœ¨è¿™é‡Œä½¿ç”¨å·¥åŽ‚æ–¹æ³•ï¼Œå¾—åˆ°å®¢æˆ·ç«¯æ‰€éœ€å¯¹è±¡çš„éƒ¨ä»¶å¯¹è±¡
 						Product1 *p1 = factoryMethod1();
 						Product2 *p2 = factoryMethod2();
-						//¹¤³§·½·¨´´½¨µÄ¶ÔÏóÊÇ´´½¨¿Í»§¶Ë¶ÔÏóËùÐèÒªµÄ
+						//å·¥åŽ‚æ–¹æ³•åˆ›å»ºçš„å¯¹è±¡æ˜¯åˆ›å»ºå®¢æˆ·ç«¯å¯¹è±¡æ‰€éœ€è¦çš„
 						Product *p = new ConcreteProduct();
 						p->setProduct1(p1);
 						p->setProduct2(p2);

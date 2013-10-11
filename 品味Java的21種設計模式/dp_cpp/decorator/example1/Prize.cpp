@@ -15,12 +15,12 @@ namespace cn
 					{
 						double prize = 0.0;
 
-						//¼ÆËãµ±ÔÂÒµÎñ½±½ğ£¬ËùÓĞÈË¶¼»á¼ÆËã
+						//è®¡ç®—å½“æœˆä¸šåŠ¡å¥–é‡‘ï¼Œæ‰€æœ‰äººéƒ½ä¼šè®¡ç®—
 						prize = this->monthPrize(user, begin, end);
-						//¼ÆËãÀÛ¼Æ½±½ğ
+						//è®¡ç®—ç´¯è®¡å¥–é‡‘
 						prize += this->sumPrize(user, begin, end);
 
-						//ĞèÒªÅĞ¶Ï¸ÃÈËÔ±ÊÇÆÕÍ¨ÈËÔ±»¹ÊÇÒµÎñ¾­Àí£¬ÍÅ¶Ó½±½ğÖ»ÓĞÒµÎñ¾­Àí²ÅÓĞ
+						//éœ€è¦åˆ¤æ–­è¯¥äººå‘˜æ˜¯æ™®é€šäººå‘˜è¿˜æ˜¯ä¸šåŠ¡ç»ç†ï¼Œå›¢é˜Ÿå¥–é‡‘åªæœ‰ä¸šåŠ¡ç»ç†æ‰æœ‰
 						if(this->isManager(user))
 						{
 							prize += this->groupPrize(user, begin, end);
@@ -31,26 +31,26 @@ namespace cn
 
 					double Prize::monthPrize(std::string user, Date *begin, Date *end)
 					{
-						//¼ÆËãµ±ÔÂÒµÎñ½±½ğ,°´ÕÕÈËÔ±È¥»ñÈ¡µ±ÔÂµÄÒµÎñ¶î£¬È»ºóÔÙ³ËÒÔ3%
+						//è®¡ç®—å½“æœˆä¸šåŠ¡å¥–é‡‘,æŒ‰ç…§äººå‘˜å»è·å–å½“æœˆçš„ä¸šåŠ¡é¢ï¼Œç„¶åå†ä¹˜ä»¥3%
 						double prize = TempDB::mapMonthSaleMoney->get(user) * 0.03;
-						puts(user+"µ±ÔÂÒµÎñ½±½ğ"+prize);
+						puts(user+"å½“æœˆä¸šåŠ¡å¥–é‡‘"+prize);
 						return prize;
 					}
 
 					double Prize::sumPrize(std::string user, Date *begin, Date *end)
 					{
-						//¼ÆËãÀÛ¼Æ½±½ğ,ÆäÊµÕâÀïÓ¦¸Ã°´ÕÕÈËÔ±È¥»ñÈ¡ÀÛ¼ÆµÄÒµÎñ¶î£¬È»ºóÔÙ³ËÒÔ0.1%
-						//¼òµ¥ÑİÊ¾Ò»ÏÂ£¬¼Ù¶¨´ó¼ÒµÄÀÛ¼ÆÒµÎñ¶î¶¼ÊÇ1000000Ôª
+						//è®¡ç®—ç´¯è®¡å¥–é‡‘,å…¶å®è¿™é‡Œåº”è¯¥æŒ‰ç…§äººå‘˜å»è·å–ç´¯è®¡çš„ä¸šåŠ¡é¢ï¼Œç„¶åå†ä¹˜ä»¥0.1%
+						//ç®€å•æ¼”ç¤ºä¸€ä¸‹ï¼Œå‡å®šå¤§å®¶çš„ç´¯è®¡ä¸šåŠ¡é¢éƒ½æ˜¯1000000å…ƒ
 						double prize = 1000000 * 0.001;
-						puts(user+"ÀÛ¼Æ½±½ğ"+prize);
+						puts(user+"ç´¯è®¡å¥–é‡‘"+prize);
 						return prize;
 					}
 
 					bool Prize::isManager(std::string user)
 					{
-						//Ó¦¸Ã´ÓÊı¾İ¿âÖĞ»ñÈ¡ÈËÔ±¶ÔÓ¦µÄÖ°Îñ
-						//ÎªÁËÑİÊ¾£¬¼òµ¥µãÅĞ¶Ï£¬Ö»ÓĞÍõÎåÊÇ¾­Àí
-						if((new std::string("ÍõÎå"))->equals(user))
+						//åº”è¯¥ä»æ•°æ®åº“ä¸­è·å–äººå‘˜å¯¹åº”çš„èŒåŠ¡
+						//ä¸ºäº†æ¼”ç¤ºï¼Œç®€å•ç‚¹åˆ¤æ–­ï¼Œåªæœ‰ç‹äº”æ˜¯ç»ç†
+						if((new std::string("ç‹äº”"))->equals(user))
 						{
 							return true;
 						}
@@ -59,14 +59,14 @@ namespace cn
 
 					double Prize::groupPrize(std::string user, Date *begin, Date *end)
 					{
-						//¼ÆËãµ±ÔÂÍÅ¶ÓÒµÎñ½±½ğ£¬ÏÈ¼ÆËã³öÍÅ¶Ó×ÜµÄÒµÎñ¶î£¬È»ºóÔÙ³ËÒÔ1%£¬¼ÙÉè¶¼ÊÇÒ»¸öÍÅ¶ÓµÄ
+						//è®¡ç®—å½“æœˆå›¢é˜Ÿä¸šåŠ¡å¥–é‡‘ï¼Œå…ˆè®¡ç®—å‡ºå›¢é˜Ÿæ€»çš„ä¸šåŠ¡é¢ï¼Œç„¶åå†ä¹˜ä»¥1%ï¼Œå‡è®¾éƒ½æ˜¯ä¸€ä¸ªå›¢é˜Ÿçš„
 						double group = 0.0;
 						for (Map<std::string, double>::const_iterator d = TempDB::mapMonthSaleMoney->begin(); d != TempDB::mapMonthSaleMoney->end(); ++d)
 						{
 							group += d->second;
 						}
 						double prize = group * 0.01;
-						puts(user+"µ±ÔÂÍÅ¶ÓÒµÎñ½±½ğ"+prize);
+						puts(user+"å½“æœˆå›¢é˜Ÿä¸šåŠ¡å¥–é‡‘"+prize);
 						return prize;
 					}
 				}

@@ -13,38 +13,38 @@ namespace cn
 
 					void Client::main(std::string args[])
 					{
-						//1£º×é×°ÃüÁîºÍ½ÓÊÕÕß
-						//´´½¨½ÓÊÕÕß
+						//1ï¼šç»„è£…å‘½ä»¤å’ŒæŽ¥æ”¶è€…
+						//åˆ›å»ºæŽ¥æ”¶è€…
 						OperationApi *operation = new Operation();
-						//´´½¨ÃüÁî
+						//åˆ›å»ºå‘½ä»¤
 						AddCommand *addCmd = new AddCommand(5);
 						SubstractCommand *substractCmd = new SubstractCommand(3);
-						//×é×°ÃüÁîºÍ½ÓÊÕÕß
+						//ç»„è£…å‘½ä»¤å’ŒæŽ¥æ”¶è€…
 						addCmd->setOperation(operation);
 						substractCmd->setOperation(operation);
 
-						//2£º°ÑÃüÁîÉèÖÃµ½³ÖÓÐÕß£¬¾ÍÊÇ¼ÆËãÆ÷ÀïÃæ
+						//2ï¼šæŠŠå‘½ä»¤è®¾ç½®åˆ°æŒæœ‰è€…ï¼Œå°±æ˜¯è®¡ç®—å™¨é‡Œé¢
 						Calculator *calculator = new Calculator();
 						calculator->setAddCmd(addCmd);
 						calculator->setSubstractCmd(substractCmd);
 
-						//3:Ä£Äâ°´ÏÂ°´Å¥£¬²âÊÔÒ»ÏÂ
+						//3:æ¨¡æ‹ŸæŒ‰ä¸‹æŒ‰é’®ï¼Œæµ‹è¯•ä¸€ä¸‹
 						calculator->addPressed();
-						puts("Ò»´Î¼Ó·¨ÔËËãºóµÄ½á¹ûÎª£º"+operation->getResult());
+						puts("ä¸€æ¬¡åŠ æ³•è¿ç®—åŽçš„ç»“æžœä¸ºï¼š"+operation->getResult());
 						calculator->substractPressed();
-						puts("Ò»´Î¼õ·¨ÔËËãºóµÄ½á¹ûÎª£º"+operation->getResult());
+						puts("ä¸€æ¬¡å‡æ³•è¿ç®—åŽçš„ç»“æžœä¸ºï¼š"+operation->getResult());
 
-						//²âÊÔ³·Ïû
+						//æµ‹è¯•æ’¤æ¶ˆ
 						calculator->undoPressed();
-						puts("³·ÏúÒ»´ÎºóµÄ½á¹ûÎª£º"+operation->getResult());
+						puts("æ’¤é”€ä¸€æ¬¡åŽçš„ç»“æžœä¸ºï¼š"+operation->getResult());
 						calculator->undoPressed();
-						puts("ÔÙ³·ÏúÒ»´ÎºóµÄ½á¹ûÎª£º"+operation->getResult());
+						puts("å†æ’¤é”€ä¸€æ¬¡åŽçš„ç»“æžœä¸ºï¼š"+operation->getResult());
 
-						//²âÊÔ»Ö¸´
+						//æµ‹è¯•æ¢å¤
 						calculator->redoPressed();
-						puts("»Ö¸´²Ù×÷Ò»´ÎºóµÄ½á¹ûÎª£º"+operation->getResult());
+						puts("æ¢å¤æ“ä½œä¸€æ¬¡åŽçš„ç»“æžœä¸ºï¼š"+operation->getResult());
 						calculator->redoPressed();
-						puts("ÔÙ»Ö¸´²Ù×÷Ò»´ÎºóµÄ½á¹ûÎª£º"+operation->getResult());
+						puts("å†æ¢å¤æ“ä½œä¸€æ¬¡åŽçš„ç»“æžœä¸ºï¼š"+operation->getResult());
 					}
 				}
 			}

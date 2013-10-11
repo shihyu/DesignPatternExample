@@ -13,7 +13,7 @@ namespace cn
 
 					LoginModel *WorkerLogin::findLoginUser(std::string loginId)
 					{
-						// ÕâÀïÊ¡ÂÔ¾ßÌåµÄ´¦Àí£¬½ö×öÊ¾Òâ£¬·µ»ØÒ»¸öÓÐÄ¬ÈÏÊý¾ÝµÄ¶ÔÏó
+						// è¿™é‡Œçœç•¥å…·ä½“çš„å¤„ç†ï¼Œä»…åšç¤ºæ„ï¼Œè¿”å›žä¸€ä¸ªæœ‰é»˜è®¤æ•°æ®çš„å¯¹è±¡
 						LoginModel *lm = new LoginModel();
 						lm->setLoginId(loginId);
 						lm->setPwd("workerpwd");
@@ -22,9 +22,9 @@ namespace cn
 
 					std::string WorkerLogin::encryptPwd(std::string pwd)
 					{
-						//¸²¸Ç¸¸ÀàµÄ·½·¨£¬Ìá¹©ÕæÕýµÄ¼ÓÃÜÊµÏÖ
-						//ÕâÀï¶ÔÃÜÂë½øÐÐ¼ÓÃÜ£¬±ÈÈçÊ¹ÓÃ£ºMD5¡¢3DESµÈµÈ£¬Ê¡ÂÔÁË
-						puts("Ê¹ÓÃMD5½øÐÐÃÜÂë¼ÓÃÜ");
+						//è¦†ç›–çˆ¶ç±»çš„æ–¹æ³•ï¼Œæä¾›çœŸæ­£çš„åŠ å¯†å®žçŽ°
+						//è¿™é‡Œå¯¹å¯†ç è¿›è¡ŒåŠ å¯†ï¼Œæ¯”å¦‚ä½¿ç”¨ï¼šMD5ã€3DESç­‰ç­‰ï¼Œçœç•¥äº†
+						puts("ä½¿ç”¨MD5è¿›è¡Œå¯†ç åŠ å¯†");
 						return pwd;
 					}
 				}

@@ -18,41 +18,41 @@ namespace cn
 
 					void Composite::addChild(Component *child)
 					{
-						//ÑÓ³Ù³õÊ¼»¯
+						//å»¶è¿Ÿåˆå§‹åŒ–
 						if (childComponents == 0)
 						{
 							childComponents = std::vector<Component*>();
 						}
 						childComponents.push_back(child);
 
-						//ÏÈÅĞ¶Ï×é¼şÂ·¾¶ÊÇ·ñÎª¿Õ£¬Èç¹ûÎª¿Õ£¬ËµÃ÷±¾×é¼şÊÇ¸ù×é¼ş
+						//å…ˆåˆ¤æ–­ç»„ä»¶è·¯å¾„æ˜¯å¦ä¸ºç©ºï¼Œå¦‚æœä¸ºç©ºï¼Œè¯´æ˜æœ¬ç»„ä»¶æ˜¯æ ¹ç»„ä»¶
 //JAVA TO C++ CONVERTER TODO TASK: There is no direct native C++ equivalent to the Java String 'trim' method:
 						if(this->getComponentPath() == "" || this->getComponentPath().trim()->length()==0)
 						{
-							//°Ñ±¾×é¼şµÄnameÉèÖÃµ½×é¼şÂ·¾¶ÖĞ
+							//æŠŠæœ¬ç»„ä»¶çš„nameè®¾ç½®åˆ°ç»„ä»¶è·¯å¾„ä¸­
 							this->setComponentPath(this->name);
 						}
-						//ÅĞ¶ÏÒª¼ÓÈëµÄ×é¼şÔÚÂ·¾¶ÉÏÊÇ·ñ³öÏÖ¹ı
-						//ÏÈÅĞ¶ÏÊÇ·ñÊÇ¸ù×é¼ş
+						//åˆ¤æ–­è¦åŠ å…¥çš„ç»„ä»¶åœ¨è·¯å¾„ä¸Šæ˜¯å¦å‡ºç°è¿‡
+						//å…ˆåˆ¤æ–­æ˜¯å¦æ˜¯æ ¹ç»„ä»¶
 //JAVA TO C++ CONVERTER TODO TASK: There is no direct native C++ equivalent to the Java String 'startsWith' method:
 						if(this->getComponentPath().startsWith(child->getName()+"."))
 						{
-							//ËµÃ÷ÊÇ¸ù×é¼ş£¬ÖØ¸´Ìí¼ÓÁË
-							throw new java::lang::IllegalArgumentException("ÔÚ±¾Í¨Â·ÉÏ£¬×é¼ş '"+child->getName()+"' ÒÑ±»Ìí¼Ó¹ıÁË");
+							//è¯´æ˜æ˜¯æ ¹ç»„ä»¶ï¼Œé‡å¤æ·»åŠ äº†
+							throw new java::lang::IllegalArgumentException("åœ¨æœ¬é€šè·¯ä¸Šï¼Œç»„ä»¶ '"+child->getName()+"' å·²è¢«æ·»åŠ è¿‡äº†");
 						}
 						else
 						{
 							if(this->getComponentPath().find("."+child->getName()) < 0)
 							{
-								//±íÊ¾Ã»ÓĞ³öÏÖ¹ı,ÄÇÃ´¿ÉÒÔ¼ÓÈë
-								//¼ÆËã×é¼şµÄÂ·¾¶
+								//è¡¨ç¤ºæ²¡æœ‰å‡ºç°è¿‡,é‚£ä¹ˆå¯ä»¥åŠ å…¥
+								//è®¡ç®—ç»„ä»¶çš„è·¯å¾„
 								std::string componentPath = this->getComponentPath()+"."+child->getName();
-								//ÉèÖÃ×Ó×é¼şµÄÂ·¾¶
+								//è®¾ç½®å­ç»„ä»¶çš„è·¯å¾„
 								child->setComponentPath(componentPath);
 							}
 							else
 							{
-								throw new java::lang::IllegalArgumentException("ÔÚ±¾Í¨Â·ÉÏ£¬×é¼ş '"+child->getName()+"' ÒÑ±»Ìí¼Ó¹ıÁË");
+								throw new java::lang::IllegalArgumentException("åœ¨æœ¬é€šè·¯ä¸Šï¼Œç»„ä»¶ '"+child->getName()+"' å·²è¢«æ·»åŠ è¿‡äº†");
 							}
 						}
 					}
@@ -65,17 +65,17 @@ namespace cn
 
 					void Composite::printStruct(std::string preStr)
 					{
-						//ÏÈ°Ñ×Ô¼ºÊä³öÈ¥
+						//å…ˆæŠŠè‡ªå·±è¾“å‡ºå»
 						puts(preStr+"+"+this->name);
-						//Èç¹û»¹°üº¬ÓĞ×Ó×é¼ş£¬ÄÇÃ´¾ÍÊä³öÕâĞ©×Ó×é¼ş¶ÔÏó
+						//å¦‚æœè¿˜åŒ…å«æœ‰å­ç»„ä»¶ï¼Œé‚£ä¹ˆå°±è¾“å‡ºè¿™äº›å­ç»„ä»¶å¯¹è±¡
 						if(this->childComponents!=0)
 						{
-							//È»ºóÌí¼ÓÒ»¸ö¿Õ¸ñ£¬±íÊ¾ÏòºóËõ½øÒ»¸ö¿Õ¸ñ
+							//ç„¶åæ·»åŠ ä¸€ä¸ªç©ºæ ¼ï¼Œè¡¨ç¤ºå‘åç¼©è¿›ä¸€ä¸ªç©ºæ ¼
 							preStr+=" ";
-							//Êä³öµ±Ç°¶ÔÏóµÄ×Ó¶ÔÏóÁË
+							//è¾“å‡ºå½“å‰å¯¹è±¡çš„å­å¯¹è±¡äº†
 							for (std::vector<Component*>::const_iterator c = childComponents.begin(); c != childComponents.end(); ++c)
 							{
-								//µİ¹éÊä³öÃ¿¸ö×Ó¶ÔÏó
+								//é€’å½’è¾“å‡ºæ¯ä¸ªå­å¯¹è±¡
 								(*c)->printStruct(preStr);
 							}
 						}

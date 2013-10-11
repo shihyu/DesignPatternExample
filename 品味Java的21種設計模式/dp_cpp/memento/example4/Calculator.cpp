@@ -23,35 +23,35 @@ namespace cn
 
 					void Calculator::addPressed()
 					{
-						//��ȡ��Ӧ�ı���¼���󣬲���������Ӧ����ʷ��¼����
+						//获取对应的备忘录对象，并保存在相应的历史记录里面
 						Memento *m1 = this->addCmd->createMemento();
 
-						//ִ������
+						//执行命令
 						this->addCmd->execute();
 
-						//�Ѳ�����¼����ʷ��¼����
+						//把操作记录到历史记录里面
 						undoCmds.push_back(this->addCmd);
 
-						//��ȡִ�������ı���¼����
+						//获取执行命令后的备忘录对象
 						Memento *m2 = this->addCmd->createMemento();
-						//���õ���������ʷ��¼����
+						//设置到撤销的历史记录里面
 						this->undoMementos.push_back(new Memento[]{m1,m2});
 					}
 
 					void Calculator::substractPressed()
 					{
-						//��ȡ��Ӧ�ı���¼���󣬲���������Ӧ����ʷ��¼����		
+						//获取对应的备忘录对象，并保存在相应的历史记录里面		
 						Memento *m1 = this->substractCmd->createMemento();
 
-						//ִ������
+						//执行命令
 						this->substractCmd->execute();
 
-						//�Ѳ�����¼����ʷ��¼����
+						//把操作记录到历史记录里面
 						undoCmds.push_back(this->substractCmd);
 
-						//��ȡִ�������ı���¼����
+						//获取执行命令后的备忘录对象
 						Memento *m2 = this->substractCmd->createMemento();
-						//���õ���������ʷ��¼����
+						//设置到撤销的历史记录里面
 						this->undoMementos.push_back(new Memento[]{m1,m2});
 					}
 
@@ -59,29 +59,29 @@ namespace cn
 					{
 						if(undoCmds.size()>0)
 						{
-							//ȡ�����һ������������
+							//取出最后一个命令来撤销
 							Command *cmd = undoCmds.back();
-							//��ȡ��Ӧ�ı���¼����
+							//获取对应的备忘录对象
 //ORIGINAL LINE: Memento[] ms = undoMementos.get(undoCmds.size()-1);
 //JAVA TO C++ CONVERTER WARNING: Since the array size is not known in this declaration, Java to C++ Converter has converted this array to a pointer.  You will need to call 'delete[]' where appropriate:
 							Memento *ms = undoMementos.at(undoCmds.size() - 1);
 
-							//����
+							//撤销
 							cmd->undo(ms[0]);
 
-							//������лָ��Ĺ��ܣ��ǾͰ���������¼���ָ�����ʷ��¼����
+							//如果还有恢复的功能，那就把这个命令记录到恢复的历史记录里面
 							redoCmds.push_back(cmd);
-							//����Ӧ�ı���¼����Ҳ���ӹ�ȥ
+							//把相应的备忘录对象也添加过去
 							redoMementos.push_back(ms);
 
-							//Ȼ������һ������ɾ������
+							//然后把最后一个命令删除掉，
 							undoCmds.remove(cmd);
-							//����Ӧ�ı���¼����Ҳɾ����
+							//把相应的备忘录对象也删除掉
 							undoMementos.remove(ms);
 						}
 						else
 						{
-							puts("�ܱ�Ǹ��û�пɳ���������");
+							puts("很抱歉，没有可撤销的命令");
 						}
 					}
 
@@ -89,28 +89,28 @@ namespace cn
 					{
 						if(redoCmds.size()>0)
 						{
-							//ȡ�����һ������������
+							//取出最后一个命令来重做
 							Command *cmd = redoCmds.back();
-							//��ȡ��Ӧ�ı���¼����
+							//获取对应的备忘录对象
 //ORIGINAL LINE: Memento[] ms = redoMementos.get(redoCmds.size()-1);
 //JAVA TO C++ CONVERTER WARNING: Since the array size is not known in this declaration, Java to C++ Converter has converted this array to a pointer.  You will need to call 'delete[]' where appropriate:
 							Memento *ms = redoMementos.at(redoCmds.size() - 1);
 
-							//����
+							//重做
 							cmd->redo(ms[1]);
 
-							//����������¼���ɳ�������ʷ��¼����
+							//把这个命令记录到可撤销的历史记录里面
 							undoCmds.push_back(cmd);
-							//����Ӧ�ı���¼����Ҳ���ӹ�ȥ
+							//把相应的备忘录对象也添加过去
 							undoMementos.push_back(ms);
-							//Ȼ������һ������ɾ����
+							//然后把最后一个命令删除掉
 							redoCmds.remove(cmd);
-							//����Ӧ�ı���¼����Ҳɾ����
+							//把相应的备忘录对象也删除掉
 							redoMementos.remove(ms);
 						}
 						else
 						{
-							puts("�ܱ�Ǹ��û�пɻָ�������");
+							puts("很抱歉，没有可恢复的命令");
 						}
 					}
 				}

@@ -28,14 +28,14 @@ namespace cn
 
 					void CPU::executeData(std::string data)
 					{
-						//°ÑÊý¾Ý·Ö½â¿ª£¬Ç°ÃæµÄÊÇÊÓÆµÊý¾Ý£¬ºóÃæµÄÊÇÒôÆµÊý¾Ý
+						//æŠŠæ•°æ®åˆ†è§£å¼€ï¼Œå‰é¢çš„æ˜¯è§†é¢‘æ•°æ®ï¼ŒåŽé¢çš„æ˜¯éŸ³é¢‘æ•°æ®
 //ORIGINAL LINE: String [] ss = data.split(",");
 //JAVA TO C++ CONVERTER WARNING: Since the array size is not known in this declaration, Java to C++ Converter has converted this array to a pointer.  You will need to call 'delete[]' where appropriate:
 //JAVA TO C++ CONVERTER TODO TASK: There is no direct native C++ equivalent to the Java String 'split' method:
 						std::string *ss = data.split(",");
 						this->videoData = ss[0];
 						this->soundData = ss[1];
-						//Í¨ÖªÖ÷°å£¬CPUµÄ¹¤×÷Íê³É
+						//é€šçŸ¥ä¸»æ¿ï¼ŒCPUçš„å·¥ä½œå®Œæˆ
 						this->getMediator()->changed(this);
 					}
 				}

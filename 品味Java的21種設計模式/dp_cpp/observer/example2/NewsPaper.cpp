@@ -19,7 +19,7 @@ namespace cn
 					void NewsPaper::setContent(std::string content)
 					{
 						this->content = content;
-						//дзхщспакё╛к╣цВсжЁЖ╠╗ж╫акё╛дг╬мм╗ж╙кЫсп╣д╤ауъ
+						//Е├┘Е╝╧Ф°┴Д╨├О╪▄Х╞╢Ф≤▌Е▐┬Е┤╨Ф┼╔Г╨╦Д╨├О╪▄И┌ёЕ╟╠И─ Г÷╔Ф┴─Ф°┴Г └Х╞╩Х─┘
 						notifyObservers();
 					}
 				}

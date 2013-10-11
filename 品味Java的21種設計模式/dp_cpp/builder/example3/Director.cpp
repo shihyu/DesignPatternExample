@@ -18,11 +18,11 @@ namespace cn
 
 					void Director::construct(ExportHeaderModel *ehm, Map<std::string, Collection<ExportDataModel*>*> *mapData, ExportFooterModel *efm)
 					{
-						//1：先构建Header
+						//1锛氬厛鏋勫缓Header
 						builder->buildHeader(ehm);
-						//2：然后构建Body
+						//2锛氱劧鍚庢瀯寤築ody
 						builder->buildBody(mapData);
-						//3：然后构建Footer
+						//3锛氱劧鍚庢瀯寤篎ooter
 						builder->buildFooter(efm);
 					}
 				}

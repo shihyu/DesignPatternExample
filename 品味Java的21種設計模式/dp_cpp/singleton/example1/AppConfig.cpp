@@ -23,26 +23,26 @@ namespace cn
 
 					AppConfig::AppConfig()
 					{
-						//µ÷ÓÃ¶ÁÈ¡ÅäÖÃÎÄ¼þµÄ·½·¨
+						//è°ƒç”¨è¯»å–é…ç½®æ–‡ä»¶çš„æ–¹æ³•
 						readConfig();
 					}
 
 					void AppConfig::readConfig()
 					{
 						Properties *p = new Properties();
-
+//JAVA TO C++ CONVERTER NOTE: The local variable in was renamed since it is a keyword in C++:
 						InputStream *in_Renamed = 0;
 						try
 						{
 							in_Renamed = AppConfig::typeid::getResourceAsStream("AppConfig.properties");
 							p->load(in_Renamed);
-							//°ÑÅäÖÃÎÄ¼þÖÐµÄÄÚÈÝ¶Á³öÀ´ÉèÖÃµ½ÊôÐÔÉÏ
+							//æŠŠé…ç½®æ–‡ä»¶ä¸­çš„å†…å®¹è¯»å‡ºæ¥è®¾ç½®åˆ°å±žæ€§ä¸Š
 							this->parameterA = p->getProperty("paramA");
 							this->parameterB = p->getProperty("paramB");
 						}
 						catch (IOException *e)
 						{
-							puts("×°ÔØÅäÖÃÎÄ¼þ³ö´íÁË£¬¾ßÌå¶ÑÕ»ÐÅÏ¢ÈçÏÂ£º");
+							puts("è£…è½½é…ç½®æ–‡ä»¶å‡ºé”™äº†ï¼Œå…·ä½“å †æ ˆä¿¡æ¯å¦‚ä¸‹ï¼š");
 							e->printStackTrace();
 						}
 //JAVA TO C++ CONVERTER TODO TASK: There is no native C++ equivalent to the exception 'finally' clause:

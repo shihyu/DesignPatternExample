@@ -33,7 +33,7 @@ namespace cn
 
 					std::string SaleModel::ToString()
 					{
-						return "商品名称="+goods+",购买数量="+saleNum;
+						return "鍟嗗搧鍚嶇О="+goods+",璐拱鏁伴噺="+saleNum;
 					}
 				}
 			}

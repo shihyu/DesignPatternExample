@@ -13,15 +13,15 @@ namespace cn
 
 					bool LoginTemplate::login(LoginModel *lm)
 					{
-						//1£º¸ù¾ÝµÇÂ¼ÈËÔ±µÄ±àºÅÈ¥»ñÈ¡ÏàÓ¦µÄÊý¾Ý
+						//1ï¼šæ ¹æ®ç™»å½•äººå‘˜çš„ç¼–å·åŽ»èŽ·å–ç›¸åº”çš„æ•°æ®
 						LoginModel *dbLm = this->findLoginUser(lm->getLoginId());
 						if(dbLm!=0)
 						{
-							//2£º¶ÔÃÜÂë½øÐÐ¼ÓÃÜ
+							//2ï¼šå¯¹å¯†ç è¿›è¡ŒåŠ å¯†
 							std::string encryptPwd = this->encryptPwd(lm->getPwd());
-							//°Ñ¼ÓÃÜºóµÄÃÜÂëÉèÖÃ»Øµ½µÇÂ¼Êý¾ÝÄ£ÐÍÀïÃæ
+							//æŠŠåŠ å¯†åŽçš„å¯†ç è®¾ç½®å›žåˆ°ç™»å½•æ•°æ®æ¨¡åž‹é‡Œé¢
 							lm->setPwd(encryptPwd);
-							//3£ºÅÐ¶ÏÊÇ·ñÆ¥Åä
+							//3ï¼šåˆ¤æ–­æ˜¯å¦åŒ¹é…
 							return this->match(lm, dbLm);
 						}
 						return false;

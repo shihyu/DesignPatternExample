@@ -23,9 +23,9 @@ namespace cn
 
 					void CDDriver::readCD()
 					{
-						//逗号前是视频显示的数据，逗号后是声音
-						this->data = "设计模式,值得好好研究";
-						//通知主板，自己的状态发生了改变
+						//閫楀彿鍓嶆槸瑙嗛鏄剧ず鐨勬暟鎹紝閫楀彿鍚庢槸澹伴煶
+						this->data = "璁捐妯″紡,鍊煎緱濂藉ソ鐮旂┒";
+						//閫氱煡涓绘澘锛岃嚜宸辩殑鐘舵�佸彂鐢熶簡鏀瑰彉
 						this->getMediator()->changed(this);
 					}
 				}

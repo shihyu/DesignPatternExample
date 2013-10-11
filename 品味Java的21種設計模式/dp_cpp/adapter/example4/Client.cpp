@@ -13,30 +13,30 @@ namespace cn
 
 					void Client::main(std::string args[])
 					{
-						//×¼±¸ÈÕÖ¾ÄÚÈÝ£¬Ò²¾ÍÊÇ²âÊÔµÄÊý¾Ý
+						//å‡†å¤‡æ—¥å¿—å†…å®¹ï¼Œä¹Ÿå°±æ˜¯æµ‹è¯•çš„æ•°æ®
 						LogModel *lm1 = new LogModel();
 						lm1->setLogId("001");
 						lm1->setOperateUser("admin");
 						lm1->setOperateTime("2010-03-02 10:08:18");
-						lm1->setLogContent("ÕâÊÇÒ»¸ö²âÊÔ");
+						lm1->setLogContent("è¿™æ˜¯ä¸€ä¸ªæµ‹è¯•");
 
 						std::vector<LogModel*> list = std::vector<LogModel*>();
 						list.push_back(lm1);
 
-						//´´½¨²Ù×÷ÈÕÖ¾ÎÄ¼þµÄ¶ÔÏó
+						//åˆ›å»ºæ“ä½œæ—¥å¿—æ–‡ä»¶çš„å¯¹è±¡
 						LogFileOperateApi *fileLogApi = new LogFileOperate("");
 						LogDbOperateApi *dbLogApi = new LogDbOperate();
 
-						//´´½¨¾­¹ýË«ÏòÊÊÅäºóµÄ²Ù×÷ÈÕÖ¾µÄ½Ó¿Ú¶ÔÏó
+						//åˆ›å»ºç»è¿‡åŒå‘é€‚é…åŽçš„æ“ä½œæ—¥å¿—çš„æŽ¥å£å¯¹è±¡
 						LogFileOperateApi *fileLogApi2 = new TwoDirectAdapter(fileLogApi,dbLogApi);
 						LogDbOperateApi *dbLogApi2 = new TwoDirectAdapter(fileLogApi,dbLogApi);
 
-						//ÏÈ²âÊÔ´ÓÎÄ¼þ²Ù×÷ÊÊÅäµ½µÚ¶þ°æ£¬ËäÈ»µ÷ÓÃµÄÊÇµÚ¶þ°æµÄ½Ó¿Ú£¬ÆäÊµÊÇÎÄ¼þ²Ù×÷ÔÚÊµÏÖ
+						//å…ˆæµ‹è¯•ä»Žæ–‡ä»¶æ“ä½œé€‚é…åˆ°ç¬¬äºŒç‰ˆï¼Œè™½ç„¶è°ƒç”¨çš„æ˜¯ç¬¬äºŒç‰ˆçš„æŽ¥å£ï¼Œå…¶å®žæ˜¯æ–‡ä»¶æ“ä½œåœ¨å®žçŽ°
 						dbLogApi2->createLog(lm1);
 						std::vector<LogModel*> allLog = dbLogApi2->getAllLog();
 						puts("allLog="+allLog);
 
-						//ÔÙ²âÊÔ´ÓÊý¾Ý¿â´æ´¢ÊÊÅä³ÉµÚÒ»°æµÄ½Ó¿Ú£¬Ò²¾ÍÊÇµ÷ÓÃµÚÒ»°æµÄ½Ó¿Ú£¬ÆäÊµÊÇÊý¾ÝÊµÏÖ
+						//å†æµ‹è¯•ä»Žæ•°æ®åº“å­˜å‚¨é€‚é…æˆç¬¬ä¸€ç‰ˆçš„æŽ¥å£ï¼Œä¹Ÿå°±æ˜¯è°ƒç”¨ç¬¬ä¸€ç‰ˆçš„æŽ¥å£ï¼Œå…¶å®žæ˜¯æ•°æ®å®žçŽ°
 						fileLogApi2->writeLogFile(list);
 						fileLogApi2->readLogFile();
 					}

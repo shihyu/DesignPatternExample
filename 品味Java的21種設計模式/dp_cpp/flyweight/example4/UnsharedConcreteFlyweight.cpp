@@ -20,7 +20,7 @@ namespace cn
 					{
 						for (std::vector<Flyweight*>::const_iterator f = list.begin(); f != list.end(); ++f)
 						{
-							//µÝ¹éµ÷ÓÃ
+							//é€’å½’è°ƒç”¨
 							if((*f)->match(securityEntity, permit))
 							{
 								return true;

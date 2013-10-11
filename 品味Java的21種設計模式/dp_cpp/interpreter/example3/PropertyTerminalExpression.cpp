@@ -18,7 +18,7 @@ namespace cn
 
 					std::string *PropertyTerminalExpression::interpret(Context *c)
 					{
-						//Ö±½Ó»ñÈ¡×îºóµÄÔªËØµÄÊôÐÔµÄÖµ
+						//ç›´æŽ¥èŽ·å–æœ€åŽçš„å…ƒç´ çš„å±žæ€§çš„å€¼
 						std::string ss[1];
 						ss[0] = c->getPreEle()->getAttribute(this->propName);
 						return ss;

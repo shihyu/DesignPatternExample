@@ -13,12 +13,12 @@ namespace cn
 
 					void BusinessObject::main(std::string args[])
 					{
-						//´´½¨DAOµÄ³éÏó¹¤³§
+						//åˆ›å»ºDAOçš„æŠ½è±¡å·¥å‚
 						DAOFactory *df = new RdbDAOFactory();
-						//Í¨¹ı³éÏó¹¤³§À´»ñÈ¡ĞèÒªµÄDAO½Ó¿Ú
+						//é€šè¿‡æŠ½è±¡å·¥å‚æ¥è·å–éœ€è¦çš„DAOæ¥å£
 						OrderMainDAO *mainDAO = df->createOrderMainDAO();
 						OrderDetailDAO *detailDAO = df->createOrderDetailDAO();
-						//µ÷ÓÃDAOÀ´Íê³ÉÊı¾İ´æ´¢µÄ¹¦ÄÜ
+						//è°ƒç”¨DAOæ¥å®Œæˆæ•°æ®å­˜å‚¨çš„åŠŸèƒ½
 						mainDAO->saveOrderMain();
 						detailDAO->saveOrderDetail();
 					}

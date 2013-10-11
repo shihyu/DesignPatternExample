@@ -13,7 +13,7 @@ namespace cn
 
 					double CooperateCustomerStrategy::calcPrice(double goodsPrice)
 					{
-						puts("¶ÔÓÚÕ½ÂÔºÏ×÷¿Í»§£¬Í³Ò»8ÕÛ");
+						puts("å¯¹äºæˆ˜ç•¥åˆä½œå®¢æˆ·ï¼Œç»Ÿä¸€8æŠ˜");
 						return goodsPrice*0.8;
 					}
 				}

@@ -17,13 +17,13 @@ namespace cn
 
 					void UrgencyMessage::sendMessage(std::string message, std::string toUser)
 					{
-						message = "¼Ó¼±£º"+message;
+						message = "åŠ æ€¥ï¼š"+message;
 						AbstractMessage::sendMessage(message, toUser);
 					}
 
 					object *UrgencyMessage::watch(std::string messageId)
 					{
-						//»ñÈ¡ÏàÓ¦µÄÊı¾İ£¬×éÖ¯³É¼à¿ØµÄÊı¾İ¶ÔÏó£¬È»ºó·µ»Ø		
+						//è·å–ç›¸åº”çš„æ•°æ®ï¼Œç»„ç»‡æˆç›‘æ§çš„æ•°æ®å¯¹è±¡ï¼Œç„¶åè¿”å›		
 						return 0;
 					}
 				}

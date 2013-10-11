@@ -13,8 +13,8 @@ namespace cn
 
 					void LogContext::log(std::string msg)
 					{
-						//ÔÚÉÏÏÂÎÄÀïÃæ£¬×ÔÐÐÊµÏÖ¶Ô¾ßÌå²ßÂÔµÄÑ¡Ôñ
-						//ÓÅÏÈÑ¡ÓÃ²ßÂÔ£º¼ÇÂ¼µ½Êý¾Ý¿â
+						//åœ¨ä¸Šä¸‹æ–‡é‡Œé¢ï¼Œè‡ªè¡Œå®žçŽ°å¯¹å…·ä½“ç­–ç•¥çš„é€‰æ‹©
+						//ä¼˜å…ˆé€‰ç”¨ç­–ç•¥ï¼šè®°å½•åˆ°æ•°æ®åº“
 						LogStrategy *strategy = new DbLog();
 						try
 						{
@@ -22,7 +22,7 @@ namespace cn
 						}
 						catch(Exception *err)
 						{
-							//³ö´íÁË£¬ÄÇ¾Í¼ÇÂ¼µ½ÎÄ¼þÖÐ
+							//å‡ºé”™äº†ï¼Œé‚£å°±è®°å½•åˆ°æ–‡ä»¶ä¸­
 							strategy = new FileLog();
 							strategy->log(msg);
 						}

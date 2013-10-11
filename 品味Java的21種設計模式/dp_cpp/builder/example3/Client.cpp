@@ -13,44 +13,44 @@ namespace cn
 
 					void Client::main(std::string args[])
 					{
-						//×¼±¸²âÊÔÊý¾Ý
+						//å‡†å¤‡æµ‹è¯•æ•°æ®
 						ExportHeaderModel *ehm = new ExportHeaderModel();
-						ehm->setDepId("Ò»·Ö¹«Ë¾");
+						ehm->setDepId("ä¸€åˆ†å…¬å¸");
 						ehm->setExportDate("2010-05-18");
 
 						Map<std::string, Collection<ExportDataModel*>*> *mapData = std::map<std::string, Collection<ExportDataModel*>*>();
 						Collection<ExportDataModel*> *col = std::vector<ExportDataModel*>();
 
 						ExportDataModel *edm1 = new ExportDataModel();
-						edm1->setProductId("²úÆ·001ºÅ");
+						edm1->setProductId("äº§å“001å·");
 						edm1->setPrice(100);
 						edm1->setAmount(80);
 
 						ExportDataModel *edm2 = new ExportDataModel();
-						edm2->setProductId("²úÆ·002ºÅ");
+						edm2->setProductId("äº§å“002å·");
 						edm2->setPrice(99);
 						edm2->setAmount(55);
-						//°ÑÊý¾Ý×é×°ÆðÀ´
+						//æŠŠæ•°æ®ç»„è£…èµ·æ¥
 						col->add(edm1);
 						col->add(edm2);
-						mapData->put("ÏúÊÛ¼ÇÂ¼±í", col);
+						mapData->put("é”€å”®è®°å½•è¡¨", col);
 
 						ExportFooterModel *efm = new ExportFooterModel();
-						efm->setExportUser("ÕÅÈý");
+						efm->setExportUser("å¼ ä¸‰");
 
-						//²âÊÔÊä³öµ½ÎÄ±¾ÎÄ¼þ
+						//æµ‹è¯•è¾“å‡ºåˆ°æ–‡æœ¬æ–‡ä»¶
 						TxtBuilder *txtBuilder = new TxtBuilder();
-						//´´½¨Ö¸µ¼Õß¶ÔÏó
+						//åˆ›å»ºæŒ‡å¯¼è€…å¯¹è±¡
 						Director *director = new Director(txtBuilder);
 						director->construct(ehm, mapData, efm);
-						//°ÑÒªÊä³öµÄÄÚÈÝÊä³öµ½¿ØÖÆÌ¨¿´¿´
-						puts("Êä³öµ½ÎÄ±¾ÎÄ¼þµÄÄÚÈÝ£º\n"+txtBuilder->getResult());
-						//²âÊÔÊä³öµ½xmlÎÄ¼þ
+						//æŠŠè¦è¾“å‡ºçš„å†…å®¹è¾“å‡ºåˆ°æŽ§åˆ¶å°çœ‹çœ‹
+						puts("è¾“å‡ºåˆ°æ–‡æœ¬æ–‡ä»¶çš„å†…å®¹ï¼š\n"+txtBuilder->getResult());
+						//æµ‹è¯•è¾“å‡ºåˆ°xmlæ–‡ä»¶
 						XmlBuilder *xmlBuilder = new XmlBuilder();
 						Director *director2 = new Director(xmlBuilder);
 						director2->construct(ehm, mapData, efm);
-						//°ÑÒªÊä³öµÄÄÚÈÝÊä³öµ½¿ØÖÆÌ¨¿´¿´
-						puts("Êä³öµ½XMLÎÄ¼þµÄÄÚÈÝ£º\n"+xmlBuilder->getResult());
+						//æŠŠè¦è¾“å‡ºçš„å†…å®¹è¾“å‡ºåˆ°æŽ§åˆ¶å°çœ‹çœ‹
+						puts("è¾“å‡ºåˆ°XMLæ–‡ä»¶çš„å†…å®¹ï¼š\n"+xmlBuilder->getResult());
 
 					}
 				}

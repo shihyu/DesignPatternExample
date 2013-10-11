@@ -13,7 +13,7 @@ namespace cn
 
 					void Client::main(std::string args[])
 					{
-						//×¼±¸Òª·¢³öµÄÃüÁî£¬Ã»ÓÐ¾ßÌåÊµÏÖÀàÁË
+						//å‡†å¤‡è¦å‘å‡ºçš„å‘½ä»¤ï¼Œæ²¡æœ‰å…·ä½“å®žçŽ°ç±»äº†
 //JAVA TO C++ CONVERTER TODO TASK: Anonymous inner classes are not converted to C++:
 //						Command cmd = new Command()
 										//		{
@@ -25,14 +25,14 @@ namespace cn
 										//
 										//			public void execute()
 										//			{
-										//				System.out.println("´òÓ¡µÄÄÚÈÝÎª="+str);
+										//				System.out.println("æ‰“å°çš„å†…å®¹ä¸º="+str);
 										//			}
 										//		};
-						cmd::setStr("ÍË»¯µÄÃüÁîÄ£Ê½ÀàËÆÓÚJava»Øµ÷µÄÊ¾Àý");
+						cmd::setStr("é€€åŒ–çš„å‘½ä»¤æ¨¡å¼ç±»ä¼¼äºŽJavaå›žè°ƒçš„ç¤ºä¾‹");
 
-						//Õâ¸öÊ±ºòµÄInvoker»òÐí¸Ã³ÆÎª·þÎñÁË
+						//è¿™ä¸ªæ—¶å€™çš„Invokeræˆ–è®¸è¯¥ç§°ä¸ºæœåŠ¡äº†
 						Invoker *invoker = new Invoker();
-						//°´ÏÂ°´Å¥£¬ÕæÕýÆô¶¯Ö´ÐÐÃüÁî
+						//æŒ‰ä¸‹æŒ‰é’®ï¼ŒçœŸæ­£å¯åŠ¨æ‰§è¡Œå‘½ä»¤
 						invoker->startPrint(cmd);
 					}
 				}

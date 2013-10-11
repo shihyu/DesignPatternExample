@@ -31,7 +31,7 @@ namespace cn
 						Prototype *prototype = map->get(prototypeId);
 						if(prototype == 0)
 						{
-							throw new Exception("��ϣ����ȡ��ԭ�ͻ�û��ע����ѱ�����");
+							throw new Exception("您希望获取的原型还没有注册或已被销毁");
 						}
 						return prototype;
 					}

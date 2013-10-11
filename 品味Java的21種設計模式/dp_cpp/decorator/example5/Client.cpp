@@ -13,9 +13,9 @@ namespace cn
 
 					void Client::main(std::string args[]) throw(Exception)
 					{
-						//流式输出文件
+						//娴佸紡杈撳嚭鏂囦欢
 						DataOutputStream *dout = new DataOutputStream(new EncryptOutputStream(new BufferedOutputStream(new FileOutputStream("MyEncrypt.txt"))));
-						//然后就可以输出内容了
+						//鐒跺悗灏卞彲浠ヨ緭鍑哄唴瀹逛簡
 						dout->write((new std::string("abcdxyz"))->getBytes());
 						dout->close();
 					}

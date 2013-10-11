@@ -14,31 +14,31 @@ namespace cn
 					void Client::main(std::string args[])
 					{
 						UserJDBC *uj = new UserJDBC();
-						//ÏÈÐÂÔö¼¸Ìõ
+						//å…ˆæ–°å¢žå‡ æ¡
 						UserModel *um1 = new UserModel();
 						um1->setUuid("u1");
-						um1->setName("ÕÅÈý");
+						um1->setName("å¼ ä¸‰");
 						um1->setAge(22);
 						uj->create(um1);
 
 						UserModel *um2 = new UserModel();
 						um2->setUuid("u2");
-						um2->setName("ÀîËÄ");
+						um2->setName("æŽå››");
 						um2->setAge(25);
 						uj->create(um2);
 
 						UserModel *um3 = new UserModel();
 						um3->setUuid("u3");
-						um3->setName("ÍõÎå");
+						um3->setName("çŽ‹äº”");
 						um3->setAge(32);
 						uj->create(um3);
 
-						//²âÊÔÐÞ¸Ä
-						um3->setName("ÍõÎå±»¸ÄÁË");
+						//æµ‹è¯•ä¿®æ”¹
+						um3->setName("çŽ‹äº”è¢«æ”¹äº†");
 						um3->setAge(35);
 						uj->update(um3);
 
-						//²âÊÔ²éÑ¯
+						//æµ‹è¯•æŸ¥è¯¢
 						UserQueryModel *uqm = new UserQueryModel();
 						uqm->setAge(25);
 						uqm->setAge2(36);

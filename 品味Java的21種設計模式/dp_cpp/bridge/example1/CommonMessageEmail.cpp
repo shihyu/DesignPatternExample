@@ -1,4 +1,5 @@
 #include "CommonMessageEmail.h"
+#include <iostream>
 
 namespace cn
 {
@@ -13,7 +14,7 @@ namespace cn
 
 					void CommonMessageEmail::send(std::string message, std::string toUser)
 					{
-						puts("Ê¹ÓÃEmailµÄ·½Ê½£¬·¢ËÍÏûÏ¢'"+message+"'¸ø"+toUser);
+                        std::cout << "ä½¿ç”¨Emailçš„æ–¹å¼ï¼Œå‘é€æ¶ˆæ¯'" << message << "ç»™" << toUser;
 					}
 				}
 			}

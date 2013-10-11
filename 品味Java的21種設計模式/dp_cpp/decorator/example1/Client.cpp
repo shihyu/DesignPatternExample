@@ -13,16 +13,16 @@ namespace cn
 
 					void Client::main(std::string args[])
 					{
-						//ÏÈ´´½¨¼ÆËã½±½ðµÄ¶ÔÏó
+						//å…ˆåˆ›å»ºè®¡ç®—å¥–é‡‘çš„å¯¹è±¡
 						Prize *p = new Prize();
 
-						//ÈÕÆÚ¶ÔÏó¶¼Ã»ÓÐÓÃÉÏ£¬ËùÒÔ´«null¾Í¿ÉÒÔÁË
-						double zs = p->calcPrize("ÕÅÈý",0,0);
-						puts("==========ÕÅÈýÓ¦µÃ½±½ð£º"+zs);
-						double ls = p->calcPrize("ÀîËÄ",0,0);
-						puts("==========ÀîËÄÓ¦µÃ½±½ð£º"+ls);
-						double ww = p->calcPrize("ÍõÎå",0,0);
-						puts("==========Íõ¾­ÀíÓ¦µÃ½±½ð£º"+ww);
+						//æ—¥æœŸå¯¹è±¡éƒ½æ²¡æœ‰ç”¨ä¸Šï¼Œæ‰€ä»¥ä¼ nullå°±å¯ä»¥äº†
+						double zs = p->calcPrize("å¼ ä¸‰",0,0);
+						puts("==========å¼ ä¸‰åº”å¾—å¥–é‡‘ï¼š"+zs);
+						double ls = p->calcPrize("æŽå››",0,0);
+						puts("==========æŽå››åº”å¾—å¥–é‡‘ï¼š"+ls);
+						double ww = p->calcPrize("çŽ‹äº”",0,0);
+						puts("==========çŽ‹ç»ç†åº”å¾—å¥–é‡‘ï¼š"+ww);
 					}
 				}
 			}

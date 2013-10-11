@@ -13,27 +13,27 @@ namespace cn
 
 					void PrintStructVisitor::visitComposite(Composite *composite)
 					{
-						//ÏÈ°Ñ×Ô¼ºÊä³öÈ¥
+						//å…ˆæŠŠè‡ªå·±è¾“å‡ºåŽ»
 						puts(preStr+"+"+composite->getName());
-						//Èç¹û»¹°üº¬ÓÐ×Ó×é¼þ£¬ÄÇÃ´¾ÍÊä³öÕâÐ©×Ó×é¼þ¶ÔÏó
+						//å¦‚æžœè¿˜åŒ…å«æœ‰å­ç»„ä»¶ï¼Œé‚£ä¹ˆå°±è¾“å‡ºè¿™äº›å­ç»„ä»¶å¯¹è±¡
 						if(composite->getChildComponents()!=0)
 						{
-							//È»ºóÌí¼ÓÒ»¸ö¿Õ¸ñ£¬±íÊ¾ÏòºóËõ½øÒ»¸ö¿Õ¸ñ
+							//ç„¶åŽæ·»åŠ ä¸€ä¸ªç©ºæ ¼ï¼Œè¡¨ç¤ºå‘åŽç¼©è¿›ä¸€ä¸ªç©ºæ ¼
 							preStr+=" ";
-							//Êä³öµ±Ç°¶ÔÏóµÄ×Ó¶ÔÏóÁË
+							//è¾“å‡ºå½“å‰å¯¹è±¡çš„å­å¯¹è±¡äº†
 							for (unknown::const_iterator c = composite->getChildComponents().begin(); c != composite->getChildComponents().end(); ++c)
 							{
-								//µÝ¹éÊä³öÃ¿¸ö×Ó¶ÔÏó
+								//é€’å½’è¾“å‡ºæ¯ä¸ªå­å¯¹è±¡
 								(*c)->accept(this);
 							}
-							//°ÑÑ­»·×Ó¶ÔÏóËù¶à¼ÓÈëµÄÒ»¸öÍË¸ñ¸øÈ¥µô
+							//æŠŠå¾ªçŽ¯å­å¯¹è±¡æ‰€å¤šåŠ å…¥çš„ä¸€ä¸ªé€€æ ¼ç»™åŽ»æŽ‰
 							preStr = preStr.substr(0,preStr.length()-1);
 						}
 					}
 
 					void PrintStructVisitor::visitLeaf(Leaf *leaf)
 					{
-						//·ÃÎÊµ½Ò¶×Ó¶ÔÏóµÄÊý¾Ý		
+						//è®¿é—®åˆ°å¶å­å¯¹è±¡çš„æ•°æ®		
 						puts(preStr+"-"+leaf->getName());
 					}
 				}

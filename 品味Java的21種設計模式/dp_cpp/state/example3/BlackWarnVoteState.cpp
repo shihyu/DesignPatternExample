@@ -13,8 +13,8 @@ namespace cn
 
 					void BlackWarnVoteState::vote(std::string user, std::string voteItem, VoteManager *voteManager)
 					{
-						//´ı½øºÚÃûµ¥¾¯¸æ×´Ì¬
-						puts("½ûÖ¹µÇÂ¼ºÍÊ¹ÓÃÏµÍ³3Ìì");
+						//å¾…è¿›é»‘åå•è­¦å‘ŠçŠ¶æ€
+						puts("ç¦æ­¢ç™»å½•å’Œä½¿ç”¨ç³»ç»Ÿ3å¤©");
 					}
 				}
 			}

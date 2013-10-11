@@ -24,11 +24,11 @@ namespace cn
 							oneExtend = new OneExtend();
 							map->put(key, oneExtend);
 						}
-						//�ѵ�ǰʵ������ż�1
+						//把当前实例的序号加1
 						num++;
 						if(num > NUM_MAX)
 						{
-							//���ʵ��������Ѿ��ﵽ�����Ŀ�ˣ��Ǿ��ظ���1��ʼ��ȡ
+							//如果实例的序号已经达到最大数目了，那就重复从1开始获取
 							num = 1;
 						}
 						return oneExtend;

@@ -13,10 +13,10 @@ namespace cn
 
 					void LogStrategyTemplate::log(std::string msg)
 					{
-						//第一步：给消息添加记录日志的时间
+						//绗竴姝ワ細缁欐秷鎭坊鍔犺褰曟棩蹇楃殑鏃堕棿
 						DateFormat *df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss SSS");
-						msg = df->format(new java::util::Date())+" 内容是："+ msg;
-						//第二步：真正执行日志记录
+						msg = df->format(new java::util::Date())+" 鍐呭鏄細"+ msg;
+						//绗簩姝ワ細鐪熸鎵ц鏃ュ織璁板綍
 						doLog(msg);
 					}
 				}

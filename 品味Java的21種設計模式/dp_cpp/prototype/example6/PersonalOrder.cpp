@@ -43,17 +43,17 @@ namespace cn
 
 					std::string PersonalOrder::ToString()
 					{
-						//¼òµ¥µãÊä³ö
-						return "¶©¹º²úÆ·ÊÇ="+this->product->getName()+"£¬¶©¹ºÊýÁ¿Îª="+this->orderProductNum;
+						//ç®€å•ç‚¹è¾“å‡º
+						return "è®¢è´­äº§å“æ˜¯="+this->product->getName()+"ï¼Œè®¢è´­æ•°é‡ä¸º="+this->orderProductNum;
 					}
 
 					OrderApi *PersonalOrder::cloneOrder()
 					{
-						//´´½¨Ò»¸öÐÂµÄ¶©µ¥£¬È»ºó°Ñ±¾ÊµÀýµÄÊý¾Ý¸´ÖÆ¹ýÈ¥
+						//åˆ›å»ºä¸€ä¸ªæ–°çš„è®¢å•ï¼Œç„¶åŽæŠŠæœ¬å®žä¾‹çš„æ•°æ®å¤åˆ¶è¿‡åŽ»
 						PersonalOrder *order = new PersonalOrder();
 						order->setCustomerName(this->customerName);
 						order->setOrderProductNum(this->orderProductNum);
-						//¶ÔÓÚ¶ÔÏóÀàÐÍµÄÊý¾Ý£¬Éî¶È¿ËÂ¡µÄÊ±ºòÐèÒª¼ÌÐøµ÷ÓÃÕâ¸ö¶ÔÏóµÄ¿ËÂ¡·½·¨
+						//å¯¹äºŽå¯¹è±¡ç±»åž‹çš„æ•°æ®ï¼Œæ·±åº¦å…‹éš†çš„æ—¶å€™éœ€è¦ç»§ç»­è°ƒç”¨è¿™ä¸ªå¯¹è±¡çš„å…‹éš†æ–¹æ³•
 						order->setProduct(static_cast<Product*>(this->product->cloneProduct()));
 						return order;
 					}

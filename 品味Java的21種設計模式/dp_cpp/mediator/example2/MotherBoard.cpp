@@ -35,30 +35,30 @@ namespace cn
 					{
 						if(colleague == cdDriver)
 						{
-							//±íÊ¾¹âÇý¶ÁÈ¡Êý¾ÝÁË
+							//è¡¨ç¤ºå…‰é©±è¯»å–æ•°æ®äº†
 							this->opeCDDriverReadData(static_cast<CDDriver*>(colleague));
 						}
 						else if(colleague == cpu)
 						{
-							//±íÊ¾CPU´¦ÀíÍêÁË
+							//è¡¨ç¤ºCPUå¤„ç†å®Œäº†
 							this->opeCPU(static_cast<CPU*>(colleague));
 						}
 					}
 
 					void MotherBoard::opeCDDriverReadData(CDDriver *cd)
 					{
-						//1£ºÏÈ»ñÈ¡¹âÇý¶ÁÈ¡µÄÊý¾Ý
+						//1ï¼šå…ˆèŽ·å–å…‰é©±è¯»å–çš„æ•°æ®
 						std::string data = cd->getData();
-						//2£º°ÑÕâÐ©Êý¾Ý´«µÝ¸øCPU½øÐÐ´¦Àí
+						//2ï¼šæŠŠè¿™äº›æ•°æ®ä¼ é€’ç»™CPUè¿›è¡Œå¤„ç†
 						this->cpu->executeData(data);
 					}
 
 					void MotherBoard::opeCPU(CPU *cpu)
 					{
-						//1£ºÏÈ»ñÈ¡CPU´¦Àí¹ýºóµÄÊý¾Ý
+						//1ï¼šå…ˆèŽ·å–CPUå¤„ç†è¿‡åŽçš„æ•°æ®
 						std::string videoData = cpu->getVideoData();
 						std::string soundData = cpu->getSoundData();
-						//2£º°ÑÕâÐ©Êý¾Ý´«µÝ¸øÏÔ¿¨ºÍÉù¿¨Õ¹Ê¾³öÀ´
+						//2ï¼šæŠŠè¿™äº›æ•°æ®ä¼ é€’ç»™æ˜¾å¡å’Œå£°å¡å±•ç¤ºå‡ºæ¥
 						this->videoCard->showData(videoData);
 						this->soundCard->soundData(soundData);
 					}

@@ -16,15 +16,15 @@ namespace cn
 						UserManager *userManager = new UserManager();
 						Collection<UserModelApi*> *col = userManager->getUserByDepId("0101");
 
-						//Èç¹ûÖ»ÊÇÏÔÊ¾ÓÃ»§Ãû³Æ£¬ÄÇÃ´²»ĞèÒªÖØĞÂ²éÑ¯Êı¾İ¿â
+						//å¦‚æœåªæ˜¯æ˜¾ç¤ºç”¨æˆ·åç§°ï¼Œé‚£ä¹ˆä¸éœ€è¦é‡æ–°æŸ¥è¯¢æ•°æ®åº“
 						for (Collection<UserModelApi*>::const_iterator umApi = col->begin(); umApi != col->end(); ++umApi)
 						{
-							puts("ÓÃ»§±àºÅ£º="+(*umApi)->getUserId()+",ÓÃ»§ĞÕÃû£º="+(*umApi)->getName());
+							puts("ç”¨æˆ·ç¼–å·ï¼š="+(*umApi)->getUserId()+",ç”¨æˆ·å§“åï¼š="+(*umApi)->getName());
 						}
-						//Èç¹û·ÃÎÊ·ÇÓÃ»§±àºÅºÍÓÃ»§ĞÕÃûÍâµÄÊôĞÔ£¬ÄÇ¾Í»áÖØĞÂ²éÑ¯Êı¾İ¿â
+						//å¦‚æœè®¿é—®éç”¨æˆ·ç¼–å·å’Œç”¨æˆ·å§“åå¤–çš„å±æ€§ï¼Œé‚£å°±ä¼šé‡æ–°æŸ¥è¯¢æ•°æ®åº“
 						for (Collection<UserModelApi*>::const_iterator umApi = col->begin(); umApi != col->end(); ++umApi)
 						{
-							puts("ÓÃ»§±àºÅ£º="+(*umApi)->getUserId()+",ÓÃ»§ĞÕÃû£º="+(*umApi)->getName()+",ËùÊô²¿ÃÅ£º="+(*umApi)->getDepId());
+							puts("ç”¨æˆ·ç¼–å·ï¼š="+(*umApi)->getUserId()+",ç”¨æˆ·å§“åï¼š="+(*umApi)->getName()+",æ‰€å±éƒ¨é—¨ï¼š="+(*umApi)->getDepId());
 						}
 					}
 				}

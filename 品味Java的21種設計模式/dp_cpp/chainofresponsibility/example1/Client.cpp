@@ -1,38 +1,26 @@
 #include "Client.h"
+#include <iostream>
+using namespace cn::javass::dp::chainofresponsibility::example1;
 
-namespace cn
+
+int main(std::string args[])
 {
-	namespace javass
-	{
-		namespace dp
-		{
-			namespace chainofresponsibility
-			{
-				namespace example1
-				{
+    FeeRequest *request = new FeeRequest();
 
-					void Client::main(std::string args[])
-					{
-						FeeRequest *request = new FeeRequest();
+    //å¼€å§‹æµ‹è¯•
+    std::string ret1 = request->requestToProjectManager("å°æ", 300);
+    std::cout << "the ret1=" << ret1;
+    std::string ret2 = request->requestToProjectManager("å°å¼ ", 300);
+    std::cout << "the ret2=" << ret2;
 
-						//¿ªÊ¼²âÊÔ
-						std::string ret1 = request->requestToProjectManager("Ğ¡Àî", 300);
-						puts("the ret1="+ret1);
-						std::string ret2 = request->requestToProjectManager("Ğ¡ÕÅ", 300);
-						puts("the ret2="+ret2);
+    std::string ret3 = request->requestToProjectManager("å°æ", 600);
+    std::cout << "the ret3=" << ret3;
+    std::string ret4 = request->requestToProjectManager("å°å¼ ", 600);
+    std::cout << "the ret4=" << ret4 ;
 
-						std::string ret3 = request->requestToProjectManager("Ğ¡Àî", 600);
-						puts("the ret3="+ret3);
-						std::string ret4 = request->requestToProjectManager("Ğ¡ÕÅ", 600);
-						puts("the ret4="+ret4);
-
-						std::string ret5 = request->requestToProjectManager("Ğ¡Àî", 1200);
-						puts("the ret5="+ret5);
-						std::string ret6 = request->requestToProjectManager("Ğ¡ÕÅ", 1200);
-						puts("the ret6="+ret6);
-					}
-				}
-			}
-		}
-	}
+    std::string ret5 = request->requestToProjectManager("å°æ", 1200);
+    std::cout << "the ret5=" << ret5;
+    std::string ret6 = request->requestToProjectManager("å°å¼ ", 1200);
+    std::cout << "the ret6=" << ret6;
+    return 0;
 }

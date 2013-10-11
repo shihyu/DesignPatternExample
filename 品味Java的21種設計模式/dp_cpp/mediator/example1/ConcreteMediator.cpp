@@ -23,8 +23,8 @@ namespace cn
 
 					void ConcreteMediator::changed(Colleague *colleague)
 					{
-						//某个同事类发生了变化，通常需要与其他同事交户
-						//具体协调相应的同事对象来实现协作行为
+						//鏌愪釜鍚屼簨绫诲彂鐢熶簡鍙樺寲锛岄�氬父闇�瑕佷笌鍏朵粬鍚屼簨浜ゆ埛
+						//鍏蜂綋鍗忚皟鐩稿簲鐨勫悓浜嬪璞℃潵瀹炵幇鍗忎綔琛屼负
 					}
 				}
 			}

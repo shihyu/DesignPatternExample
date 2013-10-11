@@ -1,4 +1,5 @@
 #include "AMDCPU.h"
+#include <iostream>
 
 namespace cn
 {
@@ -18,7 +19,8 @@ namespace cn
 
 					void AMDCPU::calculate()
 					{
-						puts("now in AMD CPU,pins="+pins);
+                        std::cout << "now in AMD CPU,pins" <<  pins << std::endl; 
+                    
 					}
 				}
 			}

@@ -13,7 +13,7 @@ namespace cn
 
 					void MessageMobile::send(std::string message, std::string toUser)
 					{
-						puts("Ê¹ÓÃÊÖ»ú¶ÌÏûÏ¢µÄ·½Ê½£¬·¢ËÍÏûÏ¢'"+message+"'¸ø"+toUser);
+						puts("ä½¿ç”¨æ‰‹æœºçŸ­æ¶ˆæ¯çš„æ–¹å¼ï¼Œå‘é€æ¶ˆæ¯'"+message+"'ç»™"+toUser);
 					}
 				}
 			}

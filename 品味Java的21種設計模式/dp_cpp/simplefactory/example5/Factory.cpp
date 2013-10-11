@@ -13,9 +13,9 @@ namespace cn
 
 					Api *Factory::createApi()
 					{
-						//Ö±½Ó¶ÁÈ¡ÅäÖÃÎÄ¼þÀ´»ñÈ¡ÐèÒª´´½¨ÊµÀýµÄÀà
+						//ç›´æŽ¥è¯»å–é…ç½®æ–‡ä»¶æ¥èŽ·å–éœ€è¦åˆ›å»ºå®žä¾‹çš„ç±»
 
-						//ÖÁÓÚÈçºÎ¶ÁÈ¡Properties»¹ÓÐÈçºÎ·´ÉäÕâÀï¾Í²»½âÊÍÁË
+						//è‡³äºŽå¦‚ä½•è¯»å–Propertiesè¿˜æœ‰å¦‚ä½•åå°„è¿™é‡Œå°±ä¸è§£é‡Šäº†
 						Properties *p = new Properties();
 //JAVA TO C++ CONVERTER NOTE: The local variable in was renamed since it is a keyword in C++:
 						InputStream *in_Renamed = 0;
@@ -26,7 +26,7 @@ namespace cn
 						}
 						catch (IOException *e)
 						{
-							puts("×°ÔØ¹¤³§ÅäÖÃÎÄ¼þ³ö´íÁË£¬¾ßÌåµÄ¶ÑÕ»ÐÅÏ¢ÈçÏÂ£º");
+							puts("è£…è½½å·¥åŽ‚é…ç½®æ–‡ä»¶å‡ºé”™äº†ï¼Œå…·ä½“çš„å †æ ˆä¿¡æ¯å¦‚ä¸‹ï¼š");
 							e->printStackTrace();
 						}
 //JAVA TO C++ CONVERTER TODO TASK: There is no native C++ equivalent to the exception 'finally' clause:
@@ -41,7 +41,7 @@ namespace cn
 								e->printStackTrace();
 							}
 						}
-						//ÓÃ·´ÉäÈ¥´´½¨£¬ÄÇÐ©ÀýÍâ´¦ÀíµÈÍêÉÆµÄ¹¤×÷ÕâÀï¾Í²»×öÁË
+						//ç”¨åå°„åŽ»åˆ›å»ºï¼Œé‚£äº›ä¾‹å¤–å¤„ç†ç­‰å®Œå–„çš„å·¥ä½œè¿™é‡Œå°±ä¸åšäº†
 						Api *api = 0;
 						try
 						{

@@ -18,12 +18,12 @@ namespace cn
 
 					void MenuCommand::setCookApi(CookApi *cookApi)
 					{
-						//Ê²Ã´¶¼²»ÓÃ×ö
+						//ä»€ä¹ˆéƒ½ä¸ç”¨åš
 					}
 
 					int MenuCommand::getTableNum()
 					{
-						//Ê²Ã´¶¼²»ÓÃ×ö
+						//ä»€ä¹ˆéƒ½ä¸ç”¨åš
 						return 0;
 					}
 
@@ -34,7 +34,7 @@ namespace cn
 
 					void MenuCommand::execute()
 					{
-						//Ö´ĞĞ²Ëµ¥¾ÍÊÇ°Ñ²Ëµ¥´«µİ¸øºó³ø
+						//æ‰§è¡Œèœå•å°±æ˜¯æŠŠèœå•ä¼ é€’ç»™åå¨
 						CommandQueue::addMenu(this);
 					}
 				}

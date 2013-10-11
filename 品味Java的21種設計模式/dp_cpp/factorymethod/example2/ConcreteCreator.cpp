@@ -13,7 +13,7 @@ namespace cn
 
 					Product *ConcreteCreator::factoryMethod()
 					{
-						//重定义工厂方法，返回一个具体的Product对象
+						//閲嶅畾涔夊伐鍘傛柟娉曪紝杩斿洖涓�涓叿浣撶殑Product瀵硅薄
 						return new ConcreteProduct();
 					}
 				}

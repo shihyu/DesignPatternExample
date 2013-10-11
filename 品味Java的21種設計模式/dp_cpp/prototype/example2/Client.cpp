@@ -18,7 +18,7 @@ namespace cn
 
 					void Client::operation()
 					{
-						//会需要创建原型接口的对象
+						//浼氶渶瑕佸垱寤哄師鍨嬫帴鍙ｇ殑瀵硅薄
 						Prototype *newPrototype = prototype->clone();
 					}
 				}

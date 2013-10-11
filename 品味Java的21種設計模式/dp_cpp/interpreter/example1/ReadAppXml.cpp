@@ -17,22 +17,22 @@ namespace cn
 					void ReadAppXml::read(std::string filePathName) throw(Exception)
 					{
 						Document *doc = 0;
-						//½¨Á¢Ò»¸ö½âÎöÆ÷¹¤³§
+						//å»ºç«‹ä¸€ä¸ªè§£æå™¨å·¥å‚
 						DocumentBuilderFactory *factory = DocumentBuilderFactory::newInstance();
-						//»ñµÃÒ»¸öDocumentBuilder¶ÔÏó£¬Õâ¸ö¶ÔÏó´ú±íÁË¾ßÌåµÄDOM½âÎöÆ÷
+						//è·å¾—ä¸€ä¸ªDocumentBuilderå¯¹è±¡ï¼Œè¿™ä¸ªå¯¹è±¡ä»£è¡¨äº†å…·ä½“çš„DOMè§£æå™¨
 						DocumentBuilder *builder=factory->newDocumentBuilder();
-						//µÃµ½Ò»¸ö±íÊ¾XMLÎÄµµµÄDocument¶ÔÏó
+						//å¾—åˆ°ä¸€ä¸ªè¡¨ç¤ºXMLæ–‡æ¡£çš„Documentå¯¹è±¡
 						doc=builder->parse(filePathName);
-						//È¥µôXMLÎÄµµÖĞ×÷Îª¸ñÊ½»¯ÄÚÈİµÄ¿Õ°×¶øÓ³ÉäÔÚDOMÊ÷ÖĞµÄ²»±ØÒªµÄText Node¶ÔÏó
+						//å»æ‰XMLæ–‡æ¡£ä¸­ä½œä¸ºæ ¼å¼åŒ–å†…å®¹çš„ç©ºç™½è€Œæ˜ å°„åœ¨DOMæ ‘ä¸­çš„ä¸å¿…è¦çš„Text Nodeå¯¹è±¡
 						doc->normalize();
 
-										//		//»ñÈ¡jdbc
+										//		//è·å–jdbc
 										//		NodeList jdbc = doc.getElementsByTagName("jdbc");
-										//		//Ö»ÓĞÒ»¸öjdbc,»ñÈ¡jdbcÖĞµÄÇı¶¯ÀàµÄÃû³Æ
+										//		//åªæœ‰ä¸€ä¸ªjdbc,è·å–jdbcä¸­çš„é©±åŠ¨ç±»çš„åç§°
 										//		NodeList driverClassNode = ((Element)jdbc.item(0)).getElementsByTagName("driver-class");
 										//		String driverClass = driverClassNode.item(0).getFirstChild().getNodeValue();
 										//		System.out.println("driverClass=="+driverClass);
-										//		//Í¬Àí»ñÈ¡url¡¢user¡¢passwordµÈÖµ
+										//		//åŒç†è·å–urlã€userã€passwordç­‰å€¼
 										//		NodeList urlNode = ((Element)jdbc.item(0)).getElementsByTagName("url");
 										//		String url = urlNode.item(0).getFirstChild().getNodeValue();
 										//		System.out.println("url=="+url);
@@ -44,17 +44,17 @@ namespace cn
 										//		NodeList passwordNode = ((Element)jdbc.item(0)).getElementsByTagName("password");
 										//		String password = passwordNode.item(0).getFirstChild().getNodeValue();
 										//		System.out.println("password=="+password);
-										//		//»ñÈ¡application-xml
+										//		//è·å–application-xml
 										//		NodeList applicationXmlNode = doc.getElementsByTagName("application-xml");
 										//		String applicationXml = applicationXmlNode.item(0).getFirstChild().getNodeValue();
 										//		System.out.println("applicationXml=="+applicationXml);
 
-						//ÏÈÒª»ñÈ¡spring-default£¬È»ºó»ñÈ¡application-xmls
-						//È»ºó²ÅÄÜ»ñÈ¡application-xml		
+						//å…ˆè¦è·å–spring-defaultï¼Œç„¶åè·å–application-xmls
+						//ç„¶åæ‰èƒ½è·å–application-xml		
 						NodeList *springDefaultNode = doc->getElementsByTagName("spring-default");
 						NodeList *appXmlsNode = (static_cast<Element*>(springDefaultNode->item(0)))->getElementsByTagName("application-xmls");
 						NodeList *appXmlNode = (static_cast<Element*>(appXmlsNode->item(0)))->getElementsByTagName("application-xml");
-						//Ñ­»·»ñÈ¡Ã¿¸öapplication-xmlÔªËØµÄÖµ
+						//å¾ªç¯è·å–æ¯ä¸ªapplication-xmlå…ƒç´ çš„å€¼
 						for(int i=0;i<appXmlNode->getLength();i++)
 						{
 							std::string applicationXml = appXmlNode->item(i)->getFirstChild()->getNodeValue();

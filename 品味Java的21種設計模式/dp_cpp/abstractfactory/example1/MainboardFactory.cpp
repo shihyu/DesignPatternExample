@@ -14,7 +14,7 @@ namespace cn
 					MainboardApi *MainboardFactory::createMainboardApi(int type)
 					{
 						MainboardApi *mainboard = 0;
-						//根据参数来选择并创建相应的主板对象
+						//鏍规嵁鍙傛暟鏉ラ�夋嫨骞跺垱寤虹浉搴旂殑涓绘澘瀵硅薄
 						if(type==1)
 						{
 							mainboard = new GAMainboard(1156);

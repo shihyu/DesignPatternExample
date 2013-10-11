@@ -13,20 +13,20 @@ namespace cn
 
 					EncryptOutputStream2::EncryptOutputStream2(OutputStream *os) : java.io.FilterOutputStream(os)
 					{
-						//���ø���Ĺ��췽��
+						//调用父类的构造方法
 					}
 
 					void EncryptOutputStream2::write(int a) throw(IOException)
 					{
-						//��ͳһ����ƶ���λ
+						//先统一向后移动两位
 						a = a+2;
-						//97��Сд��a����ֵ
+						//97是小写的a的码值
 						if(a >= (97+26))
 						{
-							//������ڣ���ʾ�Ѿ���y����z�ˣ���ȥ26�ͻص�a����b��
+							//如果大于，表示已经是y或者z了，减去26就回到a或者b了
 							a = a-26;
 						}
-						//���ø���ķ���
+						//调用父类的方法
 						java::io::FilterOutputStream::write(a);
 					}
 				}

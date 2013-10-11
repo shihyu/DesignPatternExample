@@ -18,7 +18,7 @@ namespace cn
 
 					void Box::openButtonPressed()
 					{
-						//°´ÏÂ°´Å¥£¬Ö´ÐÐÃüÁî
+						//æŒ‰ä¸‹æŒ‰é’®ï¼Œæ‰§è¡Œå‘½ä»¤
 						openCommand->execute();
 					}
 
@@ -29,7 +29,7 @@ namespace cn
 
 					void Box::resetButtonPressed()
 					{
-						//°´ÏÂ°´Å¥£¬Ö´ÐÐÃüÁî
+						//æŒ‰ä¸‹æŒ‰é’®ï¼Œæ‰§è¡Œå‘½ä»¤
 						resetCommand->execute();
 					}
 				}

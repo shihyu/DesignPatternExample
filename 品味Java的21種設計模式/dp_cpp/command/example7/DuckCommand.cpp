@@ -28,7 +28,7 @@ namespace cn
 
 					void DuckCommand::execute()
 					{
-						this->cookApi->cook(tableNum,"±±¾©¿¾Ñ¼");
+						this->cookApi->cook(tableNum,"åŒ—äº¬çƒ¤é¸­");
 					}
 				}
 			}

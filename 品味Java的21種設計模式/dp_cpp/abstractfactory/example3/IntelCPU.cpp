@@ -1,4 +1,5 @@
 #include "IntelCPU.h"
+#include <iostream>
 
 namespace cn
 {
@@ -18,7 +19,7 @@ namespace cn
 
 					void IntelCPU::calculate()
 					{
-						puts("now in Intel CPU,pins="+pins);
+                        std::cout << "now in Intel CPU,pins=" << pins << std::endl;
 					}
 				}
 			}

@@ -19,11 +19,11 @@ namespace cn
 
 					std::string *PropertysTerminalExpression::interpret(Context *c)
 					{
-						//»ñÈ¡×îºóµÄ¶à¸öÔªËØ
+						//è·å–æœ€åçš„å¤šä¸ªå…ƒç´ 
 						std::vector<Element*> eles = c->getPreEles();
 
 						std::string ss[eles.size()];
-						//Ñ­»·¶à¸öÔªËØ£¬»ñÈ¡Ã¿¸öµÄÊôĞÔµÄÖµ
+						//å¾ªç¯å¤šä¸ªå…ƒç´ ï¼Œè·å–æ¯ä¸ªçš„å±æ€§çš„å€¼
 						for(int i=0;i<sizeof(ss) / sizeof(ss[0]);i++)
 						{
 							ss[i] = eles.at(i)->getAttribute(this->propName);

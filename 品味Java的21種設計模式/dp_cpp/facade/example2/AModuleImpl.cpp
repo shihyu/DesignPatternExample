@@ -13,7 +13,7 @@ namespace cn
 
 					void AModuleImpl::testA()
 					{
-						puts("现在在A模块里面操作testA方法");
+						puts("鐜板湪鍦ˋ妯″潡閲岄潰鎿嶄綔testA鏂规硶");
 					}
 				}
 			}

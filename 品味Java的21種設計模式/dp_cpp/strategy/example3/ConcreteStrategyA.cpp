@@ -13,7 +13,7 @@ namespace cn
 
 					void ConcreteStrategyA::algorithmInterface()
 					{
-						//¾ßÌåµÄËã·¨ÊµÏÖ		
+						//å…·ä½“çš„ç®—æ³•å®ç°		
 					}
 				}
 			}

@@ -13,7 +13,7 @@ namespace cn
 
 					void FlowAMementoFileCareTaker::saveMemento(FlowAMockMemento *memento)
 					{
-						//Ğ´µ½ÎÄ¼şÖĞ
+						//å†™åˆ°æ–‡ä»¶ä¸­
 						ObjectOutputStream *out = 0;
 						try
 						{
@@ -41,7 +41,7 @@ namespace cn
 					FlowAMockMemento *FlowAMementoFileCareTaker::retriveMemento()
 					{
 						FlowAMockMemento *memento = 0;
-						//´ÓÎÄ¼şÖĞ»ñÈ¡±¸ÍüÂ¼Êı¾İ
+						//ä»æ–‡ä»¶ä¸­è·å–å¤‡å¿˜å½•æ•°æ®
 //JAVA TO C++ CONVERTER NOTE: The local variable in was renamed since it is a keyword in C++:
 						ObjectInputStream *in_Renamed = 0;
 						try

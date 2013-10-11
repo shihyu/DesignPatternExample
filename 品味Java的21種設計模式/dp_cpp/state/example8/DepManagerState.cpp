@@ -13,27 +13,27 @@ namespace cn
 
 					void DepManagerState::doWork(StateMachine *request)
 					{
-						//ÏÈ°ÑÒµÎñ¶ÔÏóÔìĞÍ»ØÀ´
+						//å…ˆæŠŠä¸šåŠ¡å¯¹è±¡é€ å‹å›æ¥
 						LeaveRequestModel *lrm = static_cast<LeaveRequestModel*>(request->getBusinessVO());
-						puts("²¿ÃÅ¾­ÀíÉóºËÖĞ£¬ÇëÉÔºò......");
+						puts("éƒ¨é—¨ç»ç†å®¡æ ¸ä¸­ï¼Œè¯·ç¨å€™......");
 
-						//Ä£ÄâÓÃ»§´¦Àí½çÃæ£¬Í¨¹ı¿ØÖÆÌ¨À´¶ÁÈ¡Êı¾İ
-						puts(lrm->getUser()+"ÉêÇë´Ó"+lrm->getBeginDate()+ "¿ªÊ¼Çë¼Ù"+lrm->getLeaveDays()+"Ìì,Çë²¿ÃÅ¾­ÀíÉóºË(1ÎªÍ¬Òâ£¬2Îª²»Í¬Òâ)£º");
-						//¶ÁÈ¡´Ó¿ØÖÆÌ¨ÊäÈëµÄÊı¾İ
+						//æ¨¡æ‹Ÿç”¨æˆ·å¤„ç†ç•Œé¢ï¼Œé€šè¿‡æ§åˆ¶å°æ¥è¯»å–æ•°æ®
+						puts(lrm->getUser()+"ç”³è¯·ä»"+lrm->getBeginDate()+ "å¼€å§‹è¯·å‡"+lrm->getLeaveDays()+"å¤©,è¯·éƒ¨é—¨ç»ç†å®¡æ ¸(1ä¸ºåŒæ„ï¼Œ2ä¸ºä¸åŒæ„)ï¼š");
+						//è¯»å–ä»æ§åˆ¶å°è¾“å…¥çš„æ•°æ®
 						Scanner *scanner = new Scanner(System::in);
 						if(scanner->hasNext())
 						{
 							int a = scanner->nextInt();
-							//ÉèÖÃ»Øµ½ÉÏÏÂÎÄÖĞ
-							std::string result = "²»Í¬Òâ";
+							//è®¾ç½®å›åˆ°ä¸Šä¸‹æ–‡ä¸­
+							std::string result = "ä¸åŒæ„";
 							if(a==1)
 							{
-								result = "Í¬Òâ";
+								result = "åŒæ„";
 							}
-							lrm->setResult("²¿ÃÅ¾­ÀíÉóºË½á¹û£º"+result);
-							//²¿ÃÅ¾­ÀíÉóºË¹ıºó£¬Ö±½Ó×ªÏòÉóºË½áÊø×´Ì¬ÁË
+							lrm->setResult("éƒ¨é—¨ç»ç†å®¡æ ¸ç»“æœï¼š"+result);
+							//éƒ¨é—¨ç»ç†å®¡æ ¸è¿‡åï¼Œç›´æ¥è½¬å‘å®¡æ ¸ç»“æŸçŠ¶æ€äº†
 							request->setState(new AuditOverState());
-							//¼ÌĞøÖ´ĞĞÏÂÒ»²½¹¤×÷
+							//ç»§ç»­æ‰§è¡Œä¸‹ä¸€æ­¥å·¥ä½œ
 							request->doWork();
 						}
 					}

@@ -18,7 +18,7 @@ namespace cn
 						try
 						{
 							conn = this->getConnection();
-							//Ö»ÐèÒª²éÑ¯userIdºÍnameÁ½¸öÖµ¾Í¿ÉÒÔÁË
+							//åªéœ€è¦æŸ¥è¯¢userIdå’Œnameä¸¤ä¸ªå€¼å°±å¯ä»¥äº†
 							std::string sql = "select u.userId,u.name " +"from tbl_user u,tbl_dep d " +"where u.depId=d.depId and d.depId like ?";
 
 							PreparedStatement *pstmt = conn->prepareStatement(sql);
@@ -27,9 +27,9 @@ namespace cn
 							ResultSet *rs = pstmt->executeQuery();
 							while(rs->next())
 							{
-								//ÕâÀïÊÇ´´½¨µÄ´úÀí¶ÔÏó£¬¶ø²»ÊÇÖ±½Ó´´½¨UserModelµÄ¶ÔÏó
+								//è¿™é‡Œæ˜¯åˆ›å»ºçš„ä»£ç†å¯¹è±¡ï¼Œè€Œä¸æ˜¯ç›´æŽ¥åˆ›å»ºUserModelçš„å¯¹è±¡
 								Proxy *proxy = new Proxy(new UserModel());
-								//Ö»ÊÇÉèÖÃuserIdºÍnameÁ½¸öÖµ¾Í¿ÉÒÔÁË
+								//åªæ˜¯è®¾ç½®userIdå’Œnameä¸¤ä¸ªå€¼å°±å¯ä»¥äº†
 								proxy->setUserId(rs->getString("userId"));
 								proxy->setName(rs->getString("name"));
 

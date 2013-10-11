@@ -23,7 +23,7 @@ namespace cn
 
 					void SecurityMgr::login(std::string user)
 					{
-						//µÇÂ¼µÄÊ±ºò¾ÍĞèÒª°Ñ¸ÃÓÃ»§ËùÓµÓĞµÄÈ¨ÏŞ£¬´ÓÊı¾İ¿âÖĞÈ¡³öÀ´£¬·Åµ½»º´æÖĞÈ¥
+						//ç™»å½•çš„æ—¶å€™å°±éœ€è¦æŠŠè¯¥ç”¨æˆ·æ‰€æ‹¥æœ‰çš„æƒé™ï¼Œä»æ•°æ®åº“ä¸­å–å‡ºæ¥ï¼Œæ”¾åˆ°ç¼“å­˜ä¸­å»
 						Collection<AuthorizationModel*> *col = queryByUser(user);
 						map->put(user, col);
 					}
@@ -33,12 +33,12 @@ namespace cn
 						Collection<AuthorizationModel*> *col = map->get(user);
 						if(col==0 || col->size() == 0)
 						{
-							puts(user+"Ã»ÓĞµÇÂ¼»òÊÇÃ»ÓĞ±»·ÖÅäÈÎºÎÈ¨ÏŞ");
+							puts(user+"æ²¡æœ‰ç™»å½•æˆ–æ˜¯æ²¡æœ‰è¢«åˆ†é…ä»»ä½•æƒé™");
 							return false;
 						}
 						for (Collection<AuthorizationModel*>::const_iterator am = col->begin(); am != col->end(); ++am)
 						{
-							//Êä³öµ±Ç°ÊµÀı£¬¿´¿´ÊÇ·ñÍ¬Ò»¸öÊµÀı¶ÔÏó
+							//è¾“å‡ºå½“å‰å®ä¾‹ï¼Œçœ‹çœ‹æ˜¯å¦åŒä¸€ä¸ªå®ä¾‹å¯¹è±¡
 							puts("am=="+*am);
 							if((*am)->getSecurityEntity()->equals(securityEntity) && (*am)->getPermit()->equals(permit))
 							{

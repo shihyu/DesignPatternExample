@@ -19,7 +19,7 @@ namespace cn
 
 					void PrintService::execute()
 					{
-						puts("打印的内容为="+str);
+						puts("鎵撳嵃鐨勫唴瀹逛负="+str);
 					}
 				}
 			}

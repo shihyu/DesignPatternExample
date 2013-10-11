@@ -13,12 +13,12 @@ namespace cn
 
 					void ConcreteClass::doPrimitiveOperation1()
 					{
-						//¾ßÌåµÄÊµÏÖ
+						//å…·ä½“çš„å®ç°
 					}
 
 					void ConcreteClass::doPrimitiveOperation2()
 					{
-						//¾ßÌåµÄÊµÏÖ
+						//å…·ä½“çš„å®ç°
 					}
 				}
 			}

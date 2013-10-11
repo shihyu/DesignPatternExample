@@ -18,27 +18,27 @@ namespace cn
 
 					void SalaryManager::calcSalary()
 					{
-						//计算工资，并把工资信息填充到工资列表里面
-						//为了测试，做点假数据进去
+						//璁＄畻宸ヨ祫锛屽苟鎶婂伐璧勪俊鎭～鍏呭埌宸ヨ祫鍒楄〃閲岄潰
+						//涓轰簡娴嬭瘯锛屽仛鐐瑰亣鏁版嵁杩涘幓
 						PayModel *pm1 = new PayModel();
 						pm1->setPay(2200);
-						pm1->setUserName("王五");
+						pm1->setUserName("鐜嬩簲");
 
 						PayModel *pm2 = new PayModel();
 						pm2->setPay(3600);
-						pm2->setUserName("赵六");
+						pm2->setUserName("璧靛叚");
 
 						PayModel *pm3 = new PayModel();
 						pm3->setPay(2200);
-						pm3->setUserName("王五二号");
+						pm3->setUserName("鐜嬩簲浜屽彿");
 
 						PayModel *pm4 = new PayModel();
 						pm4->setPay(3600);
-						pm4->setUserName("赵六二号");
+						pm4->setUserName("璧靛叚浜屽彿");
 
 						PayModel *pm5 = new PayModel();
 						pm5->setPay(2200);
-						pm5->setUserName("王五三号");
+						pm5->setUserName("鐜嬩簲涓夊彿");
 
 						pms = new PayModel[5];
 						pms[0] = pm1;

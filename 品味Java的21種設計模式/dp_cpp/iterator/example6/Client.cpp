@@ -13,17 +13,17 @@ namespace cn
 
 					void Client::main(std::string args[])
 					{
-						//·ÃÎÊ¼¯ÍÅµÄ¹¤×ÊÁÐ±í
+						//è®¿é—®é›†å›¢çš„å·¥èµ„åˆ—è¡¨
 						PayManager *payManager= new PayManager();
-						//ÏÈ¼ÆËãÔÙ»ñÈ¡
+						//å…ˆè®¡ç®—å†èŽ·å–
 						payManager->calcPay();
-						puts("¼¯ÍÅ¹¤×ÊÁÐ±í£º");
+						puts("é›†å›¢å·¥èµ„åˆ—è¡¨ï¼š");
 						test(payManager->createIterator());
-						//·ÃÎÊÐÂÊÕ¹º¹«Ë¾µÄ¹¤×ÊÁÐ±í
+						//è®¿é—®æ–°æ”¶è´­å…¬å¸çš„å·¥èµ„åˆ—è¡¨
 						SalaryManager *salaryManager = new SalaryManager();
-						//ÏÈ¼ÆËãÔÙ»ñÈ¡
+						//å…ˆè®¡ç®—å†èŽ·å–
 						salaryManager->calcSalary();
-						puts("ÐÂÊÕ¹ºµÄ¹«Ë¾¹¤×ÊÁÐ±í£º");
+						puts("æ–°æ”¶è´­çš„å…¬å¸å·¥èµ„åˆ—è¡¨ï¼š");
 						test(salaryManager->createIterator());
 					}
 

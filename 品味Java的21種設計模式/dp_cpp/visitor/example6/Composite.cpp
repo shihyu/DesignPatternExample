@@ -13,7 +13,7 @@ namespace cn
 
 					void Composite::accept(Visitor *visitor)
 					{
-						//»Øµ÷·ÃÎÊÕß¶ÔÏóµÄÏàÓ¦·½·¨
+						//å›è°ƒè®¿é—®è€…å¯¹è±¡çš„ç›¸åº”æ–¹æ³•
 						visitor->visitComposite(this);
 					}
 
@@ -30,7 +30,7 @@ namespace cn
 
 					void Composite::addChild(Component *child)
 					{
-						//ÑÓ³Ù³õÊ¼»¯
+						//å»¶è¿Ÿåˆå§‹åŒ–
 						if (childComponents == 0)
 						{
 							childComponents = std::vector<Component*>();

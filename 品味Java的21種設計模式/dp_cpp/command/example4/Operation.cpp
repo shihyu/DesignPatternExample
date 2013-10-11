@@ -23,13 +23,13 @@ namespace cn
 
 					void Operation::add(int num)
 					{
-						//实现加法功能
+						//瀹炵幇鍔犳硶鍔熻兘
 						result += num;
 					}
 
 					void Operation::substract(int num)
 					{
-						//实现减法功能
+						//瀹炵幇鍑忔硶鍔熻兘
 						result -= num;
 					}
 				}

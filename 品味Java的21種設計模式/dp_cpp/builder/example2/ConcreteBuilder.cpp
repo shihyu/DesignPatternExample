@@ -18,7 +18,7 @@ namespace cn
 
 					void ConcreteBuilder::buildPart()
 					{
-						//¹¹½¨Ä³¸ö²¿¼şµÄ¹¦ÄÜ´¦Àí
+						//æ„å»ºæŸä¸ªéƒ¨ä»¶çš„åŠŸèƒ½å¤„ç†
 					}
 				}
 			}

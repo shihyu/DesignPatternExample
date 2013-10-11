@@ -17,11 +17,11 @@ namespace cn
 
 					bool LogDecorator::sale(std::string user, std::string customer, SaleModel *saleModel)
 					{
-						//Ö´ĞĞÒµÎñ¹¦ÄÜ
+						//æ‰§è¡Œä¸šåŠ¡åŠŸèƒ½
 						bool f = this->ebi->sale(user, customer, saleModel);
-						//ÔÚÖ´ĞĞÒµÎñ¹¦ÄÜ¹ıºó£¬¼ÇÂ¼ÈÕÖ¾
+						//åœ¨æ‰§è¡Œä¸šåŠ¡åŠŸèƒ½è¿‡åï¼Œè®°å½•æ—¥å¿—
 						DateFormat *df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss SSS");
-						puts("ÈÕÖ¾¼ÇÂ¼£º"+user+"ÓÚ"+df->format(new Date())+"Ê±±£´æÁËÒ»ÌõÏúÊÛ¼ÇÂ¼£¬¿Í»§ÊÇ"+customer+",¹ºÂò¼ÇÂ¼ÊÇ"+saleModel);
+						puts("æ—¥å¿—è®°å½•ï¼š"+user+"äº"+df->format(new Date())+"æ—¶ä¿å­˜äº†ä¸€æ¡é”€å”®è®°å½•ï¼Œå®¢æˆ·æ˜¯"+customer+",è´­ä¹°è®°å½•æ˜¯"+saleModel);
 						return f;
 					}
 				}

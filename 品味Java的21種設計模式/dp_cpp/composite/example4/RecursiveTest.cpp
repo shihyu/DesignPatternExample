@@ -24,7 +24,7 @@ namespace cn
 					{
 						RecursiveTest *test = new RecursiveTest();
 						int result = test->recursive(5);
-						puts("5�Ľ׳�="+result);
+						puts("5的阶乘="+result);
 					}
 				}
 			}

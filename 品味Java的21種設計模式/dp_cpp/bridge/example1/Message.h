@@ -1,4 +1,5 @@
 #pragma once
+#include <iostream>
 
 namespace cn
 {
@@ -21,7 +22,7 @@ namespace cn
 					///	 * <param name="toUser"> 把消息发送的目的人员 </param>
 					///	 
 					public:
-						virtual public void send(std::string, std::string) = 0;
+						virtual void send(std::string, std::string) = 0;
 					};
 
 				}

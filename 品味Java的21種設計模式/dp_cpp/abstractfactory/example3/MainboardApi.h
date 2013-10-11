@@ -19,7 +19,7 @@ namespace cn
 					///	 <summary> * 示意方法，主板都具有安装CPU的功能 </summary>
 					///	 
 					public:
-						virtual public void installCPU() = 0;
+						virtual void installCPU() = 0;
 					};
 
 				}

@@ -13,8 +13,8 @@ namespace cn
 
 					void VoteManager::vote(std::string user, std::string voteItem)
 					{
-						//1����Ϊ���û�����ͶƱ�Ĵ���
-						//�ȴӼ�¼��ȡ�����е�ͶƱ����
+						//1：先为该用户增加投票的次数
+						//先从记录中取出已有的投票次数
 						int oldVoteCount = mapVoteCount->get(user);
 						if(oldVoteCount==0)
 						{
@@ -23,37 +23,37 @@ namespace cn
 						oldVoteCount = oldVoteCount + 1;
 						mapVoteCount->put(user, oldVoteCount);
 
-						//2���жϸ��û�ͶƱ�����ͣ�����������ͶƱ���ظ�ͶƱ������ͶƱ�����Ϻ�����
-						//Ȼ�����ͶƱ������������Ӧ�Ĳ���	
+						//2：判断该用户投票的类型，到底是正常投票、重复投票、恶意投票还是上黑名单
+						//然后根据投票类型来进行相应的操作	
 						if(oldVoteCount==1)
 						{
-							//����ͶƱ
-							//��¼��ͶƱ��¼��
+							//正常投票
+							//记录到投票记录中
 							mapVote->put(user, voteItem);
-							puts("��ϲ��ͶƱ�ɹ�");
+							puts("恭喜你投票成功");
 						}
 						else if(oldVoteCount>1 && oldVoteCount<5)
 						{
-							//�ظ�ͶƱ
-							//��ʱ��������
-							puts("�벻Ҫ�ظ�ͶƱ");
+							//重复投票
+							//暂时不做处理
+							puts("请不要重复投票");
 						}
 						else if(oldVoteCount >= 5 && oldVoteCount<8)
 						{
-							//����ͶƱ
-							//ȡ���û���ͶƱ�ʸ񣬲�ȡ��ͶƱ��¼
+							//恶意投票
+							//取消用户的投票资格，并取消投票记录
 							std::string s = mapVote->get(user);
 							if(s!="")
 							{
 								mapVote->remove(user);
 							}
-							puts("���ж���ˢƱ��Ϊ��ȡ��ͶƱ�ʸ�");
+							puts("你有恶意刷票行为，取消投票资格");
 						}
 						else if(oldVoteCount>=8)
 						{
-							//������
-							//����������У���ֹ��¼ϵͳ��
-							puts("���������������ֹ��¼��ʹ�ñ�ϵͳ");
+							//黑名单
+							//记入黑名单中，禁止登录系统了
+							puts("进入黑名单，将禁止登录和使用本系统");
 						}
 					}
 				}

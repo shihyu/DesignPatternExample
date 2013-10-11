@@ -23,12 +23,12 @@ namespace cn
 					///	 * <returns> CPU的对象 </returns>
 					///	 
 					public:
-						virtual public CPUApi *createCPUApi() = 0;
+						virtual CPUApi *createCPUApi() = 0;
 					///	
 					///	 <summary> * 创建主板的对象 </summary>
 					///	 * <returns> 主板的对象 </returns>
 					///	 
-						virtual public MainboardApi *createMainboardApi() = 0;
+						virtual MainboardApi *createMainboardApi() = 0;
 					};
 				}
 			}

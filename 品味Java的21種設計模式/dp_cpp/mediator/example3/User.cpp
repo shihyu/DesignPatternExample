@@ -33,13 +33,13 @@ namespace cn
 
 					bool User::dimission()
 					{
-						//1��Ҫ��ͨ���н���ȥ����������������Ա��صĲ��ź���Ա�Ĺ�ϵ
+						//1：要先通过中介者去清除掉所有与这个人员相关的部门和人员的关系
 						DepUserMediatorImpl *mediator = DepUserMediatorImpl::getInstance();
 						mediator->deleteUser(userId);
-						//2��Ȼ������������������Ա
-						//��ע�⣬ʵ�ʿ����У���Ա��ְ���ǲ������ɾ����Ա��¼�ģ�
-						//ͨ���ǰ���Ա��¼��״̬������ɾ��������ó���ɾ����
-						//ֻ�ǲ��ٲμ��µ�ҵ�񣬵����Ѿ�������ҵ���¼�ǲ��ᱻ�������
+						//2：然后才能真的清除掉这个人员
+						//请注意，实际开发中，人员离职，是不会真的删除人员记录的，
+						//通常是把人员记录的状态或者是删除标记设置成已删除，
+						//只是不再参加新的业务，但是已经发生的业务记录是不会被清除掉的
 
 						return true;
 					}

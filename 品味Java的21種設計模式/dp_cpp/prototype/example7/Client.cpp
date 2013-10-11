@@ -13,27 +13,27 @@ namespace cn
 
 					void Client::main(std::string args[])
 					{
-						//ÏÈ´´½¨Ô­ĞÍÊµÀı
+						//å…ˆåˆ›å»ºåŸå‹å®ä¾‹
 						PersonalOrder *oa1 = new PersonalOrder();
 
-						//ÉèÖÃÔ­ĞÍÊµÀıµÄÖµ
+						//è®¾ç½®åŸå‹å®ä¾‹çš„å€¼
 						Product *product = new Product();
-						product->setName("²úÆ·1");
+						product->setName("äº§å“1");
 						oa1->setProduct(product);
 						oa1->setOrderProductNum(100);
 
-						puts("ÕâÊÇµÚÒ»´Î»ñÈ¡µÄ¶ÔÏóÊµÀı="+oa1);
+						puts("è¿™æ˜¯ç¬¬ä¸€æ¬¡è·å–çš„å¯¹è±¡å®ä¾‹="+oa1);
 
-						//Í¨¹ı¿ËÂ¡À´»ñÈ¡ĞÂµÄÊµÀı
+						//é€šè¿‡å…‹éš†æ¥è·å–æ–°çš„å®ä¾‹
 						PersonalOrder *oa2 = static_cast<PersonalOrder*>(oa1->clone());
-						//ĞŞ¸ÄËüµÄÖµ
-						oa2->getProduct()->setName("²úÆ·2");
+						//ä¿®æ”¹å®ƒçš„å€¼
+						oa2->getProduct()->setName("äº§å“2");
 						oa2->setOrderProductNum(80);
-						//Êä³ö¿ËÂ¡³öÀ´µÄ¶ÔÏóµÄÖµ
-						puts("Êä³ö¿ËÂ¡³öÀ´µÄÊµÀı="+oa2);
+						//è¾“å‡ºå…‹éš†å‡ºæ¥çš„å¯¹è±¡çš„å€¼
+						puts("è¾“å‡ºå…‹éš†å‡ºæ¥çš„å®ä¾‹="+oa2);
 
-						//ÔÙ´ÎÊä³öÔ­ĞÍÊµÀıµÄÖµ
-						puts("ÔÙ´ÎÊä³öÔ­ĞÍÊµÀı="+oa1);
+						//å†æ¬¡è¾“å‡ºåŸå‹å®ä¾‹çš„å€¼
+						puts("å†æ¬¡è¾“å‡ºåŸå‹å®ä¾‹="+oa1);
 					}
 				}
 			}

@@ -1,4 +1,5 @@
 #include "GAMainboard.h"
+#include <iostream>
 
 namespace cn
 {
@@ -18,7 +19,7 @@ namespace cn
 
 					void GAMainboard::installCPU()
 					{
-						puts("now in GAMainboard,cpuHoles="+cpuHoles);
+                        std::cout << "now in GAMainboard,cpuHoles=" << cpuHoles;
 					}
 				}
 			}

@@ -38,14 +38,14 @@ namespace cn
 
 					void FlowAMock::runPhaseOne()
 					{
-						//ÔÚÕâ¸ö½×¶Î£¬¿ÉÄÜ²úÉúÁËÖÐ¼ä½á¹û£¬Ê¾ÒâÒ»ÏÂ
+						//åœ¨è¿™ä¸ªé˜¶æ®µï¼Œå¯èƒ½äº§ç”Ÿäº†ä¸­é—´ç»“æžœï¼Œç¤ºæ„ä¸€ä¸‹
 						tempResult = 3;
 						tempState = "PhaseOne";
 					}
 
 					void FlowAMock::schema1()
 					{
-						//Ê¾Òâ£¬ÐèÒªÊ¹ÓÃµÚÒ»¸ö½×¶Î²úÉúµÄÊý¾Ý
+						//ç¤ºæ„ï¼Œéœ€è¦ä½¿ç”¨ç¬¬ä¸€ä¸ªé˜¶æ®µäº§ç”Ÿçš„æ•°æ®
 						this->tempState += ",Schema1";
 						puts(this->tempState + " : now run "+tempResult);
 						this->tempResult += 11;
@@ -53,7 +53,7 @@ namespace cn
 
 					void FlowAMock::schema2()
 					{
-						//Ê¾Òâ£¬ÐèÒªÊ¹ÓÃµÚÒ»¸ö½×¶Î²úÉúµÄÊý¾Ý
+						//ç¤ºæ„ï¼Œéœ€è¦ä½¿ç”¨ç¬¬ä¸€ä¸ªé˜¶æ®µäº§ç”Ÿçš„æ•°æ®
 						this->tempState += ",Schema2";
 						puts(this->tempState + " : now run "+tempResult);
 						this->tempResult += 22;

@@ -13,7 +13,7 @@ namespace cn
 
 					void Waiter::orderDish(Command *cmd)
 					{
-						//添加到菜单中
+						//娣诲姞鍒拌彍鍗曚腑
 						menuCommand->addCommand(cmd);
 					}
 

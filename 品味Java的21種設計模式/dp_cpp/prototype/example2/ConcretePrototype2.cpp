@@ -13,7 +13,7 @@ namespace cn
 
 					Prototype *ConcretePrototype2::clone()
 					{
-						//��򵥵Ŀ�¡���½�һ��������������û�����ԣ��Ͳ�ȥ����ֵ��
+						//最简单的克隆，新建一个自身对象，由于没有属性，就不去复制值了
 						Prototype *prototype = new ConcretePrototype2();
 						return prototype;
 					}

@@ -13,13 +13,13 @@ namespace cn
 
 					void DbLog::doLog(std::string msg)
 					{
-						//ÖÆÔì´íÎó
+						//åˆ¶é€ é”™è¯¯
 //JAVA TO C++ CONVERTER TODO TASK: There is no direct native C++ equivalent to the Java String 'trim' method:
 						if(msg!="" && msg.trim()->length()>5)
 						{
 							int a = 5/0;
 						}
-						puts("ÏÖÔÚ°Ñ '"+msg+"' ¼ÇÂ¼µ½Êı¾İ¿âÖĞ");
+						puts("ç°åœ¨æŠŠ '"+msg+"' è®°å½•åˆ°æ•°æ®åº“ä¸­");
 					}
 				}
 			}

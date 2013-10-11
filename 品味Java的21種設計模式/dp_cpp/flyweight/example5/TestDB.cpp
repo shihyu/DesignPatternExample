@@ -13,17 +13,17 @@ namespace cn
 
 					TestDB::TestDB()
 					{
-						//Í¨¹ý¾²Ì¬¿éÀ´Ìî³äÄ£ÄâµÄÊý¾Ý£¬Ôö¼ÓÒ»¸ö±êÊ¶À´±íÃ÷ÊÇ·ñ×éºÏÊÚÈ¨Êý¾Ý
-						colDB->add("ÕÅÈý,ÈËÔ±ÁÐ±í,²é¿´,1");
-						colDB->add("ÀîËÄ,ÈËÔ±ÁÐ±í,²é¿´,1");
-						colDB->add("ÀîËÄ,²Ù×÷Ð½×ÊÊý¾Ý,,2");
+						//é€šè¿‡é™æ€å—æ¥å¡«å……æ¨¡æ‹Ÿçš„æ•°æ®ï¼Œå¢žåŠ ä¸€ä¸ªæ ‡è¯†æ¥è¡¨æ˜Žæ˜¯å¦ç»„åˆæŽˆæƒæ•°æ®
+						colDB->add("å¼ ä¸‰,äººå‘˜åˆ—è¡¨,æŸ¥çœ‹,1");
+						colDB->add("æŽå››,äººå‘˜åˆ—è¡¨,æŸ¥çœ‹,1");
+						colDB->add("æŽå››,æ“ä½œè–ªèµ„æ•°æ®,,2");
 
-						mapDB->put("²Ù×÷Ð½×ÊÊý¾Ý",new std::string[]{"Ð½×ÊÊý¾Ý,²é¿´","Ð½×ÊÊý¾Ý,ÐÞ¸Ä"});
+						mapDB->put("æ“ä½œè–ªèµ„æ•°æ®",new std::string[]{"è–ªèµ„æ•°æ®,æŸ¥çœ‹","è–ªèµ„æ•°æ®,ä¿®æ”¹"});
 
-						//Ôö¼Ó¸ü¶àµÄÊÚÈ¨Êý¾Ý
+						//å¢žåŠ æ›´å¤šçš„æŽˆæƒæ•°æ®
 						for(int i=0;i<3;i++)
 						{
-							colDB->add("ÕÅÈý"+i+",ÈËÔ±ÁÐ±í,²é¿´,1");
+							colDB->add("å¼ ä¸‰"+i+",äººå‘˜åˆ—è¡¨,æŸ¥çœ‹,1");
 						}
 					}
 				}

@@ -13,7 +13,7 @@ namespace cn
 
 					CommandQueue::CommandQueue()
 					{
-						//»ñÈ¡ÉÏ´ÎÃ»ÓÐ×öÍêµÄÃüÁî¶ÓÁÐ
+						//èŽ·å–ä¸Šæ¬¡æ²¡æœ‰åšå®Œçš„å‘½ä»¤é˜Ÿåˆ—
 						cmds = FileOpeUtil::readFile(FILE_NAME);
 						if(cmds==0)
 						{
@@ -23,13 +23,13 @@ namespace cn
 
 					void CommandQueue::addMenu(MenuCommand *menu)
 					{
-						//Ò»¸ö²Ëµ¥¶ÔÏó°üº¬ºÜ¶àÃüÁî¶ÔÏó
+						//ä¸€ä¸ªèœå•å¯¹è±¡åŒ…å«å¾ˆå¤šå‘½ä»¤å¯¹è±¡
 						for (unknown::const_iterator cmd = menu->getCommands()->begin(); cmd != menu->getCommands()->end(); ++cmd)
 						{
 							cmds.push_back(*cmd);
 						}
 
-						//¼ÇÂ¼ÇëÇóÈÕÖ¾
+						//è®°å½•è¯·æ±‚æ—¥å¿—
 						FileOpeUtil::writeFile(FILE_NAME, cmds);
 					}
 
@@ -38,12 +38,12 @@ namespace cn
 						Command *cmd = 0;
 						if(cmds.size() > 0)
 						{
-							//È¡³ö¶ÓÁÐµÄµÚÒ»¸ö£¬ÒòÎªÊÇÔ¼¶¨µÄ°´ÕÕ¼ÓÈëµÄÏÈºóÀ´´¦Àí
+							//å–å‡ºé˜Ÿåˆ—çš„ç¬¬ä¸€ä¸ªï¼Œå› ä¸ºæ˜¯çº¦å®šçš„æŒ‰ç…§åŠ å…¥çš„å…ˆåŽæ¥å¤„ç†
 							cmd = cmds.front();
-							//Í¬Ê±´Ó¶ÓÁÐÀïÃæÈ¡µôÕâ¸öÃüÁî¶ÔÏó
+							//åŒæ—¶ä»Žé˜Ÿåˆ—é‡Œé¢å–æŽ‰è¿™ä¸ªå‘½ä»¤å¯¹è±¡
 							cmds.remove(0);
 
-							//¼ÇÂ¼ÇëÇóÈÕÖ¾
+							//è®°å½•è¯·æ±‚æ—¥å¿—
 							FileOpeUtil::writeFile(FILE_NAME, cmds);
 						}
 						return cmd;

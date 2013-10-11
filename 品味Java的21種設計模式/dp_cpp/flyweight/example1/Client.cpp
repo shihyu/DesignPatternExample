@@ -13,20 +13,20 @@ namespace cn
 
 					void Client::main(std::string args[])
 					{
-						//ĞèÒªÏÈµÇÂ¼£¬È»ºóÔÙÅĞ¶ÏÊÇ·ñÓĞÈ¨ÏŞ
+						//éœ€è¦å…ˆç™»å½•ï¼Œç„¶åå†åˆ¤æ–­æ˜¯å¦æœ‰æƒé™
 						SecurityMgr *mgr = SecurityMgr::getInstance();
-						mgr->login("ÕÅÈı");
-						mgr->login("ÀîËÄ");
-						bool f1 = mgr->hasPermit("ÕÅÈı","Ğ½×ÊÊı¾İ","²é¿´");
-						bool f2 = mgr->hasPermit("ÀîËÄ","Ğ½×ÊÊı¾İ","²é¿´");
+						mgr->login("å¼ ä¸‰");
+						mgr->login("æå››");
+						bool f1 = mgr->hasPermit("å¼ ä¸‰","è–ªèµ„æ•°æ®","æŸ¥çœ‹");
+						bool f2 = mgr->hasPermit("æå››","è–ªèµ„æ•°æ®","æŸ¥çœ‹");
 
 						puts("f1=="+f1);
 						puts("f2=="+f2);
 
 						for(int i=0;i<3;i++)
 						{
-							mgr->login("ÕÅÈı"+i);
-							mgr->hasPermit("ÕÅÈı"+i,"Ğ½×ÊÊı¾İ","²é¿´");
+							mgr->login("å¼ ä¸‰"+i);
+							mgr->hasPermit("å¼ ä¸‰"+i,"è–ªèµ„æ•°æ®","æŸ¥çœ‹");
 						}
 					}
 				}

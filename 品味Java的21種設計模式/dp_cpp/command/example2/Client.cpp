@@ -1,31 +1,18 @@
 #include "Client.h"
 
-namespace cn
+using namespace cn::javass::dp::command::example2;
+
+int main(std::string args[])
 {
-	namespace javass
-	{
-		namespace dp
-		{
-			namespace command
-			{
-				namespace example2
-				{
+    //1ï¼šæŠŠå‘½ä»¤å’ŒçœŸæ­£çš„å®žçŽ°ç»„åˆèµ·æ¥ï¼Œç›¸å½“äºŽåœ¨ç»„è£…æœºå™¨ï¼Œ
+    //æŠŠæœºç®±ä¸ŠæŒ‰é’®çš„è¿žæŽ¥çº¿æ’æŽ¥åˆ°ä¸»æ¿ä¸Šã€‚
+    MainBoardApi *mainBoard = new GigaMainBoard();
+    OpenCommand *openCommand = new OpenCommand(mainBoard);
+    //2ï¼šä¸ºæœºç®±ä¸Šçš„æŒ‰é’®è®¾ç½®å¯¹åº”çš„å‘½ä»¤ï¼Œè®©æŒ‰é’®çŸ¥é“è¯¥å¹²ä»€ä¹ˆ
+    Box *box = new Box();
+    box->setOpenCommand(openCommand);
 
-					void Client::main(std::string args[])
-					{
-						//1£º°ÑÃüÁîºÍÕæÕýµÄÊµÏÖ×éºÏÆðÀ´£¬Ïàµ±ÓÚÔÚ×é×°»úÆ÷£¬
-						//°Ñ»úÏäÉÏ°´Å¥µÄÁ¬½ÓÏß²å½Óµ½Ö÷°åÉÏ¡£
-						MainBoardApi *mainBoard = new GigaMainBoard();
-						OpenCommand *openCommand = new OpenCommand(mainBoard);
-						//2£ºÎª»úÏäÉÏµÄ°´Å¥ÉèÖÃ¶ÔÓ¦µÄÃüÁî£¬ÈÃ°´Å¥ÖªµÀ¸Ã¸ÉÊ²Ã´
-						Box *box = new Box();
-						box->setOpenCommand(openCommand);
-
-						//3£ºÈ»ºóÄ£Äâ°´ÏÂ»úÏäÉÏµÄ°´Å¥
-						box->openButtonPressed();
-					}
-				}
-			}
-		}
-	}
+    //3ï¼šç„¶åŽæ¨¡æ‹ŸæŒ‰ä¸‹æœºç®±ä¸Šçš„æŒ‰é’®
+    box->openButtonPressed();
+    return 0;
 }

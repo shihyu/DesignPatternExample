@@ -13,27 +13,27 @@ namespace cn
 
 					void Client::main(std::string args[])
 					{
-						//ÏÈÒª×é×°Ö°ÔğÁ´		
+						//å…ˆè¦ç»„è£…èŒè´£é“¾		
 						Handler *h1 = new GeneralManager();
 						Handler *h2 = new DepManager();
 						Handler *h3 = new ProjectManager();
 						h3->setSuccessor(h2);
 						h2->setSuccessor(h1);
 
-						//¿ªÊ¼²âÊÔ
-						std::string ret1 = h3->handleFeeRequest("Ğ¡Àî", 300);
+						//å¼€å§‹æµ‹è¯•
+						std::string ret1 = h3->handleFeeRequest("å°æ", 300);
 						puts("the ret1="+ret1);
-						std::string ret2 = h3->handleFeeRequest("Ğ¡ÕÅ", 300);
+						std::string ret2 = h3->handleFeeRequest("å°å¼ ", 300);
 						puts("the ret2="+ret2);
 
-						std::string ret3 = h3->handleFeeRequest("Ğ¡Àî", 600);
+						std::string ret3 = h3->handleFeeRequest("å°æ", 600);
 						puts("the ret3="+ret3);
-						std::string ret4 = h3->handleFeeRequest("Ğ¡ÕÅ", 600);
+						std::string ret4 = h3->handleFeeRequest("å°å¼ ", 600);
 						puts("the ret4="+ret4);
 
-						std::string ret5 = h3->handleFeeRequest("Ğ¡Àî", 1200);
+						std::string ret5 = h3->handleFeeRequest("å°æ", 1200);
 						puts("the ret5="+ret5);
-						std::string ret6 = h3->handleFeeRequest("Ğ¡ÕÅ", 1200);
+						std::string ret6 = h3->handleFeeRequest("å°å¼ ", 1200);
 						puts("the ret6="+ret6);
 					}
 				}

@@ -22,7 +22,7 @@ namespace cn
 						{
 							manager = new ConfigManager();
 							cm = new ConfigModel();
-							//读取配置文件，把值设置到ConfigModel中去
+							//璇诲彇閰嶇疆鏂囦欢锛屾妸鍊艰缃埌ConfigModel涓幓
 						}
 						return manager;
 					}

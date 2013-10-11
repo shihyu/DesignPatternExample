@@ -13,27 +13,27 @@ namespace cn
 
 					void Client::main(std::string args[])
 					{
-						//´´½¨ÏàÓ¦µÄÖ§¸¶²ßÂÔ
+						//åˆ›å»ºç›¸åº”çš„æ”¯ä»˜ç­–ç•¥
 						PaymentStrategy *strategyRMB = new RMBCash();
 						PaymentStrategy *strategyDollar = new DollarCash();
 
-						//×¼±¸Ð¡ÀîµÄÖ§¸¶¹¤×ÊÉÏÏÂÎÄ
-						PaymentContext *ctx1 = new PaymentContext("Ð¡Àî",5000,strategyRMB);
-						//ÏòÐ¡ÀîÖ§¸¶¹¤×Ê
+						//å‡†å¤‡å°æŽçš„æ”¯ä»˜å·¥èµ„ä¸Šä¸‹æ–‡
+						PaymentContext *ctx1 = new PaymentContext("å°æŽ",5000,strategyRMB);
+						//å‘å°æŽæ”¯ä»˜å·¥èµ„
 						ctx1->payNow();
 
-						//ÇÐ»»Ò»¸öÈË£¬¸øpetterÖ§¸¶¹¤×Ê
+						//åˆ‡æ¢ä¸€ä¸ªäººï¼Œç»™petteræ”¯ä»˜å·¥èµ„
 						PaymentContext *ctx2 = new PaymentContext("Petter",8000,strategyDollar);
 						ctx2->payNow();
 
-						//²âÊÔÐÂÌí¼ÓµÄÖ§¸¶·½Ê½
+						//æµ‹è¯•æ–°æ·»åŠ çš„æ”¯ä»˜æ–¹å¼
 						PaymentStrategy *strategyCard = new Card();
-						PaymentContext *ctx3 = new PaymentContext2("Ð¡Íõ",9000,"010998877656",strategyCard);
+						PaymentContext *ctx3 = new PaymentContext2("å°çŽ‹",9000,"010998877656",strategyCard);
 						ctx3->payNow();
 
-						//²âÊÔÐÂÌí¼ÓµÄÖ§¸¶·½Ê½
+						//æµ‹è¯•æ–°æ·»åŠ çš„æ”¯ä»˜æ–¹å¼
 						PaymentStrategy *strategyCard2 = new Card2("010998877656");
-						PaymentContext *ctx4 = new PaymentContext("Ð¡ÕÅ",9000,strategyCard2);
+						PaymentContext *ctx4 = new PaymentContext("å°å¼ ",9000,strategyCard2);
 						ctx4->payNow();
 					}
 				}

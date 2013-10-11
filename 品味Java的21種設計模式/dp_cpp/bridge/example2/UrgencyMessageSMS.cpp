@@ -13,13 +13,13 @@ namespace cn
 
 					void UrgencyMessageSMS::send(std::string message, std::string toUser)
 					{
-						message = "¼Ó¼±£º"+message;
-						puts("Ê¹ÓÃÕ¾ÄÚ¶ÌÏûÏ¢µÄ·½Ê½£¬·¢ËÍÏûÏ¢'"+message+"'¸ø"+toUser);
+						message = "åŠ æ€¥ï¼š"+message;
+						puts("ä½¿ç”¨ç«™å†…çŸ­æ¶ˆæ¯çš„æ–¹å¼ï¼Œå‘é€æ¶ˆæ¯'"+message+"'ç»™"+toUser);
 					}
 
 					object *UrgencyMessageSMS::watch(std::string messageId)
 					{
-						//»ñÈ¡ÏàÓ¦µÄÊı¾İ£¬×éÖ¯³É¼à¿ØµÄÊı¾İ¶ÔÏó£¬È»ºó·µ»Ø		
+						//è·å–ç›¸åº”çš„æ•°æ®ï¼Œç»„ç»‡æˆç›‘æ§çš„æ•°æ®å¯¹è±¡ï¼Œç„¶åè¿”å›		
 						return 0;
 					}
 				}

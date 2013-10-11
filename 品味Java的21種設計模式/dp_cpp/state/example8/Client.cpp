@@ -13,20 +13,20 @@ namespace cn
 
 					void Client::main(std::string args[])
 					{
-						//´´½¨ÒµÎñ¶ÔÏó£¬²¢ÉèÖÃÒµÎñÊý¾Ý
+						//åˆ›å»ºä¸šåŠ¡å¯¹è±¡ï¼Œå¹¶è®¾ç½®ä¸šåŠ¡æ•°æ®
 						LeaveRequestModel *lrm = new LeaveRequestModel();
-						lrm->setUser("Ð¡Àî");
+						lrm->setUser("å°æŽ");
 						lrm->setBeginDate("2010-02-08");
 						lrm->setLeaveDays(5);
 
-						//´´½¨ÉÏÏÂÎÄ¶ÔÏó
+						//åˆ›å»ºä¸Šä¸‹æ–‡å¯¹è±¡
 						LeaveRequestContext *request = new LeaveRequestContext();
-						//ÎªÉÏÏÂÎÄ¶ÔÏóÉèÖÃÒµÎñÊý¾Ý¶ÔÏó
+						//ä¸ºä¸Šä¸‹æ–‡å¯¹è±¡è®¾ç½®ä¸šåŠ¡æ•°æ®å¯¹è±¡
 						request->setBusinessVO(lrm);
-						//ÅäÖÃÉÏÏÂÎÄ£¬×÷Îª¿ªÊ¼µÄ×´Ì¬£¬ÒÔºó¾Í²»¹ÜÁË
+						//é…ç½®ä¸Šä¸‹æ–‡ï¼Œä½œä¸ºå¼€å§‹çš„çŠ¶æ€ï¼Œä»¥åŽå°±ä¸ç®¡äº†
 						request->setState(new ProjectManagerState());
 
-						//ÇëÇóÉÏÏÂÎÄ£¬ÈÃÉÏÏÂÎÄ¿ªÊ¼´¦Àí¹¤×÷
+						//è¯·æ±‚ä¸Šä¸‹æ–‡ï¼Œè®©ä¸Šä¸‹æ–‡å¼€å§‹å¤„ç†å·¥ä½œ
 						request->doWork();
 					}
 				}

@@ -19,8 +19,8 @@ namespace cn
 
 					void Card2::pay(PaymentContext *ctx)
 					{
-						puts("���ڸ�"+ctx->getUserName()+"��"+this->account+"�ʺ�֧����"+ctx->getMoney()+"Ԫ");
-						//�������У�����ת�ʣ��Ͳ�ȥ����
+						puts("现在给"+ctx->getUserName()+"的"+this->account+"帐号支付了"+ctx->getMoney()+"元");
+						//连接银行，进行转帐，就不去管了
 					}
 				}
 			}

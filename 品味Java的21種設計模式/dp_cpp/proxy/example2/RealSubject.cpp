@@ -13,7 +13,7 @@ namespace cn
 
 					void RealSubject::request()
 					{
-						//Ö´ĞĞ¾ßÌåµÄ¹¦ÄÜ´¦Àí
+						//æ‰§è¡Œå…·ä½“çš„åŠŸèƒ½å¤„ç†
 					}
 				}
 			}

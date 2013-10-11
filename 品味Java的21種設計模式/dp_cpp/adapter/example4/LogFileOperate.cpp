@@ -13,8 +13,8 @@ namespace cn
 
 					LogFileOperate::LogFileOperate(std::string logFilePathName)
 					{
-						//ÏÈÅÐ¶ÏÊÇ·ñ´«ÈëÁËÎÄ¼þµÄÂ·¾¶ºÍÃû³Æ£¬Èç¹ûÊÇ£¬
-						//¾ÍÖØÐÂÉèÖÃ²Ù×÷µÄÈÕÖ¾ÎÄ¼þµÄÂ·¾¶ºÍÃû³Æ
+						//å…ˆåˆ¤æ–­æ˜¯å¦ä¼ å…¥äº†æ–‡ä»¶çš„è·¯å¾„å’Œåç§°ï¼Œå¦‚æžœæ˜¯ï¼Œ
+						//å°±é‡æ–°è®¾ç½®æ“ä½œçš„æ—¥å¿—æ–‡ä»¶çš„è·¯å¾„å’Œåç§°
 						InitializeInstanceFields();
 //JAVA TO C++ CONVERTER TODO TASK: There is no direct native C++ equivalent to the Java String 'trim' method:
 						if(logFilePathName!="" && logFilePathName.trim()->length()>0)

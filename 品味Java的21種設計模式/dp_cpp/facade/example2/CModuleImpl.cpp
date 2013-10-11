@@ -13,7 +13,7 @@ namespace cn
 
 					void CModuleImpl::testC()
 					{
-						puts("现在在C模块里面操作testC方法");
+						puts("鐜板湪鍦–妯″潡閲岄潰鎿嶄綔testC鏂规硶");
 					}
 				}
 			}

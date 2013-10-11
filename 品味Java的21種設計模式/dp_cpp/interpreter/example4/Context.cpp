@@ -18,7 +18,7 @@ namespace cn
 
 					Context::Context(std::string filePathName) throw(Exception)
 					{
-						//通过辅助的Xml工具类来获取被解析的xml对应的Document对象
+						//閫氳繃杈呭姪鐨刋ml宸ュ叿绫绘潵鑾峰彇琚В鏋愮殑xml瀵瑰簲鐨凞ocument瀵硅薄
 						InitializeInstanceFields();
 						this->document = XmlUtil::getRoot(filePathName);
 					}

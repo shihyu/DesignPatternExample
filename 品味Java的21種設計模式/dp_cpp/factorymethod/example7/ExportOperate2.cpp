@@ -14,15 +14,15 @@ namespace cn
 					ExportFileApi *ExportOperate2::factoryMethod(int type)
 					{
 						ExportFileApi *api = 0;
-						//����ȫ�����ǣ�Ҳ����ѡ���Լ�����Ȥ�ĸ��ǣ�
-						//����ֻ�������Լ��µ�ʵ�֣������Ĳ���
+						//可以全部覆盖，也可以选择自己感兴趣的覆盖，
+						//这里只想添加自己新的实现，其他的不管
 						if(type==3)
 						{
 							api = new ExportXml();
 						}
 						else
 						{
-							//�����Ļ����ø�����ʵ��
+							//其他的还是让父类来实现
 							api = ExportOperate::factoryMethod(type);
 						}
 						return api;

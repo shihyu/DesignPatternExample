@@ -18,7 +18,7 @@ namespace cn
 
 					void Invoker::startPrint()
 					{
-						//Ö´ÐÐÃüÁîµÄ¹¦ÄÜ
+						//æ‰§è¡Œå‘½ä»¤çš„åŠŸèƒ½
 						this->cmd->execute();
 					}
 				}

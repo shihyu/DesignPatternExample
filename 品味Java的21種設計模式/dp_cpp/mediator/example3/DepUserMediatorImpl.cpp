@@ -13,7 +13,7 @@ namespace cn
 
 					DepUserMediatorImpl::DepUserMediatorImpl()
 					{
-						//µ÷ÓÃ³õÊ¼»¯²âÊÔÊı¾İµÄ¹¦ÄÜ
+						//è°ƒç”¨åˆå§‹åŒ–æµ‹è¯•æ•°æ®çš„åŠŸèƒ½
 						InitializeInstanceFields();
 						initTestData();
 					}
@@ -25,7 +25,7 @@ namespace cn
 
 					void DepUserMediatorImpl::initTestData()
 					{
-						//×¼±¸Ò»Ğ©²âÊÔÊı¾İ
+						//å‡†å¤‡ä¸€äº›æµ‹è¯•æ•°æ®
 						DepUserModel *du1 = new DepUserModel();
 						du1->setDepUserId("du1");
 						du1->setDepId("d1");
@@ -59,20 +59,20 @@ namespace cn
 
 					bool DepUserMediatorImpl::deleteDep(std::string depId)
 					{
-						//Çë×¢Òâ£ºÎªÁËÑİÊ¾¼òµ¥£¬²¿ÃÅ³·Ïúºó£¬Ô­²¿ÃÅµÄÈËÔ±ÔõÃ´´¦ÀíµÈºóĞøÒµÎñ´¦Àí£¬ÕâÀï¾Í²»¹ÜÁË
+						//è¯·æ³¨æ„ï¼šä¸ºäº†æ¼”ç¤ºç®€å•ï¼Œéƒ¨é—¨æ’¤é”€åï¼ŒåŸéƒ¨é—¨çš„äººå‘˜æ€ä¹ˆå¤„ç†ç­‰åç»­ä¸šåŠ¡å¤„ç†ï¼Œè¿™é‡Œå°±ä¸ç®¡äº†
 
-						//1£ºµ½¼ÇÂ¼²¿ÃÅºÍÈËÔ±¹ØÏµµÄ¼¯ºÏÀïÃæ£¬Ñ°ÕÒ¸úÕâ¸ö²¿ÃÅÏà¹ØµÄÈËÔ±
-						//ÉèÖÃÒ»¸öÁÙÊ±µÄ¼¯ºÏ£¬¼ÇÂ¼ĞèÒªÇå³ıµÄ¹ØÏµ¶ÔÏó
+						//1ï¼šåˆ°è®°å½•éƒ¨é—¨å’Œäººå‘˜å…³ç³»çš„é›†åˆé‡Œé¢ï¼Œå¯»æ‰¾è·Ÿè¿™ä¸ªéƒ¨é—¨ç›¸å…³çš„äººå‘˜
+						//è®¾ç½®ä¸€ä¸ªä¸´æ—¶çš„é›†åˆï¼Œè®°å½•éœ€è¦æ¸…é™¤çš„å…³ç³»å¯¹è±¡
 						Collection<DepUserModel*> *tempCol = std::vector<DepUserModel*>();
 						for (Collection<DepUserModel*>::const_iterator du = depUserCol->begin(); du != depUserCol->end(); ++du)
 						{
 							if((*du)->getDepId()->equals(depId))
 							{
-								//2£ºĞèÒª°ÑÕâ¸öÏà¹ØµÄ¼ÇÂ¼È¥µô£¬ÏÈ¼ÇÂ¼ÏÂÀ´
+								//2ï¼šéœ€è¦æŠŠè¿™ä¸ªç›¸å…³çš„è®°å½•å»æ‰ï¼Œå…ˆè®°å½•ä¸‹æ¥
 								tempCol->add(*du);
 							}
 						}
-						//3£º´Ó¹ØÏµ¼¯ºÏÀïÃæÇå³ıµôÕâĞ©¹ØÏµ
+						//3ï¼šä»å…³ç³»é›†åˆé‡Œé¢æ¸…é™¤æ‰è¿™äº›å…³ç³»
 						depUserCol->removeAll(tempCol);
 
 						return true;
@@ -80,18 +80,18 @@ namespace cn
 
 					bool DepUserMediatorImpl::deleteUser(std::string userId)
 					{
-						//1£ºµ½¼ÇÂ¼²¿ÃÅºÍÈËÔ±¹ØÏµµÄ¼¯ºÏÀïÃæ£¬Ñ°ÕÒ¸úÕâ¸öÈËÔ±Ïà¹ØµÄ²¿ÃÅ
-						//ÉèÖÃÒ»¸öÁÙÊ±µÄ¼¯ºÏ£¬¼ÇÂ¼ĞèÒªÇå³ıµÄ¹ØÏµ¶ÔÏó
+						//1ï¼šåˆ°è®°å½•éƒ¨é—¨å’Œäººå‘˜å…³ç³»çš„é›†åˆé‡Œé¢ï¼Œå¯»æ‰¾è·Ÿè¿™ä¸ªäººå‘˜ç›¸å…³çš„éƒ¨é—¨
+						//è®¾ç½®ä¸€ä¸ªä¸´æ—¶çš„é›†åˆï¼Œè®°å½•éœ€è¦æ¸…é™¤çš„å…³ç³»å¯¹è±¡
 						Collection<DepUserModel*> *tempCol = std::vector<DepUserModel*>();
 						for (Collection<DepUserModel*>::const_iterator du = depUserCol->begin(); du != depUserCol->end(); ++du)
 						{
 							if((*du)->getUserId()->equals(userId))
 							{
-								//2£ºĞèÒª°ÑÕâ¸öÏà¹ØµÄ¼ÇÂ¼È¥µô£¬ÏÈ¼ÇÂ¼ÏÂÀ´
+								//2ï¼šéœ€è¦æŠŠè¿™ä¸ªç›¸å…³çš„è®°å½•å»æ‰ï¼Œå…ˆè®°å½•ä¸‹æ¥
 								tempCol->add(*du);
 							}
 						}
-						//3£º´Ó¹ØÏµ¼¯ºÏÀïÃæÇå³ıµôÕâĞ©¹ØÏµ
+						//3ï¼šä»å…³ç³»é›†åˆé‡Œé¢æ¸…é™¤æ‰è¿™äº›å…³ç³»
 						depUserCol->removeAll(tempCol);
 
 						return true;
@@ -103,7 +103,7 @@ namespace cn
 						{
 							if((*du)->getDepId()->equals(dep->getDepId()))
 							{
-								puts("²¿ÃÅ±àºÅ="+dep->getDepId()+"ÏÂÃæÓµÓĞÈËÔ±£¬Æä±àºÅÊÇ£º"+(*du)->getUserId());
+								puts("éƒ¨é—¨ç¼–å·="+dep->getDepId()+"ä¸‹é¢æ‹¥æœ‰äººå‘˜ï¼Œå…¶ç¼–å·æ˜¯ï¼š"+(*du)->getUserId());
 							}
 						}
 					}
@@ -114,20 +114,20 @@ namespace cn
 						{
 							if((*du)->getUserId()->equals(user->getUserId()))
 							{
-								puts("ÈËÔ±±àºÅ="+user->getUserId()+"ÊôÓÚ²¿ÃÅ±àºÅÊÇ£º"+(*du)->getDepId());
+								puts("äººå‘˜ç¼–å·="+user->getUserId()+"å±äºéƒ¨é—¨ç¼–å·æ˜¯ï¼š"+(*du)->getDepId());
 							}
 						}
 					}
 
 					bool DepUserMediatorImpl::changeDep(std::string userId, std::string oldDepId, std::string newDepId)
 					{
-						//±¾Ê¾Àı²»È¥ÊµÏÖÁË
+						//æœ¬ç¤ºä¾‹ä¸å»å®ç°äº†
 						return false;
 					}
 
 					bool DepUserMediatorImpl::joinDep(Collection<std::string> *colDepIds, Dep *newDep)
 					{
-						//±¾Ê¾Àı²»È¥ÊµÏÖÁË		
+						//æœ¬ç¤ºä¾‹ä¸å»å®ç°äº†		
 						return false;
 					}
 				}

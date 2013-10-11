@@ -18,7 +18,7 @@ namespace cn
 
 					bool ArrayIteratorImpl::hasNext()
 					{
-						//�ж��Ƿ�����һ��Ԫ��
+						//判断是否还有下一个元素
 						if(pms!=0 && index<=(sizeof(pms) / sizeof(pms[0])-1))
 						{
 							return true;
@@ -33,7 +33,7 @@ namespace cn
 						while(hasNext() && count<num)
 						{
 							col->add(pms[index]);
-							//ÿȡ��һ��ֵ���Ͱ��ѷ���������1
+							//每取走一个值，就把已访问索引加1
 							index++;
 							count++;
 						}
@@ -53,9 +53,9 @@ namespace cn
 					{
 						Collection *col = std::vector();
 						int count=0;
-						//�򵥵�ʵ�־��ǰ������˻�ȥnum����Ȼ����ȡֵ��
-						//����ʵ������ʵ�����п��ܶ��˻�ȥ���ݵģ����磺�Ѿ��������һҳ���������һҳ�����ݲ���һҳ�����ݣ���ô�˻�ȥnum���������˶���
-						//Ϊ��ʾ���ļ���ԣ�����Ͳ�ȥ������
+						//简单的实现就是把索引退回去num个，然后再取值。
+						//但事实上这种实现是有可能多退回去数据的，比如：已经到了最后一页，而且最后一页的数据不够一页的数据，那么退回去num个索引就退多了
+						//为了示例的简洁性，这里就不去处理了
 						index = index - num;
 						while(hasPrevious() && count<num)
 						{

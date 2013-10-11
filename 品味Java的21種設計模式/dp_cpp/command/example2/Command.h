@@ -19,7 +19,7 @@ namespace cn
 					///	 <summary> * 执行命令对应的操作 </summary>
 					///	 
 					public:
-						virtual public void execute() = 0;
+						virtual void execute() = 0;
 					};
 
 				}

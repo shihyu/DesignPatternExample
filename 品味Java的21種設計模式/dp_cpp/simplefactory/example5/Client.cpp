@@ -13,9 +13,9 @@ namespace cn
 
 					void Client::main(std::string args[])
 					{
-						//��Ҫ�ı䣬û��new Impl()�ˣ�ȡ����֮Factory.createApi()
+						//重要改变，没有new Impl()了，取而代之Factory.createApi()
 						Api *api = Factory::createApi();
-						api->test1("��������Ҫ���ţ�ֻ�Ǹ����Զ��ѣ�");
+						api->test1("哈哈，不要紧张，只是个测试而已！");
 					}
 				}
 			}

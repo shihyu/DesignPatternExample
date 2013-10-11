@@ -13,7 +13,7 @@ namespace cn
 
 					void Facade::test()
 					{
-						//ÔÚÄÚ²¿ÊµÏÖµÄÊ±ºò£¬¿ÉÄÜ»áµ÷ÓÃµ½ÄÚ²¿µÄ¶à¸öÄ£¿é
+						//åœ¨å†…éƒ¨å®žçŽ°çš„æ—¶å€™ï¼Œå¯èƒ½ä¼šè°ƒç”¨åˆ°å†…éƒ¨çš„å¤šä¸ªæ¨¡å—
 						AModuleApi *a = new AModuleImpl();
 						a->testA();
 						BModuleApi *b = new BModuleImpl();

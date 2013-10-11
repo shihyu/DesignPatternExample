@@ -13,26 +13,26 @@ namespace cn
 
 					void ComputerEngineer::makeComputer(AbstractFactory *schema)
 					{
-						//1£ºÊ×ÏÈ×¼±¸ºÃ×°»úËùÐèÒªµÄÅä¼þ
+						//1ï¼šé¦–å…ˆå‡†å¤‡å¥½è£…æœºæ‰€éœ€è¦çš„é…ä»¶
 						prepareHardwares(schema);
-						//2£º×é×°»úÆ÷
+						//2ï¼šç»„è£…æœºå™¨
 
-						//3£º²âÊÔ»úÆ÷
+						//3ï¼šæµ‹è¯•æœºå™¨
 
-						//4£º½»¸¶¿Í»§
+						//4ï¼šäº¤ä»˜å®¢æˆ·
 					}
 
 					void ComputerEngineer::prepareHardwares(AbstractFactory *schema)
 					{
-						//ÕâÀïÒªÈ¥×¼±¸CPUºÍÖ÷°åµÄ¾ßÌåÊµÏÖ£¬ÎªÁËÊ¾Àý¼òµ¥£¬ÕâÀïÖ»×¼±¸ÕâÁ½¸ö
-						//¿ÉÊÇ£¬×°»ú¹¤³ÌÊ¦²¢²»ÖªµÀÈçºÎÈ¥´´½¨£¬ÔõÃ´°ìÄØ£¿
+						//è¿™é‡Œè¦åŽ»å‡†å¤‡CPUå’Œä¸»æ¿çš„å…·ä½“å®žçŽ°ï¼Œä¸ºäº†ç¤ºä¾‹ç®€å•ï¼Œè¿™é‡Œåªå‡†å¤‡è¿™ä¸¤ä¸ª
+						//å¯æ˜¯ï¼Œè£…æœºå·¥ç¨‹å¸ˆå¹¶ä¸çŸ¥é“å¦‚ä½•åŽ»åˆ›å»ºï¼Œæ€Žä¹ˆåŠžå‘¢ï¼Ÿ
 
-						//Ê¹ÓÃ³éÏó¹¤³§À´»ñÈ¡ÏàÓ¦µÄ½Ó¿Ú¶ÔÏó
+						//ä½¿ç”¨æŠ½è±¡å·¥åŽ‚æ¥èŽ·å–ç›¸åº”çš„æŽ¥å£å¯¹è±¡
 						this->cpu = static_cast<CPUApi*>(schema->createProduct(1));
 						this->mainboard = static_cast<MainboardApi*>(schema->createProduct(2));
 						this->memory = static_cast<MemoryApi*>(schema->createProduct(3));
 
-						//²âÊÔÒ»ÏÂÅä¼þÊÇ·ñºÃÓÃ
+						//æµ‹è¯•ä¸€ä¸‹é…ä»¶æ˜¯å¦å¥½ç”¨
 						this->cpu->calculate();
 						this->mainboard->installCPU();
 						if(memory!=0)

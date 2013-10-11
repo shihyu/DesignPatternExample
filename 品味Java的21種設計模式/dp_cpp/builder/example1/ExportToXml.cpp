@@ -13,22 +13,22 @@ namespace cn
 
 					void ExportToXml::export(ExportHeaderModel *ehm, Map<std::string, Collection<ExportDataModel*>*> *mapData, ExportFooterModel *efm)
 					{
-						//ÓÃÀ´¼ÇÂ¼×îÖÕÊä³öµÄÎÄ¼şÄÚÈİ
+						//ç”¨æ¥è®°å½•æœ€ç»ˆè¾“å‡ºçš„æ–‡ä»¶å†…å®¹
 						StringBuffer *buffer = new StringBuffer();
-						//1£ºÏÈÀ´Æ´½ÓÎÄ¼şÍ·µÄÄÚÈİ
+						//1ï¼šå…ˆæ¥æ‹¼æ¥æ–‡ä»¶å¤´çš„å†…å®¹
 						buffer->append("<?xml version='1.0' encoding='gb2312'?>\n");
 						buffer->append("<Report>\n");
 						buffer->append("  <Header>\n");
 						buffer->append("    <DepId>"+ehm->getDepId()+"</DepId>\n");
 						buffer->append("    <ExportDate>"+ehm->getExportDate()+"</ExportDate>\n");
 						buffer->append("  </Header>\n");
-						//2£º½Ó×ÅÀ´Æ´½ÓÎÄ¼şÌåµÄÄÚÈİ
+						//2ï¼šæ¥ç€æ¥æ‹¼æ¥æ–‡ä»¶ä½“çš„å†…å®¹
 						buffer->append("  <Body>\n");
 						for (Map<std::string, Collection<ExportDataModel*>*>::const_iterator tblName = mapData->begin(); tblName != mapData->end(); ++tblName)
 						{
-							//ÏÈÆ´½Ó±íÃû³Æ
+							//å…ˆæ‹¼æ¥è¡¨åç§°
 							buffer->append("    <Datas TableName=\""+tblName->first+"\">\n");
-							//È»ºóÑ­»·Æ´½Ó¾ßÌåÊı¾İ
+							//ç„¶åå¾ªç¯æ‹¼æ¥å…·ä½“æ•°æ®
 							for (unknown::const_iterator edm = mapData->get(tblName).begin(); edm != mapData->get(tblName).end(); ++edm)
 							{
 								buffer->append("      <Data>\n");
@@ -40,15 +40,15 @@ namespace cn
 							buffer->append("    </Datas>\n");
 						}
 						buffer->append("  </Body>\n");
-						//3£º½Ó×ÅÀ´Æ´½ÓÎÄ¼şÎ²µÄÄÚÈİ
+						//3ï¼šæ¥ç€æ¥æ‹¼æ¥æ–‡ä»¶å°¾çš„å†…å®¹
 						buffer->append("  <Footer>\n");
 						buffer->append("    <ExportUser>"+efm->getExportUser()+"</ExportUser>\n");
 						buffer->append("  </Footer>\n");
 						buffer->append("</Report>\n");
 
-						//ÎªÁËÑİÊ¾¼ò½àĞÔ£¬ÕâÀï¾Í²»È¥Ğ´Êä³öÎÄ¼şµÄ´úÂëÁË
-						//°ÑÒªÊä³öµÄÄÚÈİÊä³öµ½¿ØÖÆÌ¨¿´¿´
-						puts("Êä³öµ½XMLÎÄ¼şµÄÄÚÈİ£º\n"+buffer);
+						//ä¸ºäº†æ¼”ç¤ºç®€æ´æ€§ï¼Œè¿™é‡Œå°±ä¸å»å†™è¾“å‡ºæ–‡ä»¶çš„ä»£ç äº†
+						//æŠŠè¦è¾“å‡ºçš„å†…å®¹è¾“å‡ºåˆ°æ§åˆ¶å°çœ‹çœ‹
+						puts("è¾“å‡ºåˆ°XMLæ–‡ä»¶çš„å†…å®¹ï¼š\n"+buffer);
 					}
 				}
 			}

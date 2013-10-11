@@ -13,7 +13,7 @@ namespace cn
 
 					void ConcreteStateB::handle(std::string sampleParameter)
 					{
-						//ÊµÏÖ¾ßÌåµÄ´¦Àí
+						//å®ç°å…·ä½“çš„å¤„ç†
 					}
 				}
 			}

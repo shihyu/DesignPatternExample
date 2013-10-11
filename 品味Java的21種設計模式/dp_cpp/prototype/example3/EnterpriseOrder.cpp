@@ -43,12 +43,12 @@ namespace cn
 
 					std::string EnterpriseOrder::ToString()
 					{
-						return "±¾ÆóÒµ¶©µ¥µÄ¶©¹ºÆóÒµÊÇ="+this->enterpriseName+"£¬¶©¹º²úÆ·ÊÇ="+this->productId+"£¬¶©¹ºÊýÁ¿Îª="+this->orderProductNum;
+						return "æœ¬ä¼ä¸šè®¢å•çš„è®¢è´­ä¼ä¸šæ˜¯="+this->enterpriseName+"ï¼Œè®¢è´­äº§å“æ˜¯="+this->productId+"ï¼Œè®¢è´­æ•°é‡ä¸º="+this->orderProductNum;
 					}
 
 					OrderApi *EnterpriseOrder::cloneOrder()
 					{
-						//´´½¨Ò»¸öÐÂµÄ¶©µ¥£¬È»ºó°Ñ±¾ÊµÀýµÄÊý¾Ý¸´ÖÆ¹ýÈ¥
+						//åˆ›å»ºä¸€ä¸ªæ–°çš„è®¢å•ï¼Œç„¶åŽæŠŠæœ¬å®žä¾‹çš„æ•°æ®å¤åˆ¶è¿‡åŽ»
 						EnterpriseOrder *order = new EnterpriseOrder();
 						order->setEnterpriseName(this->enterpriseName);
 						order->setProductId(this->productId);

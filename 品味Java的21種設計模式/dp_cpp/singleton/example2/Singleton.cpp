@@ -18,19 +18,19 @@ namespace cn
 
 					Singleton Singleton::getInstance()
 					{
-						//ÅĞ¶Ï´æ´¢ÊµÀıµÄ±äÁ¿ÊÇ·ñÓĞÖµ
+						//åˆ¤æ–­å­˜å‚¨å®ä¾‹çš„å˜é‡æ˜¯å¦æœ‰å€¼
 						if(uniqueInstance == 0)
 						{
-							//Èç¹ûÃ»ÓĞ£¬¾Í´´½¨Ò»¸öÀàÊµÀı£¬²¢°ÑÖµ¸³Öµ¸ø´æ´¢ÀàÊµÀıµÄ±äÁ¿
+							//å¦‚æœæ²¡æœ‰ï¼Œå°±åˆ›å»ºä¸€ä¸ªç±»å®ä¾‹ï¼Œå¹¶æŠŠå€¼èµ‹å€¼ç»™å­˜å‚¨ç±»å®ä¾‹çš„å˜é‡
 							uniqueInstance = new Singleton();
 						}
-						//Èç¹ûÓĞÖµ£¬ÄÇ¾ÍÖ±½ÓÊ¹ÓÃ
+						//å¦‚æœæœ‰å€¼ï¼Œé‚£å°±ç›´æ¥ä½¿ç”¨
 						return uniqueInstance;
 					}
 
 					void Singleton::singletonOperation()
 					{
-						//¹¦ÄÜ´¦Àí
+						//åŠŸèƒ½å¤„ç†
 					}
 
 					std::string Singleton::getSingletonData()

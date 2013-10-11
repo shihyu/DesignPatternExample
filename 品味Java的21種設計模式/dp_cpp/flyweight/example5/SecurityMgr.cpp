@@ -25,7 +25,7 @@ namespace cn
 						Collection<Flyweight*> *col = this->queryByUser(user);
 						if(col==0 || col->size() == 0)
 						{
-							puts(user+"Ã»ÓĞµÇÂ¼»òÊÇÃ»ÓĞ±»·ÖÅäÈÎºÎÈ¨ÏŞ");
+							puts(user+"æ²¡æœ‰ç™»å½•æˆ–æ˜¯æ²¡æœ‰è¢«åˆ†é…ä»»ä½•æƒé™");
 							return false;
 						}
 						for (Collection<Flyweight*>::const_iterator fm = col->begin(); fm != col->end(); ++fm)
@@ -53,16 +53,16 @@ namespace cn
 								Flyweight *fm = 0;
 								if(ss[3].equals("2"))
 								{
-									//±íÊ¾ÊÇ×éºÏ
+									//è¡¨ç¤ºæ˜¯ç»„åˆ
 									fm = new UnsharedConcreteFlyweight();
-									//»ñÈ¡ĞèÒª×éºÏµÄÊı¾İ
+									//è·å–éœ€è¦ç»„åˆçš„æ•°æ®
 //ORIGINAL LINE: String tempSs[] = TestDB.mapDB.get(ss[1]);
 //JAVA TO C++ CONVERTER WARNING: Since the array size is not known in this declaration, Java to C++ Converter has converted this array to a pointer.  You will need to call 'delete[]' where appropriate:
 									std::string *tempSs = TestDB::mapDB->get(ss[1]);
 									for (std::string::const_iterator tempS = tempSs->begin(); tempS != tempSs->end(); ++tempS)
 									{
 										Flyweight *tempFm = FlyweightFactory::getInstance()->getFlyweight(*tempS);
-										//°ÑÕâ¸ö¶ÔÏó¼ÓÈëµ½×éºÏ¶ÔÏóÖĞ
+										//æŠŠè¿™ä¸ªå¯¹è±¡åŠ å…¥åˆ°ç»„åˆå¯¹è±¡ä¸­
 										fm->add(tempFm);
 									}
 								}

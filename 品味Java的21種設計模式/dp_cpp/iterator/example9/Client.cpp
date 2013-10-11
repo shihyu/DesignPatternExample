@@ -13,28 +13,28 @@ namespace cn
 
 					void Client::main(std::string args[])
 					{
-						//·ÃÎÊĞÂÊÕ¹º¹«Ë¾µÄ¹¤×ÊÁĞ±í
+						//è®¿é—®æ–°æ”¶è´­å…¬å¸çš„å·¥èµ„åˆ—è¡¨
 						SalaryManager *salaryManager = new SalaryManager();
-						//ÏÈ¼ÆËãÔÙ»ñÈ¡
+						//å…ˆè®¡ç®—å†è·å–
 						salaryManager->calcSalary();
-						//µÃµ½·­Ò³µü´úÆ÷
+						//å¾—åˆ°ç¿»é¡µè¿­ä»£å™¨
 						AggregationIterator *it = salaryManager->createIterator();
 
-						//»ñÈ¡µÚÒ»Ò³£¬Ã¿Ò³ÏÔÊ¾2Ìõ
+						//è·å–ç¬¬ä¸€é¡µï¼Œæ¯é¡µæ˜¾ç¤º2æ¡
 						Collection *col = it->getPage(1,2);
-						puts("µÚÒ»Ò³Êı¾İ£º");
+						puts("ç¬¬ä¸€é¡µæ•°æ®ï¼š");
 						print(col);
-						//»ñÈ¡µÚ¶şÒ³£¬Ã¿Ò³ÏÔÊ¾2Ìõ
+						//è·å–ç¬¬äºŒé¡µï¼Œæ¯é¡µæ˜¾ç¤º2æ¡
 						Collection *col2 = it->getPage(2,2);
-						puts("µÚ¶şÒ³Êı¾İ£º");
+						puts("ç¬¬äºŒé¡µæ•°æ®ï¼š");
 						print(col2);
-						//ÔÙ´Î»ñÈ¡µÚÒ»Ò³
+						//å†æ¬¡è·å–ç¬¬ä¸€é¡µ
 						Collection *col3 = it->getPage(1,2);
-						puts("ÔÙ´Î»ñÈ¡µÚÒ»Ò³Êı¾İ£º");
+						puts("å†æ¬¡è·å–ç¬¬ä¸€é¡µæ•°æ®ï¼š");
 						print(col3);
-						//»ñÈ¡µÚÈıÒ³
+						//è·å–ç¬¬ä¸‰é¡µ
 						Collection *col4 = it->getPage(3,2);
-						puts("»ñÈ¡µÚÈıÒ³Êı¾İ£º");
+						puts("è·å–ç¬¬ä¸‰é¡µæ•°æ®ï¼š");
 						print(col4);
 					}
 

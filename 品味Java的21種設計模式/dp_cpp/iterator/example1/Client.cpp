@@ -13,26 +13,26 @@ namespace cn
 
 					void Client::someOperation()
 					{
-						std::string names[3] = {"ÕÅÈý","ÀîËÄ","ÍõÎå"};
-						//´´½¨¾ÛºÏ¶ÔÏó
+						std::string names[3] = {"å¼ ä¸‰","æŽå››","çŽ‹äº”"};
+						//åˆ›å»ºèšåˆå¯¹è±¡
 						Aggregate *aggregate = new ConcreteAggregate(names);
-						//Ñ­»·Êä³ö¾ÛºÏ¶ÔÏóÖÐµÄÖµ
+						//å¾ªçŽ¯è¾“å‡ºèšåˆå¯¹è±¡ä¸­çš„å€¼
 						Iterator it = aggregate->createIterator();
-						//Ê×ÏÈÉèÖÃµü´úÆ÷µ½µÚÒ»¸öÔªËØ
+						//é¦–å…ˆè®¾ç½®è¿­ä»£å™¨åˆ°ç¬¬ä¸€ä¸ªå…ƒç´ 
 						it->first();
 						while(!it->isDone())
 						{
-							//È¡³öµ±Ç°µÄÔªËØÀ´
+							//å–å‡ºå½“å‰çš„å…ƒç´ æ¥
 							object *obj = it->currentItem();
 							puts("the obj=="+obj);
-							//Èç¹û»¹Ã»ÓÐµü´úµ½×îºó£¬ÄÇÃ´¾ÍÏòÏÂµü´úÒ»¸ö
+							//å¦‚æžœè¿˜æ²¡æœ‰è¿­ä»£åˆ°æœ€åŽï¼Œé‚£ä¹ˆå°±å‘ä¸‹è¿­ä»£ä¸€ä¸ª
 							it->next();
 						}
 					}
 
 					void Client::main(std::string args[])
 					{
-						//¿ÉÒÔ¼òµ¥µÄ²âÊÔÒ»ÏÂ
+						//å¯ä»¥ç®€å•çš„æµ‹è¯•ä¸€ä¸‹
 						Client *client = new Client();
 						client->someOperation();
 					}

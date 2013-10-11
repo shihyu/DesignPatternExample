@@ -18,29 +18,29 @@ namespace cn
 
 					void Client::main(std::string args[]) throw(Exception)
 					{
-						//×¼±¸ÉÏÏÂÎÄ
+						//å‡†å¤‡ä¸Šä¸‹æ–‡
 						Context *c = new Context("InterpreterTest.xml");
-						//Í¨¹ý½âÎöÆ÷»ñÈ¡³éÏóÓï·¨Ê÷
+						//é€šè¿‡è§£æžå™¨èŽ·å–æŠ½è±¡è¯­æ³•æ ‘
 						ReadXmlExpression *re = Parser::parse("root/a/b/d$.id$");
-						//ÇëÇó½âÎö£¬»ñÈ¡·µ»ØÖµ
+						//è¯·æ±‚è§£æžï¼ŒèŽ·å–è¿”å›žå€¼
 //ORIGINAL LINE: String ss[] = re.interpret(c);
 //JAVA TO C++ CONVERTER WARNING: Since the array size is not known in this declaration, Java to C++ Converter has converted this array to a pointer.  You will need to call 'delete[]' where appropriate:
 						std::string *ss = re->interpret(c);
 						for (std::string::const_iterator s = ss->begin(); s != ss->end(); ++s)
 						{
-							puts("dµÄÊôÐÔidÖµÊÇ=" + *s);
+							puts("dçš„å±žæ€§idå€¼æ˜¯=" + *s);
 						}
 
-						//Èç¹ûÒªÊ¹ÓÃÍ¬Ò»¸öÉÏÏÂÎÄ£¬Á¬Ðø½øÐÐ½âÎö£¬ÐèÒªÖØÐÂ³õÊ¼»¯ÉÏÏÂÎÄ¶ÔÏó
+						//å¦‚æžœè¦ä½¿ç”¨åŒä¸€ä¸ªä¸Šä¸‹æ–‡ï¼Œè¿žç»­è¿›è¡Œè§£æžï¼Œéœ€è¦é‡æ–°åˆå§‹åŒ–ä¸Šä¸‹æ–‡å¯¹è±¡
 						c->reInit();
 						ReadXmlExpression *re2 = Parser::parse("root/a/b/d$");
-						//ÇëÇó½âÎö£¬»ñÈ¡·µ»ØÖµ
+						//è¯·æ±‚è§£æžï¼ŒèŽ·å–è¿”å›žå€¼
 //ORIGINAL LINE: String ss2[] = re2.interpret(c);
 //JAVA TO C++ CONVERTER WARNING: Since the array size is not known in this declaration, Java to C++ Converter has converted this array to a pointer.  You will need to call 'delete[]' where appropriate:
 						std::string *ss2 = re2->interpret(c);
 						for (std::string::const_iterator s = ss2->begin(); s != ss2->end(); ++s)
 						{
-							puts("dµÄÖµÊÇ=" + *s);
+							puts("dçš„å€¼æ˜¯=" + *s);
 						}
 					}
 				}

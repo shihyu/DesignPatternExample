@@ -18,7 +18,7 @@ namespace cn
 
 					void Context::contextInterface()
 					{
-						//通常会转调具体的策略对象进行算法运算
+						//閫氬父浼氳浆璋冨叿浣撶殑绛栫暐瀵硅薄杩涜绠楁硶杩愮畻
 						strategy->algorithmInterface();
 					}
 				}

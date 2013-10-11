@@ -18,8 +18,8 @@ namespace cn
 
 					void VoteManager2::vote(std::string user, std::string voteItem)
 					{
-						//1����Ϊ���û�����ͶƱ�Ĵ���
-						//�ȴӼ�¼��ȡ�����е�ͶƱ����
+						//1：先为该用户增加投票的次数
+						//先从记录中取出已有的投票次数
 						int oldVoteCount = mapVoteCount->get(user);
 						if(oldVoteCount==0)
 						{
@@ -28,8 +28,8 @@ namespace cn
 						oldVoteCount = oldVoteCount + 1;
 						mapVoteCount->put(user, oldVoteCount);
 
-						//2���жϸ��û�ͶƱ�����ͣ����൱�����ж϶�Ӧ��״̬
-						//����������ͶƱ���ظ�ͶƱ������ͶƱ�����Ϻ�������״̬
+						//2：判断该用户投票的类型，就相当于是判断对应的状态
+						//到底是正常投票、重复投票、恶意投票还是上黑名单的状态
 						if(oldVoteCount==1)
 						{
 							state = new NormalVoteState();
@@ -50,7 +50,7 @@ namespace cn
 						{
 							state = new BlackVoteState();
 						}
-						//Ȼ��ת��״̬������������Ӧ�Ĳ���
+						//然后转调状态对象来进行相应的操作
 										//		state.vote(user, voteItem, this);
 					}
 				}

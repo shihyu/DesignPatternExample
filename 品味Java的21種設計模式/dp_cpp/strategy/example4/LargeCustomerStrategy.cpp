@@ -13,7 +13,7 @@ namespace cn
 
 					double LargeCustomerStrategy::calcPrice(double goodsPrice)
 					{
-						puts("对于大客户，统一折扣10%");
+						puts("瀵逛簬澶у鎴凤紝缁熶竴鎶樻墸10%");
 						return goodsPrice*(1-0.1);
 					}
 				}

@@ -13,14 +13,14 @@ namespace cn
 
 					bool SaleSecurityCheck::sale(std::string user, std::string customer, SaleModel *saleModel)
 					{
-						//½øĞĞÈ¨ÏŞ¼ì²é£¬¼òµ¥µã£¬¾ÍĞ¡ÀîÄÜÍ¨¹ı
-						if((new std::string("Ğ¡Àî"))->equals(user))
+						//è¿›è¡Œæƒé™æ£€æŸ¥ï¼Œç®€å•ç‚¹ï¼Œå°±å°æèƒ½é€šè¿‡
+						if((new std::string("å°æ"))->equals(user))
 						{
 							return this->successor->sale(user, customer, saleModel);
 						}
 						else
 						{
-							puts("¶Ô²»Æğ"+user+"£¬ÄãÃ»ÓĞ±£´æÏúÊÛĞÅÏ¢µÄÈ¨ÏŞ");
+							puts("å¯¹ä¸èµ·"+user+"ï¼Œä½ æ²¡æœ‰ä¿å­˜é”€å”®ä¿¡æ¯çš„æƒé™");
 							return false;
 						}
 					}

@@ -13,7 +13,7 @@ namespace cn
 
 					void Adaptee::specificRequest()
 					{
-						//¾ßÌåµÄ¹¦ÄÜ´¦Àí
+						//å…·ä½“çš„åŠŸèƒ½å¤„ç†
 					}
 				}
 			}

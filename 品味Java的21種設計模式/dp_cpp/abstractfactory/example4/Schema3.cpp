@@ -14,7 +14,7 @@ namespace cn
 					object *Schema3::createProduct(int type)
 					{
 						object *retObj = 0;
-						//typeÎª1±íÊ¾´´½¨CPU£¬typeÎª2±íÊ¾´´½¨Ö÷°å£¬typeÎª3±íÊ¾´´½¨ÄÚ´æ
+						//typeä¸º1è¡¨ç¤ºåˆ›å»ºCPUï¼Œtypeä¸º2è¡¨ç¤ºåˆ›å»ºä¸»æ¿ï¼Œtypeä¸º3è¡¨ç¤ºåˆ›å»ºå†…å­˜
 						if(type==1)
 						{
 							retObj = new IntelCPU(1156);
@@ -23,7 +23,7 @@ namespace cn
 						{
 							retObj = new GAMainboard(1156);
 						}
-						//´´½¨ĞÂÌí¼ÓµÄ²úÆ·
+						//åˆ›å»ºæ–°æ·»åŠ çš„äº§å“
 						else if(type==3)
 						{
 							retObj = new HyMemory();

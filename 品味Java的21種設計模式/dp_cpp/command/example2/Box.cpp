@@ -18,7 +18,7 @@ namespace cn
 
 					void Box::openButtonPressed()
 					{
-						//°´ÏÂ°´Å¥£¬Ö´ÐÐÃüÁî
+						//æŒ‰ä¸‹æŒ‰é’®ï¼Œæ‰§è¡Œå‘½ä»¤
 						openCommand->execute();
 					}
 				}

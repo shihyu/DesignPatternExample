@@ -14,7 +14,7 @@ namespace cn
 					CPUApi *CPUFactory::createCPUApi(int type)
 					{
 						CPUApi *cpu = 0;
-						//根据参数来选择并创建相应的CPU对象
+						//鏍规嵁鍙傛暟鏉ラ�夋嫨骞跺垱寤虹浉搴旂殑CPU瀵硅薄
 						if(type==1)
 						{
 							cpu = new IntelCPU(1156);

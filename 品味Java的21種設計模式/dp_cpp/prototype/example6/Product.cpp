@@ -33,12 +33,12 @@ namespace cn
 
 					std::string Product::ToString()
 					{
-						return "²úÆ·±àºÅ="+this->productId+"£¬²úÆ·Ãû³Æ="+this->name;
+						return "äº§å“ç¼–å·="+this->productId+"ï¼Œäº§å“åç§°="+this->name;
 					}
 
 					ProductPrototype *Product::cloneProduct()
 					{
-						//´´½¨Ò»¸öÐÂµÄ¶©µ¥£¬È»ºó°Ñ±¾ÊµÀýµÄÊý¾Ý¸´ÖÆ¹ýÈ¥
+						//åˆ›å»ºä¸€ä¸ªæ–°çš„è®¢å•ï¼Œç„¶åŽæŠŠæœ¬å®žä¾‹çš„æ•°æ®å¤åˆ¶è¿‡åŽ»
 						Product *product = new Product();
 						product->setProductId(this->productId);
 						product->setName(this->name);

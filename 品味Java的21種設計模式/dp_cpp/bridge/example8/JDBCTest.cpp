@@ -13,27 +13,27 @@ namespace cn
 
 					void JDBCTest::main(std::string args[]) throw(Exception)
 					{
-						std::string sql = "¾ßÌåÒª²Ù×÷µÄsqlÓï¾ä";
-						// 1£º×°ÔØÇý¶¯
-						Class::forName("Çý¶¯µÄÃû×Ö");
-						// 2£º´´½¨Á¬½Ó
-						Connection *conn = DriverManager::getConnection("Á¬½ÓÊý¾Ý¿â·þÎñµÄURL", "ÓÃ»§Ãû", "ÃÜÂë");
+						std::string sql = "å…·ä½“è¦æ“ä½œçš„sqlè¯­å¥";
+						// 1ï¼šè£…è½½é©±åŠ¨
+						Class::forName("é©±åŠ¨çš„åå­—");
+						// 2ï¼šåˆ›å»ºè¿žæŽ¥
+						Connection *conn = DriverManager::getConnection("è¿žæŽ¥æ•°æ®åº“æœåŠ¡çš„URL", "ç”¨æˆ·å", "å¯†ç ");
 
-						// 3£º´´½¨statement»òÕßÊÇpreparedStatement
+						// 3ï¼šåˆ›å»ºstatementæˆ–è€…æ˜¯preparedStatement
 						PreparedStatement *pstmt = conn->prepareStatement(sql);
 
-						// 4£ºÖ´ÐÐsql£¬Èç¹ûÊÇ²éÑ¯£¬ÔÙ»ñÈ¡ResultSet
+						// 4ï¼šæ‰§è¡Œsqlï¼Œå¦‚æžœæ˜¯æŸ¥è¯¢ï¼Œå†èŽ·å–ResultSet
 						ResultSet *rs = pstmt->executeQuery(sql);
 
-						// 5£ºÑ­»·´ÓResultSetÖÐ°ÑÖµÈ¡³öÀ´£¬·â×°µ½Êý¾Ý¶ÔÏóÖÐÈ¥
+						// 5ï¼šå¾ªçŽ¯ä»ŽResultSetä¸­æŠŠå€¼å–å‡ºæ¥ï¼Œå°è£…åˆ°æ•°æ®å¯¹è±¡ä¸­åŽ»
 						while (rs->next())
 						{
-							// È¡ÖµÊ¾Òâ£¬°´Ãû³ÆÈ¡Öµ
+							// å–å€¼ç¤ºæ„ï¼ŒæŒ‰åç§°å–å€¼
 							std::string uuid = rs->getString("uuid");
-							// È¡ÖµÊ¾Òâ£¬°´Ë÷ÒýÈ¡Öµ
+							// å–å€¼ç¤ºæ„ï¼ŒæŒ‰ç´¢å¼•å–å€¼
 							int age = rs->getInt(2);
 						}
-						//6£º¹Ø±Õ
+						//6ï¼šå…³é—­
 						rs->close();
 						pstmt->close();
 						conn->close();

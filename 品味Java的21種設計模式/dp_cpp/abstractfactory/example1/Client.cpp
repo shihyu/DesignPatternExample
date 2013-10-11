@@ -1,25 +1,12 @@
 #include "Client.h"
+using namespace cn::javass::dp::abstractfactory::example1;
 
-namespace cn
+
+int main(std::string args[])
 {
-	namespace javass
-	{
-		namespace dp
-		{
-			namespace abstractfactory
-			{
-				namespace example1
-				{
-
-					void Client::main(std::string args[])
-					{
-						//´´½¨×°»ú¹¤³ÌÊ¦¶ÔÏó
-						ComputerEngineer *engineer = new ComputerEngineer();
-						//¸æËß×°»ú¹¤³ÌÊ¦×Ô¼ºÑ¡ÔñµÄÅä¼ş£¬ÈÃ×°»ú¹¤³ÌÊ¦×é×°µçÄÔ
-						engineer->makeComputer(1,2);
-					}
-				}
-			}
-		}
-	}
+    //åˆ›å»ºè£…æœºå·¥ç¨‹å¸ˆå¯¹è±¡
+    ComputerEngineer *engineer = new ComputerEngineer();
+    //å‘Šè¯‰è£…æœºå·¥ç¨‹å¸ˆè‡ªå·±é€‰æ‹©çš„é…ä»¶ï¼Œè®©è£…æœºå·¥ç¨‹å¸ˆç»„è£…ç”µè„‘
+    engineer->makeComputer(1,2);
+    return 0;
 }

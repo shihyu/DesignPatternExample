@@ -18,8 +18,8 @@ namespace cn
 
 					void VoteManager::vote(std::string user, std::string voteItem)
 					{
-						//1£ºÏÈÎª¸ÃÓÃ»§Ôö¼ÓÍ¶Æ±µÄ´ÎÊý
-						//ÏÈ´Ó¼ÇÂ¼ÖÐÈ¡³öÒÑÓÐµÄÍ¶Æ±´ÎÊý
+						//1ï¼šå…ˆä¸ºè¯¥ç”¨æˆ·å¢žåŠ æŠ•ç¥¨çš„æ¬¡æ•°
+						//å…ˆä»Žè®°å½•ä¸­å–å‡ºå·²æœ‰çš„æŠ•ç¥¨æ¬¡æ•°
 						int oldVoteCount = mapVoteCount->get(user);
 						if(oldVoteCount==0)
 						{
@@ -28,8 +28,8 @@ namespace cn
 						oldVoteCount = oldVoteCount + 1;
 						mapVoteCount->put(user, oldVoteCount);
 
-						//2£ºÅÐ¶Ï¸ÃÓÃ»§Í¶Æ±µÄÀàÐÍ£¬¾ÍÏàµ±ÓÚÊÇÅÐ¶Ï¶ÔÓ¦µÄ×´Ì¬
-						//µ½µ×ÊÇÕý³£Í¶Æ±¡¢ÖØ¸´Í¶Æ±¡¢¶ñÒâÍ¶Æ±»¹ÊÇÉÏºÚÃûµ¥µÄ×´Ì¬
+						//2ï¼šåˆ¤æ–­è¯¥ç”¨æˆ·æŠ•ç¥¨çš„ç±»åž‹ï¼Œå°±ç›¸å½“äºŽæ˜¯åˆ¤æ–­å¯¹åº”çš„çŠ¶æ€
+						//åˆ°åº•æ˜¯æ­£å¸¸æŠ•ç¥¨ã€é‡å¤æŠ•ç¥¨ã€æ¶æ„æŠ•ç¥¨è¿˜æ˜¯ä¸Šé»‘åå•çš„çŠ¶æ€
 						if(oldVoteCount==1)
 						{
 							state = new NormalVoteState();
@@ -46,7 +46,7 @@ namespace cn
 						{
 							state = new BlackVoteState();
 						}
-						//È»ºó×ªµ÷×´Ì¬¶ÔÏóÀ´½øÐÐÏàÓ¦µÄ²Ù×÷
+						//ç„¶åŽè½¬è°ƒçŠ¶æ€å¯¹è±¡æ¥è¿›è¡Œç›¸åº”çš„æ“ä½œ
 						state->vote(user, voteItem, this);
 					}
 				}

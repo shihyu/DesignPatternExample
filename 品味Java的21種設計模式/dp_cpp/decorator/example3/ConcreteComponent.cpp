@@ -13,7 +13,7 @@ namespace cn
 
 					void ConcreteComponent::operation()
 					{
-						//ÏàÓ¦µÄ¹¦ÄÜ´¦Àí
+						//ç›¸åº”çš„åŠŸèƒ½å¤„ç†
 					}
 				}
 			}

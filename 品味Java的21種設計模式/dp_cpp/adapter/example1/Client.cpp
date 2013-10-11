@@ -13,11 +13,11 @@ namespace cn
 
 					void Client::main(std::string args[])
 					{
-						//´´½¨Ðè±»ÊÊÅäµÄ¶ÔÏó
+						//åˆ›å»ºéœ€è¢«é€‚é…çš„å¯¹è±¡
 						Adaptee *adaptee = new Adaptee();
-						//´´½¨¿Í»§¶ËÐèÒªµ÷ÓÃµÄ½Ó¿Ú¶ÔÏó
+						//åˆ›å»ºå®¢æˆ·ç«¯éœ€è¦è°ƒç”¨çš„æŽ¥å£å¯¹è±¡
 						Target *target = new Adapter(adaptee);
-						//ÇëÇó´¦Àí
+						//è¯·æ±‚å¤„ç†
 						target->request();
 					}
 				}

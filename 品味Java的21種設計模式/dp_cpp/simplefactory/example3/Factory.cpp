@@ -13,7 +13,7 @@ namespace cn
 
 					Api *Factory::createApi()
 					{
-						//由于只有一个实现，就不用条件判断了
+						//鐢变簬鍙湁涓�涓疄鐜帮紝灏变笉鐢ㄦ潯浠跺垽鏂簡
 						return new Impl();
 					}
 				}

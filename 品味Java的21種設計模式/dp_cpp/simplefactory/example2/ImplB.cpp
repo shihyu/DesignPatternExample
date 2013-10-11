@@ -1,4 +1,6 @@
 #include "ImplB.h"
+#include <iostream>
+#include <string>
 
 namespace cn
 {
@@ -13,8 +15,9 @@ namespace cn
 
 					void ImplB::operation(std::string s)
 					{
-						//ʵ�ֹ��ܵĴ��룬ʾ��һ��
-						puts("ImplB s=="+s);
+						//实现功能的代码，示意一下
+						//puts("ImplB s=="+s);
+                        std::cout << s << std::endl;
 					}
 				}
 			}

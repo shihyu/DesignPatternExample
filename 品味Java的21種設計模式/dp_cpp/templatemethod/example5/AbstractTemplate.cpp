@@ -13,36 +13,36 @@ namespace cn
 
 					void AbstractTemplate::templateMethod()
 					{
-						//µÚÒ»²½
+						//ç¬¬ä¸€æ­¥
 						this->operation1();
-						//µÚ¶ş²½		
+						//ç¬¬äºŒæ­¥		
 						this->operation2();
-						//µÚÈı²½
+						//ç¬¬ä¸‰æ­¥
 						this->doPrimitiveOperation1();
-						//µÚËÄ²½
+						//ç¬¬å››æ­¥
 						this->doPrimitiveOperation2();
-						//µÚÎå²½
+						//ç¬¬äº”æ­¥
 						this->hookOperation1();
 					}
 
 					void AbstractTemplate::operation1()
 					{
-						//ÔÚÕâÀï¾ßÌåµÄÊµÏÖ
+						//åœ¨è¿™é‡Œå…·ä½“çš„å®ç°
 					}
 
 					void AbstractTemplate::operation2()
 					{
-						//ÔÚÕâÀï¾ßÌåµÄÊµÏÖ
+						//åœ¨è¿™é‡Œå…·ä½“çš„å®ç°
 					}
 
 					void AbstractTemplate::commonOperation()
 					{
-						//ÔÚÕâÀï¾ßÌåµÄÊµÏÖ
+						//åœ¨è¿™é‡Œå…·ä½“çš„å®ç°
 					}
 
 					void AbstractTemplate::hookOperation1()
 					{
-						//ÔÚÕâÀïÌá¹©È±Ê¡µÄÊµÏÖ
+						//åœ¨è¿™é‡Œæä¾›ç¼ºçœçš„å®ç°
 					}
 				}
 			}

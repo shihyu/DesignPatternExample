@@ -13,14 +13,14 @@ namespace cn
 
 					void PredilectionAnalyzeVisitor::visitEnterpriseCustomer(EnterpriseCustomer *ec)
 					{
-						//���ݹ����������ʷ��Ǳ�ڹ�������
-						//�Լ��ͻ�������ҵ�ķ�չ���ơ��ͻ��ķ�չԤ�ڵȵķ���
-						puts("���ڶ���ҵ�ͻ�"+ec->getName()+"���в�Ʒƫ�÷���");
+						//根据过往购买的历史、潜在购买意向
+						//以及客户所在行业的发展趋势、客户的发展预期等的分析
+						puts("现在对企业客户"+ec->getName()+"进行产品偏好分析");
 					}
 
 					void PredilectionAnalyzeVisitor::visitPersonalCustomer(PersonalCustomer *pc)
 					{
-						puts("���ڶԸ��˿ͻ�"+pc->getName()+"���в�Ʒƫ�÷���");
+						puts("现在对个人客户"+pc->getName()+"进行产品偏好分析");
 					}
 				}
 			}

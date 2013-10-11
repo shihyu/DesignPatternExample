@@ -14,7 +14,7 @@ namespace cn
 					void Client::main(std::string args[])
 					{
 						ExportOperate *operate = new ExportOperate();
-						operate->export(2, "²âÊÔÊý¾Ý");
+						operate->export(2, "æµ‹è¯•æ•°æ®");
 					}
 				}
 			}

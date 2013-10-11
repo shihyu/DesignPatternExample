@@ -19,7 +19,7 @@ namespace cn
 					///	 <summary> * 主板具有能开机的功能 </summary>
 					///	 
 					public:
-						virtual public void open() = 0;
+						virtual void open() = 0;
 					};
 
 				}

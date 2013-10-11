@@ -43,8 +43,8 @@ namespace cn
 
 					std::string PersonalOrder::ToString()
 					{
-						//¼òµ¥µãÊä³ö
-						return "¶©¹º²úÆ·ÊÇ="+this->product->getName()+"£¬¶©¹ºÊıÁ¿Îª="+this->orderProductNum;
+						//ç®€å•ç‚¹è¾“å‡º
+						return "è®¢è´­äº§å“æ˜¯="+this->product->getName()+"ï¼Œè®¢è´­æ•°é‡ä¸º="+this->orderProductNum;
 					}
 
 					object *PersonalOrder::clone()
@@ -53,7 +53,7 @@ namespace cn
 						try
 						{
 							obj =static_cast<PersonalOrder*>(__super::clone());
-							//ÕâÒ»¾ä»°²»¿ÉÉÙ
+							//è¿™ä¸€å¥è¯ä¸å¯å°‘
 										//			obj.setProduct((Product)this.product.clone());
 						}
 						catch (CloneNotSupportedException *e)

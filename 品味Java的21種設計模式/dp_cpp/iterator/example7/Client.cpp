@@ -13,52 +13,52 @@ namespace cn
 
 					void Client::main(std::string args[])
 					{
-						//·ÃÎÊÐÂÊÕ¹º¹«Ë¾µÄ¹¤×ÊÁÐ±í
+						//è®¿é—®æ–°æ”¶è´­å…¬å¸çš„å·¥èµ„åˆ—è¡¨
 						SalaryManager *salaryManager = new SalaryManager();
-						//ÏÈ¼ÆËãÔÙ»ñÈ¡
+						//å…ˆè®¡ç®—å†èŽ·å–
 						salaryManager->calcSalary();
 
-						//µÃµ½Ë«Ïòµü´úÆ÷
+						//å¾—åˆ°åŒå‘è¿­ä»£å™¨
 						Iterator it = salaryManager->createIterator();
-						//Ê×ÏÈÉèÖÃµü´úÆ÷µ½µÚÒ»¸öÔªËØ
+						//é¦–å…ˆè®¾ç½®è¿­ä»£å™¨åˆ°ç¬¬ä¸€ä¸ªå…ƒç´ 
 						it->first();
 
-						//ÏÈnextÒ»¸ö
+						//å…ˆnextä¸€ä¸ª
 						if(!it->isDone())
 						{
 							PayModel *pm = static_cast<PayModel*>(it->currentItem());
 							puts("next1 == "+pm);
-							//ÏòÏÂµü´úÒ»¸ö
+							//å‘ä¸‹è¿­ä»£ä¸€ä¸ª
 							it->next();
 						}
-						//È»ºópreviousÒ»¸ö
+						//ç„¶åŽpreviousä¸€ä¸ª
 						if(!it->isFirst())
 						{
-							//ÏòÇ°µü´úÒ»¸ö
+							//å‘å‰è¿­ä»£ä¸€ä¸ª
 							it->previous();
 							PayModel *pm = static_cast<PayModel*>(it->currentItem());
 							puts("previous1 == "+pm);
 						}
-						//ÔÙnextÒ»¸ö
+						//å†nextä¸€ä¸ª
 						if(!it->isDone())
 						{
 							PayModel *pm = static_cast<PayModel*>(it->currentItem());
 							puts("next2 == "+pm);
-							//ÏòÏÂµü´úÒ»¸ö
+							//å‘ä¸‹è¿­ä»£ä¸€ä¸ª
 							it->next();
 						}
-						//¼ÌÐønextÒ»¸ö
+						//ç»§ç»­nextä¸€ä¸ª
 						if(!it->isDone())
 						{
 							PayModel *pm = static_cast<PayModel*>(it->currentItem());
 							puts("next3 == "+pm);
-							//ÏòÏÂµü´úÒ»¸ö
+							//å‘ä¸‹è¿­ä»£ä¸€ä¸ª
 							it->next();
 						}
-						//È»ºópreviousÒ»¸ö
+						//ç„¶åŽpreviousä¸€ä¸ª
 						if(!it->isFirst())
 						{
-							//ÏòÇ°µü´úÒ»¸ö
+							//å‘å‰è¿­ä»£ä¸€ä¸ª
 							it->previous();
 							PayModel *pm = static_cast<PayModel*>(it->currentItem());
 							puts("previous2 == "+pm);

@@ -17,7 +17,7 @@ namespace cn
 
 					void SoundCard::soundData(std::string data)
 					{
-						puts("»­ÍâÒô£º"+data);
+						puts("ç”»å¤–éŸ³ï¼š"+data);
 					}
 				}
 			}

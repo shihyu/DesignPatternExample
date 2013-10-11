@@ -13,25 +13,25 @@ namespace cn
 
 					void Client::main(std::string args[])
 					{
-						//œ»“™◊È◊∞÷∞‘¡¥		
+						//ÂÖàË¶ÅÁªÑË£ÖËÅåË¥£Èìæ		
 						Handler *h1 = new GeneralManager();
 						Handler *h2 = new DepManager();
 						Handler *h3 = new ProjectManager();
 						h3->setSuccessor(h2);
 						h2->setSuccessor(h1);
 
-						//ø™ º≤‚ ‘…Í«Îæ€≤Õ∑—”√
-						std::string ret1 = h3->handleFeeRequest("–°¿Ó", 300);
+						//ÂºÄÂßãÊµãËØïÁî≥ËØ∑ËÅöÈ§êË¥πÁî®
+						std::string ret1 = h3->handleFeeRequest("Â∞èÊùé", 300);
 						puts("the ret1="+ret1);
-						std::string ret2 = h3->handleFeeRequest("–°¿Ó", 600);
+						std::string ret2 = h3->handleFeeRequest("Â∞èÊùé", 600);
 						puts("the ret2="+ret2);
-						std::string ret3 = h3->handleFeeRequest("–°¿Ó", 1200);
+						std::string ret3 = h3->handleFeeRequest("Â∞èÊùé", 1200);
 						puts("the ret3="+ret3);
 
-						//ø™ º≤‚ ‘…Í«Î≤Ó¬√∑—”√
-						h3->handlePreFeeRequest("–°’≈", 3000);
-						h3->handlePreFeeRequest("–°’≈", 6000);
-						h3->handlePreFeeRequest("–°’≈", 32000);
+						//ÂºÄÂßãÊµãËØïÁî≥ËØ∑Â∑ÆÊóÖË¥πÁî®
+						h3->handlePreFeeRequest("Â∞èÂº†", 3000);
+						h3->handlePreFeeRequest("Â∞èÂº†", 6000);
+						h3->handlePreFeeRequest("Â∞èÂº†", 32000);
 					}
 				}
 			}

@@ -13,7 +13,7 @@ namespace cn
 
 					void MessageSMS::send(std::string message, std::string toUser)
 					{
-						puts("Ê¹ÓÃÕ¾ÄÚ¶ÌÏûÏ¢µÄ·½Ê½£¬·¢ËÍÏûÏ¢'"+message+"'¸ø"+toUser);
+						puts("ä½¿ç”¨ç«™å†…çŸ­æ¶ˆæ¯çš„æ–¹å¼ï¼Œå‘é€æ¶ˆæ¯'"+message+"'ç»™"+toUser);
 					}
 				}
 			}

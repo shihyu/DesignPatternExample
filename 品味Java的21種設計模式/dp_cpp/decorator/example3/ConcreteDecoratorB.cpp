@@ -17,12 +17,12 @@ namespace cn
 
 					void ConcreteDecoratorB::addedBehavior()
 					{
-						//ĞèÒªÌí¼ÓµÄÖ°ÔğÊµÏÖ
+						//éœ€è¦æ·»åŠ çš„èŒè´£å®ç°
 					}
 
 					void ConcreteDecoratorB::operation()
 					{
-						//µ÷ÓÃ¸¸ÀàµÄ·½·¨£¬¿ÉÒÔÔÚµ÷ÓÃÇ°ºóÖ´ĞĞÒ»Ğ©¸½¼Ó¶¯×÷
+						//è°ƒç”¨çˆ¶ç±»çš„æ–¹æ³•ï¼Œå¯ä»¥åœ¨è°ƒç”¨å‰åæ‰§è¡Œä¸€äº›é™„åŠ åŠ¨ä½œ
 						Decorator::operation();
 						addedBehavior();
 					}

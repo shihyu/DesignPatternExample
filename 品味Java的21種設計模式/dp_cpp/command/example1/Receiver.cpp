@@ -13,7 +13,7 @@ namespace cn
 
 					void Receiver::action()
 					{
-						//ÕæÕýÖ´ÐÐÃüÁî²Ù×÷µÄ¹¦ÄÜ´úÂë
+						//çœŸæ­£æ‰§è¡Œå‘½ä»¤æ“ä½œçš„åŠŸèƒ½ä»£ç 
 					}
 				}
 			}

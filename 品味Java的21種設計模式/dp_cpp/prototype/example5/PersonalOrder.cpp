@@ -43,12 +43,12 @@ namespace cn
 
 					std::string PersonalOrder::ToString()
 					{
-						return "±¾¸öÈË¶©µ¥µÄ¶©¹ºÈËÊÇ="+this->customerName+"£¬¶©¹º²úÆ·ÊÇ="+this->productId+"£¬¶©¹ºÊýÁ¿Îª="+this->orderProductNum;
+						return "æœ¬ä¸ªäººè®¢å•çš„è®¢è´­äººæ˜¯="+this->customerName+"ï¼Œè®¢è´­äº§å“æ˜¯="+this->productId+"ï¼Œè®¢è´­æ•°é‡ä¸º="+this->orderProductNum;
 					}
 
 					object *PersonalOrder::clone()
 					{
-						//¿ËÂ¡·½·¨µÄÕæÕýÊµÏÖ£¬Ö±½Óµ÷ÓÃ¸¸ÀàµÄ¿ËÂ¡·½·¨¾Í¿ÉÒÔÁË
+						//å…‹éš†æ–¹æ³•çš„çœŸæ­£å®žçŽ°ï¼Œç›´æŽ¥è°ƒç”¨çˆ¶ç±»çš„å…‹éš†æ–¹æ³•å°±å¯ä»¥äº†
 						object *obj = 0;
 						try
 						{

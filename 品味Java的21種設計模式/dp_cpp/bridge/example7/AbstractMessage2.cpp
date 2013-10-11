@@ -16,22 +16,22 @@ namespace cn
 						MessageImplementor *impl = 0;
 						if(message == "")
 						{
-							//Èç¹ûÃ»ÓĞÏûÏ¢£¬Ä¬ÈÏÊ¹ÓÃÕ¾ÄÚ¶ÌÏûÏ¢
+							//å¦‚æœæ²¡æœ‰æ¶ˆæ¯ï¼Œé»˜è®¤ä½¿ç”¨ç«™å†…çŸ­æ¶ˆæ¯
 							impl = new MessageSMS();
 						}
 						else if(message.length()< 100)
 						{
-							//Èç¹ûÏûÏ¢³¤¶ÈÔÚ100ÒÔÄÚ£¬Ê¹ÓÃÊÖ»ú¶ÌÏûÏ¢
+							//å¦‚æœæ¶ˆæ¯é•¿åº¦åœ¨100ä»¥å†…ï¼Œä½¿ç”¨æ‰‹æœºçŸ­æ¶ˆæ¯
 							impl = new MessageMobile();
 						}
 						else if(message.length()<1000)
 						{
-							//Èç¹ûÏûÏ¢³¤¶ÈÔÚ100-1000ÒÔÄÚ£¬Ê¹ÓÃÕ¾ÄÚ¶ÌÏûÏ¢
+							//å¦‚æœæ¶ˆæ¯é•¿åº¦åœ¨100-1000ä»¥å†…ï¼Œä½¿ç”¨ç«™å†…çŸ­æ¶ˆæ¯
 							impl = new MessageSMS();
 						}
 						else
 						{
-							//Èç¹ûÏûÏ¢³¤¶ÈÔÚ1000ÒÔÉÏ
+							//å¦‚æœæ¶ˆæ¯é•¿åº¦åœ¨1000ä»¥ä¸Š
 							impl = new MessageEmail();
 						}
 						return impl;
@@ -39,7 +39,7 @@ namespace cn
 
 					AbstractMessage2::AbstractMessage2()
 					{
-						//ÏÖÔÚÊ²Ã´¶¼²»×öÁË
+						//ç°åœ¨ä»€ä¹ˆéƒ½ä¸åšäº†
 					}
 
 					void AbstractMessage2::sendMessage(std::string message, std::string toUser)

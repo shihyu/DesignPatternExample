@@ -18,7 +18,7 @@ namespace cn
 
 					double Decorator::calcPrize(std::string user, Date *begin, Date *end)
 					{
-						//×ªµ÷×é¼þ¶ÔÏóµÄ·½·¨
+						//è½¬è°ƒç»„ä»¶å¯¹è±¡çš„æ–¹æ³•
 						return c->calcPrize(user, begin, end);
 					}
 				}

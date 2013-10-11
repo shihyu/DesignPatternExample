@@ -13,12 +13,12 @@ namespace cn
 
 					void Waiter::orderDish(Command *cmd)
 					{
-						//¿Í»§´«¹ýÀ´µÄÃüÁî¶ÔÏóÊÇÃ»ÓÐºÍ½ÓÊÕÕß×é×°µÄ
-						//ÔÚÕâÀï×é×°°É
+						//å®¢æˆ·ä¼ è¿‡æ¥çš„å‘½ä»¤å¯¹è±¡æ˜¯æ²¡æœ‰å’ŒæŽ¥æ”¶è€…ç»„è£…çš„
+						//åœ¨è¿™é‡Œç»„è£…å§
 						CookApi *hotCook = new HotCook();
 						CookApi *coolCook = new CoolCook();
-						//ÅÐ¶Áµ½µ×ÊÇ×éºÏÁ¹²ËÊ¦¸µ»¹ÊÇÈÈ²ËÊ¦¸µ
-						//¼òµ¥µã¸ù¾ÝÃüÁîµÄÔ­Ê¼¶ÔÏóµÄÀàÐÍÀ´ÅÐ¶Ï
+						//åˆ¤è¯»åˆ°åº•æ˜¯ç»„åˆå‡‰èœå¸ˆå‚…è¿˜æ˜¯çƒ­èœå¸ˆå‚…
+						//ç®€å•ç‚¹æ ¹æ®å‘½ä»¤çš„åŽŸå§‹å¯¹è±¡çš„ç±»åž‹æ¥åˆ¤æ–­
 						if(dynamic_cast<DuckCommand*>(cmd) != 0)
 						{
 							(static_cast<DuckCommand*>(cmd))->setCookApi(hotCook);
@@ -29,10 +29,10 @@ namespace cn
 						}
 						else if(dynamic_cast<PorkCommand*>(cmd) != 0)
 						{
-							//ÕâÊÇ¸öÁ¹²Ë£¬ËùÒÔÒª×éºÏÁ¹²ËµÄÊ¦¸µ
+							//è¿™æ˜¯ä¸ªå‡‰èœï¼Œæ‰€ä»¥è¦ç»„åˆå‡‰èœçš„å¸ˆå‚…
 							(static_cast<PorkCommand*>(cmd))->setCookApi(coolCook);
 						}
-						//Ìí¼Óµ½²Ëµ¥ÖÐ
+						//æ·»åŠ åˆ°èœå•ä¸­
 						menuCommand->addCommand(cmd);
 					}
 

@@ -18,7 +18,7 @@ namespace cn
 
 					Iterator *ConcreteAggregate::createIterator()
 					{
-						//ÊµÏÖ´´½¨IteratorµÄ¹¤³§·½·¨
+						//å®žçŽ°åˆ›å»ºIteratorçš„å·¥åŽ‚æ–¹æ³•
 						return new ConcreteIterator(this);
 					}
 

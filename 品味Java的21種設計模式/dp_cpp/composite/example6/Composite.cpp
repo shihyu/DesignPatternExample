@@ -13,14 +13,14 @@ namespace cn
 
 					void Composite::addChild(Component *child)
 					{
-						//ÑÓ³Ù³õÊ¼»¯
+						//å»¶è¿Ÿåˆå§‹åŒ–
 						if (childComponents == 0)
 						{
 							childComponents = std::vector<Component*>();
 						}
 						childComponents.push_back(child);
 
-						//Ìí¼Ó¶Ô¸¸×é¼şµÄÒıÓÃ
+						//æ·»åŠ å¯¹çˆ¶ç»„ä»¶çš„å¼•ç”¨
 						child->setParent(this);
 					}
 
@@ -28,20 +28,20 @@ namespace cn
 					{
 						if (childComponents != 0)
 						{
-							//²éÕÒµ½ÒªÉ¾³ıµÄ×é¼şÔÚ¼¯ºÏÖĞµÄË÷ÒıÎ»ÖÃ
+							//æŸ¥æ‰¾åˆ°è¦åˆ é™¤çš„ç»„ä»¶åœ¨é›†åˆä¸­çš„ç´¢å¼•ä½ç½®
 							int idx = childComponents.find(child);
 							if (idx != -1)
 							{
-								//ÏÈ°Ñ±»É¾³ıµÄÉÌÆ·Àà±ğ¶ÔÏóµÄ¸¸ÉÌÆ·Àà±ğ£¬ÉèÖÃ³ÉÎª±»É¾³ıµÄÉÌÆ·Àà±ğµÄ×ÓÀà±ğµÄ¸¸ÉÌÆ·Àà±ğ
+								//å…ˆæŠŠè¢«åˆ é™¤çš„å•†å“ç±»åˆ«å¯¹è±¡çš„çˆ¶å•†å“ç±»åˆ«ï¼Œè®¾ç½®æˆä¸ºè¢«åˆ é™¤çš„å•†å“ç±»åˆ«çš„å­ç±»åˆ«çš„çˆ¶å•†å“ç±»åˆ«
 								for (unknown::const_iterator c = child->getChildren().begin(); c != child->getChildren().end(); ++c)
 								{
-									//É¾³ıµÄ×é¼ş¶ÔÏóÊÇ±¾ÊµÀıµÄÒ»¸ö×Ó×é¼ş¶ÔÏó
+									//åˆ é™¤çš„ç»„ä»¶å¯¹è±¡æ˜¯æœ¬å®ä¾‹çš„ä¸€ä¸ªå­ç»„ä»¶å¯¹è±¡
 									(*c)->setParent(this);
-									//°Ñ±»É¾³ıµÄÉÌÆ·Àà±ğ¶ÔÏóµÄ×Ó×é¼ş¶ÔÏóÌí¼Óµ½µ±Ç°ÊµÀıÖĞ
+									//æŠŠè¢«åˆ é™¤çš„å•†å“ç±»åˆ«å¯¹è±¡çš„å­ç»„ä»¶å¯¹è±¡æ·»åŠ åˆ°å½“å‰å®ä¾‹ä¸­
 									childComponents.push_back(*c);
 								}
 
-								//ÕæµÄÉ¾³ı
+								//çœŸçš„åˆ é™¤
 								childComponents.remove(idx);
 							}
 						}
@@ -60,17 +60,17 @@ namespace cn
 
 					void Composite::printStruct(std::string preStr)
 					{
-						//ÏÈ°Ñ×Ô¼ºÊä³öÈ¥
+						//å…ˆæŠŠè‡ªå·±è¾“å‡ºå»
 						puts(preStr+"+"+this->name);
-						//Èç¹û»¹°üº¬ÓĞ×Ó×é¼ş£¬ÄÇÃ´¾ÍÊä³öÕâĞ©×Ó×é¼ş¶ÔÏó
+						//å¦‚æœè¿˜åŒ…å«æœ‰å­ç»„ä»¶ï¼Œé‚£ä¹ˆå°±è¾“å‡ºè¿™äº›å­ç»„ä»¶å¯¹è±¡
 						if(this->childComponents!=0)
 						{
-							//È»ºóÌí¼ÓÒ»¸ö¿Õ¸ñ£¬±íÊ¾ÏòºóËõ½øÒ»¸ö¿Õ¸ñ
+							//ç„¶åæ·»åŠ ä¸€ä¸ªç©ºæ ¼ï¼Œè¡¨ç¤ºå‘åç¼©è¿›ä¸€ä¸ªç©ºæ ¼
 							preStr+=" ";
-							//Êä³öµ±Ç°¶ÔÏóµÄ×Ó¶ÔÏóÁË
+							//è¾“å‡ºå½“å‰å¯¹è±¡çš„å­å¯¹è±¡äº†
 							for (std::vector<Component*>::const_iterator c = childComponents.begin(); c != childComponents.end(); ++c)
 							{
-								//µİ¹éÊä³öÃ¿¸ö×Ó¶ÔÏó
+								//é€’å½’è¾“å‡ºæ¯ä¸ªå­å¯¹è±¡
 								(*c)->printStruct(preStr);
 							}
 						}

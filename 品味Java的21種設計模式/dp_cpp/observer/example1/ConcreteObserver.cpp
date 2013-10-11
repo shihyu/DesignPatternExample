@@ -13,8 +13,8 @@ namespace cn
 
 					void ConcreteObserver::update(Subject *subject)
 					{
-						// ¾ßÌåµÄ¸üĞÂÊµÏÖ
-						//ÕâÀï¿ÉÄÜĞèÒª¸üĞÂ¹Û²ìÕßµÄ×´Ì¬£¬Ê¹ÆäÓëÄ¿±êµÄ×´Ì¬±£³ÖÒ»ÖÂ
+						// å…·ä½“çš„æ›´æ–°å®ç°
+						//è¿™é‡Œå¯èƒ½éœ€è¦æ›´æ–°è§‚å¯Ÿè€…çš„çŠ¶æ€ï¼Œä½¿å…¶ä¸ç›®æ ‡çš„çŠ¶æ€ä¿æŒä¸€è‡´
 						observerState = (static_cast<ConcreteSubject*>(subject))->getSubjectState();
 					}
 				}

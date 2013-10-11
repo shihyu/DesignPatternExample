@@ -19,7 +19,7 @@ namespace cn
 					void ConcreteSubject::setSubjectState(std::string subjectState)
 					{
 						this->subjectState = subjectState;
-						//×´Ì¬·¢ÉúÁË¸Ä±ä£¬Í¨Öª¸÷¸ö¹Û²ìÕß
+						//çŠ¶æ€å‘ç”Ÿäº†æ”¹å˜ï¼Œé€šçŸ¥å„ä¸ªè§‚å¯Ÿè€…
 						this->notifyObservers();
 					}
 				}

@@ -28,8 +28,8 @@ namespace cn
 
 					void VoteManager::vote(std::string user, std::string voteItem) throw(Exception)
 					{
-						//1£ºÏÈÎª¸ÃÓÃ»§Ôö¼ÓÍ¶Æ±µÄ´ÎÊı
-						//ÏÈ´Ó¼ÇÂ¼ÖĞÈ¡³öÒÑÓĞµÄÍ¶Æ±´ÎÊı
+						//1ï¼šå…ˆä¸ºè¯¥ç”¨æˆ·å¢åŠ æŠ•ç¥¨çš„æ¬¡æ•°
+						//å…ˆä»è®°å½•ä¸­å–å‡ºå·²æœ‰çš„æŠ•ç¥¨æ¬¡æ•°
 						int oldVoteCount = mapVoteCount->get(user);
 						if(oldVoteCount==0)
 						{
@@ -39,33 +39,33 @@ namespace cn
 						mapVoteCount->put(user, oldVoteCount);
 
 						VoteState *state = 0;
-						//2£ºÖ±½Ó´ÓÊı¾İ¿â»ñÈ¡¸ÃÓÃ»§¶ÔÓ¦µÄÏÂÒ»¸ö×´Ì¬µÄ×´Ì¬±àÂë
-						std::string stateId = "´ÓÊı¾İ¿âÖĞ»ñÈ¡Õâ¸öÖµ";
-						//¿ªÊ¼¸ù¾İ×´Ì¬±àÂëÀ´´´½¨ĞèÓÃµÄ×´Ì¬¶ÔÏó
+						//2ï¼šç›´æ¥ä»æ•°æ®åº“è·å–è¯¥ç”¨æˆ·å¯¹åº”çš„ä¸‹ä¸€ä¸ªçŠ¶æ€çš„çŠ¶æ€ç¼–ç 
+						std::string stateId = "ä»æ•°æ®åº“ä¸­è·å–è¿™ä¸ªå€¼";
+						//å¼€å§‹æ ¹æ®çŠ¶æ€ç¼–ç æ¥åˆ›å»ºéœ€ç”¨çš„çŠ¶æ€å¯¹è±¡
 
-						//¸ù¾İ×´Ì¬±àÂëÈ¥»ñÈ¡ÏàÓ¦µÄÀà
-						std::string className = "¸ù¾İ×´Ì¬±àÂëÈ¥»ñÈ¡ÏàÓ¦µÄÀà";
-						//Ê¹ÓÃ·´Éä´´½¨¶ÔÏóÊµÀı£¬¼òµ¥Ê¾ÒâÒ»ÏÂ
+						//æ ¹æ®çŠ¶æ€ç¼–ç å»è·å–ç›¸åº”çš„ç±»
+						std::string className = "æ ¹æ®çŠ¶æ€ç¼–ç å»è·å–ç›¸åº”çš„ç±»";
+						//ä½¿ç”¨åå°„åˆ›å»ºå¯¹è±¡å®ä¾‹ï¼Œç®€å•ç¤ºæ„ä¸€ä¸‹
 						Class *c = Class::forName(className);
 						state = static_cast<VoteState*>(c->newInstance());
 
-						if((new std::string("Õı³£Í¶Æ±"))->equals(stateId))
+						if((new std::string("æ­£å¸¸æŠ•ç¥¨"))->equals(stateId))
 						{
 							state = new NormalVoteState();
 						}
-						else if((new std::string("ÖØ¸´Í¶Æ±"))->equals(stateId))
+						else if((new std::string("é‡å¤æŠ•ç¥¨"))->equals(stateId))
 						{
 							state = new RepeatVoteState();
 						}
-						else if((new std::string("¶ñÒâÍ¶Æ±"))->equals(stateId))
+						else if((new std::string("æ¶æ„æŠ•ç¥¨"))->equals(stateId))
 						{
 							state = new SpiteVoteState();
 						}
-						else if((new std::string("ºÚÃûµ¥"))->equals(stateId))
+						else if((new std::string("é»‘åå•"))->equals(stateId))
 						{
 							state = new BlackVoteState();
 						}
-						//È»ºó×ªµ÷×´Ì¬¶ÔÏóÀ´½øĞĞÏàÓ¦µÄ²Ù×÷
+						//ç„¶åè½¬è°ƒçŠ¶æ€å¯¹è±¡æ¥è¿›è¡Œç›¸åº”çš„æ“ä½œ
 						state->vote(user, voteItem, this);
 					}
 				}

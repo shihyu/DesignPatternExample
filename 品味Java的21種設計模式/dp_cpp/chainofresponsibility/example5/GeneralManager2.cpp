@@ -15,29 +15,29 @@ namespace cn
 					{
 						if(PreFeeRequestModel::FEE_TYPE.equals(rm->getType()))
 						{
-							//±íÊ¾Ô¤Ö§²îÂÃ·ÑÓÃÉêÇë
+							//è¡¨ç¤ºé¢„æ”¯å·®æ—…è´¹ç”¨ç”³è¯·
 							return myHandler(rm);
 						}
 						else
 						{
-							//ÆäËûµÄÈÃ¸¸ÀàÈ¥´¦Àí
+							//å…¶ä»–çš„è®©çˆ¶ç±»å»å¤„ç†
 							return GeneralManager::handleRequest(rm);
 						}
 					}
 
 					object *GeneralManager2::myHandler(RequestModel *rm)
 					{
-						//ÏÈ°ÑÍ¨ÓÃµÄ¶ÔÏóÔìĞÍ»ØÀ´
+						//å…ˆæŠŠé€šç”¨çš„å¯¹è±¡é€ å‹å›æ¥
 						PreFeeRequestModel *frm = static_cast<PreFeeRequestModel*>(rm);
 						if(frm->getFee() >= 5000)
 						{
-							//¹¤×÷ĞèÒªÂï£¬Í³Í³Í¬Òâ
-							puts("×Ü¾­ÀíÍ¬Òâ"+frm->getUser()+"Ô¤Ö§²îÂÃ·ÑÓÃ"+frm->getFee()+"ÔªµÄÇëÇó");
+							//å·¥ä½œéœ€è¦å˜›ï¼Œç»Ÿç»ŸåŒæ„
+							puts("æ€»ç»ç†åŒæ„"+frm->getUser()+"é¢„æ”¯å·®æ—…è´¹ç”¨"+frm->getFee()+"å…ƒçš„è¯·æ±‚");
 							return true;
 						}
 						else
 						{
-							//Èç¹û»¹ÓĞºó¼ÌµÄ´¦Àí¶ÔÏó£¬¼ÌĞø´«µİ
+							//å¦‚æœè¿˜æœ‰åç»§çš„å¤„ç†å¯¹è±¡ï¼Œç»§ç»­ä¼ é€’
 							if(this->successor!=0)
 							{
 								return this->successor->handleRequest(rm);

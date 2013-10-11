@@ -13,8 +13,8 @@ namespace cn
 
 					void Reader::update(Subject *subject)
 					{
-						//这是采用拉的方式
-						puts(name+"收到报纸了，阅读先。内容是==="+(static_cast<NewsPaper*>(subject))->getContent());
+						//杩欐槸閲囩敤鎷夌殑鏂瑰紡
+						puts(name+"鏀跺埌鎶ョ焊浜嗭紝闃呰鍏堛�傚唴瀹规槸==="+(static_cast<NewsPaper*>(subject))->getContent());
 					}
 
 					std::string Reader::getName()

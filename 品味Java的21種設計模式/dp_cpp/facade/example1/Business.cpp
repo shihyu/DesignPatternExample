@@ -13,12 +13,12 @@ namespace cn
 
 					void Business::generate()
 					{
-						//1£º´ÓÅäÖÃ¹ÜÀíÀïÃæ»ñÈ¡ÏàÓ¦µÄÅäÖÃÐÅÏ¢
+						//1ï¼šä»Žé…ç½®ç®¡ç†é‡Œé¢èŽ·å–ç›¸åº”çš„é…ç½®ä¿¡æ¯
 						ConfigModel *cm = ConfigManager::getInstance()->getConfigData();
 						if(cm->isNeedGenBusiness())
 						{
-							//2£º°´ÕÕÒªÇóÈ¥Éú³ÉÏàÓ¦µÄ´úÂë£¬²¢±£´æ³ÉÎÄ¼þ
-							puts("ÕýÔÚÉú³ÉÂß¼­²ã´úÂëÎÄ¼þ");
+							//2ï¼šæŒ‰ç…§è¦æ±‚åŽ»ç”Ÿæˆç›¸åº”çš„ä»£ç ï¼Œå¹¶ä¿å­˜æˆæ–‡ä»¶
+							puts("æ­£åœ¨ç”Ÿæˆé€»è¾‘å±‚ä»£ç æ–‡ä»¶");
 						}
 					}
 				}

@@ -14,8 +14,8 @@ namespace cn
 					void Client::main(std::string args[])
 					{
 						LogContext *log = new LogContext();
-						log->log("记录日志");
-						log->log("再次记录日志");
+						log->log("璁板綍鏃ュ織");
+						log->log("鍐嶆璁板綍鏃ュ織");
 					}
 				}
 			}

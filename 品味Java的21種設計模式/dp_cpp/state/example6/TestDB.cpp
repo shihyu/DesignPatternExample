@@ -21,7 +21,7 @@ namespace cn
 					{
 						while(true)
 						{
-							//一直运行着
+							//涓�鐩磋繍琛岀潃
 							try
 							{
 								delay(1000L);

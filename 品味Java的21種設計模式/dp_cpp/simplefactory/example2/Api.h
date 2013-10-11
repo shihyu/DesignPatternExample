@@ -1,4 +1,5 @@
 #pragma once
+#include <string>
 
 namespace cn
 {
@@ -20,7 +21,7 @@ namespace cn
 					///	 * <param name="s"> 示意，需要的参数 </param>
 					///	 
 					public:
-						virtual public void operation(std::string) = 0;
+						virtual void operation(std::string) = 0;
 					};
 
 				}

@@ -13,7 +13,7 @@ namespace cn
 
 					bool ExportOperate::export(int type, std::string data)
 					{
-						//Ê¹ÓÃ¹¤³§·½·¨
+						//ä½¿ç”¨å·¥å‚æ–¹æ³•
 						ExportFileApi *api = factoryMethod(type);
 						return api->export(data);
 					}
@@ -21,7 +21,7 @@ namespace cn
 					ExportFileApi *ExportOperate::factoryMethod(int type)
 					{
 						ExportFileApi *api = 0;
-						//¸ù¾İÀàĞÍÀ´Ñ¡Ôñ¾¿¾¹Òª´´½¨ÄÄÒ»ÖÖµ¼³öÎÄ¼ş¶ÔÏó
+						//æ ¹æ®ç±»å‹æ¥é€‰æ‹©ç©¶ç«Ÿè¦åˆ›å»ºå“ªä¸€ç§å¯¼å‡ºæ–‡ä»¶å¯¹è±¡
 						if(type==1)
 						{
 							api = new ExportTxtFile();

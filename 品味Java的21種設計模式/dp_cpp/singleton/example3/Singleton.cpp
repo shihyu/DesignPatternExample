@@ -18,13 +18,13 @@ namespace cn
 
 					Singleton Singleton::getInstance()
 					{
-						//直接使用已经创建好的实例
+						//鐩存帴浣跨敤宸茬粡鍒涘缓濂界殑瀹炰緥
 						return uniqueInstance;
 					}
 
 					void Singleton::singletonOperation()
 					{
-						//功能处理
+						//鍔熻兘澶勭悊
 					}
 
 					std::string Singleton::getSingletonData()

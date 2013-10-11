@@ -13,13 +13,13 @@ namespace cn
 
 					void Client::main(std::string args[])
 					{
-						//×¼±¸Òª·¢³öµÄÃüÁî
-						Command *cmd = new PrintService("ÍË»¯µÄÃüÁîÄ£Ê½Ê¾Àý");
-						//ÉèÖÃÃüÁî¸ø³ÖÓÐÕß
+						//å‡†å¤‡è¦å‘å‡ºçš„å‘½ä»¤
+						Command *cmd = new PrintService("é€€åŒ–çš„å‘½ä»¤æ¨¡å¼ç¤ºä¾‹");
+						//è®¾ç½®å‘½ä»¤ç»™æŒæœ‰è€…
 						Invoker *invoker = new Invoker();
 						invoker->setCmd(cmd);
 
-						//°´ÏÂ°´Å¥£¬ÕæÕýÆô¶¯Ö´ÐÐÃüÁî
+						//æŒ‰ä¸‹æŒ‰é’®ï¼ŒçœŸæ­£å¯åŠ¨æ‰§è¡Œå‘½ä»¤
 						invoker->startPrint();
 					}
 				}

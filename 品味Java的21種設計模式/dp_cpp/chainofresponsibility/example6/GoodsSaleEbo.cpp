@@ -13,14 +13,14 @@ namespace cn
 
 					bool GoodsSaleEbo::sale(std::string user, std::string customer, SaleModel *saleModel)
 					{
-						//Èç¹ûÈ«²¿ÔÚÕâÀï´¦Àí£¬»ù±¾µÄË³ÐòÊÇ
-						//1£ºÈ¨ÏÞ¼ì²é
-						//2£ºÍ¨ÓÃÊý¾Ý¼ì²é£¨Õâ¸öÒ²¿ÉÄÜÔÚ±íÏÖ²ãÒÑ¾­×÷¹ýÁË£©
-						//3£ºÊý¾ÝÂß¼­Ð£Ñé
+						//å¦‚æžœå…¨éƒ¨åœ¨è¿™é‡Œå¤„ç†ï¼ŒåŸºæœ¬çš„é¡ºåºæ˜¯
+						//1ï¼šæƒé™æ£€æŸ¥
+						//2ï¼šé€šç”¨æ•°æ®æ£€æŸ¥ï¼ˆè¿™ä¸ªä¹Ÿå¯èƒ½åœ¨è¡¨çŽ°å±‚å·²ç»ä½œè¿‡äº†ï¼‰
+						//3ï¼šæ•°æ®é€»è¾‘æ ¡éªŒ
 
-						//4£ºÕæÕýµÄÒµÎñ´¦Àí
+						//4ï¼šçœŸæ­£çš„ä¸šåŠ¡å¤„ç†
 
-						//µ«ÊÇÏÖÔÚÍ¨¹ý¹¦ÄÜÁ´À´×ö£¬ÕâÀï¾ÍÖ÷Òª¸ºÔð¹¹½¨Á´
+						//ä½†æ˜¯çŽ°åœ¨é€šè¿‡åŠŸèƒ½é“¾æ¥åšï¼Œè¿™é‡Œå°±ä¸»è¦è´Ÿè´£æž„å»ºé“¾
 						SaleSecurityCheck *ssc = new SaleSecurityCheck();
 						SaleDataCheck *sdc = new SaleDataCheck();
 						SaleLogicCheck *slc = new SaleLogicCheck();
@@ -28,7 +28,7 @@ namespace cn
 						ssc->setSuccessor(sdc);
 						sdc->setSuccessor(slc);
 						slc->setSuccessor(sd);
-						//ÏòÁ´ÉÏµÄµÚÒ»¸ö¶ÔÏó·¢³ö´¦ÀíµÄÇëÇó
+						//å‘é“¾ä¸Šçš„ç¬¬ä¸€ä¸ªå¯¹è±¡å‘å‡ºå¤„ç†çš„è¯·æ±‚
 						return ssc->sale(user, customer, saleModel);
 					}
 				}

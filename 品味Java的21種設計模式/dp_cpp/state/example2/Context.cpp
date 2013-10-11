@@ -18,7 +18,7 @@ namespace cn
 
 					void Context::request(std::string sampleParameter)
 					{
-						//ÔÚ´¦ÀíÖÐ£¬»á×ªµ÷stateÀ´´¦Àí
+						//åœ¨å¤„ç†ä¸­ï¼Œä¼šè½¬è°ƒstateæ¥å¤„ç†
 						state->handle(sampleParameter);
 					}
 				}

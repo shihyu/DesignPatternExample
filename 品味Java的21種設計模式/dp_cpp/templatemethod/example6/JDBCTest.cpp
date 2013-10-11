@@ -92,19 +92,19 @@ namespace cn
 					{
 						StringBuffer *buffer = new StringBuffer();
 						buffer->append(sql);
-						//¾ø¶ÔÆ¥Åä
+						//ç»å¯¹åŒ¹é…
 //JAVA TO C++ CONVERTER TODO TASK: There is no direct native C++ equivalent to the Java String 'trim' method:
 						if(uqm->getUuid()!="" && uqm->getUuid().trim()->length()>0)
 						{
 							buffer->append(" and uuid=? ");
 						}
-						//Ä£ºýÆ¥Åä
+						//æ¨¡ç³ŠåŒ¹é…
 //JAVA TO C++ CONVERTER TODO TASK: There is no direct native C++ equivalent to the Java String 'trim' method:
 						if(uqm->getName()!="" && uqm->getName().trim()->length()>0)
 						{
 							buffer->append(" and name like ? ");
 						}
-						//Çø¼äÆ¥Åä
+						//åŒºé—´åŒ¹é…
 						if(uqm->getAge() > 0)
 						{
 							buffer->append(" and age >=? ");
@@ -161,27 +161,27 @@ namespace cn
 					void JDBCTest::main(std::string args[])
 					{
 						JDBCTest *uj = new JDBCTest();
-						//ÏÈÐÂÔö¼¸Ìõ
+						//å…ˆæ–°å¢žå‡ æ¡
 						UserModel *um1 = new UserModel();
 						um1->setUuid("u1");
-						um1->setName("ÕÅÈý");
+						um1->setName("å¼ ä¸‰");
 						um1->setAge(22);
 						uj->create(um1);
 
 						UserModel *um2 = new UserModel();
 						um2->setUuid("u2");
-						um2->setName("ÀîËÄ");
+						um2->setName("æŽå››");
 						um2->setAge(25);
 						uj->create(um2);
 
 						UserModel *um3 = new UserModel();
 						um3->setUuid("u3");
-						um3->setName("ÍõÎå");
+						um3->setName("çŽ‹äº”");
 						um3->setAge(32);
 						uj->create(um3);
 
 
-						//²âÊÔ²éÑ¯
+						//æµ‹è¯•æŸ¥è¯¢
 						UserQueryModel *uqm = new UserQueryModel();
 						uqm->setAge(25);
 						uqm->setAge2(36);

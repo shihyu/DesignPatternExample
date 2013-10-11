@@ -18,17 +18,17 @@ namespace cn
 
 					ReadXmlExpression *Parser::parse(std::string expr)
 					{
-						//ÏÈ³õÊ¼»¯¼ÇÂ¼Ğè½âÎöµÄÔªËØµÄÃû³ÆµÄ¼¯»á
+						//å…ˆåˆå§‹åŒ–è®°å½•éœ€è§£æçš„å…ƒç´ çš„åç§°çš„é›†ä¼š
 						listEle = std::vector<std::string>();
 
-						//µÚÒ»²½£º·Ö½â±í´ïÊ½£¬µÃµ½ĞèÒª½âÎöµÄÔªËØÃû³ÆºÍ¸ÃÔªËØ¶ÔÓ¦µÄ½âÎöÄ£ĞÍ
+						//ç¬¬ä¸€æ­¥ï¼šåˆ†è§£è¡¨è¾¾å¼ï¼Œå¾—åˆ°éœ€è¦è§£æçš„å…ƒç´ åç§°å’Œè¯¥å…ƒç´ å¯¹åº”çš„è§£ææ¨¡å‹
 						Map<std::string, ParserModel*> *mapPath = parseMapPath(expr);
 
-						//µÚ¶ş²½£º¸ù¾İ½ÚµãµÄÊôĞÔ×ª»»³ÉÎªÏàÓ¦µÄ½âÊÍÆ÷¶ÔÏó
+						//ç¬¬äºŒæ­¥ï¼šæ ¹æ®èŠ‚ç‚¹çš„å±æ€§è½¬æ¢æˆä¸ºç›¸åº”çš„è§£é‡Šå™¨å¯¹è±¡
 						std::vector<ReadXmlExpression*> list = mapPath2Interpreter(mapPath);
 
-						//µÚÈı²½£º×éºÏ³éÏóÓï·¨Ê÷£¬Ò»¶¨Òª°´ÕÕÏÈºóË³ĞòÀ´×éºÏ£¬
-						//·ñÔò¶ÔÏóµÄ°üº¬¹ØÏµ¾ÍÂÒÁË
+						//ç¬¬ä¸‰æ­¥ï¼šç»„åˆæŠ½è±¡è¯­æ³•æ ‘ï¼Œä¸€å®šè¦æŒ‰ç…§å…ˆåé¡ºåºæ¥ç»„åˆï¼Œ
+						//å¦åˆ™å¯¹è±¡çš„åŒ…å«å…³ç³»å°±ä¹±äº†
 						ReadXmlExpression *returnRe = buildTree(list);
 
 						return returnRe;
@@ -36,36 +36,36 @@ namespace cn
 
 					Map<std::string, ParserModel*> *Parser::parseMapPath(std::string expr)
 					{
-						//ÏÈ°´ÕÕ/·Ö¸î×Ö·û´®
+						//å…ˆæŒ‰ç…§/åˆ†å‰²å­—ç¬¦ä¸²
 						StringTokenizer *tokenizer = new StringTokenizer(expr, BACKLASH);
-						//³õÊ¼»¯Ò»¸ömapÓÃÀ´´æ·Å·Ö½â³öÀ´µÄÖµ
+						//åˆå§‹åŒ–ä¸€ä¸ªmapç”¨æ¥å­˜æ”¾åˆ†è§£å‡ºæ¥çš„å€¼
 						Map<std::string, ParserModel*> *mapPath = std::map<std::string, ParserModel*>();
 						while (tokenizer->hasMoreTokens())
 						{
 							std::string onePath = tokenizer->nextToken();
 							if (tokenizer->hasMoreTokens())
 							{
-								//»¹ÓĞÏÂÒ»¸öÖµ£¬ËµÃ÷Õâ²»ÊÇ×îºóÒ»¸öÔªËØ
-								//°´ÕÕÏÖÔÚµÄÓï·¨£¬ÊôĞÔ±ØÈ»ÔÚ×îºó£¬Òò´ËÒ²²»ÊÇÊôĞÔ
+								//è¿˜æœ‰ä¸‹ä¸€ä¸ªå€¼ï¼Œè¯´æ˜è¿™ä¸æ˜¯æœ€åä¸€ä¸ªå…ƒç´ 
+								//æŒ‰ç…§ç°åœ¨çš„è¯­æ³•ï¼Œå±æ€§å¿…ç„¶åœ¨æœ€åï¼Œå› æ­¤ä¹Ÿä¸æ˜¯å±æ€§
 								setParsePath(false,onePath,false,mapPath);
 							}
 							else
 							{
-								//ËµÃ÷µ½×îºóÁË
+								//è¯´æ˜åˆ°æœ€åäº†
 								int dotIndex = onePath.find(DOT);
 								if (dotIndex > 0)
 								{
-									//ËµÃ÷ÊÇÒª»ñÈ¡ÊôĞÔµÄÖµ£¬ÄÇ¾Í°´ÕÕ"."À´·Ö¸î£¬Ç°ÃæµÄ¾ÍÊÇÔªËØÃû×Ö£¬ºóÃæµÄÊÇÊôĞÔµÄÃû×Ö
+									//è¯´æ˜æ˜¯è¦è·å–å±æ€§çš„å€¼ï¼Œé‚£å°±æŒ‰ç…§"."æ¥åˆ†å‰²ï¼Œå‰é¢çš„å°±æ˜¯å…ƒç´ åå­—ï¼Œåé¢çš„æ˜¯å±æ€§çš„åå­—
 									std::string eleName = onePath.substr(0, dotIndex);
 									std::string propName = onePath.substr(dotIndex + 1);
-									//ÉèÖÃÊôĞÔÇ°ÃæµÄÄÇ¸öÔªËØ£¬×ÔÈ»²»ÊÇ×îºóÒ»¸ö£¬Ò²²»ÊÇÊôĞÔ
+									//è®¾ç½®å±æ€§å‰é¢çš„é‚£ä¸ªå…ƒç´ ï¼Œè‡ªç„¶ä¸æ˜¯æœ€åä¸€ä¸ªï¼Œä¹Ÿä¸æ˜¯å±æ€§
 									setParsePath(false,eleName,false,mapPath);
-									//ÉèÖÃÊôĞÔ£¬°´ÕÕÏÖÔÚµÄÓï·¨¶¨Òå£¬ÊôĞÔÖ»ÄÜÊÇ×îºóÒ»¸ö
+									//è®¾ç½®å±æ€§ï¼ŒæŒ‰ç…§ç°åœ¨çš„è¯­æ³•å®šä¹‰ï¼Œå±æ€§åªèƒ½æ˜¯æœ€åä¸€ä¸ª
 									setParsePath(true,propName,true,mapPath);
 								}
 								else
 								{
-									//ËµÃ÷ÊÇÈ¡ÔªËØµÄÖµ£¬¶øÇÒÊÇ×îºóÒ»¸öÔªËØµÄÖµ
+									//è¯´æ˜æ˜¯å–å…ƒç´ çš„å€¼ï¼Œè€Œä¸”æ˜¯æœ€åä¸€ä¸ªå…ƒç´ çš„å€¼
 									setParsePath(true,onePath,false,mapPath);
 								}
 								break;
@@ -78,10 +78,10 @@ namespace cn
 					{
 						ParserModel *pm = new ParserModel();
 						pm->setEnd(end);
-						//Èç¹û´øÓĞ$·ûºÅ¾ÍËµÃ÷²»ÊÇÒ»¸öÖµ
+						//å¦‚æœå¸¦æœ‰$ç¬¦å·å°±è¯´æ˜ä¸æ˜¯ä¸€ä¸ªå€¼
 						pm->setSingleVlaue(!(ele.find(DOLLAR)>0));
 						pm->setPropertyValue(propertyValue);
-						//È¥µô$
+						//å»æ‰$
 //JAVA TO C++ CONVERTER TODO TASK: There is no direct native C++ equivalent to the Java String 'replace' method:
 						ele = ele.replace(DOLLAR, "");
 						mapPath->put(ele,pm);
@@ -91,7 +91,7 @@ namespace cn
 					std::vector<ReadXmlExpression*> Parser::mapPath2Interpreter(Map<std::string, ParserModel*> *mapPath)
 					{
 						std::vector<ReadXmlExpression*> list = std::vector<ReadXmlExpression*>();
-						//Ò»¶¨Òª°´ÕÕ·Ö½âµÄÏÈºóË³ĞòÀ´×ª»»³É½âÊÍÆ÷¶ÔÏó
+						//ä¸€å®šè¦æŒ‰ç…§åˆ†è§£çš„å…ˆåé¡ºåºæ¥è½¬æ¢æˆè§£é‡Šå™¨å¯¹è±¡
 						for (std::vector<std::string>::const_iterator key = listEle.begin(); key != listEle.end(); ++key)
 						{
 							ParserModel *pm = mapPath->get(*key);
@@ -100,12 +100,12 @@ namespace cn
 							{
 								if(pm->isSingleVlaue())
 								{
-									//²»ÊÇ×îºóÒ»¸ö£¬ÊÇÒ»¸öÖµ£¬×ª»¯Îª
+									//ä¸æ˜¯æœ€åä¸€ä¸ªï¼Œæ˜¯ä¸€ä¸ªå€¼ï¼Œè½¬åŒ–ä¸º
 									obj = new ElementExpression(*key);
 								}
 								else
 								{
-									//²»ÊÇ×îºóÒ»¸ö£¬ÊÇ¶à¸öÖµ£¬×ª»¯Îª
+									//ä¸æ˜¯æœ€åä¸€ä¸ªï¼Œæ˜¯å¤šä¸ªå€¼ï¼Œè½¬åŒ–ä¸º
 									obj = new ElementsExpression(*key);
 								}
 							}
@@ -115,12 +115,12 @@ namespace cn
 								{
 									if(pm->isSingleVlaue())
 									{
-										//ÊÇ×îºóÒ»¸ö£¬ÊÇÒ»¸öÖµ£¬È¡ÊôĞÔµÄÖµ£¬×ª»¯Îª
+										//æ˜¯æœ€åä¸€ä¸ªï¼Œæ˜¯ä¸€ä¸ªå€¼ï¼Œå–å±æ€§çš„å€¼ï¼Œè½¬åŒ–ä¸º
 										obj = new PropertyTerminalExpression(*key);
 									}
 									else
 									{
-										//ÊÇ×îºóÒ»¸ö£¬ÊÇ¶à¸öÖµ£¬È¡ÊôĞÔµÄÖµ£¬×ª»¯Îª
+										//æ˜¯æœ€åä¸€ä¸ªï¼Œæ˜¯å¤šä¸ªå€¼ï¼Œå–å±æ€§çš„å€¼ï¼Œè½¬åŒ–ä¸º
 										obj = new PropertysTerminalExpression(*key);
 									}
 								}
@@ -128,17 +128,17 @@ namespace cn
 								{
 									if(pm->isSingleVlaue())
 									{
-										//ÊÇ×îºóÒ»¸ö£¬ÊÇÒ»¸öÖµ£¬È¡ÔªËØµÄÖµ£¬×ª»¯Îª
+										//æ˜¯æœ€åä¸€ä¸ªï¼Œæ˜¯ä¸€ä¸ªå€¼ï¼Œå–å…ƒç´ çš„å€¼ï¼Œè½¬åŒ–ä¸º
 										obj = new ElementTerminalExpression(*key);
 									}
 									else
 									{
-										//ÊÇ×îºóÒ»¸ö£¬ÊÇ¶à¸öÖµ£¬È¡ÔªËØµÄÖµ£¬×ª»¯Îª
+										//æ˜¯æœ€åä¸€ä¸ªï¼Œæ˜¯å¤šä¸ªå€¼ï¼Œå–å…ƒç´ çš„å€¼ï¼Œè½¬åŒ–ä¸º
 										obj = new ElementsTerminalExpression(*key);
 									}
 								}
 							}
-							//°Ñ×ª»»ºóµÄ¶ÔÏóÌí¼Óµ½¼¯ºÏÖĞ
+							//æŠŠè½¬æ¢åçš„å¯¹è±¡æ·»åŠ åˆ°é›†åˆä¸­
 							list.push_back(obj);
 						}
 						return list;
@@ -146,21 +146,21 @@ namespace cn
 
 					ReadXmlExpression *Parser::buildTree(std::vector<ReadXmlExpression*> &list)
 					{
-						//µÚÒ»¸ö¶ÔÏó£¬Ò²ÊÇ·µ»ØÈ¥µÄ¶ÔÏó£¬¾ÍÊÇ³éÏóÓï·¨Ê÷µÄ¸ù
+						//ç¬¬ä¸€ä¸ªå¯¹è±¡ï¼Œä¹Ÿæ˜¯è¿”å›å»çš„å¯¹è±¡ï¼Œå°±æ˜¯æŠ½è±¡è¯­æ³•æ ‘çš„æ ¹
 						ReadXmlExpression *returnRe = 0;
-						//¶¨ÒåÉÏÒ»¸ö¶ÔÏó
+						//å®šä¹‰ä¸Šä¸€ä¸ªå¯¹è±¡
 						ReadXmlExpression *preRe = 0;
 						for (std::vector<ReadXmlExpression*>::const_iterator re = list.begin(); re != list.end(); ++re)
 						{
 							if(preRe==0)
 							{
-								//ËµÃ÷ÊÇµÚÒ»¸öÔªËØ
+								//è¯´æ˜æ˜¯ç¬¬ä¸€ä¸ªå…ƒç´ 
 								preRe = *re;
 								returnRe = *re;
 							}
 							else
 							{
-								//°ÑÔªËØÌí¼Óµ½ÉÏÒ»¸ö¶ÔÏóÏÂÃæ£¬Í¬Ê±°Ñ±¾¶ÔÏóÉèÖÃ³ÉÎªoldRe£¬×÷ÎªÏÂÒ»¸ö¶ÔÏóµÄ¸¸½áµã
+								//æŠŠå…ƒç´ æ·»åŠ åˆ°ä¸Šä¸€ä¸ªå¯¹è±¡ä¸‹é¢ï¼ŒåŒæ—¶æŠŠæœ¬å¯¹è±¡è®¾ç½®æˆä¸ºoldReï¼Œä½œä¸ºä¸‹ä¸€ä¸ªå¯¹è±¡çš„çˆ¶ç»“ç‚¹
 								if(dynamic_cast<ElementExpression*>(preRe) != 0)
 								{
 									ElementExpression *ele = static_cast<ElementExpression*>(preRe);

@@ -30,7 +30,7 @@ namespace cn
 
 					std::string ConcretePrototype2::ToString()
 					{
-						return "Now in Prototype2£¬name="+name;
+						return "Now in Prototype2ï¼Œname="+name;
 					}
 				}
 			}

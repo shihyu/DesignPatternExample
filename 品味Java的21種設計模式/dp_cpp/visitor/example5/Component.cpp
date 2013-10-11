@@ -13,21 +13,21 @@ namespace cn
 
 					void Component::addChild(Component *child)
 					{
-						// È±Ê¡µÄÊµÏÖ£¬Å×³öÀıÍâ£¬ÒòÎªÒ¶×Ó¶ÔÏóÃ»ÓĞÕâ¸ö¹¦ÄÜ£¬»òÕß×Ó×é¼şÃ»ÓĞÊµÏÖÕâ¸ö¹¦ÄÜ
-						throw new UnsupportedOperationException("¶ÔÏó²»Ö§³ÖÕâ¸ö¹¦ÄÜ");
+						// ç¼ºçœçš„å®ç°ï¼ŒæŠ›å‡ºä¾‹å¤–ï¼Œå› ä¸ºå¶å­å¯¹è±¡æ²¡æœ‰è¿™ä¸ªåŠŸèƒ½ï¼Œæˆ–è€…å­ç»„ä»¶æ²¡æœ‰å®ç°è¿™ä¸ªåŠŸèƒ½
+						throw new UnsupportedOperationException("å¯¹è±¡ä¸æ”¯æŒè¿™ä¸ªåŠŸèƒ½");
 
 					}
 
 					void Component::removeChild(Component *child)
 					{
-						// È±Ê¡µÄÊµÏÖ£¬Å×³öÀıÍâ£¬ÒòÎªÒ¶×Ó¶ÔÏóÃ»ÓĞÕâ¸ö¹¦ÄÜ£¬»òÕß×Ó×é¼şÃ»ÓĞÊµÏÖÕâ¸ö¹¦ÄÜ
-						throw new UnsupportedOperationException("¶ÔÏó²»Ö§³ÖÕâ¸ö¹¦ÄÜ");
+						// ç¼ºçœçš„å®ç°ï¼ŒæŠ›å‡ºä¾‹å¤–ï¼Œå› ä¸ºå¶å­å¯¹è±¡æ²¡æœ‰è¿™ä¸ªåŠŸèƒ½ï¼Œæˆ–è€…å­ç»„ä»¶æ²¡æœ‰å®ç°è¿™ä¸ªåŠŸèƒ½
+						throw new UnsupportedOperationException("å¯¹è±¡ä¸æ”¯æŒè¿™ä¸ªåŠŸèƒ½");
 
 					}
 
 					Component *Component::getChildren(int index)
 					{
-						throw new UnsupportedOperationException("¶ÔÏó²»Ö§³ÖÕâ¸ö¹¦ÄÜ");
+						throw new UnsupportedOperationException("å¯¹è±¡ä¸æ”¯æŒè¿™ä¸ªåŠŸèƒ½");
 					}
 				}
 			}

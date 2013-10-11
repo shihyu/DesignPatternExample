@@ -16,9 +16,9 @@ namespace cn
 						buffer->append("  <Body>\n");
 						for (Map<std::string, Collection<ExportDataModel*>*>::const_iterator tblName = mapData->begin(); tblName != mapData->end(); ++tblName)
 						{
-							//先拼接表名称
+							//鍏堟嫾鎺ヨ〃鍚嶇О
 							buffer->append("    <Datas TableName=\""+tblName->first+"\">\n");
-							//然后循环拼接具体数据
+							//鐒跺悗寰幆鎷兼帴鍏蜂綋鏁版嵁
 							for (unknown::const_iterator edm = mapData->get(tblName).begin(); edm != mapData->get(tblName).end(); ++edm)
 							{
 								buffer->append("      <Data>\n");

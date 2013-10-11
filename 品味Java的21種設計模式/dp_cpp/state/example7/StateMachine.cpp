@@ -13,7 +13,7 @@ namespace cn
 
 					void StateMachine::doWork()
 					{
-						//×ªµ÷ÏàÓ¦µÄ×´Ì¬¶ÔÏóÕæÕýÍê³É¹¦ÄÜ´¦Àí
+						//è½¬è°ƒç›¸åº”çš„çŠ¶æ€å¯¹è±¡çœŸæ­£å®ŒæˆåŠŸèƒ½å¤„ç†
 						this->state->doWork(this);
 					}
 

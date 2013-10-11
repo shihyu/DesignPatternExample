@@ -24,14 +24,14 @@ namespace cn
 					void Calculator::addPressed()
 					{
 						this->addCmd->execute();
-						//°Ñ²Ù×÷¼ÇÂ¼µ½ÀúÊ·¼ÇÂ¼ÀïÃæ
+						//æŠŠæ“ä½œè®°å½•åˆ°å†å²è®°å½•é‡Œé¢
 						undoCmds.push_back(this->addCmd);
 					}
 
 					void Calculator::substractPressed()
 					{
 						this->substractCmd->execute();
-						//°Ñ²Ù×÷¼ÇÂ¼µ½ÀúÊ·¼ÇÂ¼ÀïÃæ
+						//æŠŠæ“ä½œè®°å½•åˆ°å†å²è®°å½•é‡Œé¢
 						undoCmds.push_back(this->substractCmd);
 					}
 
@@ -39,17 +39,17 @@ namespace cn
 					{
 						if(this->undoCmds.size()>0)
 						{
-							//È¡³ö×îºóÒ»¸öÃüÁîÀ´³·Ïú
+							//å–å‡ºæœ€åä¸€ä¸ªå‘½ä»¤æ¥æ’¤é”€
 							Command *cmd = this->undoCmds.back();
 							cmd->undo();
-							//Èç¹û»¹ÓĞ»Ö¸´µÄ¹¦ÄÜ£¬ÄÇ¾Í°ÑÕâ¸öÃüÁî¼ÇÂ¼µ½»Ö¸´µÄÀúÊ·¼ÇÂ¼ÀïÃæ
+							//å¦‚æœè¿˜æœ‰æ¢å¤çš„åŠŸèƒ½ï¼Œé‚£å°±æŠŠè¿™ä¸ªå‘½ä»¤è®°å½•åˆ°æ¢å¤çš„å†å²è®°å½•é‡Œé¢
 							this->redoCmds.push_back(cmd);
-							//È»ºó°Ñ×îºóÒ»¸öÃüÁîÉ¾³ıµô£¬
+							//ç„¶åæŠŠæœ€åä¸€ä¸ªå‘½ä»¤åˆ é™¤æ‰ï¼Œ
 							this->undoCmds.remove(cmd);
 						}
 						else
 						{
-							puts("ºÜ±§Ç¸£¬Ã»ÓĞ¿É³·ÏúµÄÃüÁî");
+							puts("å¾ˆæŠ±æ­‰ï¼Œæ²¡æœ‰å¯æ’¤é”€çš„å‘½ä»¤");
 						}
 					}
 
@@ -57,17 +57,17 @@ namespace cn
 					{
 						if(this->redoCmds.size()>0)
 						{
-							//È¡³ö×îºóÒ»¸öÃüÁîÀ´ÖØ×ö
+							//å–å‡ºæœ€åä¸€ä¸ªå‘½ä»¤æ¥é‡åš
 							Command *cmd = this->redoCmds.back();
 							cmd->execute();
-							//°ÑÕâ¸öÃüÁî¼ÇÂ¼µ½¿É³·ÏúµÄÀúÊ·¼ÇÂ¼ÀïÃæ
+							//æŠŠè¿™ä¸ªå‘½ä»¤è®°å½•åˆ°å¯æ’¤é”€çš„å†å²è®°å½•é‡Œé¢
 							this->undoCmds.push_back(cmd);
-							//È»ºó°Ñ×îºóÒ»¸öÃüÁîÉ¾³ıµô
+							//ç„¶åæŠŠæœ€åä¸€ä¸ªå‘½ä»¤åˆ é™¤æ‰
 							this->redoCmds.remove(cmd);
 						}
 						else
 						{
-							puts("ºÜ±§Ç¸£¬Ã»ÓĞ¿É»Ö¸´µÄÃüÁî");
+							puts("å¾ˆæŠ±æ­‰ï¼Œæ²¡æœ‰å¯æ¢å¤çš„å‘½ä»¤");
 						}
 					}
 				}

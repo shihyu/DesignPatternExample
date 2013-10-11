@@ -13,8 +13,8 @@ namespace cn
 
 					bool SaleMgr::sale(std::string user, std::string customer, SaleModel *saleModel)
 					{
-						//½øĞĞÕæÕıµÄÒµÎñÂß¼­´¦Àí
-						puts(user+"±£´æÁË"+customer+"¹ºÂò "+saleModel+" µÄÏúÊÛÊı¾İ");
+						//è¿›è¡ŒçœŸæ­£çš„ä¸šåŠ¡é€»è¾‘å¤„ç†
+						puts(user+"ä¿å­˜äº†"+customer+"è´­ä¹° "+saleModel+" çš„é”€å”®æ•°æ®");
 						return true;
 					}
 				}

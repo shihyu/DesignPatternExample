@@ -13,30 +13,30 @@ namespace cn
 
 					void Client::main(std::string args[])
 					{
-						//创建ObjectStruct
+						//鍒涘缓ObjectStruct
 						ObjectStructure *os = new ObjectStructure();
-						//准备点测试数据，创建客户对象，并加入ObjectStructure
+						//鍑嗗鐐规祴璇曟暟鎹紝鍒涘缓瀹㈡埛瀵硅薄锛屽苟鍔犲叆ObjectStructure
 						Customer *cm1 = new EnterpriseCustomer();
-						cm1->setName("ABC集团");
+						cm1->setName("ABC闆嗗洟");
 						os->addElement(cm1);
 
 						Customer *cm2 = new EnterpriseCustomer();
-						cm2->setName("CDE公司");
+						cm2->setName("CDE鍏徃");
 						os->addElement(cm2);
 
 						Customer *cm3 = new PersonalCustomer();
-						cm3->setName("张三");
+						cm3->setName("寮犱笁");
 						os->addElement(cm3);
 
-						//客户提出服务请求，传入服务请求的Visitor
+						//瀹㈡埛鎻愬嚭鏈嶅姟璇锋眰锛屼紶鍏ユ湇鍔¤姹傜殑Visitor
 						ServiceRequestVisitor *srVisitor = new ServiceRequestVisitor();
 						os->handleRequest(srVisitor);
 
-						//要对客户进行偏好分析，传入偏好分析的Visitor
+						//瑕佸瀹㈡埛杩涜鍋忓ソ鍒嗘瀽锛屼紶鍏ュ亸濂藉垎鏋愮殑Visitor
 						PredilectionAnalyzeVisitor *paVisitor = new PredilectionAnalyzeVisitor();
 						os->handleRequest(paVisitor);
 
-						//要对客户进行价值分析，传入价值分析的Visitor
+						//瑕佸瀹㈡埛杩涜浠峰�煎垎鏋愶紝浼犲叆浠峰�煎垎鏋愮殑Visitor
 						WorthAnalyzeVisitor *waVisitor = new WorthAnalyzeVisitor();
 						os->handleRequest(waVisitor);
 

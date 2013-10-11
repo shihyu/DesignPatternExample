@@ -13,7 +13,7 @@ namespace cn
 
 					void FileLog::log(std::string msg)
 					{
-						puts("ÏÖÔÚ°Ñ '"+msg+"' ¼ÇÂ¼µ½ÎÄ¼şÖĞ");
+						puts("ç°åœ¨æŠŠ '"+msg+"' è®°å½•åˆ°æ–‡ä»¶ä¸­");
 					}
 				}
 			}

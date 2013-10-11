@@ -1,4 +1,5 @@
 #include "Impl.h"
+#include <iostream>
 
 namespace cn
 {
@@ -13,7 +14,7 @@ namespace cn
 
 					void Impl::test1(std::string s)
 					{
-						puts("Now In Impl. The input s=="+s);
+                        std::cout << "Now In Impl. The input s==" << s << std::endl;
 					}
 				}
 			}

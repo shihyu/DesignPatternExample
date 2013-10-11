@@ -14,24 +14,24 @@ namespace cn
 					std::string DepManager::handleFeeRequest(std::string user, double fee)
 					{
 						std::string str = "";
-						//²¿ÃÅ¾­ÀíµÄÈ¨ÏŞÖ»ÄÜÔÚ1000ÒÔÄÚ
+						//éƒ¨é—¨ç»ç†çš„æƒé™åªèƒ½åœ¨1000ä»¥å†…
 						if(fee < 1000)
 						{
-							//ÎªÁË²âÊÔ£¬¼òµ¥µã£¬Ö»Í¬ÒâĞ¡ÀîÉêÇëµÄ
-							if((new std::string("Ğ¡Àî"))->equals(user))
+							//ä¸ºäº†æµ‹è¯•ï¼Œç®€å•ç‚¹ï¼ŒåªåŒæ„å°æç”³è¯·çš„
+							if((new std::string("å°æ"))->equals(user))
 							{
-								str = "²¿ÃÅ¾­ÀíÍ¬Òâ"+user+"¾Û²Í·ÑÓÃ"+fee+"ÔªµÄÇëÇó";
+								str = "éƒ¨é—¨ç»ç†åŒæ„"+user+"èšé¤è´¹ç”¨"+fee+"å…ƒçš„è¯·æ±‚";
 							}
 							else
 							{
-								//ÆäËûÈËÒ»ÂÉ²»Í¬Òâ
-								str = "²¿ÃÅ¾­Àí²»Í¬Òâ"+user+"¾Û²Í·ÑÓÃ"+fee+"ÔªµÄÇëÇó";
+								//å…¶ä»–äººä¸€å¾‹ä¸åŒæ„
+								str = "éƒ¨é—¨ç»ç†ä¸åŒæ„"+user+"èšé¤è´¹ç”¨"+fee+"å…ƒçš„è¯·æ±‚";
 							}
 							return str;
 						}
 						else
 						{
-							//³¬¹ı1000£¬¼ÌĞø´«µİ¸ø¼¶±ğ¸ü¸ßµÄÈË´¦Àí
+							//è¶…è¿‡1000ï¼Œç»§ç»­ä¼ é€’ç»™çº§åˆ«æ›´é«˜çš„äººå¤„ç†
 							if(this->successor!=0)
 							{
 								return this->successor->handleFeeRequest(user, fee);

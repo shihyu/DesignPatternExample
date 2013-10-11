@@ -13,33 +13,33 @@ namespace cn
 
 					void JDBCTemplate::create(object *obj)
 					{
-						//1£º»ñÈ¡ÐÂÔöµÄsql
+						//1ï¼šèŽ·å–æ–°å¢žçš„sql
 						std::string sql = this->getMainSql(TYPE_CREATE);
-						//2£ºµ÷ÓÃÍ¨ÓÃµÄ¸üÐÂÊµÏÖ
+						//2ï¼šè°ƒç”¨é€šç”¨çš„æ›´æ–°å®žçŽ°
 						this->executeUpdate(sql, TYPE_CREATE,obj);
 					}
 
 					void JDBCTemplate::update(object *obj)
 					{
-						//1£º»ñÈ¡ÐÞ¸ÄµÄsql
+						//1ï¼šèŽ·å–ä¿®æ”¹çš„sql
 						std::string sql = this->getMainSql(TYPE_UPDATE);
-						//2£ºµ÷ÓÃÍ¨ÓÃµÄ¸üÐÂÊµÏÖ
+						//2ï¼šè°ƒç”¨é€šç”¨çš„æ›´æ–°å®žçŽ°
 						this->executeUpdate(sql, TYPE_UPDATE,obj);
 					}
 
 					void JDBCTemplate::delete(object *obj)
 					{
-						//1£º»ñÈ¡É¾³ýµÄsql
+						//1ï¼šèŽ·å–åˆ é™¤çš„sql
 						std::string sql = this->getMainSql(TYPE_DELETE);
-						//2£ºµ÷ÓÃÍ¨ÓÃµÄ¸üÐÂÊµÏÖ
+						//2ï¼šè°ƒç”¨é€šç”¨çš„æ›´æ–°å®žçŽ°
 						this->executeUpdate(sql, TYPE_DELETE,obj);
 					}
 
 					Collection *JDBCTemplate::getByCondition(object *qm)
 					{
-						//1£º»ñÈ¡²éÑ¯µÄsql
+						//1ï¼šèŽ·å–æŸ¥è¯¢çš„sql
 						std::string sql = this->getMainSql(TYPE_CONDITION);
-						//2£ºµ÷ÓÃÍ¨ÓÃµÄ²éÑ¯ÊµÏÖ
+						//2ï¼šè°ƒç”¨é€šç”¨çš„æŸ¥è¯¢å®žçŽ°
 						return this->getByCondition(sql, qm);
 					}
 
@@ -55,17 +55,17 @@ namespace cn
 						Connection *conn = 0;
 						try
 						{
-							//µ÷ÓÃ¹³×Ó·½·¨
+							//è°ƒç”¨é’©å­æ–¹æ³•
 							conn = this->getConnection();
-							//µ÷ÓÃÔ­Óï²Ù×÷
+							//è°ƒç”¨åŽŸè¯­æ“ä½œ
 							sql = this->prepareQuerySql(sql, qm);
 							PreparedStatement *pstmt = conn->prepareStatement(sql);
-							//µ÷ÓÃÔ­Óï²Ù×÷
+							//è°ƒç”¨åŽŸè¯­æ“ä½œ
 							this->setQuerySqlValue(pstmt, qm);
 							ResultSet *rs = pstmt->executeQuery();
 							while(rs->next())
 							{
-								//µ÷ÓÃÔ­Óï²Ù×÷
+								//è°ƒç”¨åŽŸè¯­æ“ä½œ
 								col->add(this->rs2Object(rs));
 							}
 							rs->close();
@@ -95,10 +95,10 @@ namespace cn
 						Connection *conn = 0;
 						try
 						{
-							//µ÷ÓÃ¹³×Ó·½·¨			
+							//è°ƒç”¨é’©å­æ–¹æ³•			
 							conn = this->getConnection();
 							PreparedStatement *pstmt = conn->prepareStatement(sql);
-							//µ÷ÓÃÔ­Óï²Ù×÷
+							//è°ƒç”¨åŽŸè¯­æ“ä½œ
 							this->setUpdateSqlValue(type,pstmt,obj);
 							pstmt->executeUpdate();
 							pstmt->close();

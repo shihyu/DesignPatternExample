@@ -13,13 +13,13 @@ namespace cn
 
 					void ConcreteElementA::accept(Visitor *visitor)
 					{
-						//»Øµ÷·ÃÎÊÕß¶ÔÏóµÄÏàÓ¦·½·¨
+						//å›è°ƒè®¿é—®è€…å¯¹è±¡çš„ç›¸åº”æ–¹æ³•
 						visitor->visitConcreteElementA(this);
 					}
 
 					void ConcreteElementA::opertionA()
 					{
-						//ÒÑÓĞµÄ¹¦ÄÜÊµÏÖ
+						//å·²æœ‰çš„åŠŸèƒ½å®ç°
 					}
 				}
 			}

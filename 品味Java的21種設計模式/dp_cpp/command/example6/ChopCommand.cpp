@@ -28,7 +28,7 @@ namespace cn
 
 					void ChopCommand::execute()
 					{
-						this->cookApi->cook(tableNum,"ÂÌ¶¹ÅÅ¹ÇìÒ");
+						this->cookApi->cook(tableNum,"ç»¿è±†æŽ’éª¨ç…²");
 					}
 				}
 			}

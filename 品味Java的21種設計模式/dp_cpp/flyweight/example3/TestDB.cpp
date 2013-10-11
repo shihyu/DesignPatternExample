@@ -13,15 +13,15 @@ namespace cn
 
 					TestDB::TestDB()
 					{
-						//Í¨¹ý¾²Ì¬¿éÀ´Ìî³äÄ£ÄâµÄÊý¾Ý		
-						colDB->add("ÕÅÈý,ÈËÔ±ÁÐ±í,²é¿´");
-						colDB->add("ÀîËÄ,ÈËÔ±ÁÐ±í,²é¿´");
-						colDB->add("ÀîËÄ,Ð½×ÊÊý¾Ý,²é¿´");
-						colDB->add("ÀîËÄ,Ð½×ÊÊý¾Ý,ÐÞ¸Ä");
-						//Ôö¼Ó¸ü¶àµÄÊÚÈ¨Êý¾Ý
+						//é€šè¿‡é™æ€å—æ¥å¡«å……æ¨¡æ‹Ÿçš„æ•°æ®		
+						colDB->add("å¼ ä¸‰,äººå‘˜åˆ—è¡¨,æŸ¥çœ‹");
+						colDB->add("æŽå››,äººå‘˜åˆ—è¡¨,æŸ¥çœ‹");
+						colDB->add("æŽå››,è–ªèµ„æ•°æ®,æŸ¥çœ‹");
+						colDB->add("æŽå››,è–ªèµ„æ•°æ®,ä¿®æ”¹");
+						//å¢žåŠ æ›´å¤šçš„æŽˆæƒæ•°æ®
 						for(int i=0;i<3;i++)
 						{
-							colDB->add("ÕÅÈý"+i+",ÈËÔ±ÁÐ±í,²é¿´");
+							colDB->add("å¼ ä¸‰"+i+",äººå‘˜åˆ—è¡¨,æŸ¥çœ‹");
 						}
 					}
 				}

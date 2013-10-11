@@ -18,7 +18,7 @@ namespace cn
 
 					void PorkCommand::execute()
 					{
-						this->cookApi->cook("ËâÄà°×Èâ");
+						this->cookApi->cook("è’œæ³¥ç™½è‚‰");
 					}
 				}
 			}

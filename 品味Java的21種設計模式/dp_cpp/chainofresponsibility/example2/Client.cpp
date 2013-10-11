@@ -13,12 +13,12 @@ namespace cn
 
 					void Client::main(std::string args[])
 					{
-						//ÏÈÒª×é×°Ö°ÔðÁ´
+						//å…ˆè¦ç»„è£…èŒè´£é“¾
 						Handler *h1 = new ConcreteHandler1();
 						Handler *h2 = new ConcreteHandler2();
 
 						h1->setSuccessor(h2);
-						//È»ºóÌá½»ÇëÇó
+						//ç„¶åŽæäº¤è¯·æ±‚
 						h1->handleRequest();
 					}
 				}

@@ -13,21 +13,21 @@ namespace cn
 
 					void Client::main(std::string args[])
 					{
-						//Ö»ÊÇ¸ºÔðÏò·þÎñÔ±µã²Ë¾ÍºÃÁË
-						//´´½¨·þÎñÔ±
+						//åªæ˜¯è´Ÿè´£å‘æœåŠ¡å‘˜ç‚¹èœå°±å¥½äº†
+						//åˆ›å»ºæœåŠ¡å‘˜
 						Waiter *waiter = new Waiter();
 
-						//´´½¨ÃüÁî¶ÔÏó£¬¾ÍÊÇÒªµãµÄ²Ë
+						//åˆ›å»ºå‘½ä»¤å¯¹è±¡ï¼Œå°±æ˜¯è¦ç‚¹çš„èœ
 						Command *chop = new ChopCommand();
 						Command *duck = new DuckCommand();
 						Command *pork = new PorkCommand();
 
-						//µã²Ë£¬¾ÍÊÇ°ÑÕâÐ©²ËÈÃ·þÎñÔ±¼ÇÂ¼ÏÂÀ´
+						//ç‚¹èœï¼Œå°±æ˜¯æŠŠè¿™äº›èœè®©æœåŠ¡å‘˜è®°å½•ä¸‹æ¥
 						waiter->orderDish(chop);
 						waiter->orderDish(duck);
 						waiter->orderDish(pork);
 
-						//µã²ËÍê±Ï
+						//ç‚¹èœå®Œæ¯•
 						waiter->orderOver();
 					}
 				}

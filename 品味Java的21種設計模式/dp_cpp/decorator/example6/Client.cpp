@@ -13,15 +13,15 @@ namespace cn
 
 					void Client::main(std::string args[])
 					{
-						//µÃµ½ÒµÎñ½Ó¿Ú,×éºÏ×°ÊÎÆ÷
+						//å¾—åˆ°ä¸šåŠ¡æŽ¥å£,ç»„åˆè£…é¥°å™¨
 						GoodsSaleEbi *ebi = new CheckDecorator(new LogDecorator(new GoodsSaleEbo()));
-						//×¼±¸²âÊÔÊý¾Ý
+						//å‡†å¤‡æµ‹è¯•æ•°æ®
 						SaleModel *saleModel = new SaleModel();
-						saleModel->setGoods("MotoÊÖ»ú");
+						saleModel->setGoods("Motoæ‰‹æœº");
 						saleModel->setSaleNum(2);
-						//µ÷ÓÃÒµÎñ¹¦ÄÜ
-						ebi->sale("ÕÅÈý","ÕÅÈý·á", saleModel);
-						ebi->sale("ÀîËÄ","ÕÅÈý·á", saleModel);
+						//è°ƒç”¨ä¸šåŠ¡åŠŸèƒ½
+						ebi->sale("å¼ ä¸‰","å¼ ä¸‰ä¸°", saleModel);
+						ebi->sale("æŽå››","å¼ ä¸‰ä¸°", saleModel);
 					}
 				}
 			}

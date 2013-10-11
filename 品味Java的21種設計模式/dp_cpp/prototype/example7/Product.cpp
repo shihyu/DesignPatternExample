@@ -33,7 +33,7 @@ namespace cn
 
 					std::string Product::ToString()
 					{
-						return "²úÆ·±àºÅ="+this->productId+"£¬²úÆ·Ãû³Æ="+this->name;
+						return "äº§å“ç¼–å·="+this->productId+"ï¼Œäº§å“åç§°="+this->name;
 					}
 
 					object *Product::clone()

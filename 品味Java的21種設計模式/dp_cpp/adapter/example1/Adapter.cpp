@@ -18,7 +18,7 @@ namespace cn
 
 					void Adapter::request()
 					{
-						//可能转调已经实现了的方法，进行适配
+						//鍙兘杞皟宸茬粡瀹炵幇浜嗙殑鏂规硶锛岃繘琛岄�傞厤
 						adaptee->specificRequest();
 					}
 				}

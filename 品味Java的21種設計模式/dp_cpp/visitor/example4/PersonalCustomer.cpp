@@ -33,7 +33,7 @@ namespace cn
 
 					void PersonalCustomer::accept(Visitor *visitor)
 					{
-						//回调访问者对象的相应方法
+						//鍥炶皟璁块棶鑰呭璞＄殑鐩稿簲鏂规硶
 						visitor->visitPersonalCustomer(this);
 					}
 				}
