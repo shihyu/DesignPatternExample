@@ -7,7 +7,7 @@ namespace factoryMethod {
     class IFactory {
 
     public:
-        virtual public LeiFeng* createLeiFeng() = 0;
+        virtual LeiFeng* createLeiFeng() = 0;
     };
 
 }

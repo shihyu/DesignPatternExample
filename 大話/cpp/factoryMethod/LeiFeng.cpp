@@ -1,16 +1,18 @@
 #include "LeiFeng.h"
+#include <iostream>
+using namespace std;
 
 namespace factoryMethod {
 
     void LeiFeng::sweep() {
-        puts("sweep");
+        cout << "sweep" << endl;
     }
 
     void LeiFeng::buyRice() {
-        puts("Buy Rice");
+        cout << "Buy Rice" << endl;
     }
 
     void LeiFeng::Wash() {
-        puts("Wash");
+        cout << "Wash" << endl;
     }
 }
