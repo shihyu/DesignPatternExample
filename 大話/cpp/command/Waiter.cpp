@@ -1,15 +1,16 @@
 #include "Waiter.h"
+#include <iostream>
 
 namespace command {
 
     void Waiter::setOrder(Command* com) {
         orders.push_back(com);
-        puts("add an order " + new Date());
+        std::cout << "add an order " + std::string(new Date()) << std::endl;
     }
 
     void Waiter::cancelOrder(Command* com) {
         orders.remove(com);
-        puts("Cancel the order " + new Date());
+        std::cout << "Cancel the order " + std::string(new Date()) << std::endl;
     }
 
     void Waiter::excute() {

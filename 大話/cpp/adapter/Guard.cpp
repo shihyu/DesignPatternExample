@@ -1,4 +1,5 @@
 #include "Guard.h"
+#include <iostream>
 
 namespace adapter {
 
@@ -7,10 +8,10 @@ namespace adapter {
     }
 
     void Guard::attrack() {
-        puts(this->getName() + " attrack");
+        std::cout << this->getName() + std::string(" attrack") << std::endl;
     }
 
     void Guard::defence() {
-        puts(this->getName() + " defence");
+        std::cout << this->getName() + std::string(" defence") << std::endl;
     }
 }

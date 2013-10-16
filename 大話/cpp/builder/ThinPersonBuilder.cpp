@@ -1,20 +1,21 @@
 #include "ThinPersonBuilder.h"
+#include <iostream>
 
 namespace builder {
 
     void ThinPersonBuilder::createArm() {
-        puts("Create A Thin Arm!");
+        std::cout << "Create A Thin Arm!" << std::endl;
     }
 
     void ThinPersonBuilder::createBody() {
-        puts("Create A Thin Body!");
+        std::cout << "Create A Thin Body!" << std::endl;
     }
 
     void ThinPersonBuilder::createHead() {
-        puts("Create A Thin Head!");
+        std::cout << "Create A Thin Head!" << std::endl;
     }
 
     void ThinPersonBuilder::createLeg() {
-        puts("Create A Thin Leg!");
+        std::cout << "Create A Thin Leg!" << std::endl;
     }
 }

@@ -1,12 +1,13 @@
 #include "Barbecuer.h"
+#include <iostream>
 
 namespace command {
 
     void Barbecuer::bakeMutton() {
-        puts("Bake the mutton!");
+        std::cout << "Bake the mutton!" << std::endl;
     }
 
     void Barbecuer::bakeChickenWing() {
-        puts("Bake the chicken wing!");
+        std::cout << "Bake the chicken wing!" << std::endl;
     }
 }

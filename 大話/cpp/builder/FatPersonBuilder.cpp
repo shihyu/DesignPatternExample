@@ -1,20 +1,21 @@
 #include "FatPersonBuilder.h"
+#include <iostream>
 
 namespace builder {
 
     void FatPersonBuilder::createArm() {
-        puts("Create A Fat Arm!");
+        std::cout << "Create A Fat Arm!" << std::endl;
     }
 
     void FatPersonBuilder::createBody() {
-        puts("Create A Fat Arm!");
+        std::cout << "Create A Fat Arm!" << std::endl;
     }
 
     void FatPersonBuilder::createHead() {
-        puts("Create A Fat Arm!");
+        std::cout << "Create A Fat Arm!" << std::endl;
     }
 
     void FatPersonBuilder::createLeg() {
-        puts("Create A Fat Arm!");
+        std::cout << "Create A Fat Arm!" << std::endl;
     }
 }

@@ -1,4 +1,5 @@
 #include "Center.h"
+#include <iostream>
 
 namespace adapter {
 
@@ -7,10 +8,10 @@ namespace adapter {
     }
 
     void Center::jinggong() {
-        puts(this->getName() + " jinggong");
+        std::cout << this->getName() + std::string(" jinggong") << std::endl;
     }
 
     void Center::fangshou() {
-        puts(this->getName() + " fangshou");
+        std::cout << this->getName() + std::string(" fangshou") << std::endl;
     }
 }
