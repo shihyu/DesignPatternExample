@@ -1,4 +1,5 @@
 #include "Person.h"
+#include <iostream>
 
 namespace decorator {
 
@@ -10,7 +11,7 @@ namespace decorator {
     }
 
     void Person::show() {
-        puts(" decorated guy " + this->name);
+        std::cout << " decorated guy " + this->name;
     }
 
     std::string Person::getName() {

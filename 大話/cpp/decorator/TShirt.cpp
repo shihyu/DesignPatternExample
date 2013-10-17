@@ -1,9 +1,10 @@
 #include "TShirt.h"
+#include <iostream>
 
 namespace decorator {
 
     void TShirt::show() {
-        std::cout::put(" T-Shirt ");
+        std::cout << " T-Shirt " << std::endl;
         Finery::show();
     }
 }

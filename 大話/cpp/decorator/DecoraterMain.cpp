@@ -1,14 +1,14 @@
 #include "DecoraterMain.h"
+#include <iostream>
+using namespace decorator;
 
-namespace decorator {
-
-    void DecoraterMain::main(std::string args[]) {
-        Person* lin = new Person("Lincoln");
-        puts("The first show:");
-        Sneaker* s = new Sneaker();
-        Hat* h = new Hat();
-        s->decorate(lin);
-        h->decorate(s);
-        h->show();
-    }
+int main() {
+    Person* lin = new Person("Lincoln");
+    std::cout << "The first show:" << std::endl;
+    Sneaker* s = new Sneaker();
+    Hat* h = new Hat();
+    s->decorate(lin);
+    h->decorate(s);
+    h->show();
+    return 0;
 }

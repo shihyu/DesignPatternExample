@@ -1,9 +1,10 @@
 #include "Sneaker.h"
+#include <iostream>
 
 namespace decorator {
 
     void Sneaker::show() {
-        std::cout::put(" sneaker ");
+        std::cout << " sneaker " << std::endl;
         Finery::show();
     }
 }
