@@ -1,0 +1,31 @@
+g++ -c -pipe -g -Wall -W -fPIE  -I../../../../Qt5.1.1/5.1.1/gcc_64/mkspecs/linux-g++ -I. -I. -o AfternoonState.o AfternoonState.cpp
+In file included from BeforeNoonState.h:5,
+                 from Work.h:4,
+                 from State.h:3,
+                 from AfternoonState.h:3,
+                 from AfternoonState.cpp:1:
+NoonState.h:8: error: expected class-name before ‘{’ token
+NoonState.h:10: error: ‘Work’ has not been declared
+In file included from Work.h:4,
+                 from State.h:3,
+                 from AfternoonState.h:3,
+                 from AfternoonState.cpp:1:
+BeforeNoonState.h:9: error: expected class-name before ‘{’ token
+BeforeNoonState.h:12: error: ‘Work’ has not been declared
+In file included from State.h:3,
+                 from AfternoonState.h:3,
+                 from AfternoonState.cpp:1:
+Work.h:12: error: ISO C++ forbids declaration of ‘State’ with no type
+Work.h:12: error: expected ‘;’ before ‘*’ token
+Work.h:20: error: declaration of ‘virtual bool state::Work::isFinish()’
+Work.h:11: error: conflicts with previous declaration ‘bool state::Work::isFinish’
+Work.h:22: error: ISO C++ forbids declaration of ‘State’ with no type
+Work.h:22: error: ‘State’ declared as a ‘virtual’ field
+Work.h:22: error: expected ‘;’ before ‘*’ token
+Work.h:24: error: ‘State’ has not been declared
+AfternoonState.cpp: In member function ‘virtual void state::AfternoonState::writeProgram(state::Work*)’:
+AfternoonState.cpp:7: error: invalid operands of types ‘const char*’ and ‘const char [17]’ to binary ‘operator+’
+AfternoonState.cpp:7: error: ‘puts’ was not declared in this scope
+AfternoonState.cpp:9: error: no matching function for call to ‘state::Work::setState(state::EveningState*)’
+Work.h:24: note: candidates are: virtual void state::Work::setState(int*)
+make: *** [AfternoonState.o] Error 1

@@ -1,10 +1,15 @@
 #include "AfternoonState.h"
+#include <sstream>
+#include <iostream>
 
 namespace state {
-
     void AfternoonState::writeProgram(Work* w) {
         if (w->getHour() < 17) {
-            puts("the current time:" + w->getHour() + "fell better now!");
+            std::string s;
+            std::stringstream ss;
+            ss << w->getHour();
+            ss >> s;
+            std::cout <<  "the current time:" + s + "fell better now!" << std::endl;
         } else {
             w->setState(new EveningState());
             w->writeprogram();

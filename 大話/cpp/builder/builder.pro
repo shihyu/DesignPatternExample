@@ -5,6 +5,10 @@
 TEMPLATE = app
 TARGET = builder
 INCLUDEPATH += .
+CONFIG = warn_on debug 
+INCLUDEPATH
+LIBS
+
 
 # Input
 HEADERS += BuilderMain.h \

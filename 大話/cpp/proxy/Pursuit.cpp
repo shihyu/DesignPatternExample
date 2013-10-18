@@ -1,4 +1,5 @@
 #include "Pursuit.h"
+#include <iostream>
 
 namespace proxy {
 
@@ -7,14 +8,14 @@ namespace proxy {
     }
 
     void Pursuit::giveChocolate() {
-        puts(mm->getName() + "give you a chocolate");
+        std::cout << mm->getName() + "give you a chocolate" << std::endl;
     }
 
     void Pursuit::giveDolls() {
-        puts(mm->getName() + "give you a doll");
+        std::cout << mm->getName() + "give you a doll" << std::endl;
     }
 
     void Pursuit::giveFlowers() {
-        puts(mm->getName() + "give you a Flower");
+        std::cout << mm->getName() + "give you a Flower" << std::endl;
     }
 }

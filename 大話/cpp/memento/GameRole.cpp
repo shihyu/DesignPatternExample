@@ -1,4 +1,5 @@
 #include "GameRole.h"
+#include <iostream>
 
 namespace memento {
 
@@ -51,10 +52,10 @@ namespace memento {
     }
 
     void GameRole::show() {
-        puts("Name: " + name);
-        puts("Vitality: " + this->vitality);
-        puts("Attrack: " + this->attrack);
-        puts("Defence: " + this->defence);
+        std::cout <<  "Name: " + name << std::endl;
+        std::cout <<  "Vitality: " + this->vitality << std::endl;
+        std::cout <<  "Attrack: " + this->attrack << std::endl;
+        std::cout <<  "Defence: " + this->defence << std::endl;
     }
 
     Memento* GameRole::createMemento() {

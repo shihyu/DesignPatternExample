@@ -5,6 +5,10 @@
 TEMPLATE = app
 TARGET = simpleFactory
 INCLUDEPATH += .
+CONFIG = warn_on debug 
+INCLUDEPATH
+LIBS
+
 
 # Input
 HEADERS += Operation.h \

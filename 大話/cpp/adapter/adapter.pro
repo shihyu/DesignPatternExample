@@ -5,6 +5,9 @@
 TEMPLATE = app
 TARGET = adapter
 INCLUDEPATH += .
+CONFIG = warn_on debug 
+INCLUDEPATH
+LIBS
 
 # Input
 HEADERS += AdapterMain.h Center.h Guard.h Player.h Translator.h

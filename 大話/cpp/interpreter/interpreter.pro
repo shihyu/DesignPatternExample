@@ -5,6 +5,10 @@
 TEMPLATE = app
 TARGET = interpreter
 INCLUDEPATH += .
+CONFIG = warn_on debug 
+INCLUDEPATH
+LIBS
+
 
 # Input
 HEADERS += Expression.h InterpreterMain.h Note.h PlayContext.h Scale.h

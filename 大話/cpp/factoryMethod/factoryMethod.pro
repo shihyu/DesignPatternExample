@@ -5,6 +5,10 @@
 TEMPLATE = app
 TARGET = factoryMethod
 INCLUDEPATH += .
+CONFIG = warn_on debug 
+INCLUDEPATH
+LIBS
+
 
 # Input
 HEADERS += FactoryMethodMain.h \

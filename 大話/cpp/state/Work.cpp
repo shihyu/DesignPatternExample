@@ -1,4 +1,7 @@
 #include "Work.h"
+#include "State.h"
+#include "BeforeNoonState.h"
+
 
 namespace state {
 
@@ -15,7 +18,7 @@ namespace state {
     }
 
     bool Work::isFinish() {
-        return isFinish;
+        return mIsFinish;
     }
 
     State* Work::getState() {
@@ -27,7 +30,7 @@ namespace state {
     }
 
     void Work::setFinish(bool isFinish) {
-        this->isFinish = isFinish;
+        this->mIsFinish = isFinish;
     }
 
     void Work::writeprogram() {

@@ -5,6 +5,9 @@
 TEMPLATE = app
 TARGET = command
 INCLUDEPATH += .
+CONFIG = warn_on
+INCLUDEPATH
+LIBS
 
 # Input
 HEADERS += BakeChickenWingCommand.h \

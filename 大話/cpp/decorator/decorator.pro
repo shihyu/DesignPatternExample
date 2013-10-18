@@ -5,6 +5,10 @@
 TEMPLATE = app
 TARGET = decorator
 INCLUDEPATH += .
+CONFIG = warn_on debug 
+INCLUDEPATH
+LIBS
+
 
 # Input
 HEADERS += DecoraterMain.h Finery.h Hat.h Person.h Sneaker.h TShirt.h

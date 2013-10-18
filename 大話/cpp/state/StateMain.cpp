@@ -1,8 +1,7 @@
 #include "StateMain.h"
+using namespace state;
 
-namespace state {
-
-    void StateMain::main(std::string args[]) {
+    int main() {
         Work* today = new Work();
         today->setHour(10);
         today->writeprogram();
@@ -20,5 +19,5 @@ namespace state {
         today->writeprogram();
         today->setHour(22);
         today->writeprogram();
+        return 0;
     }
-}

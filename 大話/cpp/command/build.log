@@ -1,0 +1,49 @@
+g++ -c -pipe -O2 -Wall -W -fPIE  -I../../../../Qt5.1.1/5.1.1/gcc_64/mkspecs/linux-g++ -I. -I. -o Waiter.o Waiter.cpp
+Waiter.cpp: In member function 「virtual void command::Waiter::setOrder(command::Command*)」:
+Waiter.cpp:8:62: 錯誤： 對 「std::basic_string<char>::basic_string(int*)」 的呼叫沒有匹配的函式
+Waiter.cpp:8:62: 附註： candidates are:
+/usr/include/c++/4.6/bits/basic_string.h:527:9: 附註： template<class _InputIterator> std::basic_string::basic_string(_InputIterator, _InputIterator, const _Alloc&)
+/usr/include/c++/4.6/bits/basic_string.tcc:221:5: 附註： std::basic_string<_CharT, _Traits, _Alloc>::basic_string(std::basic_string<_CharT, _Traits, _Alloc>::size_type, _CharT, const _Alloc&) [with _CharT = char, _Traits = std::char_traits<char>, _Alloc = std::allocator<char>, std::basic_string<_CharT, _Traits, _Alloc>::size_type = long unsigned int]
+/usr/include/c++/4.6/bits/basic_string.tcc:221:5: 附註：   candidate expects 3 arguments, 1 provided
+/usr/include/c++/4.6/bits/basic_string.tcc:214:5: 附註： std::basic_string<_CharT, _Traits, _Alloc>::basic_string(const _CharT*, const _Alloc&) [with _CharT = char, _Traits = std::char_traits<char>, _Alloc = std::allocator<char>]
+/usr/include/c++/4.6/bits/basic_string.tcc:214:5: 附註：   no known conversion for argument 1 from 「int*」 to 「const char*」
+/usr/include/c++/4.6/bits/basic_string.tcc:207:5: 附註： std::basic_string<_CharT, _Traits, _Alloc>::basic_string(const _CharT*, std::basic_string<_CharT, _Traits, _Alloc>::size_type, const _Alloc&) [with _CharT = char, _Traits = std::char_traits<char>, _Alloc = std::allocator<char>, std::basic_string<_CharT, _Traits, _Alloc>::size_type = long unsigned int]
+/usr/include/c++/4.6/bits/basic_string.tcc:207:5: 附註：   candidate expects 3 arguments, 1 provided
+/usr/include/c++/4.6/bits/basic_string.tcc:195:5: 附註： std::basic_string<_CharT, _Traits, _Alloc>::basic_string(const std::basic_string<_CharT, _Traits, _Alloc>&, std::basic_string<_CharT, _Traits, _Alloc>::size_type, std::basic_string<_CharT, _Traits, _Alloc>::size_type, const _Alloc&) [with _CharT = char, _Traits = std::char_traits<char>, _Alloc = std::allocator<char>, std::basic_string<_CharT, _Traits, _Alloc> = std::basic_string<char>, std::basic_string<_CharT, _Traits, _Alloc>::size_type = long unsigned int]
+/usr/include/c++/4.6/bits/basic_string.tcc:195:5: 附註：   candidate expects 4 arguments, 1 provided
+/usr/include/c++/4.6/bits/basic_string.tcc:185:5: 附註： std::basic_string<_CharT, _Traits, _Alloc>::basic_string(const std::basic_string<_CharT, _Traits, _Alloc>&, std::basic_string<_CharT, _Traits, _Alloc>::size_type, std::basic_string<_CharT, _Traits, _Alloc>::size_type) [with _CharT = char, _Traits = std::char_traits<char>, _Alloc = std::allocator<char>, std::basic_string<_CharT, _Traits, _Alloc> = std::basic_string<char>, std::basic_string<_CharT, _Traits, _Alloc>::size_type = long unsigned int]
+/usr/include/c++/4.6/bits/basic_string.tcc:185:5: 附註：   candidate expects 3 arguments, 1 provided
+/usr/include/c++/4.6/bits/basic_string.tcc:171:5: 附註： std::basic_string<_CharT, _Traits, _Alloc>::basic_string(const std::basic_string<_CharT, _Traits, _Alloc>&) [with _CharT = char, _Traits = std::char_traits<char>, _Alloc = std::allocator<char>, std::basic_string<_CharT, _Traits, _Alloc> = std::basic_string<char>]
+/usr/include/c++/4.6/bits/basic_string.tcc:171:5: 附註：   no known conversion for argument 1 from 「int*」 to 「const std::basic_string<char>&」
+/usr/include/c++/4.6/bits/basic_string.tcc:179:5: 附註： std::basic_string<_CharT, _Traits, _Alloc>::basic_string(const _Alloc&) [with _CharT = char, _Traits = std::char_traits<char>, _Alloc = std::allocator<char>]
+/usr/include/c++/4.6/bits/basic_string.tcc:179:5: 附註：   no known conversion for argument 1 from 「int*」 to 「const std::allocator<char>&」
+/usr/include/c++/4.6/bits/basic_string.h:432:7: 附註： std::basic_string<_CharT, _Traits, _Alloc>::basic_string() [with _CharT = char, _Traits = std::char_traits<char>, _Alloc = std::allocator<char>]
+/usr/include/c++/4.6/bits/basic_string.h:432:7: 附註：   candidate expects 0 arguments, 1 provided
+Waiter.cpp:8:51: 錯誤： expected primary-expression before 「(」 token
+Waiter.cpp:8:56: 錯誤： expected type-specifier before 「Date」
+Waiter.cpp:8:56: 錯誤： expected 「)」 before 「Date」
+Waiter.cpp: In member function 「virtual void command::Waiter::cancelOrder(command::Command*)」:
+Waiter.cpp:12:16: 錯誤： 「class std::vector<command::Command*>」 沒具名為 「remove」 的成員
+Waiter.cpp:13:66: 錯誤： 對 「std::basic_string<char>::basic_string(int*)」 的呼叫沒有匹配的函式
+Waiter.cpp:13:66: 附註： candidates are:
+/usr/include/c++/4.6/bits/basic_string.h:527:9: 附註： template<class _InputIterator> std::basic_string::basic_string(_InputIterator, _InputIterator, const _Alloc&)
+/usr/include/c++/4.6/bits/basic_string.tcc:221:5: 附註： std::basic_string<_CharT, _Traits, _Alloc>::basic_string(std::basic_string<_CharT, _Traits, _Alloc>::size_type, _CharT, const _Alloc&) [with _CharT = char, _Traits = std::char_traits<char>, _Alloc = std::allocator<char>, std::basic_string<_CharT, _Traits, _Alloc>::size_type = long unsigned int]
+/usr/include/c++/4.6/bits/basic_string.tcc:221:5: 附註：   candidate expects 3 arguments, 1 provided
+/usr/include/c++/4.6/bits/basic_string.tcc:214:5: 附註： std::basic_string<_CharT, _Traits, _Alloc>::basic_string(const _CharT*, const _Alloc&) [with _CharT = char, _Traits = std::char_traits<char>, _Alloc = std::allocator<char>]
+/usr/include/c++/4.6/bits/basic_string.tcc:214:5: 附註：   no known conversion for argument 1 from 「int*」 to 「const char*」
+/usr/include/c++/4.6/bits/basic_string.tcc:207:5: 附註： std::basic_string<_CharT, _Traits, _Alloc>::basic_string(const _CharT*, std::basic_string<_CharT, _Traits, _Alloc>::size_type, const _Alloc&) [with _CharT = char, _Traits = std::char_traits<char>, _Alloc = std::allocator<char>, std::basic_string<_CharT, _Traits, _Alloc>::size_type = long unsigned int]
+/usr/include/c++/4.6/bits/basic_string.tcc:207:5: 附註：   candidate expects 3 arguments, 1 provided
+/usr/include/c++/4.6/bits/basic_string.tcc:195:5: 附註： std::basic_string<_CharT, _Traits, _Alloc>::basic_string(const std::basic_string<_CharT, _Traits, _Alloc>&, std::basic_string<_CharT, _Traits, _Alloc>::size_type, std::basic_string<_CharT, _Traits, _Alloc>::size_type, const _Alloc&) [with _CharT = char, _Traits = std::char_traits<char>, _Alloc = std::allocator<char>, std::basic_string<_CharT, _Traits, _Alloc> = std::basic_string<char>, std::basic_string<_CharT, _Traits, _Alloc>::size_type = long unsigned int]
+/usr/include/c++/4.6/bits/basic_string.tcc:195:5: 附註：   candidate expects 4 arguments, 1 provided
+/usr/include/c++/4.6/bits/basic_string.tcc:185:5: 附註： std::basic_string<_CharT, _Traits, _Alloc>::basic_string(const std::basic_string<_CharT, _Traits, _Alloc>&, std::basic_string<_CharT, _Traits, _Alloc>::size_type, std::basic_string<_CharT, _Traits, _Alloc>::size_type) [with _CharT = char, _Traits = std::char_traits<char>, _Alloc = std::allocator<char>, std::basic_string<_CharT, _Traits, _Alloc> = std::basic_string<char>, std::basic_string<_CharT, _Traits, _Alloc>::size_type = long unsigned int]
+/usr/include/c++/4.6/bits/basic_string.tcc:185:5: 附註：   candidate expects 3 arguments, 1 provided
+/usr/include/c++/4.6/bits/basic_string.tcc:171:5: 附註： std::basic_string<_CharT, _Traits, _Alloc>::basic_string(const std::basic_string<_CharT, _Traits, _Alloc>&) [with _CharT = char, _Traits = std::char_traits<char>, _Alloc = std::allocator<char>, std::basic_string<_CharT, _Traits, _Alloc> = std::basic_string<char>]
+/usr/include/c++/4.6/bits/basic_string.tcc:171:5: 附註：   no known conversion for argument 1 from 「int*」 to 「const std::basic_string<char>&」
+/usr/include/c++/4.6/bits/basic_string.tcc:179:5: 附註： std::basic_string<_CharT, _Traits, _Alloc>::basic_string(const _Alloc&) [with _CharT = char, _Traits = std::char_traits<char>, _Alloc = std::allocator<char>]
+/usr/include/c++/4.6/bits/basic_string.tcc:179:5: 附註：   no known conversion for argument 1 from 「int*」 to 「const std::allocator<char>&」
+/usr/include/c++/4.6/bits/basic_string.h:432:7: 附註： std::basic_string<_CharT, _Traits, _Alloc>::basic_string() [with _CharT = char, _Traits = std::char_traits<char>, _Alloc = std::allocator<char>]
+/usr/include/c++/4.6/bits/basic_string.h:432:7: 附註：   candidate expects 0 arguments, 1 provided
+Waiter.cpp:13:55: 錯誤： expected primary-expression before 「(」 token
+Waiter.cpp:13:60: 錯誤： expected type-specifier before 「Date」
+Waiter.cpp:13:60: 錯誤： expected 「)」 before 「Date」
+make: *** [Waiter.o] Error 1

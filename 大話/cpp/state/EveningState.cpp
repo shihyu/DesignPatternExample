@@ -1,4 +1,7 @@
 #include "EveningState.h"
+#include <sstream>
+#include <iostream>
+
 
 namespace state {
 
@@ -8,7 +11,11 @@ namespace state {
             w->writeprogram();
         } else {
             if (w->getHour() < 21) {
-                puts("the current time:" + w->getHour() + " work overtime!how sad!");
+                std::string s;
+                std::stringstream ss;
+                ss << w->getHour();
+                ss >> s;
+                std::cout << "the current time:" + s + " work overtime!how sad!" << std::endl;
             } else {
                 w->setState(new SleepState());
                 w->writeprogram();

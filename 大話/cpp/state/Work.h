@@ -1,18 +1,20 @@
-#pragma once
-
-#include "State.h"
-#include "BeforeNoonState.h"
+#ifndef _WORK_H_
+#define _WORK_H_
+//#include "State.h"
+//#include "BeforeNoonState.h"
 
 namespace state {
+    class State;
 
     class Work {
     private:
         int hour;
-        bool isFinish;
+        bool mIsFinish;
         State* state;
 
     public:
         Work();
+
         virtual int getHour();
 
         virtual void setHour(int hour);
@@ -29,3 +31,4 @@ namespace state {
     };
 
 }
+#endif
