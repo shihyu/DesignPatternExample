@@ -1,14 +1,15 @@
 #include "TestPaper.h"
+#include <iostream>
 
 namespace templateMethod {
 
     void TestPaper::question1() {
-        puts("11+22=");
+        std::cout << "11+22= std::endl";
         answer1();
     }
 
     void TestPaper::question2() {
-        puts("11+44=");
+        std::cout << "11+44=" << std::endl;
         answer2();
     }
 

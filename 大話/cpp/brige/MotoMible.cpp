@@ -1,4 +1,5 @@
 #include "MotoMible.h"
+#include <iostream>
 
 namespace brige {
 
@@ -6,7 +7,7 @@ namespace brige {
     }
 
     void MotoMible::run() {
-        puts("Moto Mobile: ");
+        std::cout << "Moto Mobile: " << std::endl;
         this->getSoft()->run();
     }
 }

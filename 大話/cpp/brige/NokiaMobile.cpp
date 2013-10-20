@@ -1,4 +1,5 @@
 #include "NokiaMobile.h"
+#include <iostream>
 
 namespace brige {
 
@@ -6,7 +7,7 @@ namespace brige {
     }
 
     void NokiaMobile::run() {
-        puts("Nokia Mobile: ");
+        std::cout << "Nokia Mobile: " << std::endl;
         this->getSoft()->run();
     }
 }
