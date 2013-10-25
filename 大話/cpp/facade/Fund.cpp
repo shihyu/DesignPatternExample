@@ -1,4 +1,5 @@
 #include "Fund.h"
+#include <iostream>
 
 namespace facade {
 
@@ -8,13 +9,13 @@ namespace facade {
     }
 
     void Fund::method1() {
-        puts("method1: ");
+        std::cout << "method1: " << std::endl;
         s1->buy();
         s2->buy();
     }
 
     void Fund::method2() {
-        puts("method2: ");
+        std::cout << "method2: " << std::endl;
         s2->buy();
         s1->sell();
     }

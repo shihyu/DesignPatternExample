@@ -1,10 +1,10 @@
 #include "FacadeMain.h"
+using namespace facade;
 
-namespace facade {
 
-    void FacadeMain::main(std::string args[]) {
-        Fund* fund = new Fund();
-        fund->method1();
-        fund->method2();
-    }
+int main(void) {
+    Fund* fund = new Fund();
+    fund->method1();
+    fund->method2();
+    return 0;
 }

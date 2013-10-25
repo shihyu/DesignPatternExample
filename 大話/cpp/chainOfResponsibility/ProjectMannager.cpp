@@ -1,12 +1,13 @@
 #include "ProjectMannager.h"
+#include <iostream>
 
 namespace chainOfResponsibility {
 
     void ProjectMannager::handleRequest(Request* que) {
-        if (que->getType().equals("leave")) {
-            puts("PM  agree the leave request");
+        if (que->getType() == "leave") {
+            std::cout << "PM  agree the leave request" << std::endl;
         } else {
-            puts("PM has no right to handle it, Pls ask help from Director!");
+            std::cout << "PM has no right to handle it, Pls ask help from Director!" << std::endl;
             this->getNextHandler()->handleRequest(que);
         }
     }

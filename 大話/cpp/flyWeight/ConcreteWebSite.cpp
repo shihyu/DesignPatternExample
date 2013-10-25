@@ -1,4 +1,5 @@
 #include "ConcreteWebSite.h"
+#include <iostream>
 
 namespace flyWeight {
 
@@ -7,7 +8,7 @@ namespace flyWeight {
     }
 
     void ConcreteWebSite::use(User* u) {
-        puts("the type of Website: " + name + " user: " + u->getName());
+        std::cout << "the type of Website: " + name + " user: " + u->getName() << std::endl;
     }
 
     std::string ConcreteWebSite::getName() {

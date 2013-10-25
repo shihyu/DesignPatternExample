@@ -1,12 +1,13 @@
 #include "Director.h"
+#include <iostream>
 
 namespace chainOfResponsibility {
 
     void Director::handleRequest(Request* que) {
-        if (que->getType().equals("finance")) {
-            puts("Director  agree the finance request");
+        if (que->getType() == "finance") {
+            std::cout << "Director  agree the finance request" << std::endl;
         } else {
-            puts("Director has no right to handle it, Pls ask help from Manager!");
+            std::cout << "Director has no right to handle it, Pls ask help from Manager!" << std::endl;
             this->getNextHandler()->handleRequest(que);
         }
     }

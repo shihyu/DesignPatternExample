@@ -1,7 +1,8 @@
-#pragma once
+#ifndef UNIONNATIONS_H_
+#define UNIONNATIONS_H_
 
-#include "Country.h"
 #include <string>
+class Country;
 
 namespace mediator {
 
@@ -12,3 +13,5 @@ namespace mediator {
     };
 
 }
+
+#endif
