@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" 
+	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+  <!-- 配置请求分发器 JokerDispatcherServlet-->
+  <servlet>
+    <servlet-name>jokerServlet</servlet-name>
+    <servlet-class>com.joker.core.mvc.servlet.JokerDispatcherServlet</servlet-class>  
+    <!-- 配置joker MVC配置文件内容 -->
+    <init-param>
+		<param-name>config</param-name>
+		<param-value>/WEB-INF/config/joker-config.xml</param-value>
+	</init-param>
+	<load-on-startup>1</load-on-startup>
+  </servlet>
+  <!-- 配置url请求格式mapping -->
+  <servlet-mapping>
+    <servlet-name>jokerServlet</servlet-name>
+    <url-pattern>*.jk</url-pattern>
+  </servlet-mapping>
+  
+</web-app>
