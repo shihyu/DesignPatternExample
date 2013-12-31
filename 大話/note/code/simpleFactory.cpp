@@ -1,7 +1,10 @@
+<<<<<<< HEAD
 #include <iostream>
 using namespace std;
 
 //基類
+=======
+>>>>>>> 14d3b8f815a3a91095d901d67b7df12325c89591
 class COperation {
 public:
     int m_nFirst;
@@ -12,7 +15,10 @@ public:
     }
 };
 
+<<<<<<< HEAD
 //加法
+=======
+>>>>>>> 14d3b8f815a3a91095d901d67b7df12325c89591
 class AddOperation : public COperation {
 public:
     virtual double GetResult() {
@@ -20,6 +26,7 @@ public:
     }
 };
 
+<<<<<<< HEAD
 //減法
 class SubOperation : public COperation {
 public:
@@ -65,3 +72,5 @@ int main() {
     cout << op->GetResult() << endl;
     return 0;
 }
+=======
+>>>>>>> 14d3b8f815a3a91095d901d67b7df12325c89591
