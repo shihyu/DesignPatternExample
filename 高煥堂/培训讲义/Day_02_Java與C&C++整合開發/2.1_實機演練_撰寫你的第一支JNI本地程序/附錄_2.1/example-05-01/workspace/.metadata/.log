@@ -1,0 +1,138 @@
+!SESSION 2008-09-26 13:28:32.671 -----------------------------------------------
+eclipse.buildId=I20080617-2000
+java.version=1.6.0_07
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_TW
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.equinox.p2.metadata.repository 4 1000 2008-09-26 13:30:09.875
+!MESSAGE No repository found at https://dl-ssl.google.com/android/eclipse/
+!SUBENTRY 1 org.eclipse.equinox.p2.updatesite 4 1002 2008-09-26 13:30:09.875
+!MESSAGE Error reading update site https://dl-ssl.google.com/android/eclipse/.
+!STACK 0
+java.net.UnknownHostException: dl-ssl.google.com
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at sun.net.NetworkClient.doConnect(Unknown Source)
+	at sun.net.www.http.HttpClient.openServer(Unknown Source)
+	at sun.net.www.http.HttpClient.openServer(Unknown Source)
+	at sun.net.www.protocol.https.HttpsClient.<init>(Unknown Source)
+	at sun.net.www.protocol.https.HttpsClient.New(Unknown Source)
+	at sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.getNewHttpClient(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(Unknown Source)
+	at sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(Unknown Source)
+	at sun.net.www.protocol.https.HttpsURLConnectionImpl.getInputStream(Unknown Source)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.UrlConnectionRetrieveFileTransfer.openStreams(UrlConnectionRetrieveFileTransfer.java:237)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.AbstractRetrieveFileTransfer.sendRetrieveRequest(AbstractRetrieveFileTransfer.java:639)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.AbstractRetrieveFileTransfer.sendRetrieveRequest(AbstractRetrieveFileTransfer.java:381)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.MultiProtocolRetrieveAdapter.sendRetrieveRequest(MultiProtocolRetrieveAdapter.java:95)
+	at org.eclipse.equinox.internal.p2.updatesite.ECFTransport.transfer(ECFTransport.java:284)
+	at org.eclipse.equinox.internal.p2.updatesite.ECFTransport.performDownload(ECFTransport.java:193)
+	at org.eclipse.equinox.internal.p2.updatesite.ECFTransport.download(ECFTransport.java:167)
+	at org.eclipse.equinox.internal.p2.updatesite.UpdateSite.loadSiteFile(UpdateSite.java:156)
+	at org.eclipse.equinox.internal.p2.updatesite.UpdateSite.load(UpdateSite.java:105)
+	at org.eclipse.equinox.internal.p2.updatesite.metadata.UpdateSiteMetadataRepository.<init>(UpdateSiteMetadataRepository.java:52)
+	at org.eclipse.equinox.internal.p2.updatesite.metadata.UpdateSiteMetadataRepositoryFactory.load(UpdateSiteMetadataRepositoryFactory.java:48)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:485)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:452)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:435)
+	at org.eclipse.equinox.internal.provisional.p2.ui.operations.ProvisioningUtil.loadMetadataRepository(ProvisioningUtil.java:71)
+	at org.eclipse.equinox.internal.provisional.p2.ui.dialogs.AvailableIUGroup$6.run(AvailableIUGroup.java:404)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.equinox.p2.director 2 0 2008-09-26 13:30:18.531
+!MESSAGE Problems resolving provisioning plan.
+!SUBENTRY 1 org.eclipse.equinox.p2.director 2 0 2008-09-26 13:30:18.531
+!MESSAGE Unable to satisfy dependency from com.android.ide.eclipse.editors.feature.group 0.8.0.v200809220836-110569 to requiredCapability: org.eclipse.equinox.p2.iu/org.eclipse.wst.sse.ui/0.0.0.
+!SUBENTRY 1 org.eclipse.equinox.p2.director 2 0 2008-09-26 13:30:18.531
+!MESSAGE Unable to satisfy dependency from com.android.ide.eclipse.editors.feature.group 0.8.0.v200809220836-110569 to requiredCapability: org.eclipse.equinox.p2.iu/org.eclipse.wst.xml.ui/0.0.0.
+!SUBENTRY 1 org.eclipse.equinox.p2.director 2 0 2008-09-26 13:30:18.531
+!MESSAGE Unable to satisfy dependency from com.android.ide.eclipse.editors.feature.group 0.8.0.v200809220836-110569 to requiredCapability: org.eclipse.equinox.p2.iu/org.eclipse.wst.xml.core/0.0.0.
+!SUBENTRY 1 org.eclipse.equinox.p2.director 2 0 2008-09-26 13:30:18.531
+!MESSAGE Unable to satisfy dependency from com.android.ide.eclipse.editors.feature.group 0.8.0.v200809220836-110569 to requiredCapability: org.eclipse.equinox.p2.iu/org.eclipse.wst.sse.core/0.0.0.
+!SUBENTRY 1 org.eclipse.equinox.p2.director 2 0 2008-09-26 13:30:18.531
+!MESSAGE Unable to satisfy dependency from com.android.ide.eclipse.editors.feature.group 0.8.0.v200809220836-110569 to requiredCapability: org.eclipse.equinox.p2.iu/org.eclipse.gef/0.0.0.
+
+!ENTRY org.eclipse.equinox.p2.director 4 0 2008-09-26 13:30:19.375
+!MESSAGE Problems resolving provisioning plan.
+!SUBENTRY 1 org.eclipse.equinox.p2.director 2 0 2008-09-26 13:30:19.375
+!MESSAGE Unable to satisfy dependency from com.android.ide.eclipse.editors.feature.group 0.8.0.v200809220836-110569 to requiredCapability: org.eclipse.equinox.p2.iu/org.eclipse.wst.sse.ui/0.0.0.
+!SUBENTRY 1 org.eclipse.equinox.p2.director 2 0 2008-09-26 13:30:19.375
+!MESSAGE Unable to satisfy dependency from com.android.ide.eclipse.editors.feature.group 0.8.0.v200809220836-110569 to requiredCapability: org.eclipse.equinox.p2.iu/org.eclipse.wst.xml.ui/0.0.0.
+!SUBENTRY 1 org.eclipse.equinox.p2.director 2 0 2008-09-26 13:30:19.375
+!MESSAGE Unable to satisfy dependency from com.android.ide.eclipse.editors.feature.group 0.8.0.v200809220836-110569 to requiredCapability: org.eclipse.equinox.p2.iu/org.eclipse.wst.xml.core/0.0.0.
+!SUBENTRY 1 org.eclipse.equinox.p2.director 2 0 2008-09-26 13:30:19.375
+!MESSAGE Unable to satisfy dependency from com.android.ide.eclipse.editors.feature.group 0.8.0.v200809220836-110569 to requiredCapability: org.eclipse.equinox.p2.iu/org.eclipse.wst.sse.core/0.0.0.
+!SUBENTRY 1 org.eclipse.equinox.p2.director 2 0 2008-09-26 13:30:19.375
+!MESSAGE Unable to satisfy dependency from com.android.ide.eclipse.editors.feature.group 0.8.0.v200809220836-110569 to requiredCapability: org.eclipse.equinox.p2.iu/org.eclipse.gef/0.0.0.
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 0 2008-09-26 13:30:19.375
+!MESSAGE No solution found because the problem in C:\DOCUME~1\tyyy\LOCALS~1\Temp\p2Encoding34020.opb is unsatisfiable.
+
+!ENTRY org.eclipse.equinox.p2.ui 4 10005 2008-09-26 13:30:28.718
+!MESSAGE Cannot complete the request.  See the details.
+!SUBENTRY 1 org.eclipse.equinox.p2.ui 4 10005 2008-09-26 13:30:28.718
+!MESSAGE Cannot complete the request.  See the details.
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 0 2008-09-26 13:30:28.718
+!MESSAGE Unsatisfied dependency: [com.android.ide.eclipse.editors.feature.group 0.8.0.v200809220836-110569] requiredCapability: org.eclipse.equinox.p2.iu/org.eclipse.wst.sse.core/0.0.0
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 0 2008-09-26 13:30:28.718
+!MESSAGE Unsatisfied dependency: [com.android.ide.eclipse.editors.feature.group 0.8.0.v200809220836-110569] requiredCapability: org.eclipse.equinox.p2.iu/org.eclipse.wst.xml.ui/0.0.0
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 0 2008-09-26 13:30:28.718
+!MESSAGE Unsatisfied dependency: [com.android.ide.eclipse.editors.feature.group 0.8.0.v200809220836-110569] requiredCapability: org.eclipse.equinox.p2.iu/org.eclipse.wst.xml.core/0.0.0
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 0 2008-09-26 13:30:28.718
+!MESSAGE Unsatisfied dependency: [com.android.ide.eclipse.editors.feature.group 0.8.0.v200809220836-110569] requiredCapability: org.eclipse.equinox.p2.iu/org.eclipse.wst.sse.ui/0.0.0
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 0 2008-09-26 13:30:28.718
+!MESSAGE Unsatisfied dependency: [com.android.ide.eclipse.editors.feature.group 0.8.0.v200809220836-110569] requiredCapability: org.eclipse.equinox.p2.iu/org.eclipse.gef/0.0.0
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 0 2008-09-26 13:30:28.718
+!MESSAGE Unsatisfied dependency: [com.android.ide.eclipse.editors.feature.group 0.8.0.v200809220836-110569] requiredCapability: org.eclipse.equinox.p2.iu/org.eclipse.wst.sse.core/0.0.0
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 0 2008-09-26 13:30:28.718
+!MESSAGE Unsatisfied dependency: [com.android.ide.eclipse.editors.feature.group 0.8.0.v200809220836-110569] requiredCapability: org.eclipse.equinox.p2.iu/org.eclipse.gef/0.0.0
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 0 2008-09-26 13:30:28.718
+!MESSAGE Unsatisfied dependency: [com.android.ide.eclipse.editors.feature.group 0.8.0.v200809220836-110569] requiredCapability: org.eclipse.equinox.p2.iu/org.eclipse.wst.xml.core/0.0.0
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 0 2008-09-26 13:30:28.718
+!MESSAGE Unsatisfied dependency: [com.android.ide.eclipse.editors.feature.group 0.8.0.v200809220836-110569] requiredCapability: org.eclipse.equinox.p2.iu/org.eclipse.wst.sse.ui/0.0.0
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 0 2008-09-26 13:30:28.718
+!MESSAGE Unsatisfied dependency: [com.android.ide.eclipse.editors.feature.group 0.8.0.v200809220836-110569] requiredCapability: org.eclipse.equinox.p2.iu/org.eclipse.wst.xml.ui/0.0.0
+
+!ENTRY org.eclipse.equinox.p2.ui 4 10005 2008-09-26 13:30:30.140
+!MESSAGE Cannot complete the request.  See the details.
+!SUBENTRY 1 org.eclipse.equinox.p2.ui 4 10005 2008-09-26 13:30:30.140
+!MESSAGE Cannot complete the request.  See the details.
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 0 2008-09-26 13:30:30.140
+!MESSAGE Unsatisfied dependency: [com.android.ide.eclipse.editors.feature.group 0.8.0.v200809220836-110569] requiredCapability: org.eclipse.equinox.p2.iu/org.eclipse.wst.sse.core/0.0.0
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 0 2008-09-26 13:30:30.140
+!MESSAGE Unsatisfied dependency: [com.android.ide.eclipse.editors.feature.group 0.8.0.v200809220836-110569] requiredCapability: org.eclipse.equinox.p2.iu/org.eclipse.wst.xml.ui/0.0.0
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 0 2008-09-26 13:30:30.140
+!MESSAGE Unsatisfied dependency: [com.android.ide.eclipse.editors.feature.group 0.8.0.v200809220836-110569] requiredCapability: org.eclipse.equinox.p2.iu/org.eclipse.wst.xml.core/0.0.0
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 0 2008-09-26 13:30:30.140
+!MESSAGE Unsatisfied dependency: [com.android.ide.eclipse.editors.feature.group 0.8.0.v200809220836-110569] requiredCapability: org.eclipse.equinox.p2.iu/org.eclipse.wst.sse.ui/0.0.0
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 0 2008-09-26 13:30:30.140
+!MESSAGE Unsatisfied dependency: [com.android.ide.eclipse.editors.feature.group 0.8.0.v200809220836-110569] requiredCapability: org.eclipse.equinox.p2.iu/org.eclipse.gef/0.0.0
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 0 2008-09-26 13:30:30.140
+!MESSAGE Unsatisfied dependency: [com.android.ide.eclipse.editors.feature.group 0.8.0.v200809220836-110569] requiredCapability: org.eclipse.equinox.p2.iu/org.eclipse.wst.sse.core/0.0.0
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 0 2008-09-26 13:30:30.140
+!MESSAGE Unsatisfied dependency: [com.android.ide.eclipse.editors.feature.group 0.8.0.v200809220836-110569] requiredCapability: org.eclipse.equinox.p2.iu/org.eclipse.gef/0.0.0
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 0 2008-09-26 13:30:30.140
+!MESSAGE Unsatisfied dependency: [com.android.ide.eclipse.editors.feature.group 0.8.0.v200809220836-110569] requiredCapability: org.eclipse.equinox.p2.iu/org.eclipse.wst.xml.core/0.0.0
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 0 2008-09-26 13:30:30.140
+!MESSAGE Unsatisfied dependency: [com.android.ide.eclipse.editors.feature.group 0.8.0.v200809220836-110569] requiredCapability: org.eclipse.equinox.p2.iu/org.eclipse.wst.sse.ui/0.0.0
+!SUBENTRY 1 org.eclipse.equinox.p2.director 4 0 2008-09-26 13:30:30.140
+!MESSAGE Unsatisfied dependency: [com.android.ide.eclipse.editors.feature.group 0.8.0.v200809220836-110569] requiredCapability: org.eclipse.equinox.p2.iu/org.eclipse.wst.xml.ui/0.0.0
+!SESSION 2008-09-27 17:37:22.312 -----------------------------------------------
+eclipse.buildId=I20080617-2000
+java.version=1.6.0_07
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_TW
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.core.resources 2 10035 2008-09-27 17:37:25.421
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+!SESSION 2008-09-28 11:35:45.390 -----------------------------------------------
+eclipse.buildId=I20080617-2000
+java.version=1.6.0_07
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_TW
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.core.resources 2 10035 2008-09-28 11:35:56.984
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
