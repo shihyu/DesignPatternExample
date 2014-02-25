@@ -18,7 +18,6 @@ public:
 class Man : public Person {
 public:
     virtual void accept(Action* visitor);
-
 };
 
 class ObjectStructure {

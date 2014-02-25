@@ -17,7 +17,6 @@ public:
     virtual UnionNations* getUn();
 
     virtual void setUn(UnionNations* un);
-
 };
 
 class USA : public Country {
@@ -27,7 +26,6 @@ public:
     virtual void declare(std::string message);
 
     virtual void getMessage(std::string message);
-
 };
 
 class Iraq : public Country {
@@ -37,7 +35,6 @@ public:
     virtual void declare(std::string message);
 
     virtual void getMessage(std::string message);
-
 };
 
 class UnionNationsSecurityCouncil : public UnionNations {
@@ -55,7 +52,6 @@ public:
     virtual void setIraq(Iraq* iraq);
 
     virtual void declare(std::string message, Country* country);
-
 };
 
 Iraq::Iraq(UnionNations* un) : Country(un) {

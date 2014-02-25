@@ -41,7 +41,6 @@ public:
 
 };
 
-
 class Manager : public RequestHandler {
 public:
     virtual void handleRequest(Request* que);

@@ -3,7 +3,7 @@
 #include <iostream>
 
 using namespace std;
-using namespace simpleFactory; 
+using namespace simpleFactory;
 
 int main() {
     Operation* operAdd = OperationFactory::createOperation('+');

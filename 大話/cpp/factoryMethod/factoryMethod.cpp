@@ -11,13 +11,11 @@ public:
 };
 
 class IFactory {
-
 public:
     virtual LeiFeng* createLeiFeng() = 0;
 };
 
 class VolunteerFactory : public IFactory {
-
 public:
     virtual LeiFeng* createLeiFeng();
 

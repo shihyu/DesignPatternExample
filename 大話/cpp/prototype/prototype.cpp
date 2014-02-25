@@ -26,7 +26,6 @@ public:
     virtual Resume* clone();
 };
 
-
 Resume::Resume(std::string name) {
     this->name = name;
 }

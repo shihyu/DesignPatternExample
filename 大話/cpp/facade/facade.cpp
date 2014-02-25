@@ -9,7 +9,6 @@ public:
 };
 
 class Stock1 {
-
 public:
     virtual void buy();
 
@@ -17,7 +16,6 @@ public:
 };
 
 class Fund {
-
 private:
     Stock1* s1;
     Stock2* s2;
@@ -27,7 +25,6 @@ public:
     virtual void method1();
 
     virtual void method2();
-
 };
 
 void Stock1::buy() {

@@ -3,7 +3,6 @@
 #include <string>
 
 class Person {
-
 private:
     std::string name;
 public:
@@ -42,8 +41,6 @@ class TShirt : public Finery {
 public:
     virtual void show();
 };
-
-
 
 class DecoraterMain {
 

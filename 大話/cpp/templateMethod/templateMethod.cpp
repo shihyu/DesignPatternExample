@@ -12,7 +12,6 @@ public:
 };
 
 class TestPaperA : public TestPaper {
-
 public:
     virtual void answer1();
 

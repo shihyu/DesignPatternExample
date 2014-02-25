@@ -50,7 +50,6 @@ public:
     NokiaMobile(std::string brand);
 
     virtual void run();
-
 };
 
 MotoMible::MotoMible(std::string brand)
@@ -110,5 +109,3 @@ int main() {
     moto->run();
     return 0;
 }
-
-

@@ -9,7 +9,7 @@ namespace templateMethod {
     }
 
     void TestPaper::question2() {
-        std::cout << "11+44="; 
+        std::cout << "11+44=";
         answer2();
     }
 
