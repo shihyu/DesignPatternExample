@@ -7,7 +7,6 @@ public:
         cout << "普通的請求" << endl;
     }
     virtual ~Target() {
-    
     }
 };
 

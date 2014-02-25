@@ -46,12 +46,12 @@ int main() {
     cin >> c;
 
     switch (c) {
-    case  '+':
-        {
-            Context *context = new Context(new AddOperation(a, b));
+    case  '+': {
+            Context* context = new Context(new AddOperation(a, b));
             cout << context->GetResult() << endl;
         }
         break;
+
     default:
         break;
     }
