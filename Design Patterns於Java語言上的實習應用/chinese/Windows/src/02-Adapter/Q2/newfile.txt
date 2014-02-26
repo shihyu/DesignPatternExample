@@ -1,0 +1,318 @@
+第2章 Adapter －換個包裝再度利用
+Adapter Pattern
+　　如果現在有一台使用直流電12V的筆記型電腦，要改接到交流電110V的家用電源時，你會需
+要用到交流電轉接器（AC Adapter）。交流電轉接器能將家用電源的「110V交流電」轉換成我們
+所需要的「12V直流電」。轉接器的功能就是介入既有內容和需要結果之間，做為溝通的橋樑。轉接
+器的英文原文是adapter，代表「adapt（適合）」的意思。
+
+（圖2-1）轉接器的功能
+1.交流電110V
+2.交流電轉換器
+3.直流電12V
+
+　　在程式設計的世界裡也是如此，如果既有內容無法直接利用時，通常需要先轉換成必要的型態後
+再使用。具有填平「既有內容」和「需要結果」兩者間「落差」的設計 Pattern就是：
+
+Adapter Pattern
+
+　　Adapter Pattern又稱為Wrapper Pattern。wrapper這個字有「包裝紙」的意思。就好
+像一個本來平淡無奇的商品經過美觀漂亮的包裝紙裝扮之後，就能搖身一變做為送人的禮品，某樣內
+容經過包裝改頭換面後即可使用在其他用途，具有這個轉換能力的就可引申為包裝紙或轉接器。
+　　Adapter Pattern有下列2種。
+	?類別的Adapter Pattern（繼承）
+	?實例的Adapter Pattern（委讓）
+　　本章依序會介紹這2種Adapter Pattern。
+
+程式範例（1）（繼承）
+　　以下程式範例係利用類別的Adapter Pattern，此範例不難，只有把字串輸出成：
+(Hello)
+　　或
+*Hello*
+　　Banner類別（banner是「廣告看板」的意思）有兩種方法，一是字串放在小括號內後再輸出
+的showWithParen方法，另一種是字串前後各加1個*後再輸出的showWithAster方法。假設
+這個Banner類別跟前面交流電110V一樣都是「既有的內容」。
+　　而Print介面則是宣告先調弱字串（加小括號）再輸出的方法printWeak（weak是微弱的意
+思）以及先加強字串（前後加*表示強調）再輸出的方法printStrong（strong是強大的意思）。
+假設這個介面跟前面的直流電12V一樣都是「需要的結果」。
+　　接下來要建立一個能使用Banner類別來滿足Print介面的類別，換句話說，就是把交流電110V
+轉換成直流電12V的轉接器。
+　　負責轉接器功能的是PrintBanner類別，它會繼承既有的Banner類別，然後實作需要的
+Print介面。Print Banner類別分別利用showWithParen方法、showWithAster方法來實作
+printWeak和printStrong。如此一來，PrintBanner類別就發揮了它轉接器的功能。使用電
+源與程式範例的對應關係即如表2-1所示。
+
+（表2-1）使用電源與程式範例的對應關係
+
+電源
+程式範例
+既有的內容
+交流電110V
+Banner類別（showWithParen, 
+showWithAster）
+轉換裝置
+轉接器
+PrintBanner類別
+需要的結果
+直流電12V
+Print介面（printWeak, printStrong）
+
+（圖2-2）類別圖 – 類別的程式範例（繼承）
+
+
+　　Banner類別
+　　Banner類別（List 2-1）是既有的類別。
+
+（List 2-1）Banner類別（Banner.java）
+public class Banner { 
+    private String string; 
+    public Banner(String string) { 
+        this.string = string; 
+    } 
+    public void showWithParen() { 
+        System.out.println("(" + string + ")"); 
+    } 
+    public void showWithAster() { 
+        System.out.println("*" + string + "*"); 
+    } 
+} 
+
+　　Print介面
+　　Print介面（List 2-2）是需要的介面。
+
+（List 2-2）Print介面（Print.java） 
+public interface Print { 
+    public abstract void printWeak(); 
+    public abstract void printStrong(); 
+} 
+
+　　PrintBanner類別
+　　PrintBanner類別（List 2-3）發揮轉接器的功能，它先擴充（extends）既有的Banner
+類別，然後繼承showWithParen方法和showWithAster方法。另外還先實作（implements）
+需要的Print介面，再實作printWeak方法和printStrong方法。
+ 
+（List 2-3）PrintBanner類別（PrintBanner.java）
+public class PrintBanner extends Banner implements Print { 
+    public PrintBanner(String string) { 
+        super(string); 
+    } 
+    public void printWeak() { 
+        showWithParen(); 
+    } 
+    public void printStrong() { 
+        showWithAster(); 
+    } 
+} 
+
+　　Main類別
+　　Main類別（List 2-4）則利用前面所建立的PrintBanner類別（即轉接器功能）減弱（小
+括號）、或加強（前後各一個*）字串Hello後再輸出。
+ 
+（List 2-4）Main類別（Main.java）
+public class Main { 
+    public static void main(String[] args) { 
+        Print p = new PrintBanner("Hello"); 
+        p.printWeak(); 
+        p.printStrong(); 
+    } 
+} 
+
+（圖2-3）執行結果 
+ (Hello)
+*Hello* 
+
+　　請注意，這裡是把PrintBanner的實例指定到Print介面型態的變數。Main類別只不過是
+利用Print這個介面（即利用printWeak方法和printStrong方法）來寫程式而已。從Main
+類別的原始碼完全看不出有Banner類別、showWithParen方法或showWithAster方法。就好
+像是筆記型電腦只要有人提供直流電12V的電流就能正常運作，根本不知道它的原形（轉接器的另
+一端）竟然是交流電110V。
+　　Main類別並不知道系統會以什麼樣的方式執行PrintBanner類別。換種說法，這個不知道也
+就是指不需要去修改Main類別，就能修改PrintBanner類別的實作。
+程式範例（2）（委讓）
+　　前面的程式範例是「類別」的Adapter Pattern，這裡要繼續介紹「實例」的Adapter 
+Pattern。前面的程式範例利用「繼承」進行符合（conformance），在此則是使用「委讓」。
+
+補充說明：委讓
+　　「委讓」這個名詞感覺上有點硬，不過主要是指把事情「交給誰」的意思。例如，無法出席重要
+會議時要寫委託書，內容大概是「由於我無法親自出席，特此委任王大明擔任我的代理人」。委讓跟
+委任大致相同。Java語言中的委讓是指把某個方法的實際處理動作交給其他實例的方法進行。 
+
+　　Main類別、Banner類別同前面的程式範例（1）。但Print是假設為類別而非介面（List 2-5）。
+　　也就是說，這裡是要利用Banner類別來實現另一個跟Print類別有相同方法的類別。記得嗎，
+Java語言是無法同時繼承兩個類別（單一繼承）。因為Java語言無法把PrintBanner類別定義
+成Print和Banner這兩者的子類別。
+　　PrintBanner類別（List 2-6）把Banner類別的實例儲存在banner欄位。這個實例是利
+用PrintBanner類別的建構子所產生。而在printWeak和printStrong方法再利用這個banner
+欄位呼叫出showWithParen, showWithAster方法。
+　　前面的範例是呼叫從自己的父類別繼承來的showWithParen, showWithAster方法，這裡
+則是透過欄位呼叫。
+　　這裡就出現了委讓關係。當系統呼叫PrintBanner類別的printWeak方法時，並不是自己動
+手處理，而是把工作交給其他實例（Banner的實例）的showWithParen方法。 
+
+（圖2-4）類別圖 – 實例的程式範例（委讓） 
+
+　　Print類別
+（List 2-5）Print類別（Print.java）
+public abstract class Print { 
+    public abstract void printWeak(); 
+    public abstract void printStrong(); 
+} 
+
+　　PrintBanner類別
+（List 2-6）PrintBanner類別（PrintBanner.java） 
+public class PrintBanner extends Print { 
+    private Banner banner; 
+    public PrintBanner(String string) { 
+        this.banner = new Banner(string); 
+    } 
+    public void printWeak() { 
+        banner.showWithParen(); 
+    } 
+    public void printStrong() { 
+        banner.showWithAster(); 
+    } 
+} 
+
+Adapter Pattern的所有角色
+　　Adapter Pattern中所出現過的角色可整理如下。
+Target（對象）的角色
+　　決定現在需要什麼方法的角色，例如筆記型電腦必須要有直流電12V才能動。在程式範例中，
+負責這個角色的是Print介面（繼承）和Print類別（委讓）。
+Client（委讓人）的角色
+　　利用Target角色的方法來做事的角色，例如有直流電12V才能用的筆記型電腦。在程式範例
+中，負責這個角色的是Main類別。
+Adaptee（被動符合）的角色
+　　是Adaptee（被動符合）而非Adapt-er（主動符合）。具有既有方法的角色，也就是交流電
+110V的交流電電源。在程式範例中，負責這個角色的是Banner類別。
+　　如果擔任Adaptee角色的方法與Target角色的方法有相符時（即若家用電源為直流電12V），
+那就不需要後面的Adapter角色了…。
+Adapter的角色
+　　Adapter Pattern的核心人物。利用Adaptee角色的方法努力滿足Target角色要求是
+Adapter Pattern的天賦使命，這是Adapter角色的工作。例如，把交流電110V轉換成直流電
+12V的轉接器。在程式範例中，負責這個角色的是PrintBanner類別。
+　　如果是類別的Adapter Pattern，Adapter角色要透過「繼承」的方式來利用Adaptee角
+色。
+　　而換到實例的Adapter Pattern時，就要改以「委?」來利用Adaptee角色。
+　　以上2個Adapter Pattern的類別圖即如圖2-5、圖2-6所示。
+擴展自我視野的提示
+　　什麼時候用？
+　　有些讀者可能會問「為什麼不等到有需要用哪個方法時，再動手編寫就好？花時間寫Adapter 
+Pattern真的有必要嗎」，到底什麼時候會需要用到Adapter Pattern？
+
+（圖2-5）類別圖 – 類別的Adapter Pattern（繼承）
+
+（圖2-6）類別圖 – 實例的Adapter Pattern（委讓）
+
+　　寫程式時不一定每次都要從零出發，我們經常會利用一些既有的類別。尤其是那些已經做過太多
+測試知道bug不多、或是曾經用過覺得不錯的類別，既然好用，當然會想盡量多利用這些類別。
+　　Adapter Pattern可以把過去使用過的類別換個包裝重新建立出需要的類別，這個 Pattern
+?可以幫你節省建立必要方法群組的時間。萬一程式寫著寫著發現有bug時，因為可以確定既有類
+別（Adaptee角色）沒有bug，所以只要重點式的檢查Adapter角色的類別即可，減輕程式檢查
+的負擔。
+　　就算沒有原始碼也無妨
+　　如果想要讓已經建立好的類別符合新建的介面（API），Adapter Pattern應該就是最自然的
+做法。但是我們經常會不自覺地陷入一個誤解的圈套，感覺上好像必須修改既有類別的程式碼才能讓
+它符合新建的介面（API），誤認為「應該只要修改一下這裡就好了」。事情可沒那麼簡單，一旦執行
+這個修改動作，原本已經完成動作測試的既有類別就得再重新作測試！
+　　Adapter Pattern的目的是不必動到既有類別就能讓它符合該介面（API）。而且Adapter 
+Pattern也不一定要取得既有類別的原始碼程式。Adapter Pattern只要知道既有類別的規格，
+就能建立其他新的類別。
+　　版本更新與相容性
+　　凡是軟體都會需要做版本更新，當你在做軟體的版本更新時最常碰到的問題應該是「與舊版本的
+相容性」。如果乾脆把舊版本整個殺掉，軟體維護當然就輕鬆許多，不過這個手段可不是萬靈丹。有
+時候利用Adapter Pattern會能讓新舊版本共存，而且維護也很容易。
+　　假設現在完成版本更新後，就只著重在新版本而不想再維護舊版本的部分。此時，把新版本視為
+Adaptee角色，舊版本則為Target角色，接下來只要建立一個擔任Adapter角色的類別，讓它
+利用新版本的類別來實作舊版本的方法即可。
+　　這個關係的概念圖即如圖2-7所示（請注意，這不是UML圖）。
+　　類別差別太大
+　　如果Adaptee角色跟Target角色的功能相差太多的話，當然就不能使用Adapter Pattern。
+想想，你可能從交流電110V的電源變成流出自來水嗎？
+
+（圖2-7）與舊版本取得相容性的Adapter Pattern 
+支援Version 1.0 的程式
+支援Version 2.0 的程式
+支援Version 1.0 的程式
+1.0<---->2.0轉接器
+
+相關 Pattern
+Bridge Pattern（第9章）
+　　Adapter Pattern是用來連接相異介面（API）的類別時所使用的 Pattern。Bridge 
+Pattern是連接功能階段和實作階段的 Pattern。
+Decorator Pattern（第12章）
+　　Adapter Pattern是填補介面（API）間差距的 Pattern。Decorator Pattern是不需
+更改介面（API）即可新增功能的 Pattern。
+重點回顧
+　　在本章所學習到的是連接兩個介面（API）相異的類別並填平其差距的Adapter Pattern。分
+別介紹利用繼承關係、委讓關係的做法，同時說明特徵。
+　　各位覺得如何，是不是開始習慣設計 Pattern了呢？別忘了要做練習問題喔。
+練習問題                                解答請見附錄A（p.383）
+●問題2-1
+　　本章的程式範例在建立PrintBanner類別的實例時，把它指定到Print型態變數（List 
+2-4），即：
+Print p = new PrintBanner("Hello");
+　　為什麼不採取下面這個指定到PrintBanner型態變數的做法呢？
+PrintBanner p = new PrintBanner("Hello"); 
+
+●問題2-2
+　　java.util.Properties類別是用來管理鍵盤和相對應數值（即內容），如：
+year=2000 
+month=11 
+day=20
+　　java.util.Properties類別有下面幾個方法可從資料束（stream）讀取內容或反向寫入到
+資料束。
+void load(InputStream in) throws IOException
+從InputStream讀取內容的集合。
+void store(OutputStream out, String header) throws IOException
+把內容的集合寫入到OutputStream。header是註解字串。 
+
+　　請利用Adapter Pattern建立一個把內容的集合儲存成檔案的FileProperties類別。
+　　假設在此是以List 2-7的FileIO介面（Target角色）宣告把內容的集合儲存成檔案的方
+法，FileProperties類別則是實作這個FileIO介面。
+　　執行前和執行後的file.txt、newfile.txt即如List 2-9和List 2-10所示（若該行字
+首是#，則為java.util.Properties類別自動產生的註解）。
+　　如果有FileProperties類別，就算不知道java.util.Properties類別的方法，只要知
+道FileIO介面的方法就能處理內容。
+　　以電源來比喻的話，java.util.Properties類別是既有的交流電110V、FileIO介面是現
+在需要的直流電12V，而FileProperties類別則為轉接器。 
+
+（List 2-7）FileIO介面（FileIO.java） 
+import java.io.*; 
+ 
+public interface FileIO { 
+    public void readFromFile(String filename) throws IOException; 
+    public void writeToFile(String filename) throws IOException; 
+    public void setValue(String key, String value); 
+    public String getValue(String key); 
+} 
+
+（List 2-8）Main類別（Main.java） 
+import java.io.*; 
+ 
+public class Main { 
+    public static void main(String[] args) { 
+        FileIO f = new FileProperties(); 
+        try { 
+            f.readFromFile("file.txt"); 
+            f.setValue("year", "2000"); 
+            f.setValue("month", "11"); 
+            f.setValue("day", "20"); 
+            f.writeToFile("newfile.txt"); 
+        } catch (IOException e) { 
+            e.printStackTrace(); 
+        } 
+    } 
+} 
+ 
+ 
+
+（List 2-9）讀取檔案（file.txt） 
+year=1999 
+ 
+
+（List 2-10）輸出檔案範例（newfile.txt） 
+#written by FileProperties 
+#Mon Nov 20 10:27:07 JST 2000			←顯示檔案建立的日期 
+day=20 
+year=2000 
+month=11
+
