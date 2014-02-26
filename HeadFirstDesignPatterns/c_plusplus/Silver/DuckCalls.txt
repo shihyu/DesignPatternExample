@@ -1,0 +1,7 @@
+display; quack;
+while(daylight) {fly; left; right}
+quack;
+while(raining) {swim; right; left}
+display;
+quack;
+
