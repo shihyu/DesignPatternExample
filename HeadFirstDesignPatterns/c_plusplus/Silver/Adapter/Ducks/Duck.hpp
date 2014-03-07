@@ -9,7 +9,7 @@ namespace Ducks {
 
 class Duck {
 
-	public: virtual ~Duck() = 0 {
+	public: virtual ~Duck() {
 	}
  	public: virtual void fly() const = 0;
 	public: virtual void quack() const = 0;

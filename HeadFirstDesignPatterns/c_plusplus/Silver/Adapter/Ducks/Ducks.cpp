@@ -1,4 +1,4 @@
-#include "Ducks.hpp"
+include "Ducks.hpp"
 
 using namespace HeadFirstDesignPatterns::Adapter::Ducks;
 

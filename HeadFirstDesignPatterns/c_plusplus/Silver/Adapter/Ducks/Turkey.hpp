@@ -9,7 +9,7 @@ namespace Ducks {
 
 class Turkey {
 
-	public: virtual ~Turkey() = 0 {
+	public: virtual ~Turkey() {
 	}
 	public: virtual void gobble() const = 0;
  	public: virtual void fly() const = 0;
