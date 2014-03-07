@@ -1,19 +1,21 @@
-#ifndef	_HFDP_CPP_STRATEGY_QUACK_BEHAVIOR_HPP_
+#ifndef _HFDP_CPP_STRATEGY_QUACK_BEHAVIOR_HPP_
 #define _HFDP_CPP_STRATEGY_QUACK_BEHAVIOR_HPP_
 
 #include "MiniDuckSimulator.hpp"
 
 namespace HeadFirstDesignPatterns {
-namespace Strategy {
+    namespace Strategy {
 
-class QuackBehavior {
+        class QuackBehavior {
 
-	public: virtual ~QuackBehavior() = 0 {
-	};
-	public: virtual void quack() const = 0;
-};
+        public:
+            virtual ~QuackBehavior() = 0 {
+            };
+        public:
+            virtual void quack() const = 0;
+        };
 
-} // namespace Strategy
+    } // namespace Strategy
 } // namespace HeadFirstDesignPatterns
 
 #endif

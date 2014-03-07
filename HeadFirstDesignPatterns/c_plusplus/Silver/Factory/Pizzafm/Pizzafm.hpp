@@ -1,4 +1,4 @@
-#ifndef	_HFDP_CPP_FACTORY_PIZZAFM_HPP_
+#ifndef _HFDP_CPP_FACTORY_PIZZAFM_HPP_
 #define _HFDP_CPP_FACTORY_PIZZAFM_HPP_
 
 #include "../../Standard.h"

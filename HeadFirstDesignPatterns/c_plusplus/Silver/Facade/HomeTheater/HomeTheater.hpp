@@ -1,4 +1,4 @@
-#ifndef	_HFDP_CPP_FACADE_HOME_THEATER_HPP_
+#ifndef _HFDP_CPP_FACADE_HOME_THEATER_HPP_
 #define _HFDP_CPP_FACADE_HOME_THEATER_HPP_
 
 #include "../../Standard.h"

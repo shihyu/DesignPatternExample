@@ -1,21 +1,23 @@
-#ifndef	_HFDP_CPP_STRATEGY_MALLARD_DUCK_HPP_
+#ifndef _HFDP_CPP_STRATEGY_MALLARD_DUCK_HPP_
 #define _HFDP_CPP_STRATEGY_MALLARD_DUCK_HPP_
 
 #include "MiniDuckSimulator.hpp"
 
 namespace HeadFirstDesignPatterns {
-namespace Strategy {
+    namespace Strategy {
 
-class MallardDuck : public Duck {
+        class MallardDuck : public Duck {
 
-	public:	MallardDuck() : Duck( new FlyWithWings(), new Quack() ) {
-	}
-	public: void display() const {
-		std::cout << "I'm a real Mallard duck" << std::endl;
-	}
-};
+        public:
+            MallardDuck() : Duck(new FlyWithWings(), new Quack()) {
+            }
+        public:
+            void display() const {
+                std::cout << "I'm a real Mallard duck" << std::endl;
+            }
+        };
 
-} // namespace Strategy
+    } // namespace Strategy
 } // namespace HeadFirstDesignPatterns
 
 #endif

@@ -1,27 +1,32 @@
-#ifndef	_HFDP_CPP_VISITOR_VISITOR_HPP_
+#ifndef _HFDP_CPP_VISITOR_VISITOR_HPP_
 #define _HFDP_CPP_VISITOR_VISITOR_HPP_
 
 namespace HeadFirstDesignPatterns {
-namespace Visitor {
-namespace Menus {
+    namespace Visitor {
+        namespace Menus {
 
-class Ingredient;
-class MenuItem;
-class Menu;
+            class Ingredient;
+            class MenuItem;
+            class Menu;
 
-class Visitor {
+            class Visitor {
 
-	protected: explicit Visitor() {
-	}
-	public: virtual ~Visitor() = 0 {
-	}
-	public: virtual void visit( Menu* component ) = 0;
-	public: virtual void visit( MenuItem* component ) = 0;
-	public: virtual void visit( Ingredient* component ) = 0;
-};
+            protected:
+                explicit Visitor() {
+                }
+            public:
+                virtual ~Visitor() = 0 {
+                }
+            public:
+                virtual void visit(Menu* component) = 0;
+            public:
+                virtual void visit(MenuItem* component) = 0;
+            public:
+                virtual void visit(Ingredient* component) = 0;
+            };
 
-} // namespace Menus
-} // namespace Visitor
+        } // namespace Menus
+    } // namespace Visitor
 } // namespace HeadFirstDesignPatterns
 
 #endif

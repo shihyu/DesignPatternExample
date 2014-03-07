@@ -1,4 +1,4 @@
-#ifndef	_HFDP_CPP_COMPOSITE_MENUS_HPP_
+#ifndef _HFDP_CPP_COMPOSITE_MENUS_HPP_
 #define _HFDP_CPP_COMPOSITE_MENUS_HPP_
 
 #include "../../Standard.h"

@@ -1,22 +1,25 @@
-#ifndef	_HFDP_CPP_INTERPRETER_MINI_DUCK_SIMULATOR_FLY_COMMAND_HPP_
+#ifndef _HFDP_CPP_INTERPRETER_MINI_DUCK_SIMULATOR_FLY_COMMAND_HPP_
 #define _HFDP_CPP_INTERPRETER_MINI_DUCK_SIMULATOR_FLY_COMMAND_HPP_
 
 #include "MiniDuckSimulator.hpp"
 
 namespace HeadFirstDesignPatterns {
-namespace Interpreter {
-namespace MiniDuckSimulator {
+    namespace Interpreter {
+        namespace MiniDuckSimulator {
 
-class FlyCommand : public Expression {
-	private: ~FlyCommand() { // disable inheritance
-	}
-	public: void accept( Visitor* visitor ) { assert( visitor );
-		visitor->interpret( this );
-	}
-};
+            class FlyCommand : public Expression {
+            private:
+                ~FlyCommand() { // disable inheritance
+                }
+            public:
+                void accept(Visitor* visitor) {
+                    assert(visitor);
+                    visitor->interpret(this);
+                }
+            };
 
-} // namespace MiniDuckSimulator
-} // namespace Interpreter
+        } // namespace MiniDuckSimulator
+    } // namespace Interpreter
 } // namespace HeadFirstDesignPatterns
 
 #endif

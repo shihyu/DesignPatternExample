@@ -1,4 +1,4 @@
-#ifndef	_HFDP_CPP_ADAPTER_BIRDS_HPP_
+#ifndef _HFDP_CPP_ADAPTER_BIRDS_HPP_
 #define _HFDP_CPP_ADAPTER_BIRDS_HPP_
 
 #include "../../Standard.h"

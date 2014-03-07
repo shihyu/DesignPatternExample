@@ -1,37 +1,46 @@
-#ifndef	_HFDP_CPP_COMPOUND_FACTORY_QUACK_COUNTER_HPP_
+#ifndef _HFDP_CPP_COMPOUND_FACTORY_QUACK_COUNTER_HPP_
 #define _HFDP_CPP_COMPOUND_FACTORY_QUACK_COUNTER_HPP_
 
 #include "DuckSimulator.hpp"
 
 namespace HeadFirstDesignPatterns {
-namespace Compound {
-namespace Factory {
+    namespace Compound {
+        namespace Factory {
 
-class QuackCounter : public Quackable {
+            class QuackCounter : public Quackable {
 
-	private: std::auto_ptr< Quackable > _duck;
-	private: static int _numberOfQuacks;
-  
-	private: QuackCounter( const QuackCounter& ); // Disable copy constructor
-	private: void operator=( const QuackCounter& ); // Disable assignment operator
+            private:
+                std::auto_ptr< Quackable > _duck;
+            private:
+                static int _numberOfQuacks;
 
-	public: explicit QuackCounter ( Quackable* duck ) :
-		_duck( duck ) { assert( duck );
-	}
-	public: void quack() const {
-		_duck->quack();
-		_numberOfQuacks++;
-	}
-	public: static int getQuacks() {
-		return _numberOfQuacks;
-	}
-	public: std::string toString() const {
-		return _duck->toString();
-	}
-};
+            private:
+                QuackCounter(const QuackCounter&);   // Disable copy constructor
+            private:
+                void operator=(const QuackCounter&);   // Disable assignment operator
 
-} // namespace Factory
-} // namespace Compound
+            public:
+                explicit QuackCounter(Quackable* duck) :
+                    _duck(duck) {
+                    assert(duck);
+                }
+            public:
+                void quack() const {
+                    _duck->quack();
+                    _numberOfQuacks++;
+                }
+            public:
+                static int getQuacks() {
+                    return _numberOfQuacks;
+                }
+            public:
+                std::string toString() const {
+                    return _duck->toString();
+                }
+            };
+
+        } // namespace Factory
+    } // namespace Compound
 } // namespace HeadFirstDesignPatterns
 
 #endif

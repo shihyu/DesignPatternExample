@@ -1,4 +1,4 @@
-#ifndef	_HFDP_CPP_TEMPLATE_BARISTA_HPP_
+#ifndef _HFDP_CPP_TEMPLATE_BARISTA_HPP_
 #define _HFDP_CPP_TEMPLATE_BARISTA_HPP_
 
 #include "../../Standard.h"

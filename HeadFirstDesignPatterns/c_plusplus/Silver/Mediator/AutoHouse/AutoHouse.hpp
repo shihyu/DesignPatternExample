@@ -1,4 +1,4 @@
-#ifndef	_HFDP_CPP_MEDIATOR_AUTO_HOUSE_HPP_
+#ifndef _HFDP_CPP_MEDIATOR_AUTO_HOUSE_HPP_
 #define _HFDP_CPP_MEDIATOR_AUTO_HOUSE_HPP_
 
 #include "../../Standard.h"
