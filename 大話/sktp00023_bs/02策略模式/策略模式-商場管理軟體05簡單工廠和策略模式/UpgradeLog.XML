@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="商場管理軟體">
+</Property><Property Name="方案檔" Value="C:\Books\大話設計模式\程式碼\02策略模式\策略模式-商場管理軟體05簡單工廠和策略模式\商場管理軟體.sln">
+</Property><Property Name="Date" Value="2009年2月24日">
+</Property><Property Name="Time" Value="上午 11:53">
+</Property></Properties><Event ErrorLevel="0" Project="商場管理軟體" Source="商場管理軟體\商場管理軟體.csproj" Description="專案轉換成功">
+</Event><Event ErrorLevel="3" Project="商場管理軟體" Source="商場管理軟體\商場管理軟體.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="商場管理軟體.sln" Description="方案轉換成功">
+</Event><Event ErrorLevel="3" Project="" Source="商場管理軟體.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="商場管理軟體" Source="商場管理軟體\商場管理軟體.csproj" Description="掃描完成: 專案檔不需要升級。">
+</Event></UpgradeLog>

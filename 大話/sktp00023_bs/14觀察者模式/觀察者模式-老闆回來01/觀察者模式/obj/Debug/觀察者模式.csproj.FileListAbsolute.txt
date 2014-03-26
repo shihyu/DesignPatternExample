@@ -1,0 +1,5 @@
+C:\Books\大話設計模式\程式碼\14觀察者模式\觀察者模式-老闆回來01\觀察者模式\bin\Debug\觀察者模式.exe
+C:\Books\大話設計模式\程式碼\14觀察者模式\觀察者模式-老闆回來01\觀察者模式\bin\Debug\觀察者模式.pdb
+C:\Books\大話設計模式\程式碼\14觀察者模式\觀察者模式-老闆回來01\觀察者模式\obj\Debug\ResolveAssemblyReference.cache
+C:\Books\大話設計模式\程式碼\14觀察者模式\觀察者模式-老闆回來01\觀察者模式\obj\Debug\觀察者模式.exe
+C:\Books\大話設計模式\程式碼\14觀察者模式\觀察者模式-老闆回來01\觀察者模式\obj\Debug\觀察者模式.pdb

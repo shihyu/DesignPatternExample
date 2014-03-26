@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="觀察者模式">
+</Property><Property Name="方案檔" Value="C:\Books\大話設計模式\程式碼\14觀察者模式\觀察者模式-老闆回來01\觀察者模式.sln">
+</Property><Property Name="Date" Value="2009年2月24日">
+</Property><Property Name="Time" Value="下午 15:09">
+</Property></Properties><Event ErrorLevel="0" Project="觀察者模式" Source="觀察者模式\觀察者模式.csproj" Description="專案轉換成功">
+</Event><Event ErrorLevel="3" Project="觀察者模式" Source="觀察者模式\觀察者模式.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="觀察者模式.sln" Description="方案轉換成功">
+</Event><Event ErrorLevel="3" Project="" Source="觀察者模式.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="觀察者模式" Source="觀察者模式\觀察者模式.csproj" Description="掃描完成: 專案檔不需要升級。">
+</Event></UpgradeLog>

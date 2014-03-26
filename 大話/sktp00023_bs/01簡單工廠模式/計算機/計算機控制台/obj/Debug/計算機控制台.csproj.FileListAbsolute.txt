@@ -1,0 +1,7 @@
+C:\Books\大話設計模式\程式碼\01簡單工廠模式\計算機\計算機控制台\bin\Debug\OperationLibrary.dll
+C:\Books\大話設計模式\程式碼\01簡單工廠模式\計算機\計算機控制台\bin\Debug\OperationLibrary.pdb
+C:\Books\大話設計模式\程式碼\01簡單工廠模式\計算機\計算機控制台\obj\Debug\ResolveAssemblyReference.cache
+C:\Books\大話設計模式\程式碼\01簡單工廠模式\計算機\計算機控制台\bin\Debug\計算機控制台.exe
+C:\Books\大話設計模式\程式碼\01簡單工廠模式\計算機\計算機控制台\bin\Debug\計算機控制台.pdb
+C:\Books\大話設計模式\程式碼\01簡單工廠模式\計算機\計算機控制台\obj\Debug\計算機控制台.exe
+C:\Books\大話設計模式\程式碼\01簡單工廠模式\計算機\計算機控制台\obj\Debug\計算機控制台.pdb
