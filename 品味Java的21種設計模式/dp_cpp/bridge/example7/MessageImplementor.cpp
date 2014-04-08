@@ -1,17 +1,12 @@
 #include "MessageImplementor.h"
 
-namespace cn
-{
-	namespace javass
-	{
-		namespace dp
-		{
-			namespace bridge
-			{
-				namespace example7
-				{
-				}
-			}
-		}
-	}
+namespace cn {
+namespace javass {
+namespace dp {
+namespace bridge {
+namespace example7 {
+}
+}
+}
+}
 }

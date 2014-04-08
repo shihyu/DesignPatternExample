@@ -2,10 +2,10 @@
 
 namespace command {
 
-    BakeMuttonCommand::BakeMuttonCommand(Barbecuer* bar) : Command(bar) {
-    }
+BakeMuttonCommand::BakeMuttonCommand(Barbecuer *bar) : Command(bar) {
+}
 
-    void BakeMuttonCommand::excuteCommand() {
-        this->getBarbecuer()->bakeMutton();
-    }
+void BakeMuttonCommand::excuteCommand() {
+    this->getBarbecuer()->bakeMutton();
+}
 }

@@ -4,10 +4,10 @@
 
 namespace simpleFactory {
 
-    class OperationSub : public Operation {
+class OperationSub : public Operation {
 
-    public:
-        virtual int getResult();
-    };
+public:
+    virtual int getResult();
+};
 
 }

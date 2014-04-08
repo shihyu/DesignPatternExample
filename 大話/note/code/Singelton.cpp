@@ -6,9 +6,9 @@ using namespace std;
 class Singelton {
 private:
     Singelton() {}
-    static Singelton* singel;
+    static Singelton *singel;
 public:
-    static Singelton* GetInstance() {
+    static Singelton *GetInstance() {
         if (singel == NULL) {
             singel = new Singelton();
         }
@@ -17,12 +17,12 @@ public:
     }
 };
 
-Singelton* Singelton::singel = NULL;//注意靜態變數類外初始化
+Singelton *Singelton::singel = NULL;//注意靜態變數類外初始化
 
 // 用戶端:
 int main() {
-    Singelton* s1 = Singelton::GetInstance();
-    Singelton* s2 = Singelton::GetInstance();
+    Singelton *s1 = Singelton::GetInstance();
+    Singelton *s2 = Singelton::GetInstance();
 
     if (s1 == s2) {
         cout << "ok" << endl;

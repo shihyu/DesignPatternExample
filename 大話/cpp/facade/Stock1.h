@@ -2,12 +2,12 @@
 
 namespace facade {
 
-    class Stock1 {
+class Stock1 {
 
-    public:
-        virtual void buy();
+public:
+    virtual void buy();
 
-        virtual void sell();
-    };
+    virtual void sell();
+};
 
 }

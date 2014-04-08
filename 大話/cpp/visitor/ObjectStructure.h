@@ -7,31 +7,31 @@
 namespace visitor {
 
 
-    class ObjectStructure {
+class ObjectStructure {
 
-    private:
-        std::vector<Person*> elements;
+private:
+    std::vector<Person *> elements;
 
-    public:
-        virtual void detach(Person* p);
+public:
+    virtual void detach(Person *p);
 
-        virtual void attach(Person* p);
+    virtual void attach(Person *p);
 
-        virtual void display(Action* visitor);
+    virtual void display(Action *visitor);
 
-    private:
-        bool initialized;
-        void InitializeInstanceFields() {
-            if (! initialized) {
-                elements = std::vector<Person*>();
-                initialized = true;
-            }
+private:
+    bool initialized;
+    void InitializeInstanceFields() {
+        if (! initialized) {
+            elements = std::vector<Person *>();
+            initialized = true;
         }
+    }
 
-    public:
-        ObjectStructure() {
-            InitializeInstanceFields();
-        }
-    };
+public:
+    ObjectStructure() {
+        InitializeInstanceFields();
+    }
+};
 
 }

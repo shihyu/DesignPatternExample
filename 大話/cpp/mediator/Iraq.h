@@ -6,15 +6,15 @@
 
 namespace mediator {
 
-    class Iraq : public Country {
+class Iraq : public Country {
 
-    public:
-        Iraq(UnionNations* un);
+public:
+    Iraq(UnionNations *un);
 
-        virtual void declare(std::string message);
+    virtual void declare(std::string message);
 
-        virtual void getMessage(std::string message);
+    virtual void getMessage(std::string message);
 
-    };
+};
 
 }

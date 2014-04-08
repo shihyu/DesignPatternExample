@@ -4,29 +4,23 @@
 #include "MessageImplementor.h"
 #include <string>
 
-namespace cn
-{
-	namespace javass
-	{
-		namespace dp
-		{
-			namespace bridge
-			{
-				namespace example6
-				{
-					///
-					/// <summary> * 普通消息 </summary>
-					/// 
-					class CommonMessage : public AbstractMessage
-					{
-					public:
-						CommonMessage(MessageImplementor *impl);
+namespace cn {
+namespace javass {
+namespace dp {
+namespace bridge {
+namespace example6 {
+///
+/// <summary> * 普通消息 </summary>
+///
+class CommonMessage : public AbstractMessage {
+public:
+    CommonMessage(MessageImplementor *impl);
 
-						virtual void sendMessage(std::string message, std::string toUser);
-					};
+    virtual void sendMessage(std::string message, std::string toUser);
+};
 
-				}
-			}
-		}
-	}
+}
+}
+}
+}
 }

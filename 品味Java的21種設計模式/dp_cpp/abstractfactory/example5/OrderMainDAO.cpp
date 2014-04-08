@@ -1,17 +1,12 @@
 #include "OrderMainDAO.h"
 
-namespace cn
-{
-	namespace javass
-	{
-		namespace dp
-		{
-			namespace abstractfactory
-			{
-				namespace example5
-				{
-				}
-			}
-		}
-	}
+namespace cn {
+namespace javass {
+namespace dp {
+namespace abstractfactory {
+namespace example5 {
+}
+}
+}
+}
 }

@@ -5,11 +5,11 @@
 
 namespace visitor {
 
-    class Woman : public Person {
+class Woman : public Person {
 
-    public:
-        virtual void accept(Action* visitor);
+public:
+    virtual void accept(Action *visitor);
 
-    };
+};
 
 }

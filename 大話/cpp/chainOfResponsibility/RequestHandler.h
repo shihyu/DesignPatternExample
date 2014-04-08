@@ -4,17 +4,17 @@
 
 namespace chainOfResponsibility {
 
-    class RequestHandler {
+class RequestHandler {
 
-    private:
-        RequestHandler* nextHandler;
+private:
+    RequestHandler *nextHandler;
 
-    public:
-        virtual void setNextHandler(RequestHandler* handler);
+public:
+    virtual void setNextHandler(RequestHandler *handler);
 
-        virtual void handleRequest(Request* que) = 0;
+    virtual void handleRequest(Request *que) = 0;
 
-        virtual RequestHandler* getNextHandler();
-    };
+    virtual RequestHandler *getNextHandler();
+};
 
 }

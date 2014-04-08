@@ -4,15 +4,15 @@
 
 namespace builder {
 
-    class PersonDirector {
+class PersonDirector {
 
-    private:
-        PersonBuilder* pb;
+private:
+    PersonBuilder *pb;
 
-    public:
-        PersonDirector(PersonBuilder* pb);
+public:
+    PersonDirector(PersonBuilder *pb);
 
-        virtual void createPerson();
-    };
+    virtual void createPerson();
+};
 
 }

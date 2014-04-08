@@ -7,13 +7,13 @@
 
 namespace decorator {
 
-    class DecoraterMain {
+class DecoraterMain {
 
-        ///
-        ///   * <param name="args"> </param>
-        ///
-        static void main(std::string args[]);
+    ///
+    ///   * <param name="args"> </param>
+    ///
+    static void main(std::string args[]);
 
-    };
+};
 
 }

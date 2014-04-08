@@ -4,7 +4,7 @@ using namespace HeadFirstDesignPatterns::Interpreter::MiniDuckSimulator;
 
 void lexer(std::istream_iterator< char > next,
            std::istream_iterator< char > last,
-           std::vector< std::string >& tokens) {
+           std::vector< std::string > &tokens) {
     std::string token;
 
     while (next != last) {
@@ -34,7 +34,7 @@ void lexer(std::istream_iterator< char > next,
     }
 }
 
-int main(int argc, char* argv[]) {
+int main(int argc, char *argv[]) {
     int fowl = 0;
 
     if (argc > 1) {  // argument[1]=type of duck

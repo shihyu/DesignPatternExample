@@ -38,7 +38,7 @@ public:
 
 class Translator : public Player {
 public:
-    Center* wjzf;
+    Center *wjzf;
 
     Translator(std::string name);
 
@@ -107,10 +107,10 @@ void Guard::defence() {
 }
 
 int main() {
-    Player* guard = new Guard("Alston");
+    Player *guard = new Guard("Alston");
     guard->attrack();
     guard->defence();
-    Player* center = new Translator("YM");
+    Player *center = new Translator("YM");
     center->attrack();
     center->defence();
     return 0;

@@ -16,10 +16,10 @@ public:
 
 class Finery : public Person {
 private:
-    Person* component;
+    Person *component;
 
 public:
-    virtual void decorate(Person* component);
+    virtual void decorate(Person *component);
 
     virtual void show();
 };
@@ -67,7 +67,7 @@ void Sneaker::show() {
 }
 
 
-void Finery::decorate(Person* component) {
+void Finery::decorate(Person *component) {
     this->component = component;
 }
 
@@ -97,10 +97,10 @@ void Person::setName(std::string name) {
 }
 
 int main() {
-    Person* lin = new Person("Lincoln");
+    Person *lin = new Person("Lincoln");
     std::cout << "The first show:" << std::endl;
-    Sneaker* s = new Sneaker();
-    Hat* h = new Hat();
+    Sneaker *s = new Sneaker();
+    Hat *h = new Hat();
     s->decorate(lin);
     h->decorate(s);
     h->show();

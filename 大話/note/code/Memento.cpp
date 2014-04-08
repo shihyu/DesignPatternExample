@@ -7,8 +7,8 @@ class Memo;
 class Originator {
 public:
     string state;
-    Memo* CreateMemo();
-    void SetMemo(Memo* memo);
+    Memo *CreateMemo();
+    void SetMemo(Memo *memo);
     void Show() {
         cout << "狀態:" << state << endl;
     }
@@ -23,26 +23,26 @@ public:
     }
 };
 
-Memo* Originator::CreateMemo() {
+Memo *Originator::CreateMemo() {
     return new Memo(state);
 }
 
-void Originator::SetMemo(Memo* memo) {
+void Originator::SetMemo(Memo *memo) {
     state = memo->state;
 }
 
 //管理者類
 class Caretaker {
 public:
-    Memo* memo;
+    Memo *memo;
 };
 
 // 用戶端:
 int main() {
-    Originator* on = new Originator();
+    Originator *on = new Originator();
     on->state = "on";
     on->Show();
-    Caretaker* c = new Caretaker();
+    Caretaker *c = new Caretaker();
     c->memo = on->CreateMemo();
     on->state = "off";
     on->Show();

@@ -3,8 +3,8 @@
 
 namespace decorator {
 
-    void Hat::show() {
-        std::cout << " red hat " << std::endl;
-        Finery::show();
-    }
+void Hat::show() {
+    std::cout << " red hat " << std::endl;
+    Finery::show();
+}
 }

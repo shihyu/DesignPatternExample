@@ -5,11 +5,11 @@
 
 namespace chainOfResponsibility {
 
-    class Manager : public RequestHandler {
+class Manager : public RequestHandler {
 
-    public:
-        virtual void handleRequest(Request* que);
+public:
+    virtual void handleRequest(Request *que);
 
-    };
+};
 
 }

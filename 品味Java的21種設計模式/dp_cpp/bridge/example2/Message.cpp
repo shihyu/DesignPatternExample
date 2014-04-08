@@ -1,17 +1,12 @@
 #include "Message.h"
 
-namespace cn
-{
-	namespace javass
-	{
-		namespace dp
-		{
-			namespace bridge
-			{
-				namespace example2
-				{
-				}
-			}
-		}
-	}
+namespace cn {
+namespace javass {
+namespace dp {
+namespace bridge {
+namespace example2 {
+}
+}
+}
+}
 }

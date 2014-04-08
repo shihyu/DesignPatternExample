@@ -2,14 +2,14 @@
 
 namespace factoryMethod {
 
-    class LeiFeng {
+class LeiFeng {
 
-    public:
-        virtual void sweep();
+public:
+    virtual void sweep();
 
-        virtual void buyRice();
+    virtual void buyRice();
 
-        virtual void Wash();
-    };
+    virtual void Wash();
+};
 
 }

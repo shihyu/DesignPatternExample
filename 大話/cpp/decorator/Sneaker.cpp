@@ -3,8 +3,8 @@
 
 namespace decorator {
 
-    void Sneaker::show() {
-        std::cout << " sneaker " << std::endl;
-        Finery::show();
-    }
+void Sneaker::show() {
+    std::cout << " sneaker " << std::endl;
+    Finery::show();
+}
 }

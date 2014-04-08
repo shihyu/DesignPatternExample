@@ -4,19 +4,19 @@
 
 namespace strategy {
 
-    class CashRebate : public CashSuper {
-    private:
-        double rebate;
+class CashRebate : public CashSuper {
+private:
+    double rebate;
 
-    public:
-        CashRebate(double rebate);
+public:
+    CashRebate(double rebate);
 
-        virtual double getRebate();
+    virtual double getRebate();
 
-        virtual void setRebate(double rebate);
+    virtual void setRebate(double rebate);
 
-        virtual double acceptCash(double money);
+    virtual double acceptCash(double money);
 
-    };
+};
 
 }

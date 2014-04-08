@@ -1,17 +1,12 @@
 #include "LogFileOperateApi.h"
 
-namespace cn
-{
-	namespace javass
-	{
-		namespace dp
-		{
-			namespace adapter
-			{
-				namespace example4
-				{
-				}
-			}
-		}
-	}
+namespace cn {
+namespace javass {
+namespace dp {
+namespace adapter {
+namespace example4 {
+}
+}
+}
+}
 }

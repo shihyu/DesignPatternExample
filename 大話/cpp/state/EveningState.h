@@ -7,11 +7,11 @@
 
 namespace state {
 
-    class EveningState : public State {
+class EveningState : public State {
 
-    public:
-        virtual void writeProgram(Work* w);
+public:
+    virtual void writeProgram(Work *w);
 
-    };
+};
 
 }

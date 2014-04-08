@@ -6,12 +6,12 @@
 
 namespace state {
 
-    class AfternoonState : public State {
+class AfternoonState : public State {
 
-    public:
-        virtual void writeProgram(Work* w);
+public:
+    virtual void writeProgram(Work *w);
 
-    };
+};
 
 }
 #endif

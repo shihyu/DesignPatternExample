@@ -6,11 +6,11 @@ class Country;
 
 namespace mediator {
 
-    class UnionNations {
+class UnionNations {
 
-    public:
-        virtual void declare(std::string message, Country* country) = 0;
-    };
+public:
+    virtual void declare(std::string message, Country *country) = 0;
+};
 
 }
 

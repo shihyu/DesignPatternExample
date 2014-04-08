@@ -4,9 +4,9 @@
 
 namespace simpleFactory {
 
-    class OperationAdd : public Operation {
-    public:
-        virtual int getResult();
-    };
+class OperationAdd : public Operation {
+public:
+    virtual int getResult();
+};
 
 }

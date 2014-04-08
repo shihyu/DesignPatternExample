@@ -2,7 +2,7 @@
 using namespace state;
 
 int main() {
-    Work* today = new Work();
+    Work *today = new Work();
     today->setHour(10);
     today->writeprogram();
     today->setHour(12);

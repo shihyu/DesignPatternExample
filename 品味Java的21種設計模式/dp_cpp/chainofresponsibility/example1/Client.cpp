@@ -3,8 +3,7 @@
 using namespace cn::javass::dp::chainofresponsibility::example1;
 
 
-int main(std::string args[])
-{
+int main(std::string args[]) {
     FeeRequest *request = new FeeRequest();
 
     //开始测试

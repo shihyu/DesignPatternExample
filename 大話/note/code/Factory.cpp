@@ -32,7 +32,7 @@ public :
 //工廠基類 Creator
 class LeiFengFactory {
 public:
-    virtual LeiFeng* CreateLeiFeng() {
+    virtual LeiFeng *CreateLeiFeng() {
         return new LeiFeng();
     }
     virtual ~LeiFengFactory() {
@@ -42,22 +42,22 @@ public:
 //工廠具體類
 class StudentFactory : public LeiFengFactory {
 public :
-    virtual LeiFeng* CreateLeiFeng() {
+    virtual LeiFeng *CreateLeiFeng() {
         return new Student();
     }
 };
 
 class VolenterFactory : public LeiFengFactory {
 public:
-    virtual LeiFeng* CreateLeiFeng() {
+    virtual LeiFeng *CreateLeiFeng() {
         return new Volenter();
     }
 };
 
 //用戶端
 int main() {
-    LeiFengFactory* sf = new LeiFengFactory();
-    LeiFeng* s = sf->CreateLeiFeng();
+    LeiFengFactory *sf = new LeiFengFactory();
+    LeiFeng *s = sf->CreateLeiFeng();
     s->Sweep();
     delete s;
     delete sf;

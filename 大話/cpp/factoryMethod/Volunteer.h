@@ -4,8 +4,8 @@
 
 namespace factoryMethod {
 
-    class Volunteer : public LeiFeng {
+class Volunteer : public LeiFeng {
 
-    };
+};
 
 }

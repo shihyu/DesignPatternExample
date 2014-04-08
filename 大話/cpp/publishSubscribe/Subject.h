@@ -6,31 +6,31 @@
 namespace publishSubscribe {
 
 
-    class Subject {
+class Subject {
 
-    private:
-        std::vector<Observer*> observerList;
+private:
+    std::vector<Observer *> observerList;
 
-    public:
-        virtual void attach(Observer* ob);
+public:
+    virtual void attach(Observer *ob);
 
-        virtual void detach(Observer* ob);
+    virtual void detach(Observer *ob);
 
-        virtual void notifyObservers();
+    virtual void notifyObservers();
 
-    private:
-        bool initialized;
-        void InitializeInstanceFields() {
-            if (! initialized) {
-                observerList = std::vector<Observer*>();
-                initialized = true;
-            }
+private:
+    bool initialized;
+    void InitializeInstanceFields() {
+        if (! initialized) {
+            observerList = std::vector<Observer *>();
+            initialized = true;
         }
+    }
 
-    public:
-        Subject() {
-            InitializeInstanceFields();
-        }
-    };
+public:
+    Subject() {
+        InitializeInstanceFields();
+    }
+};
 
 }

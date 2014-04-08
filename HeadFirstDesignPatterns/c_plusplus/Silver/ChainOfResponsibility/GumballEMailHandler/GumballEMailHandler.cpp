@@ -2,7 +2,7 @@
 
 using namespace HeadFirstDesignPatterns::ChainOfResponsibility::GumballEMailHandler;
 
-const char* email [] = {
+const char *email [] = {
     "You guys really razz my berries, your gumball machines are totally hip",
     "Cruisin for a bruisin? My kids lost their money trying to win gumballs!",
     "You guys make me frosted, you've got four year olds gambling now!",
@@ -22,10 +22,10 @@ const char* email [] = {
     "We want gumball machines in all our stores!, sincerly Starbuzz"
 };
 
-int main(int argc, char* argv[]) {
+int main(int argc, char *argv[]) {
     std::auto_ptr< Client > client(new Client());
 
-    for (int i = 0; i < sizeof(email) / sizeof(char*); i++) {
+    for (int i = 0; i < sizeof(email) / sizeof(char *); i++) {
         client->handleRequest(email[i]);
     }
 

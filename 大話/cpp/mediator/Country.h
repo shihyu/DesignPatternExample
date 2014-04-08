@@ -4,17 +4,17 @@
 
 namespace mediator {
 
-    class Country {
-    private:
-        UnionNations* un;
+class Country {
+private:
+    UnionNations *un;
 
-    public:
-        Country(UnionNations* un);
+public:
+    Country(UnionNations *un);
 
-        virtual UnionNations* getUn();
+    virtual UnionNations *getUn();
 
-        virtual void setUn(UnionNations* un);
+    virtual void setUn(UnionNations *un);
 
-    };
+};
 
 }

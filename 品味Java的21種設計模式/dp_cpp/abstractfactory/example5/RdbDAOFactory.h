@@ -6,26 +6,20 @@
 #include "OrderMainDAO.h"
 #include "RdbMainDAOImpl.h"
 
-namespace cn
-{
-	namespace javass
-	{
-		namespace dp
-		{
-			namespace abstractfactory
-			{
-				namespace example5
-				{
+namespace cn {
+namespace javass {
+namespace dp {
+namespace abstractfactory {
+namespace example5 {
 
-					class RdbDAOFactory : public DAOFactory
-					{
-					public:
-						virtual OrderDetailDAO *createOrderDetailDAO();
-						virtual OrderMainDAO *createOrderMainDAO();
-					};
+class RdbDAOFactory : public DAOFactory {
+public:
+    virtual OrderDetailDAO *createOrderDetailDAO();
+    virtual OrderMainDAO *createOrderMainDAO();
+};
 
-				}
-			}
-		}
-	}
+}
+}
+}
+}
 }

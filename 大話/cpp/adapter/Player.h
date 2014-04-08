@@ -4,19 +4,19 @@
 
 namespace adapter {
 
-    class Player {
+class Player {
 
-    private:
-        std::string name;
+private:
+    std::string name;
 
-    public:
-        virtual std::string getName();
+public:
+    virtual std::string getName();
 
-        virtual void setName(std::string name);
+    virtual void setName(std::string name);
 
-        virtual void attrack();
+    virtual void attrack();
 
-        virtual void defence();
-    };
+    virtual void defence();
+};
 
 }

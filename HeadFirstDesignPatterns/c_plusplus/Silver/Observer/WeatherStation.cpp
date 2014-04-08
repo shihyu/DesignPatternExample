@@ -2,7 +2,7 @@
 
 using namespace HeadFirstDesignPatterns::Observer;
 
-int main(int argc, char* argv[]) {
+int main(int argc, char *argv[]) {
     WeatherData weatherData;
     CurrentConditionsDisplay currentDisplay(&weatherData);
     StatisticsDisplay statisticsDisplay(&weatherData);

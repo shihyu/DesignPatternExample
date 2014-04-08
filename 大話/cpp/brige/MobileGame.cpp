@@ -3,7 +3,7 @@
 
 namespace brige {
 
-    void MobileGame::run() {
-        std::cout << "run mobile game!" << std::endl;
-    }
+void MobileGame::run() {
+    std::cout << "run mobile game!" << std::endl;
+}
 }

@@ -1,25 +1,18 @@
 #include "ConcreteStrategyB.h"
 
-namespace cn
-{
-	namespace javass
-	{
-		namespace dp
-		{
-			namespace strategy
-			{
-				namespace example7
-				{
+namespace cn {
+namespace javass {
+namespace dp {
+namespace strategy {
+namespace example7 {
 
-					void ConcreteStrategyB::stepOneOpe()
-					{
-					}
+void ConcreteStrategyB::stepOneOpe() {
+}
 
-					void ConcreteStrategyB::stepTwoOpe()
-					{
-					}
-				}
-			}
-		}
-	}
+void ConcreteStrategyB::stepTwoOpe() {
+}
+}
+}
+}
+}
 }

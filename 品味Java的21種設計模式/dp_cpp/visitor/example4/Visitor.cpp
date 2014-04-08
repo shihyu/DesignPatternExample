@@ -1,17 +1,12 @@
 #include "Visitor.h"
 
-namespace cn
-{
-	namespace javass
-	{
-		namespace dp
-		{
-			namespace visitor
-			{
-				namespace example4
-				{
-				}
-			}
-		}
-	}
+namespace cn {
+namespace javass {
+namespace dp {
+namespace visitor {
+namespace example4 {
+}
+}
+}
+}
 }

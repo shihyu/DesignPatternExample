@@ -16,7 +16,7 @@ extern "C" {
  */
 
 JNIEXPORT jint JNICALL Java_com_misoo_service_counternative_execute
-  (JNIEnv*, jobject, jint);
+(JNIEnv *, jobject, jint);
 
 #ifdef __cplusplus
 }

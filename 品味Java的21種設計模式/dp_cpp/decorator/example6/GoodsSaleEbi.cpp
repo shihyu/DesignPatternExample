@@ -1,17 +1,12 @@
 #include "GoodsSaleEbi.h"
 
-namespace cn
-{
-	namespace javass
-	{
-		namespace dp
-		{
-			namespace decorator
-			{
-				namespace example6
-				{
-				}
-			}
-		}
-	}
+namespace cn {
+namespace javass {
+namespace dp {
+namespace decorator {
+namespace example6 {
+}
+}
+}
+}
 }

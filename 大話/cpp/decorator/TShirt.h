@@ -4,10 +4,10 @@
 
 namespace decorator {
 
-    class TShirt : public Finery {
+class TShirt : public Finery {
 
-    public:
-        virtual void show();
-    };
+public:
+    virtual void show();
+};
 
 }

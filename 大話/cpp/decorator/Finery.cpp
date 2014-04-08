@@ -2,13 +2,13 @@
 
 namespace decorator {
 
-    void Finery::decorate(decorator::Person* component) {
-        this->component = component;
-    }
+void Finery::decorate(decorator::Person *component) {
+    this->component = component;
+}
 
-    void Finery::show() {
-        if (component != 0) {
-            component->show();
-        }
+void Finery::show() {
+    if (component != 0) {
+        component->show();
     }
+}
 }

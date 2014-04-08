@@ -2,10 +2,10 @@
 
 namespace strategy {
 
-    class CashSuper {
+class CashSuper {
 
-    public:
-        virtual double acceptCash(double money) = 0;
-    };
+public:
+    virtual double acceptCash(double money) = 0;
+};
 
 }

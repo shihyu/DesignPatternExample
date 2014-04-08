@@ -1,37 +1,28 @@
 #include "LoginModel.h"
 
-namespace cn
-{
-	namespace javass
-	{
-		namespace dp
-		{
-			namespace templatemethod
-			{
-				namespace example2
-				{
+namespace cn {
+namespace javass {
+namespace dp {
+namespace templatemethod {
+namespace example2 {
 
-					std::string LoginModel::getWorkerId()
-					{
-						return workerId;
-					}
+std::string LoginModel::getWorkerId() {
+    return workerId;
+}
 
-					void LoginModel::setWorkerId(std::string workerId)
-					{
-						this->workerId = workerId;
-					}
+void LoginModel::setWorkerId(std::string workerId) {
+    this->workerId = workerId;
+}
 
-					std::string LoginModel::getPwd()
-					{
-						return pwd;
-					}
+std::string LoginModel::getPwd() {
+    return pwd;
+}
 
-					void LoginModel::setPwd(std::string pwd)
-					{
-						this->pwd = pwd;
-					}
-				}
-			}
-		}
-	}
+void LoginModel::setPwd(std::string pwd) {
+    this->pwd = pwd;
+}
+}
+}
+}
+}
 }

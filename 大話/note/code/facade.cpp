@@ -26,9 +26,9 @@ public:
 //外觀類
 class Facade {
 private:
-    SubSysOne* sub1;
-    SubSysTwo* sub2;
-    SubSysThree* sub3;
+    SubSysOne *sub1;
+    SubSysTwo *sub2;
+    SubSysThree *sub3;
 public:
     Facade() {
         sub1 = new SubSysOne();
@@ -49,7 +49,7 @@ public:
 
 //用戶端
 int main() {
-    Facade* test = new Facade();
+    Facade *test = new Facade();
     test->FacadeMethod();
     return 0;
 }

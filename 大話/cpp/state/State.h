@@ -3,13 +3,13 @@
 //#include "Work.h"
 
 namespace state {
-    class Work;
+class Work;
 
-    class State {
+class State {
 
-    public:
-        virtual void writeProgram(Work* w) = 0;
-    };
+public:
+    virtual void writeProgram(Work *w) = 0;
+};
 
 }
-#endif 
+#endif

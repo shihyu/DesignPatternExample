@@ -9,12 +9,12 @@ public:
 
 class Subject {
 private:
-    std::vector<Observer*> observerList;
+    std::vector<Observer *> observerList;
 
 public:
-    virtual void attach(Observer* ob);
+    virtual void attach(Observer *ob);
 
-    virtual void detach(Observer* ob);
+    virtual void detach(Observer *ob);
 
     virtual void notifyObservers();
 
@@ -22,7 +22,7 @@ private:
     bool initialized;
     void InitializeInstanceFields() {
         if (! initialized) {
-            observerList = std::vector<Observer*>();
+            observerList = std::vector<Observer *>();
             initialized = true;
         }
     }
@@ -48,10 +48,10 @@ class LincolnObserver : public Observer {
 private:
     std::string name;
     std::string status;
-    ScretarySubject* sub;
+    ScretarySubject *sub;
 
 public:
-    LincolnObserver(std::string name, ScretarySubject* sub);
+    LincolnObserver(std::string name, ScretarySubject *sub);
 
     virtual std::string getName();
 
@@ -61,9 +61,9 @@ public:
 
     virtual void setStatus(std::string status);
 
-    virtual ScretarySubject* getSub();
+    virtual ScretarySubject *getSub();
 
-    virtual void setSub(ScretarySubject* sub);
+    virtual void setSub(ScretarySubject *sub);
 
     virtual void update();
 
@@ -87,13 +87,13 @@ void BossSubject::setSubjectState(std::string subjectState) {
     this->subjectState = subjectState;
 }
 
-void Subject::attach(Observer* ob) {
+void Subject::attach(Observer *ob) {
     this->observerList.push_back(ob);
 }
 
-void Subject::detach(Observer* ob) {
+void Subject::detach(Observer *ob) {
     // this->observerList.remove(ob);
-    for (std::vector<Observer*>::iterator it = observerList.begin(); it != observerList.end();) {
+    for (std::vector<Observer *>::iterator it = observerList.begin(); it != observerList.end();) {
         if (*it == ob) {
             it = observerList.erase(it);
         } else {
@@ -103,12 +103,12 @@ void Subject::detach(Observer* ob) {
 }
 
 void Subject::notifyObservers() {
-    for (std::vector<Observer*>::const_iterator o = observerList.begin(); o != observerList.end(); ++o) {
+    for (std::vector<Observer *>::const_iterator o = observerList.begin(); o != observerList.end(); ++o) {
         (*o)->update();
     }
 }
 
-LincolnObserver::LincolnObserver(std::string name, ScretarySubject* sub) {
+LincolnObserver::LincolnObserver(std::string name, ScretarySubject *sub) {
     this->name = name;
     this->sub = sub;
 }
@@ -129,11 +129,11 @@ void LincolnObserver::setStatus(std::string status) {
     this->status = status;
 }
 
-ScretarySubject* LincolnObserver::getSub() {
+ScretarySubject *LincolnObserver::getSub() {
     return sub;
 }
 
-void LincolnObserver::setSub(ScretarySubject* sub) {
+void LincolnObserver::setSub(ScretarySubject *sub) {
     this->sub = sub;
 }
 
@@ -151,9 +151,9 @@ void ScretarySubject::setSubjectState(std::string subjectState) {
 }
 
 int main() {
-    ScretarySubject* scretary = new ScretarySubject();
+    ScretarySubject *scretary = new ScretarySubject();
     scretary->setSubjectState("the boss is come back,work hardly!");
-    LincolnObserver* lin = new LincolnObserver("Lincoln", scretary);
+    LincolnObserver *lin = new LincolnObserver("Lincoln", scretary);
     scretary->attach(lin);
     scretary->notifyObservers();
     return 0;

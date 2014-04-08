@@ -6,11 +6,11 @@
 
 namespace state {
 
-    class BeforeNoonState : public State {
+class BeforeNoonState : public State {
 
-    public:
-        virtual void writeProgram(Work* w);
+public:
+    virtual void writeProgram(Work *w);
 
-    };
+};
 
 }

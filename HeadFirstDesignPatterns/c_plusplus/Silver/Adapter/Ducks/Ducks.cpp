@@ -2,12 +2,12 @@ include "Ducks.hpp"
 
 using namespace HeadFirstDesignPatterns::Adapter::Ducks;
 
-void testDuck(const Duck* duck) {
+void testDuck(const Duck *duck) {
     duck->quack();
     duck->fly();
 }
 
-int main(int argc, char* argv[]) {
+int main(int argc, char *argv[]) {
     std::auto_ptr< MallardDuck > duck(new MallardDuck());
 #ifdef _DUCK_ADAPTER_
     std::auto_ptr< Turkey > duckAdapter(new DuckAdapter(duck.get()));

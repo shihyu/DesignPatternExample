@@ -3,11 +3,11 @@
 
 namespace brige {
 
-    MotoMible::MotoMible(std::string brand) : Mobile(brand) {
-    }
+MotoMible::MotoMible(std::string brand) : Mobile(brand) {
+}
 
-    void MotoMible::run() {
-        std::cout << "Moto Mobile: " << std::endl;
-        this->getSoft()->run();
-    }
+void MotoMible::run() {
+    std::cout << "Moto Mobile: " << std::endl;
+    this->getSoft()->run();
+}
 }

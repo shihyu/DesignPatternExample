@@ -1,27 +1,20 @@
 #include "GAMainboard.h"
 
-namespace cn
-{
-	namespace javass
-	{
-		namespace dp
-		{
-			namespace abstractfactory
-			{
-				namespace example4
-				{
+namespace cn {
+namespace javass {
+namespace dp {
+namespace abstractfactory {
+namespace example4 {
 
-					GAMainboard::GAMainboard(int cpuHoles)
-					{
-						this->cpuHoles = cpuHoles;
-					}
+GAMainboard::GAMainboard(int cpuHoles) {
+    this->cpuHoles = cpuHoles;
+}
 
-					void GAMainboard::installCPU()
-					{
-						puts("now in GAMainboard,cpuHoles="+cpuHoles);
-					}
-				}
-			}
-		}
-	}
+void GAMainboard::installCPU() {
+    puts("now in GAMainboard,cpuHoles=" + cpuHoles);
+}
+}
+}
+}
+}
 }

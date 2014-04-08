@@ -2,28 +2,22 @@
 
 #include "BModuleApi.h"
 
-namespace cn
-{
-	namespace javass
-	{
-		namespace dp
-		{
-			namespace facade
-			{
-				namespace example2
-				{
+namespace cn {
+namespace javass {
+namespace dp {
+namespace facade {
+namespace example2 {
 
-					class BModuleImpl : public BModuleApi
-					{
+class BModuleImpl : public BModuleApi {
 
 
-					public:
-						virtual void testB();
+public:
+    virtual void testB();
 
-					};
+};
 
-				}
-			}
-		}
-	}
+}
+}
+}
+}
 }

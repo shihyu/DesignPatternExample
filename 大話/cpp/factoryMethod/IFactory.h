@@ -4,10 +4,10 @@
 
 namespace factoryMethod {
 
-    class IFactory {
+class IFactory {
 
-    public:
-        virtual LeiFeng* createLeiFeng() = 0;
-    };
+public:
+    virtual LeiFeng *createLeiFeng() = 0;
+};
 
 }

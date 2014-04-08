@@ -2,7 +2,7 @@
 
 using namespace HeadFirstDesignPatterns::Facade::HomeTheater;
 
-int main(int argc, char* argv[]) {
+int main(int argc, char *argv[]) {
     std::auto_ptr< Amplifier > amp(
         new Amplifier("Top-O-Line Amplifier"));
     std::auto_ptr< Tuner > tuner(

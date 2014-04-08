@@ -5,9 +5,9 @@ package cn.javass.dp.strategy.example3;
  */
 public class ConcreteStrategyB implements Strategy {
 
-	public void algorithmInterface() {
-		//具体的算法实现		
-	}
-	
+    public void algorithmInterface() {
+        //具体的算法实现
+    }
+
 }
 

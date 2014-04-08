@@ -2,7 +2,7 @@
 
 using namespace HeadFirstDesignPatterns::Composite::Menus;
 
-int main(int argc, char* argv[]) {
+int main(int argc, char *argv[]) {
     std::auto_ptr< MenuComponent > pancakeHouseMenu(
         new Menu("PANCAKE HOUSE MENU", "Breakfast"));
     std::auto_ptr< MenuComponent > dinerMenu(

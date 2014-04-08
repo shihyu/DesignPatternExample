@@ -13,7 +13,7 @@ extern "C" {
  * Signature: (II)I
  */
 JNIEXPORT jint JNICALL Java_com_misoo_gx05_NativeJniAdder_calculate
-  (JNIEnv *, jclass, jint, jint);
+(JNIEnv *, jclass, jint, jint);
 
 #ifdef __cplusplus
 }

@@ -1,17 +1,12 @@
 #include "Api.h"
 
-namespace cn
-{
-	namespace javass
-	{
-		namespace dp
-		{
-			namespace simplefactory
-			{
-				namespace example5
-				{
-				}
-			}
-		}
-	}
+namespace cn {
+namespace javass {
+namespace dp {
+namespace simplefactory {
+namespace example5 {
+}
+}
+}
+}
 }

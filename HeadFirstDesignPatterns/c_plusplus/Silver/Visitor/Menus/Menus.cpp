@@ -3,7 +3,7 @@
 
 using namespace HeadFirstDesignPatterns::Visitor::Menus;
 
-int main(int argc, char* argv[]) {
+int main(int argc, char *argv[]) {
     std::auto_ptr< MenuComponent > pancakeHouseMenu(
         new Menu("PANCAKE HOUSE MENU", "Breakfast")
     );
@@ -25,7 +25,7 @@ int main(int argc, char* argv[]) {
     allMenus->add(pancakeHouseMenu.get());
     allMenus->add(dinerMenu.get());
     allMenus->add(cafeMenu.get());
-    MenuItem* menuItem = 0;
+    MenuItem *menuItem = 0;
     menuItem = new MenuItem("K&B's Pancake Breakfast", "Pancakes with scrambled eggs, and toast", 2.99);
     menuItem->add(new Scrambled(new Egg(2.0f), new Butter(1.0f)));
     menuItem->add(new Bread(2.0f));
@@ -57,37 +57,37 @@ int main(int argc, char* argv[]) {
     srand(_getpid());
 
     switch (rand() % 6) {
-    case 0: {   //  sunday
+        case 0: {   //  sunday
             menuItem->add(new Soup("Potato soup", new Potato(1.0f), new Stock(new Milk(1.0f), 1.0f)));
         }
         break;
 
-    case 1: {   // monday
+        case 1: {   // monday
             menuItem->add(new Soup("Minnestrone soup", new MixedVegetables(1.0f), new Stock(new Chicken(0.5f), 0.5f)));
         }
         break;
 
-    case 2: {   // tuesday
+        case 2: {   // tuesday
             menuItem->add(new Soup("Tomato soup", new Tomato(1.0f), new Stock(new Tomato(1.0f), 0.5f)));
         }
         break;
 
-    case 3: {   // wednsday
+        case 3: {   // wednsday
             menuItem->add(new Soup("Beef barley soup", new Beef(1.0f), new Stock(new Beef(1.0f), 0.5f)));
         }
         break;
 
-    case 4: {   // thursday
+        case 4: {   // thursday
             menuItem->add(new Soup("Chicken noodle soup", new Pasta(1.0f), new Stock(new Chicken(1.0f), 0.25f)));
         }
         break;
 
-    case 5: {   // friday
+        case 5: {   // friday
             menuItem->add(new Soup("Fish soup", new Fish(1.0f), new Stock(new Fish(1.0f), 0.5f)));
         }
         break;
 
-    default: {  // saturday
+        default: {  // saturday
             menuItem->add(new Soup("Rice soup", new Rice(1.0f), new Stock(new Beef(0.5f), 0.5f)));
         }
         break;

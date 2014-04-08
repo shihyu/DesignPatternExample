@@ -40,7 +40,7 @@ public:
 //為中場翻譯
 class TransLater: public Player {
 private:
-    Center* player;
+    Center *player;
 public:
     TransLater(string strName): Player(strName) {
         player = new Center(strName);
@@ -55,7 +55,7 @@ public:
 
 // 用戶端
 int main() {
-    Player* p = new TransLater("小李");
+    Player *p = new TransLater("小李");
     p->Attack();
     return 0;
 }

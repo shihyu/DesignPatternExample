@@ -6,11 +6,11 @@
 
 namespace factoryMethod {
 
-    class UndergraduateFactory : public IFactory {
+class UndergraduateFactory : public IFactory {
 
-    public:
-        virtual LeiFeng* createLeiFeng();
+public:
+    virtual LeiFeng *createLeiFeng();
 
-    };
+};
 
 }

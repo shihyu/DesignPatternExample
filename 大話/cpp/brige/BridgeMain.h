@@ -10,13 +10,13 @@
 
 namespace brige {
 
-    class BridgeMain {
+class BridgeMain {
 
-        ///
-        ///   * <param name="args"> </param>
-        ///
-        static void main(std::string args[]);
+    ///
+    ///   * <param name="args"> </param>
+    ///
+    static void main(std::string args[]);
 
-    };
+};
 
 }

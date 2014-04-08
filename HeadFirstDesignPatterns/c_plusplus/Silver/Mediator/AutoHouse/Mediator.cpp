@@ -32,7 +32,7 @@ void Mediator::off() {
     _shower->off();
     _weatherStation->off();
 }
-void Mediator::onEvent(const Appliance* appliance, unsigned long value) const {
+void Mediator::onEvent(const Appliance *appliance, unsigned long value) const {
     if (appliance == _alarm.get()) {
         output("Alarm -- Buzzzzz!");
 

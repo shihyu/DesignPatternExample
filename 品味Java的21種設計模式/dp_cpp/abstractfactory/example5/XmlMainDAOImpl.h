@@ -2,27 +2,21 @@
 
 #include "OrderMainDAO.h"
 
-namespace cn
-{
-	namespace javass
-	{
-		namespace dp
-		{
-			namespace abstractfactory
-			{
-				namespace example5
-				{
+namespace cn {
+namespace javass {
+namespace dp {
+namespace abstractfactory {
+namespace example5 {
 
-					class XmlMainDAOImpl : public OrderMainDAO
-					{
+class XmlMainDAOImpl : public OrderMainDAO {
 
-					public:
-						virtual void saveOrderMain();
+public:
+    virtual void saveOrderMain();
 
-					};
+};
 
-				}
-			}
-		}
-	}
+}
+}
+}
+}
 }

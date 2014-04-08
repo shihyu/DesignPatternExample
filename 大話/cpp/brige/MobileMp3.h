@@ -4,11 +4,11 @@
 
 namespace brige {
 
-    class MobileMp3 : public MobileSoft {
+class MobileMp3 : public MobileSoft {
 
-    public:
-        virtual void run();
+public:
+    virtual void run();
 
-    };
+};
 
 }

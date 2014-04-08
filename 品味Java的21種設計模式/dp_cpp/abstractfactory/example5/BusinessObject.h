@@ -6,24 +6,18 @@
 #include "OrderDetailDAO.h"
 #include <string>
 
-namespace cn
-{
-	namespace javass
-	{
-		namespace dp
-		{
-			namespace abstractfactory
-			{
-				namespace example5
-				{
+namespace cn {
+namespace javass {
+namespace dp {
+namespace abstractfactory {
+namespace example5 {
 
-					class BusinessObject
-					{
-						static void main(std::string args[]);
-					};
+class BusinessObject {
+    static void main(std::string args[]);
+};
 
-				}
-			}
-		}
-	}
+}
+}
+}
+}
 }

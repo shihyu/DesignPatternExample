@@ -4,12 +4,12 @@ using namespace HeadFirstDesignPatterns::Compound::Decorator;
 
 int QuackCounter::_numberOfQuacks(0);
 
-void simulate(const Quackable* duck) {
+void simulate(const Quackable *duck) {
     assert(duck);
     duck->quack();
 }
 
-int main(int argc, char* argv[]) {
+int main(int argc, char *argv[]) {
     std::auto_ptr< Quackable > mallardDuck(new QuackCounter(new MallardDuck()));
     std::auto_ptr< Quackable > redheadDuck(new QuackCounter(new RedheadDuck()));
     std::auto_ptr< Quackable > duckCall(new QuackCounter(new DuckCall()));

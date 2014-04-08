@@ -5,11 +5,11 @@
 
 namespace interpreter {
 
-    class Scale : public Expression {
+class Scale : public Expression {
 
-    public:
-        virtual void excute(std::string key, double value);
+public:
+    virtual void excute(std::string key, double value);
 
-    };
+};
 
 }

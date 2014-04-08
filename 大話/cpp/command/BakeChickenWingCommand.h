@@ -5,13 +5,13 @@
 
 namespace command {
 
-    class BakeChickenWingCommand : public Command {
+class BakeChickenWingCommand : public Command {
 
-    public:
-        BakeChickenWingCommand(Barbecuer* bar);
+public:
+    BakeChickenWingCommand(Barbecuer *bar);
 
-        virtual void excuteCommand();
+    virtual void excuteCommand();
 
-    };
+};
 
 }

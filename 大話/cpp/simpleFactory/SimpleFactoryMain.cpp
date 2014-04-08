@@ -6,8 +6,8 @@ using namespace std;
 using namespace simpleFactory;
 
 int main() {
-    Operation* operAdd = OperationFactory::createOperation('+');
-    Operation* operSub = OperationFactory::createOperation('-');
+    Operation *operAdd = OperationFactory::createOperation('+');
+    Operation *operSub = OperationFactory::createOperation('-');
     operAdd->setA(11);
     operAdd->setB(22);
     //puts(operAdd->getResult());

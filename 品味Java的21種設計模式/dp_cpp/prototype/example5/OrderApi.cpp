@@ -1,17 +1,12 @@
 #include "OrderApi.h"
 
-namespace cn
-{
-	namespace javass
-	{
-		namespace dp
-		{
-			namespace prototype
-			{
-				namespace example5
-				{
-				}
-			}
-		}
-	}
+namespace cn {
+namespace javass {
+namespace dp {
+namespace prototype {
+namespace example5 {
+}
+}
+}
+}
 }

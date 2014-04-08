@@ -4,31 +4,31 @@
 //#include "BeforeNoonState.h"
 
 namespace state {
-    class State;
+class State;
 
-    class Work {
-    private:
-        int hour;
-        bool mIsFinish;
-        State* state;
+class Work {
+private:
+    int hour;
+    bool mIsFinish;
+    State *state;
 
-    public:
-        Work();
+public:
+    Work();
 
-        virtual int getHour();
+    virtual int getHour();
 
-        virtual void setHour(int hour);
+    virtual void setHour(int hour);
 
-        virtual bool isFinish();
+    virtual bool isFinish();
 
-        virtual State* getState();
+    virtual State *getState();
 
-        virtual void setState(State* state);
+    virtual void setState(State *state);
 
-        virtual void setFinish(bool isFinish);
+    virtual void setFinish(bool isFinish);
 
-        virtual void writeprogram();
-    };
+    virtual void writeprogram();
+};
 
 }
 #endif

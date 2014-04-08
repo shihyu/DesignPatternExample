@@ -13,23 +13,23 @@ public:
 //管理者
 class Manager {
 protected:
-    Manager* manager;
+    Manager *manager;
     string name;
 public:
     Manager(string temp) {
         name = temp;
     }
-    void SetSuccessor(Manager* temp) {
+    void SetSuccessor(Manager *temp) {
         manager = temp;
     }
-    virtual void GetRequest(Request* request) = 0;
+    virtual void GetRequest(Request *request) = 0;
 };
 
 //經理
 class CommonManager : public Manager {
 public:
     CommonManager(string strTemp) : Manager(strTemp) {}
-    virtual void GetRequest(Request* request) {
+    virtual void GetRequest(Request *request) {
         if (request->m_nNumber >= 0 && request->m_nNumber < 10) {
             cout << name << "處理了" << request->m_nNumber << "個請求" << endl;
         } else {
@@ -42,7 +42,7 @@ public:
 class MajorDomo : public Manager {
 public:
     MajorDomo(string name) : Manager(name) {}
-    virtual void GetRequest(Request* request) {
+    virtual void GetRequest(Request *request) {
         if (request->m_nNumber >= 10) {
             cout << name << "處理了" << request->m_nNumber << "個請求" << endl;
         }
@@ -51,10 +51,10 @@ public:
 
 //用戶端
 int main() {
-    Manager* common = new CommonManager("張經理");
-    Manager* major = new MajorDomo("李總監");
+    Manager *common = new CommonManager("張經理");
+    Manager *major = new MajorDomo("李總監");
     common->SetSuccessor(major);
-    Request* req = new Request();
+    Request *req = new Request();
     req->m_nNumber = 33;
     common->GetRequest(req);
     req->m_nNumber = 3;

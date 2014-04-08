@@ -4,25 +4,25 @@
 
 namespace composite {
 
-    class Company {
+class Company {
 
-    private:
-        std::string name;
+private:
+    std::string name;
 
-    public:
-        Company(std::string name);
+public:
+    Company(std::string name);
 
-        virtual std::string getName();
+    virtual std::string getName();
 
-        virtual void setName(std::string name);
+    virtual void setName(std::string name);
 
-        virtual void add(Company* c) = 0;
+    virtual void add(Company *c) = 0;
 
-        virtual void remove(Company* c) = 0;
+    virtual void remove(Company *c) = 0;
 
-        virtual void display(int depth) = 0;
+    virtual void display(int depth) = 0;
 
-        virtual void lineOfDuty() = 0;
-    };
+    virtual void lineOfDuty() = 0;
+};
 
 }

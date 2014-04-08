@@ -9,14 +9,14 @@ public:
 
 class CashContext {
 private:
-    CashSuper* cs;
+    CashSuper *cs;
 
 public:
     CashContext(std::string type);
 
-    virtual CashSuper* getCs();
+    virtual CashSuper *getCs();
 
-    virtual void setCs(CashSuper* cs);
+    virtual void setCs(CashSuper *cs);
 
     virtual double getCash(double money);
 };
@@ -76,11 +76,11 @@ CashContext::CashContext(std::string type) {
     }
 }
 
-CashSuper* CashContext::getCs() {
+CashSuper *CashContext::getCs() {
     return cs;
 }
 
-void CashContext::setCs(CashSuper* cs) {
+void CashContext::setCs(CashSuper *cs) {
     this->cs = cs;
 }
 
@@ -138,7 +138,7 @@ int main() {
     double price = 100.0;
     double num = 10;
     std::string s = "normal";
-    CashContext* cc = new CashContext(s);
+    CashContext *cc = new CashContext(s);
     std::cout << cc->getCash(price * num);
     return 0;
 }

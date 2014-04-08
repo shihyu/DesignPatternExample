@@ -2,10 +2,10 @@
 using namespace memento;
 
 int main() {
-    GameRole* mario = new GameRole("Mario");
+    GameRole *mario = new GameRole("Mario");
     mario->init();
     mario->show();
-    CareTaker* ct = new CareTaker();
+    CareTaker *ct = new CareTaker();
     ct->setMemento(mario->createMemento());
     mario->Fight();
     mario->show();

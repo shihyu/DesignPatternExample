@@ -25,9 +25,9 @@ public:
 
 class Pursuit : public GiveGift {
 public:
-    SchoolGirl* mm;
+    SchoolGirl *mm;
 
-    Pursuit(SchoolGirl* mm);
+    Pursuit(SchoolGirl *mm);
 
     virtual void giveChocolate();
 
@@ -39,9 +39,9 @@ public:
 
 class Proxy : public GiveGift {
 public:
-    Pursuit* gg;
+    Pursuit *gg;
 
-    Proxy(SchoolGirl* mm);
+    Proxy(SchoolGirl *mm);
 
     virtual void giveChocolate();
 
@@ -51,7 +51,7 @@ public:
 
 };
 
-Pursuit::Pursuit(SchoolGirl* mm) {
+Pursuit::Pursuit(SchoolGirl *mm) {
     this->mm = mm;
 }
 
@@ -82,7 +82,7 @@ void SchoolGirl::setName(std::string name) {
     this->name = name;
 }
 
-Proxy::Proxy(SchoolGirl* mm) {
+Proxy::Proxy(SchoolGirl *mm) {
     this->gg = new Pursuit(mm);
 }
 
@@ -99,8 +99,8 @@ void Proxy::giveFlowers() {
 }
 
 int main() {
-    SchoolGirl* mm = new SchoolGirl("jin ");
-    Proxy* agent = new Proxy(mm);
+    SchoolGirl *mm = new SchoolGirl("jin ");
+    Proxy *agent = new Proxy(mm);
     agent->giveChocolate();
     agent->giveFlowers();
     return 0;

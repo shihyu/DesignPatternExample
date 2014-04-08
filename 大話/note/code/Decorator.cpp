@@ -19,9 +19,9 @@ public:
 // 裝飾類
 class Finery : public Person  {
 protected:
-    Person* m_component;
+    Person *m_component;
 public:
-    void Decorate(Person* component) {
+    void Decorate(Person *component) {
         m_component = component;
     }
     virtual void Show() {
@@ -49,9 +49,9 @@ public:
 
 // 用戶端
 int main() {
-    Person* p = new Person("小李");
-    BigTrouser* bt = new BigTrouser();
-    TShirts* ts = new TShirts();
+    Person *p = new Person("小李");
+    BigTrouser *bt = new BigTrouser();
+    TShirts *ts = new TShirts();
     bt->Decorate(p);
     ts->Decorate(bt);
     ts->Show();

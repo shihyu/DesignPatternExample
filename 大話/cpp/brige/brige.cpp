@@ -8,15 +8,15 @@ public:
 
 class Mobile {
 private:
-    MobileSoft* soft;
+    MobileSoft *soft;
     std::string brand;
 
 public:
     Mobile(std::string brand);
 
-    virtual MobileSoft* getSoft();
+    virtual MobileSoft *getSoft();
 
-    virtual void setSoft(MobileSoft* soft);
+    virtual void setSoft(MobileSoft *soft);
 
     virtual std::string getBrand();
 
@@ -82,11 +82,11 @@ Mobile::Mobile(std::string brand) {
     this->brand = brand;
 }
 
-MobileSoft* Mobile::getSoft() {
+MobileSoft *Mobile::getSoft() {
     return soft;
 }
 
-void Mobile::setSoft(MobileSoft* soft) {
+void Mobile::setSoft(MobileSoft *soft) {
     this->soft = soft;
 }
 
@@ -99,12 +99,12 @@ void Mobile::setBrand(std::string brand) {
 }
 
 int main() {
-    Mobile* nokia = new NokiaMobile("Nokia");
-    MobileSoft* game = new MobileGame();
+    Mobile *nokia = new NokiaMobile("Nokia");
+    MobileSoft *game = new MobileGame();
     nokia->setSoft(game);
     nokia->run();
-    Mobile* moto = new MotoMible("Moto");
-    MobileSoft* mp3 = new MobileMp3();
+    Mobile *moto = new MotoMible("Moto");
+    MobileSoft *mp3 = new MobileMp3();
     moto->setSoft(mp3);
     moto->run();
     return 0;

@@ -7,13 +7,13 @@
 
 namespace mediator {
 
-    class MediatorMain {
+class MediatorMain {
 
-        ///
-        ///   * <param name="args"> </param>
-        ///
-        static void main(std::string args[]);
+    ///
+    ///   * <param name="args"> </param>
+    ///
+    static void main(std::string args[]);
 
-    };
+};
 
 }

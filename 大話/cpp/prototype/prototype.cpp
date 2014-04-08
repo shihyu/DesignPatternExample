@@ -23,7 +23,7 @@ public:
 
     virtual std::string ToString();
 
-    virtual Resume* clone();
+    virtual Resume *clone();
 };
 
 Resume::Resume(std::string name) {
@@ -58,10 +58,10 @@ std::string Resume::ToString() {
     return name + " " + sex + " " + age;
 }
 
-Resume* Resume::clone() {
+Resume *Resume::clone() {
     try {
-        return static_cast<Resume*>(__super::clone());
-    } catch (CloneNotSupportedException* e) {
+        return static_cast<Resume *>(__super::clone());
+    } catch (CloneNotSupportedException *e) {
         puts("Clone has error");
         e->printStackTrace();
     }
@@ -70,11 +70,11 @@ Resume* Resume::clone() {
 }
 
 int main() {
-    Resume* linResume = new Resume("Lincoln");
+    Resume *linResume = new Resume("Lincoln");
     linResume->setAge("23");
     linResume->setSex("M");
     puts(linResume->toString());
-    Resume* linResume2 = linResume->clone();
+    Resume *linResume2 = linResume->clone();
     linResume2->setAge("22");
     puts(linResume2->toString());
     return 0;

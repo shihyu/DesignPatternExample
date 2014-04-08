@@ -5,18 +5,18 @@
 
 namespace facade {
 
-    class Fund {
+class Fund {
 
-    private:
-        Stock1* s1;
-        Stock2* s2;
-    public:
-        Fund();
+private:
+    Stock1 *s1;
+    Stock2 *s2;
+public:
+    Fund();
 
-        virtual void method1();
+    virtual void method1();
 
-        virtual void method2();
+    virtual void method2();
 
-    };
+};
 
 }

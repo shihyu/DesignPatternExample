@@ -4,24 +4,18 @@
 #include "VoteManager.h"
 #include <string>
 
-namespace cn
-{
-	namespace javass
-	{
-		namespace dp
-		{
-			namespace state
-			{
-				namespace example5
-				{
+namespace cn {
+namespace javass {
+namespace dp {
+namespace state {
+namespace example5 {
 
-					class SpiteVoteState : public VoteState
-					{
-					public:
-						virtual void vote(std::string user, std::string voteItem, VoteManager *voteManager);
-					};
-				}
-			}
-		}
-	}
+class SpiteVoteState : public VoteState {
+public:
+    virtual void vote(std::string user, std::string voteItem, VoteManager *voteManager);
+};
+}
+}
+}
+}
 }

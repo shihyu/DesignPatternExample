@@ -4,15 +4,15 @@
 
 namespace memento {
 
-    class CareTaker {
+class CareTaker {
 
-    private:
-        Memento* memento;
+private:
+    Memento *memento;
 
-    public:
-        virtual Memento* getMemento();
+public:
+    virtual Memento *getMemento();
 
-        virtual void setMemento(Memento* memento);
-    };
+    virtual void setMemento(Memento *memento);
+};
 
 }

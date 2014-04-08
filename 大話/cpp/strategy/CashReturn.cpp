@@ -2,32 +2,32 @@
 
 namespace strategy {
 
-    CashReturn::CashReturn(double achieveNum, double returnNum) {
-        this->achieveNum = achieveNum;
-        this->returnNum = returnNum;
+CashReturn::CashReturn(double achieveNum, double returnNum) {
+    this->achieveNum = achieveNum;
+    this->returnNum = returnNum;
+}
+
+double CashReturn::acceptCash(double money) {
+    if (money > achieveNum) {
+        return money - floor(money / this->achieveNum) * returnNum;
     }
 
-    double CashReturn::acceptCash(double money) {
-        if (money > achieveNum) {
-            return money - floor(money / this->achieveNum) * returnNum;
-        }
+    return money;
+}
 
-        return money;
-    }
+double CashReturn::getAchieveNum() {
+    return achieveNum;
+}
 
-    double CashReturn::getAchieveNum() {
-        return achieveNum;
-    }
+void CashReturn::setAchieveNum(double achieveNum) {
+    this->achieveNum = achieveNum;
+}
 
-    void CashReturn::setAchieveNum(double achieveNum) {
-        this->achieveNum = achieveNum;
-    }
+double CashReturn::getReturnNum() {
+    return returnNum;
+}
 
-    double CashReturn::getReturnNum() {
-        return returnNum;
-    }
-
-    void CashReturn::setReturnNum(double returnNum) {
-        this->returnNum = returnNum;
-    }
+void CashReturn::setReturnNum(double returnNum) {
+    this->returnNum = returnNum;
+}
 }

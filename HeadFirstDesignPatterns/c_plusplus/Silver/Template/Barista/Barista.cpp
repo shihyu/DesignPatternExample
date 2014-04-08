@@ -2,7 +2,7 @@
 
 using namespace HeadFirstDesignPatterns::Template::Barista;
 
-int main(int argc, char* argv[]) {
+int main(int argc, char *argv[]) {
     std::auto_ptr< Tea > tea(new Tea());
     std::auto_ptr< Coffee > coffee(new Coffee());
     std::cout << std::endl << "Making tea..." << std::endl;

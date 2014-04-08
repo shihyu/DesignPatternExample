@@ -2,11 +2,11 @@
 
 namespace chainOfResponsibility {
 
-    void RequestHandler::setNextHandler(RequestHandler* handler) {
-        this->nextHandler = handler;
-    }
+void RequestHandler::setNextHandler(RequestHandler *handler) {
+    this->nextHandler = handler;
+}
 
-    RequestHandler* RequestHandler::getNextHandler() {
-        return nextHandler;
-    }
+RequestHandler *RequestHandler::getNextHandler() {
+    return nextHandler;
+}
 }

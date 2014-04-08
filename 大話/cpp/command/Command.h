@@ -4,18 +4,18 @@
 
 namespace command {
 
-    class Command {
+class Command {
 
-    private:
-        Barbecuer* barbecuer;
-    public:
-        Command(Barbecuer* bar);
+private:
+    Barbecuer *barbecuer;
+public:
+    Command(Barbecuer *bar);
 
-        virtual void excuteCommand() = 0;
+    virtual void excuteCommand() = 0;
 
-        virtual Barbecuer* getBarbecuer();
+    virtual Barbecuer *getBarbecuer();
 
-        virtual void setBarbecuer(Barbecuer* barbecuer);
-    };
+    virtual void setBarbecuer(Barbecuer *barbecuer);
+};
 
 }

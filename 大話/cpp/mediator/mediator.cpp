@@ -4,24 +4,24 @@
 class Country;
 class UnionNations {
 public:
-    virtual void declare(std::string message, Country* country) = 0;
+    virtual void declare(std::string message, Country *country) = 0;
 };
 
 class Country {
 private:
-    UnionNations* un;
+    UnionNations *un;
 
 public:
-    Country(UnionNations* un);
+    Country(UnionNations *un);
 
-    virtual UnionNations* getUn();
+    virtual UnionNations *getUn();
 
-    virtual void setUn(UnionNations* un);
+    virtual void setUn(UnionNations *un);
 };
 
 class USA : public Country {
 public:
-    USA(UnionNations* un);
+    USA(UnionNations *un);
 
     virtual void declare(std::string message);
 
@@ -30,7 +30,7 @@ public:
 
 class Iraq : public Country {
 public:
-    Iraq(UnionNations* un);
+    Iraq(UnionNations *un);
 
     virtual void declare(std::string message);
 
@@ -39,22 +39,22 @@ public:
 
 class UnionNationsSecurityCouncil : public UnionNations {
 private:
-    USA* usa;
-    Iraq* iraq;
+    USA *usa;
+    Iraq *iraq;
 
 public:
-    virtual USA* getUsa();
+    virtual USA *getUsa();
 
-    virtual void setUsa(USA* usa);
+    virtual void setUsa(USA *usa);
 
-    virtual Iraq* getIraq();
+    virtual Iraq *getIraq();
 
-    virtual void setIraq(Iraq* iraq);
+    virtual void setIraq(Iraq *iraq);
 
-    virtual void declare(std::string message, Country* country);
+    virtual void declare(std::string message, Country *country);
 };
 
-Iraq::Iraq(UnionNations* un) : Country(un) {
+Iraq::Iraq(UnionNations *un) : Country(un) {
 }
 
 void Iraq::declare(std::string message) {
@@ -65,43 +65,43 @@ void Iraq::getMessage(std::string message) {
     std::cout << "Iraq has get the message: " << message << std::endl;
 }
 
-Country::Country(UnionNations* un) {
+Country::Country(UnionNations *un) {
     this->un = un;
 }
 
-UnionNations* Country::getUn() {
+UnionNations *Country::getUn() {
     return un;
 }
 
-void Country::setUn(UnionNations* un) {
+void Country::setUn(UnionNations *un) {
     this->un = un;
 }
 
-USA* UnionNationsSecurityCouncil::getUsa() {
+USA *UnionNationsSecurityCouncil::getUsa() {
     return usa;
 }
 
-void UnionNationsSecurityCouncil::setUsa(USA* usa) {
+void UnionNationsSecurityCouncil::setUsa(USA *usa) {
     this->usa = usa;
 }
 
-Iraq* UnionNationsSecurityCouncil::getIraq() {
+Iraq *UnionNationsSecurityCouncil::getIraq() {
     return iraq;
 }
 
-void UnionNationsSecurityCouncil::setIraq(Iraq* iraq) {
+void UnionNationsSecurityCouncil::setIraq(Iraq *iraq) {
     this->iraq = iraq;
 }
 
-void UnionNationsSecurityCouncil::declare(std::string message, Country* country) {
-    if (dynamic_cast<USA*>(country) != 0) {
+void UnionNationsSecurityCouncil::declare(std::string message, Country *country) {
+    if (dynamic_cast<USA *>(country) != 0) {
         iraq->getMessage(message);
     } else {
         usa->getMessage(message);
     }
 }
 
-USA::USA(UnionNations* un) : Country(un) {
+USA::USA(UnionNations *un) : Country(un) {
 }
 
 void USA::declare(std::string message) {
@@ -113,9 +113,9 @@ void USA::getMessage(std::string message) {
 }
 
 int main(void) {
-    UnionNationsSecurityCouncil* unsc = new UnionNationsSecurityCouncil();
-    USA* usa = new USA(unsc);
-    Iraq* iraq = new Iraq(unsc);
+    UnionNationsSecurityCouncil *unsc = new UnionNationsSecurityCouncil();
+    USA *usa = new USA(unsc);
+    Iraq *iraq = new Iraq(unsc);
     unsc->setIraq(iraq);
     unsc->setUsa(usa);
     usa->declare("stop the unclear weapon's development!");

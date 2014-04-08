@@ -5,24 +5,18 @@
 #include "CommonMessageEmail.h"
 #include <string>
 
-namespace cn
-{
-	namespace javass
-	{
-		namespace dp
-		{
-			namespace bridge
-			{
-				namespace example2
-				{
+namespace cn {
+namespace javass {
+namespace dp {
+namespace bridge {
+namespace example2 {
 
-					class Client
-					{
-						static void main(std::string args[]);
-					};
+class Client {
+    static void main(std::string args[]);
+};
 
-				}
-			}
-		}
-	}
+}
+}
+}
+}
 }

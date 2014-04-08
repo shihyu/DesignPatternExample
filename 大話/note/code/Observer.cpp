@@ -8,9 +8,9 @@ class Secretary;
 class StockObserver {
 private:
     string name;
-    Secretary* sub;
+    Secretary *sub;
 public:
-    StockObserver(string strname, Secretary* strsub) {
+    StockObserver(string strname, Secretary *strsub) {
         name = strname;
         sub = strsub;
     }
@@ -42,11 +42,11 @@ void StockObserver::Update() {
 
 //用戶端
 int main() {
-    Secretary* p = new Secretary();
+    Secretary *p = new Secretary();
     //創建通知者
     //觀察者
-    StockObserver* s1 = new StockObserver("小李", p);
-    StockObserver* s2 = new StockObserver("小趙", p);
+    StockObserver *s1 = new StockObserver("小李", p);
+    StockObserver *s2 = new StockObserver("小趙", p);
     //加入通知佇列
     p->Add(*s1);
     p->Add(*s2);

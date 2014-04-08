@@ -9,13 +9,13 @@
 
 namespace command {
 
-    class CommandMain {
+class CommandMain {
 
-        ///
-        ///   * <param name="args"> </param>
-        ///
-        static void main(std::string args[]);
+    ///
+    ///   * <param name="args"> </param>
+    ///
+    static void main(std::string args[]);
 
-    };
+};
 
 }

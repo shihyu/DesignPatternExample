@@ -2,28 +2,22 @@
 
 #include "CModuleApi.h"
 
-namespace cn
-{
-	namespace javass
-	{
-		namespace dp
-		{
-			namespace facade
-			{
-				namespace example2
-				{
+namespace cn {
+namespace javass {
+namespace dp {
+namespace facade {
+namespace example2 {
 
-					class CModuleImpl : public CModuleApi
-					{
+class CModuleImpl : public CModuleApi {
 
 
-					public:
-						virtual void testC();
+public:
+    virtual void testC();
 
-					};
+};
 
-				}
-			}
-		}
-	}
+}
+}
+}
+}
 }

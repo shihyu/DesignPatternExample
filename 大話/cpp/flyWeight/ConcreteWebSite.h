@@ -6,19 +6,19 @@
 
 namespace flyWeight {
 
-    class ConcreteWebSite : public WebSite {
-    private:
-        std::string name;
+class ConcreteWebSite : public WebSite {
+private:
+    std::string name;
 
-    public:
-        ConcreteWebSite(std::string name);
+public:
+    ConcreteWebSite(std::string name);
 
-        virtual void use(User* u);
+    virtual void use(User *u);
 
-        virtual std::string getName();
+    virtual std::string getName();
 
-        virtual void setName(std::string name);
+    virtual void setName(std::string name);
 
-    };
+};
 
 }

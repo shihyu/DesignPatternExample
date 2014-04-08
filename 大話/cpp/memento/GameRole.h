@@ -5,42 +5,42 @@
 
 namespace memento {
 
-    class GameRole {
+class GameRole {
 
-    private:
-        std::string name;
-        int vitality;
-        int attrack;
-        int defence;
+private:
+    std::string name;
+    int vitality;
+    int attrack;
+    int defence;
 
-    public:
-        GameRole(std::string name);
+public:
+    GameRole(std::string name);
 
-        virtual std::string getName();
+    virtual std::string getName();
 
-        virtual void setName(std::string name);
+    virtual void setName(std::string name);
 
-        virtual int getVitality();
+    virtual int getVitality();
 
-        virtual void setVitality(int vitality);
+    virtual void setVitality(int vitality);
 
-        virtual int getAttrack();
+    virtual int getAttrack();
 
-        virtual void setAttrack(int attrack);
+    virtual void setAttrack(int attrack);
 
-        virtual int getDefence();
+    virtual int getDefence();
 
-        virtual void setDefence(int defence);
+    virtual void setDefence(int defence);
 
-        virtual void init();
+    virtual void init();
 
-        virtual void Fight();
+    virtual void Fight();
 
-        virtual void show();
+    virtual void show();
 
-        virtual Memento* createMemento();
+    virtual Memento *createMemento();
 
-        virtual void backupFromMemento(Memento* m);
-    };
+    virtual void backupFromMemento(Memento *m);
+};
 
 }

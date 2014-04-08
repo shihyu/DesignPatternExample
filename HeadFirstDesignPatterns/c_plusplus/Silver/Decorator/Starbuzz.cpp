@@ -2,15 +2,15 @@
 
 using namespace HeadFirstDesignPatterns::Decorator;
 
-int main(int argc, char* argv[]) {
-    Beverage* beverage = new Espresso();
+int main(int argc, char *argv[]) {
+    Beverage *beverage = new Espresso();
     std::cout.setf(std::ios::showpoint);
     std::cout.precision(3);
     std::cout << beverage->getDescription()
               << " $"
               << beverage->cost()
               << std::endl;
-    Beverage* beverage2 = new DarkRoast();
+    Beverage *beverage2 = new DarkRoast();
     beverage2 = new Mocha(beverage2);
     beverage2 = new Mocha(beverage2);
     beverage2 = new Whip(beverage2);
@@ -18,7 +18,7 @@ int main(int argc, char* argv[]) {
               << " $"
               << beverage2->cost()
               << std::endl;
-    Beverage* beverage3 = new HouseBlend();
+    Beverage *beverage3 = new HouseBlend();
     beverage3 = new Soy(beverage3);
     beverage3 = new Mocha(beverage3);
     beverage3 = new Whip(beverage3);

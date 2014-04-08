@@ -13,10 +13,10 @@ public:
 class PersonDirector {
 
 private:
-    PersonBuilder* pb;
+    PersonBuilder *pb;
 
 public:
-    PersonDirector(PersonBuilder* pb);
+    PersonDirector(PersonBuilder *pb);
 
     virtual void createPerson();
 };
@@ -91,7 +91,7 @@ void FatPersonBuilder::createLeg() {
 }
 
 
-PersonDirector::PersonDirector(PersonBuilder* pb) {
+PersonDirector::PersonDirector(PersonBuilder *pb) {
     this->pb = pb;
 }
 
@@ -103,9 +103,9 @@ void PersonDirector::createPerson() {
 }
 
 int main() {
-    PersonBuilder* thin = new ThinPersonBuilder();
-    PersonBuilder* fat = new FatPersonBuilder();
-    PersonDirector* pd = new PersonDirector(thin);
+    PersonBuilder *thin = new ThinPersonBuilder();
+    PersonBuilder *fat = new FatPersonBuilder();
+    PersonDirector *pd = new PersonDirector(thin);
     pd->createPerson();
     pd = new PersonDirector(fat);
     pd->createPerson();

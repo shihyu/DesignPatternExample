@@ -3,29 +3,23 @@
 #include "SpecialUrgencyMessage.h"
 #include <string>
 
-namespace cn
-{
-	namespace javass
-	{
-		namespace dp
-		{
-			namespace bridge
-			{
-				namespace example3
-				{
+namespace cn {
+namespace javass {
+namespace dp {
+namespace bridge {
+namespace example3 {
 
-					class SpecialUrgencyMessageSMS : public SpecialUrgencyMessage
-					{
+class SpecialUrgencyMessageSMS : public SpecialUrgencyMessage {
 
-					public:
-						virtual void hurry(std::string messageId);
+public:
+    virtual void hurry(std::string messageId);
 
-						virtual void send(std::string message, std::string toUser);
+    virtual void send(std::string message, std::string toUser);
 
-					};
+};
 
-				}
-			}
-		}
-	}
+}
+}
+}
+}
 }

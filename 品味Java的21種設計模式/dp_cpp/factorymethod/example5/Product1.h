@@ -1,23 +1,17 @@
 #pragma once
 
-namespace cn
-{
-	namespace javass
-	{
-		namespace dp
-		{
-			namespace factorymethod
-			{
-				namespace example5
-				{
+namespace cn {
+namespace javass {
+namespace dp {
+namespace factorymethod {
+namespace example5 {
 
-					class Product1
-					{
+class Product1 {
 
-					};
+};
 
-				}
-			}
-		}
-	}
+}
+}
+}
+}
 }

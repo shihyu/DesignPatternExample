@@ -2,23 +2,23 @@
 
 namespace singleton {
 
-    Person::Person(std::string name) {
-        this->name = name;
+Person::Person(std::string name) {
+    this->name = name;
+}
+
+Person *Person::createInstance() {
+    if (child == 0) {
+        child = new Person("lincoln");
     }
 
-    Person* Person::createInstance() {
-        if (child == 0) {
-            child = new Person("lincoln");
-        }
+    return child;
+}
 
-        return child;
-    }
+std::string Person::getName() {
+    return name;
+}
 
-    std::string Person::getName() {
-        return name;
-    }
-
-    void Person::setName(std::string name) {
-        this->name = name;
-    }
+void Person::setName(std::string name) {
+    this->name = name;
+}
 }

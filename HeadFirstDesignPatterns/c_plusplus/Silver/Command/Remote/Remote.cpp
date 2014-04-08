@@ -2,7 +2,7 @@
 
 using namespace HeadFirstDesignPatterns::Command::Remote;
 
-int main(int argc, char* argv[]) {
+int main(int argc, char *argv[]) {
     std::auto_ptr< RemoteControl > remoteControl(
         new RemoteControl());
     std::auto_ptr< Light > livingRoomLight(

@@ -10,25 +10,19 @@
 #include <map>
 #include <vector>
 
-namespace cn
-{
-	namespace javass
-	{
-		namespace dp
-		{
-			namespace builder
-			{
-				namespace example3
-				{
+namespace cn {
+namespace javass {
+namespace dp {
+namespace builder {
+namespace example3 {
 
 
-					class Client
-					{
-						static void main(std::string args[]);
-					};
+class Client {
+    static void main(std::string args[]);
+};
 
-				}
-			}
-		}
-	}
+}
+}
+}
+}
 }

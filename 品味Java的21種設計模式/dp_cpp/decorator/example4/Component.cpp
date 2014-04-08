@@ -1,17 +1,12 @@
 #include "Component.h"
 
-namespace cn
-{
-	namespace javass
-	{
-		namespace dp
-		{
-			namespace decorator
-			{
-				namespace example4
-				{
-				}
-			}
-		}
-	}
+namespace cn {
+namespace javass {
+namespace dp {
+namespace decorator {
+namespace example4 {
+}
+}
+}
+}
 }

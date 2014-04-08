@@ -1,17 +1,12 @@
 #include "Prototype.h"
 
-namespace cn
-{
-	namespace javass
-	{
-		namespace dp
-		{
-			namespace prototype
-			{
-				namespace example2
-				{
-				}
-			}
-		}
-	}
+namespace cn {
+namespace javass {
+namespace dp {
+namespace prototype {
+namespace example2 {
+}
+}
+}
+}
 }

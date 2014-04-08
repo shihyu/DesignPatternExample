@@ -5,19 +5,19 @@
 
 namespace composite {
 
-    class FinanceDepartment : public Company {
+class FinanceDepartment : public Company {
 
-    public:
-        FinanceDepartment(std::string name);
+public:
+    FinanceDepartment(std::string name);
 
-        virtual void add(composite::Company* c);
+    virtual void add(composite::Company *c);
 
-        virtual void display(int depth);
+    virtual void display(int depth);
 
-        virtual void lineOfDuty();
+    virtual void lineOfDuty();
 
-        virtual void remove(composite::Company* c);
+    virtual void remove(composite::Company *c);
 
-    };
+};
 
 }

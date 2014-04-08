@@ -28,9 +28,9 @@ protected:
 
 //用戶端
 int main() {
-    Naruto* man = new Naruto();
+    Naruto *man = new Naruto();
     man->Show();
-    OnePice* man2 = new OnePice();
+    OnePice *man2 = new OnePice();
     man2->Show();
     return 0;
 }

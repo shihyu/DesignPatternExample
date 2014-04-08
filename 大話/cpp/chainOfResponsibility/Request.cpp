@@ -2,31 +2,31 @@
 
 namespace chainOfResponsibility {
 
-    Request::Request(std::string type) {
-        this->type = type;
-    }
+Request::Request(std::string type) {
+    this->type = type;
+}
 
-    std::string Request::getType() {
-        return type;
-    }
+std::string Request::getType() {
+    return type;
+}
 
-    void Request::setType(std::string type) {
-        this->type = type;
-    }
+void Request::setType(std::string type) {
+    this->type = type;
+}
 
-    std::string Request::getContent() {
-        return content;
-    }
+std::string Request::getContent() {
+    return content;
+}
 
-    void Request::setContent(std::string content) {
-        this->content = content;
-    }
+void Request::setContent(std::string content) {
+    this->content = content;
+}
 
-    int Request::getQuanlity() {
-        return quanlity;
-    }
+int Request::getQuanlity() {
+    return quanlity;
+}
 
-    void Request::setQuanlity(int quanlity) {
-        this->quanlity = quanlity;
-    }
+void Request::setQuanlity(int quanlity) {
+    this->quanlity = quanlity;
+}
 }

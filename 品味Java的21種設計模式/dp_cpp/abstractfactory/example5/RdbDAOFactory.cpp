@@ -1,27 +1,20 @@
 #include "RdbDAOFactory.h"
 
-namespace cn
-{
-	namespace javass
-	{
-		namespace dp
-		{
-			namespace abstractfactory
-			{
-				namespace example5
-				{
+namespace cn {
+namespace javass {
+namespace dp {
+namespace abstractfactory {
+namespace example5 {
 
-					OrderDetailDAO *RdbDAOFactory::createOrderDetailDAO()
-					{
-						return new RdbDetailDAOImpl();
-					}
+OrderDetailDAO *RdbDAOFactory::createOrderDetailDAO() {
+    return new RdbDetailDAOImpl();
+}
 
-					OrderMainDAO *RdbDAOFactory::createOrderMainDAO()
-					{
-						return new RdbMainDAOImpl();
-					}
-				}
-			}
-		}
-	}
+OrderMainDAO *RdbDAOFactory::createOrderMainDAO() {
+    return new RdbMainDAOImpl();
+}
+}
+}
+}
+}
 }

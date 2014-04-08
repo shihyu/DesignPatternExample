@@ -2,7 +2,7 @@
 
 using namespace HeadFirstDesignPatterns::Command::SimpleRemote;
 
-int main(int argc, char* argv[]) {
+int main(int argc, char *argv[]) {
     std::auto_ptr< SimpleRemoteControl > remote(new SimpleRemoteControl());
     std::auto_ptr< Light > light(new Light());
     std::auto_ptr< GarageDoor > garageDoor(new GarageDoor());

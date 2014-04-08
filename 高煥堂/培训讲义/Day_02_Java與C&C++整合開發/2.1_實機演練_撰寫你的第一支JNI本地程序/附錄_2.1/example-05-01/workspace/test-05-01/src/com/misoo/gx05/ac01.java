@@ -12,9 +12,10 @@ public class ac01 extends Activity {
         //  ----´ú¸Õ¤§¥Î----
         int digit_1 = 1, digit_2 = 1;
         int cs = NativeJniAdder.calculate(digit_1, digit_2);
-        int sum = cs % 10;  	int carry = cs / 10;
-		String carry_sum_str = String.valueOf(carry) + 
-		                       String.valueOf(sum);
-		setTitle("[" + carry_sum_str +"]");
-	 }
+        int sum = cs % 10;
+        int carry = cs / 10;
+        String carry_sum_str = String.valueOf(carry) +
+                               String.valueOf(sum);
+        setTitle("[" + carry_sum_str + "]");
+    }
 }

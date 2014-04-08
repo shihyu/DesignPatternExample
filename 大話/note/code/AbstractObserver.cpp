@@ -8,9 +8,9 @@ class SecretaryBase;
 class CObserverBase {
 protected:
     string name;
-    SecretaryBase* sub;
+    SecretaryBase *sub;
 public:
-    CObserverBase(string strname, SecretaryBase* strsub) {
+    CObserverBase(string strname, SecretaryBase *strsub) {
         name = strname;
         sub = strsub;
     }
@@ -20,7 +20,7 @@ public:
 //具體的觀察者,看股票的
 class StockObserver : public CObserverBase {
 public:
-    StockObserver(string strname, SecretaryBase* strsub) : CObserverBase(strname, strsub) {
+    StockObserver(string strname, SecretaryBase *strsub) : CObserverBase(strname, strsub) {
     }
     virtual void Update();
 };
@@ -28,7 +28,7 @@ public:
 //具體觀察者,看 NBA 的
 class NBAObserver : public CObserverBase {
 public:
-    NBAObserver(string strname, SecretaryBase* strsub) : CObserverBase(strname, strsub) {
+    NBAObserver(string strname, SecretaryBase *strsub) : CObserverBase(strname, strsub) {
     }
     virtual void Update();
 };
@@ -37,20 +37,20 @@ public:
 class SecretaryBase {
 public:
     string action;
-    vector<CObserverBase*> observers;
+    vector<CObserverBase *> observers;
 public:
-    virtual void Attach(CObserverBase* observer) = 0;
+    virtual void Attach(CObserverBase *observer) = 0;
     virtual void Notify() = 0;
 };
 
 //具體通知者
 class Secretary : public SecretaryBase {
 public:
-    void Attach(CObserverBase* ob) {
+    void Attach(CObserverBase *ob) {
         observers.push_back(ob);
     }
     void Notify() {
-        vector<CObserverBase*>::iterator p = observers.begin();
+        vector<CObserverBase *>::iterator p = observers.begin();
 
         while (p != observers.end()) {
             (*p)->Update();
@@ -69,10 +69,10 @@ void NBAObserver::Update() {
 
 // 用戶端:
 int main() {
-    SecretaryBase* p = new Secretary(); //創建觀察者
+    SecretaryBase *p = new Secretary(); //創建觀察者
     //被觀察的對象
-    CObserverBase* s1 = new NBAObserver("小李", p);
-    CObserverBase* s2 = new StockObserver("小趙", p);
+    CObserverBase *s1 = new NBAObserver("小李", p);
+    CObserverBase *s2 = new StockObserver("小趙", p);
     //加入觀察佇列
     p->Attach(s1);
     p->Attach(s2);

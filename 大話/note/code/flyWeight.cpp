@@ -38,10 +38,10 @@ public:
 //網站工廠類,用於存放共用的 WebSite 物件
 class WebFactory {
 private:
-    vector<WebSite*> websites;
+    vector<WebSite *> websites;
 public:
-    WebSite* GetWeb() {
-        vector<WebSite*>::iterator p = websites.begin();
+    WebSite *GetWeb() {
+        vector<WebSite *>::iterator p = websites.begin();
         return *p;
     }
     WebFactory() {
@@ -51,13 +51,13 @@ public:
 
 //用戶端
 int main() {
-    WebFactory* f = new WebFactory();
-    WebSite* ws = f->GetWeb();
+    WebFactory *f = new WebFactory();
+    WebSite *ws = f->GetWeb();
     ws->Use();
-    WebSite* ws2 = f->GetWeb();
+    WebSite *ws2 = f->GetWeb();
     ws2->Use();
     //不共用的類
-    WebSite* ws3 = new UnShareWebSite("測試");
+    WebSite *ws3 = new UnShareWebSite("測試");
     ws3->Use();
     return 0;
 }

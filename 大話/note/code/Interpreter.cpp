@@ -6,19 +6,19 @@ using namespace std;
 class Context;
 class AbstractExpression {
 public:
-    virtual void Interpret(Context* context) = 0;
+    virtual void Interpret(Context *context) = 0;
 };
 
 class Expression : public AbstractExpression {
 public:
-    virtual void Interpret(Context* context) {
+    virtual void Interpret(Context *context) {
         cout << "終端解譯器" << endl;
     };
 };
 
 class NonterminalExpression : public AbstractExpression {
 public:
-    virtual void Interpret(Context* context) {
+    virtual void Interpret(Context *context) {
         cout << "非終端解譯器" << endl;
     }
 };
@@ -31,12 +31,12 @@ public:
 
 //用戶端
 int main() {
-    Context* context = new Context();
-    vector<AbstractExpression*> express;
+    Context *context = new Context();
+    vector<AbstractExpression *> express;
     express.push_back(new Expression());
     express.push_back(new NonterminalExpression());
     express.push_back(new NonterminalExpression());
-    vector<AbstractExpression*>::iterator p = express.begin();
+    vector<AbstractExpression *>::iterator p = express.begin();
 
     while (p != express.end()) {
         (*p)->Interpret(context);

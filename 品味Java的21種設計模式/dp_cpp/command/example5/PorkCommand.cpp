@@ -1,27 +1,20 @@
 #include "PorkCommand.h"
 
-namespace cn
-{
-	namespace javass
-	{
-		namespace dp
-		{
-			namespace command
-			{
-				namespace example5
-				{
+namespace cn {
+namespace javass {
+namespace dp {
+namespace command {
+namespace example5 {
 
-					void PorkCommand::setCookApi(CookApi *cookApi)
-					{
-						this->cookApi = cookApi;
-					}
+void PorkCommand::setCookApi(CookApi *cookApi) {
+    this->cookApi = cookApi;
+}
 
-					void PorkCommand::execute()
-					{
-						this->cookApi->cook("蒜泥白肉");
-					}
-				}
-			}
-		}
-	}
+void PorkCommand::execute() {
+    this->cookApi->cook("蒜泥白肉");
+}
+}
+}
+}
+}
 }

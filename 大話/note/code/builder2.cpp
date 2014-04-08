@@ -48,9 +48,9 @@ public:
 //指揮者類
 class Direct {
 private:
-    Person* p;
+    Person *p;
 public:
-    Direct(Person* temp) {
+    Direct(Person *temp) {
         p = temp;
     }
     void Create() {
@@ -63,8 +63,8 @@ public:
 
 //用戶端代碼:
 int main() {
-    Person* p = new ThickPerson();
-    Direct* d = new Direct(p);
+    Person *p = new ThickPerson();
+    Direct *d = new Direct(p);
     d->Create();
     delete d;
     delete p;

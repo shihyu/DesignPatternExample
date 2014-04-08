@@ -2,10 +2,10 @@
 
 namespace simpleFactory {
 
-    Operation* OperationFactory::createOperation(wchar_t operate) {
-        Operation* oper = 0;
+Operation *OperationFactory::createOperation(wchar_t operate) {
+    Operation *oper = 0;
 
-        switch (operate) {
+    switch (operate) {
         case '+':
             oper = new OperationAdd();
             break;
@@ -13,8 +13,8 @@ namespace simpleFactory {
         case '-':
             oper = new OperationSub();
             break;
-        }
-
-        return oper;
     }
+
+    return oper;
+}
 }

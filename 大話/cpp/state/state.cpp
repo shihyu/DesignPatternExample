@@ -6,20 +6,20 @@ class Work;
 
 class State {
 public:
-    virtual void writeProgram(Work* w) = 0;
+    virtual void writeProgram(Work *w) = 0;
 };
 
 class EveningState : public State {
 
 public:
-    virtual void writeProgram(Work* w);
+    virtual void writeProgram(Work *w);
 
 };
 
 class RestState : public State {
 
 public:
-    virtual void writeProgram(Work* w);
+    virtual void writeProgram(Work *w);
 
 };
 
@@ -27,7 +27,7 @@ class Work {
 private:
     int hour;
     bool mIsFinish;
-    State* state;
+    State *state;
 
 public:
     Work();
@@ -38,9 +38,9 @@ public:
 
     virtual bool isFinish();
 
-    virtual State* getState();
+    virtual State *getState();
 
-    virtual void setState(State* state);
+    virtual void setState(State *state);
 
     virtual void setFinish(bool isFinish);
 
@@ -50,14 +50,14 @@ public:
 class BeforeNoonState : public State {
 
 public:
-    virtual void writeProgram(Work* w);
+    virtual void writeProgram(Work *w);
 
 };
 
 class SleepState : public State {
 
 public:
-    virtual void writeProgram(Work* w);
+    virtual void writeProgram(Work *w);
 
 };
 
@@ -75,18 +75,18 @@ class StateMain {
 class Work;
 class NoonState : public State {
 public:
-    virtual void writeProgram(Work* w);
+    virtual void writeProgram(Work *w);
 
 };
 
 class AfternoonState : public State {
 
 public:
-    virtual void writeProgram(Work* w);
+    virtual void writeProgram(Work *w);
 
 };
 
-void SleepState::writeProgram(Work* w) {
+void SleepState::writeProgram(Work *w) {
     std::string s;
     std::stringstream ss;
     ss << w->getHour();
@@ -110,11 +110,11 @@ bool Work::isFinish() {
     return mIsFinish;
 }
 
-State* Work::getState() {
+State *Work::getState() {
     return state;
 }
 
-void Work::setState(State* state) {
+void Work::setState(State *state) {
     this->state = state;
 }
 
@@ -127,7 +127,7 @@ void Work::writeprogram() {
 }
 
 
-void BeforeNoonState::writeProgram(Work* w) {
+void BeforeNoonState::writeProgram(Work *w) {
     if (w->getHour() < 12) {
         std::string s;
         std::stringstream ss;
@@ -140,7 +140,7 @@ void BeforeNoonState::writeProgram(Work* w) {
     }
 }
 
-void RestState::writeProgram(Work* w) {
+void RestState::writeProgram(Work *w) {
     std::string s;
     std::stringstream ss;
     ss << w->getHour();
@@ -148,7 +148,7 @@ void RestState::writeProgram(Work* w) {
     std::cout << "the current time:" + s + " work finished,rest" << std::endl;
 }
 
-void AfternoonState::writeProgram(Work* w) {
+void AfternoonState::writeProgram(Work *w) {
     if (w->getHour() < 17) {
         std::string s;
         std::stringstream ss;
@@ -161,7 +161,7 @@ void AfternoonState::writeProgram(Work* w) {
     }
 }
 
-void NoonState::writeProgram(Work* w) {
+void NoonState::writeProgram(Work *w) {
     if (w->getHour() < 13) {
         std::string s;
         std::stringstream ss;
@@ -174,7 +174,7 @@ void NoonState::writeProgram(Work* w) {
     }
 }
 
-void EveningState::writeProgram(Work* w) {
+void EveningState::writeProgram(Work *w) {
     if (w->isFinish()) {
         w->setState(new RestState());
         w->writeprogram();
@@ -193,7 +193,7 @@ void EveningState::writeProgram(Work* w) {
 }
 
 int main() {
-    Work* today = new Work();
+    Work *today = new Work();
     today->setHour(10);
     today->writeprogram();
     today->setHour(12);

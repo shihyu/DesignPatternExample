@@ -5,14 +5,14 @@
 
 namespace adapter {
 
-    class Guard : public Player {
+class Guard : public Player {
 
-    public:
-        Guard(std::string name);
+public:
+    Guard(std::string name);
 
-        virtual void attrack();
+    virtual void attrack();
 
-        virtual void defence();
-    };
+    virtual void defence();
+};
 
 }

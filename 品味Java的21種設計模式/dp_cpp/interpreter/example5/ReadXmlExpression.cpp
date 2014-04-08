@@ -1,17 +1,12 @@
 #include "ReadXmlExpression.h"
 
-namespace cn
-{
-	namespace javass
-	{
-		namespace dp
-		{
-			namespace interpreter
-			{
-				namespace example5
-				{
-				}
-			}
-		}
-	}
+namespace cn {
+namespace javass {
+namespace dp {
+namespace interpreter {
+namespace example5 {
+}
+}
+}
+}
 }

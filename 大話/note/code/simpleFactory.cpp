@@ -31,25 +31,25 @@ public:
 //工廠類
 class CCalculatorFactory {
 public:
-    static COperation* Create(char cOperator);
+    static COperation *Create(char cOperator);
 };
 
-COperation* CCalculatorFactory::Create(char cOperator) {
-    COperation* oper;
+COperation *CCalculatorFactory::Create(char cOperator) {
+    COperation *oper;
 
     //在 C#中可以用反射來取消判斷時用的 switch,在 C++中用什麼呢?RTTI??
     switch (cOperator) {
-    case '+':
-        oper = new AddOperation();
-        break;
+        case '+':
+            oper = new AddOperation();
+            break;
 
-    case '-':
-        oper = new SubOperation();
-        break;
+        case '-':
+            oper = new SubOperation();
+            break;
 
-    default:
-        oper = new AddOperation();
-        break;
+        default:
+            oper = new AddOperation();
+            break;
     }
 
     return oper;
@@ -59,7 +59,7 @@ COperation* CCalculatorFactory::Create(char cOperator) {
 int main() {
     int a, b;
     cin >> a >> b;
-    COperation* op = CCalculatorFactory::Create('-');
+    COperation *op = CCalculatorFactory::Create('-');
     op->m_nFirst = a;
     op->m_nSecond = b;
     cout << op->GetResult() << endl;

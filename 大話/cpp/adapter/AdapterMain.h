@@ -7,13 +7,13 @@
 
 namespace adapter {
 
-    class AdapterMain {
+class AdapterMain {
 
-        ///
-        ///   * <param name="args"> </param>
-        ///
-        static void main(std::string args[]);
+    ///
+    ///   * <param name="args"> </param>
+    ///
+    static void main(std::string args[]);
 
-    };
+};
 
 }

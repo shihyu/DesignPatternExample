@@ -1,17 +1,12 @@
 #include "CookApi.h"
 
-namespace cn
-{
-	namespace javass
-	{
-		namespace dp
-		{
-			namespace command
-			{
-				namespace example5
-				{
-				}
-			}
-		}
-	}
+namespace cn {
+namespace javass {
+namespace dp {
+namespace command {
+namespace example5 {
+}
+}
+}
+}
 }

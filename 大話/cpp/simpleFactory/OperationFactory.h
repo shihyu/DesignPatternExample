@@ -6,11 +6,11 @@
 
 namespace simpleFactory {
 
-    class OperationFactory {
+class OperationFactory {
 
-    public:
-        static Operation* createOperation(wchar_t operate);
+public:
+    static Operation *createOperation(wchar_t operate);
 
-    };
+};
 
 }

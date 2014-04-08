@@ -22,7 +22,7 @@ public:
 
 class OperationFactory {
 public:
-    static Operation* createOperation(wchar_t operate);
+    static Operation *createOperation(wchar_t operate);
 
 };
 
@@ -39,17 +39,17 @@ int OperationSub::getResult() {
     return a - b;
 }
 
-Operation* OperationFactory::createOperation(wchar_t operate) {
-    Operation* oper = 0;
+Operation *OperationFactory::createOperation(wchar_t operate) {
+    Operation *oper = 0;
 
     switch (operate) {
-    case '+':
-        oper = new OperationAdd();
-        break;
+        case '+':
+            oper = new OperationAdd();
+            break;
 
-    case '-':
-        oper = new OperationSub();
-        break;
+        case '-':
+            oper = new OperationSub();
+            break;
     }
 
     return oper;
@@ -76,8 +76,8 @@ int Operation::getResult() {
 }
 
 int main() {
-    Operation* operAdd = OperationFactory::createOperation('+');
-    Operation* operSub = OperationFactory::createOperation('-');
+    Operation *operAdd = OperationFactory::createOperation('+');
+    Operation *operSub = OperationFactory::createOperation('-');
     operAdd->setA(11);
     operAdd->setB(22);
     //puts(operAdd->getResult());

@@ -2,7 +2,7 @@
 
 namespace visitor {
 
-    void Woman::accept(Action* visitor) {
-        visitor->getWomanReaction(this);
-    }
+void Woman::accept(Action *visitor) {
+    visitor->getWomanReaction(this);
+}
 }

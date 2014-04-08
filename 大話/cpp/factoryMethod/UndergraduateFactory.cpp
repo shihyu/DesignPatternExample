@@ -2,7 +2,7 @@
 
 namespace factoryMethod {
 
-    LeiFeng* UndergraduateFactory::createLeiFeng() {
-        return new Graduate();
-    }
+LeiFeng *UndergraduateFactory::createLeiFeng() {
+    return new Graduate();
+}
 }

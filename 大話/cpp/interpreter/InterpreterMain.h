@@ -8,9 +8,9 @@
 
 namespace interpreter {
 
-    class InterpreterMain {
+class InterpreterMain {
 
-        static void main(std::string args[]);
-    };
+    static void main(std::string args[]);
+};
 
 }

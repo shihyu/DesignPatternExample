@@ -4,17 +4,17 @@
 
 namespace interpreter {
 
-    class PlayContext {
+class PlayContext {
 
-    private:
-        std::string context;
+private:
+    std::string context;
 
-    public:
-        virtual std::string getContext();
+public:
+    virtual std::string getContext();
 
-        virtual void setContext(std::string context);
+    virtual void setContext(std::string context);
 
 
-    };
+};
 
 }

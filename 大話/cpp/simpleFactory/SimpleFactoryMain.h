@@ -6,12 +6,12 @@
 
 namespace simpleFactory {
 
-    class SimpleFactoryMain {
+class SimpleFactoryMain {
 
-        ///
-        ///   <summary> * @Lincoln Liu </summary>
-        ///
-        static void main(std::string args[]);
-    };
+    ///
+    ///   <summary> * @Lincoln Liu </summary>
+    ///
+    static void main(std::string args[]);
+};
 
 }

@@ -12,12 +12,12 @@ public:
 
 class IFactory {
 public:
-    virtual LeiFeng* createLeiFeng() = 0;
+    virtual LeiFeng *createLeiFeng() = 0;
 };
 
 class VolunteerFactory : public IFactory {
 public:
-    virtual LeiFeng* createLeiFeng();
+    virtual LeiFeng *createLeiFeng();
 
 };
 
@@ -28,7 +28,7 @@ class Volunteer : public LeiFeng {
 class UndergraduateFactory : public IFactory {
 
 public:
-    virtual LeiFeng* createLeiFeng();
+    virtual LeiFeng *createLeiFeng();
 
 };
 
@@ -36,12 +36,12 @@ class Graduate : public LeiFeng {
 
 };
 
-LeiFeng* VolunteerFactory::createLeiFeng() {
+LeiFeng *VolunteerFactory::createLeiFeng() {
     return new Volunteer();
 }
 
 
-LeiFeng* UndergraduateFactory::createLeiFeng() {
+LeiFeng *UndergraduateFactory::createLeiFeng() {
     return new Graduate();
 }
 
@@ -58,13 +58,13 @@ void LeiFeng::Wash() {
 }
 
 int main() {
-    IFactory* factory = new UndergraduateFactory();
-    Graduate* student = static_cast<Graduate*>(factory->createLeiFeng());
+    IFactory *factory = new UndergraduateFactory();
+    Graduate *student = static_cast<Graduate *>(factory->createLeiFeng());
     //Graduate* student = factory->createLeiFeng();
     student->buyRice();
     student->Wash();
-    IFactory* VFactory = new VolunteerFactory();
-    Volunteer* volunteer = static_cast<Volunteer*>(VFactory->createLeiFeng());
+    IFactory *VFactory = new VolunteerFactory();
+    Volunteer *volunteer = static_cast<Volunteer *>(VFactory->createLeiFeng());
     volunteer->buyRice();
     volunteer->sweep();
     return 0;

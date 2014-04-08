@@ -7,15 +7,15 @@ class Colleague;
 //仲介者類
 class Mediator {
 public:
-    virtual void Send(string message, Colleague* col) = 0;
+    virtual void Send(string message, Colleague *col) = 0;
 };
 
 //抽象同事類
 class Colleague {
 protected:
-    Mediator* mediator;
+    Mediator *mediator;
 public:
-    Colleague(Mediator* temp) {
+    Colleague(Mediator *temp) {
         mediator = temp;
     }
 };
@@ -23,7 +23,7 @@ public:
 //同事一
 class Colleague1 : public Colleague {
 public:
-    Colleague1(Mediator* media) : Colleague(media) {}
+    Colleague1(Mediator *media) : Colleague(media) {}
     void Send(string strMessage) {
         mediator->Send(strMessage, this);
     }
@@ -35,7 +35,7 @@ public:
 //同事二
 class Colleague2 : public Colleague {
 public:
-    Colleague2(Mediator* media) : Colleague(media) {}
+    Colleague2(Mediator *media) : Colleague(media) {}
     void Send(string strMessage) {
         mediator->Send(strMessage, this);
     }
@@ -47,9 +47,9 @@ public:
 //具體仲介者類
 class ConcreteMediator : public Mediator {
 public:
-    Colleague1* col1;
-    Colleague2* col2;
-    virtual void Send(string message, Colleague* col) {
+    Colleague1 *col1;
+    Colleague2 *col2;
+    virtual void Send(string message, Colleague *col) {
         if (col == col1) {
             col2->Notify(message);
         } else {
@@ -60,10 +60,10 @@ public:
 
 //用戶端:
 int main() {
-    ConcreteMediator* m = new ConcreteMediator();
+    ConcreteMediator *m = new ConcreteMediator();
     //讓同事認識仲介
-    Colleague1* col1 = new Colleague1(m);
-    Colleague2* col2 = new Colleague2(m);
+    Colleague1 *col1 = new Colleague1(m);
+    Colleague2 *col2 = new Colleague2(m);
     //讓仲介認識具體的同事類
     m->col1 = col1;
     m->col2 = col2;

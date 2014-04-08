@@ -1,34 +1,26 @@
 #include "Leaf.h"
 
-namespace cn
-{
-	namespace javass
-	{
-		namespace dp
-		{
-			namespace visitor
-			{
-				namespace example6
-				{
+namespace cn {
+namespace javass {
+namespace dp {
+namespace visitor {
+namespace example6 {
 
-					void Leaf::accept(Visitor *visitor)
-					{
-						//回调访问者对象的相应方法
-						visitor->visitLeaf(this);
-					}
+void Leaf::accept(Visitor *visitor) {
+    //回调访问者对象的相应方法
+    visitor->visitLeaf(this);
+}
 
-					Leaf::Leaf(std::string name)
-					{
-						InitializeInstanceFields();
-						this->name = name;
-					}
+Leaf::Leaf(std::string name) {
+    InitializeInstanceFields();
+    this->name = name;
+}
 
-					std::string Leaf::getName()
-					{
-						return name;
-					}
-				}
-			}
-		}
-	}
+std::string Leaf::getName() {
+    return name;
+}
+}
+}
+}
+}
 }

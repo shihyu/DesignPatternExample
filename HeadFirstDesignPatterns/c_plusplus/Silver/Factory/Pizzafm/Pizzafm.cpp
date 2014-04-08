@@ -2,7 +2,7 @@
 
 using namespace HeadFirstDesignPatterns::Factory::Method;
 
-int main(int argc, char* argv[]) {
+int main(int argc, char *argv[]) {
     std::auto_ptr< PizzaStore > nyStore(new NYPizzaStore());
     std::auto_ptr< PizzaStore > chicagoStore(new ChicagoPizzaStore());
     std::auto_ptr< Pizza > pizza(nyStore->orderPizza("cheese"));

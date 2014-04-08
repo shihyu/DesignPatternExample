@@ -4,10 +4,10 @@
 
 namespace flyWeight {
 
-    class WebSite {
+class WebSite {
 
-    public:
-        virtual void use(User* u) = 0;
-    };
+public:
+    virtual void use(User *u) = 0;
+};
 
 }

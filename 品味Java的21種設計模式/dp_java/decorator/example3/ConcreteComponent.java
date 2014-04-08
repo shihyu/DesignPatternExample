@@ -5,9 +5,9 @@ package cn.javass.dp.decorator.example3;
  */
 public class ConcreteComponent extends Component {
 
-	public void operation() {
-		//相应的功能处理
-	}
+    public void operation() {
+        //相应的功能处理
+    }
 
 }
 

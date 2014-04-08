@@ -7,17 +7,17 @@ class NoonState;
 
 class State {
 public:
-    virtual void WriteProgram(Work* w) = 0;
+    virtual void WriteProgram(Work *w) = 0;
 };
 
 class Work {
 private:
-    State* current;
+    State *current;
 public:
     double hour;
 public:
     Work();
-    void SetState(State* temp) {
+    void SetState(State *temp) {
         current = temp;
     }
     void Writeprogram() {
@@ -27,7 +27,7 @@ public:
 
 class NoonState : public State {
 public:
-    virtual void WriteProgram(Work* w) {
+    virtual void WriteProgram(Work *w) {
         cout << "execute" << endl;
 
         if ((w->hour) < 13) {
@@ -40,7 +40,7 @@ public:
 
 class ForenoonState : public State {
 public:
-    virtual void WriteProgram(Work* w) {
+    virtual void WriteProgram(Work *w) {
         if ((w->hour) < 12) {
             cout << "現在的精神無敵好" << endl;
         } else {
@@ -56,7 +56,7 @@ Work::Work() {
 
 // 用戶端:
 int main() {
-    Work* mywork = new Work();
+    Work *mywork = new Work();
     mywork->hour = 9;
     mywork->Writeprogram();
     mywork->hour = 14;

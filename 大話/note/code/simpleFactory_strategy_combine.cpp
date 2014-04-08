@@ -30,17 +30,17 @@ public:
 
 class Context {
 private:
-    COperation* op;
+    COperation *op;
 public:
     Context(char cType) {
         switch (cType) {
-        case '+':
-            op = new AddOperation(3, 8);
-            break;
+            case '+':
+                op = new AddOperation(3, 8);
+                break;
 
-        default:
-            op = new AddOperation();
-            break;
+            default:
+                op = new AddOperation();
+                break;
         }
     }
     double GetResult() {
@@ -50,7 +50,7 @@ public:
 
 //用戶端
 int main() {
-    Context* test = new Context('+');
+    Context *test = new Context('+');
     cout << test->GetResult() << endl;
     return 0;
 }

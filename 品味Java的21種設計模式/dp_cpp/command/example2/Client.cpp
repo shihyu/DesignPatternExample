@@ -2,8 +2,7 @@
 
 using namespace cn::javass::dp::command::example2;
 
-int main(std::string args[])
-{
+int main(std::string args[]) {
     //1：把命令和真正的实现组合起来，相当于在组装机器，
     //把机箱上按钮的连接线插接到主板上。
     MainBoardApi *mainBoard = new GigaMainBoard();

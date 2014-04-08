@@ -5,13 +5,13 @@
 
 namespace strategy {
 
-    class CashMain {
+class CashMain {
 
-        ///
-        ///   <summary> * @lincoln liu </summary>
-        ///
-        static void main(std::string args[]);
+    ///
+    ///   <summary> * @lincoln liu </summary>
+    ///
+    static void main(std::string args[]);
 
-    };
+};
 
 }

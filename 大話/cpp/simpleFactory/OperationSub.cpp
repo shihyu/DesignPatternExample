@@ -2,7 +2,7 @@
 
 namespace simpleFactory {
 
-    int OperationSub::getResult() {
-        return a - b;
-    }
+int OperationSub::getResult() {
+    return a - b;
+}
 }

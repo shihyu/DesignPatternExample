@@ -3,11 +3,11 @@
 
 namespace facade {
 
-    void Stock2::buy() {
-        std::cout << "Stock2 buy!" << std::endl;
-    }
+void Stock2::buy() {
+    std::cout << "Stock2 buy!" << std::endl;
+}
 
-    void Stock2::sell() {
-        std::cout << "Stock2 sell!" << std::endl;
-    }
+void Stock2::sell() {
+    std::cout << "Stock2 sell!" << std::endl;
+}
 }

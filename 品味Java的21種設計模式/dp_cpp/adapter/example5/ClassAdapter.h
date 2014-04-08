@@ -6,38 +6,32 @@
 #include <string>
 #include <vector>
 
-namespace cn
-{
-	namespace javass
-	{
-		namespace dp
-		{
-			namespace adapter
-			{
-				namespace example5
-				{
+namespace cn {
+namespace javass {
+namespace dp {
+namespace adapter {
+namespace example5 {
 
 
-					///
-					/// <summary> * 类适配器对象 </summary>
-					/// 
-					class ClassAdapter : public LogFileOperate, LogDbOperateApi
-					{
+///
+/// <summary> * 类适配器对象 </summary>
+///
+class ClassAdapter : public LogFileOperate, LogDbOperateApi {
 
-					public:
-						ClassAdapter(std::string logFilePathName);
+public:
+    ClassAdapter(std::string logFilePathName);
 
-						virtual void createLog(LogModel *lm);
+    virtual void createLog(LogModel *lm);
 
-						virtual std::vector<LogModel*> getAllLog();
+    virtual std::vector<LogModel *> getAllLog();
 
-						virtual void removeLog(LogModel *lm);
+    virtual void removeLog(LogModel *lm);
 
-						virtual void updateLog(LogModel *lm);
-					};
+    virtual void updateLog(LogModel *lm);
+};
 
-				}
-			}
-		}
-	}
+}
+}
+}
+}
 }

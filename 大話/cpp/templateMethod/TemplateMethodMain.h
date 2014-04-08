@@ -7,13 +7,13 @@
 
 namespace templateMethod {
 
-    class TemplateMethodMain {
+class TemplateMethodMain {
 
-        ///
-        ///   <summary> * @lincoln liu </summary>
-        ///
-        static void main(std::string args[]);
+    ///
+    ///   <summary> * @lincoln liu </summary>
+    ///
+    static void main(std::string args[]);
 
-    };
+};
 
 }

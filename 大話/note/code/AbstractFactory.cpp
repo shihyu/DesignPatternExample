@@ -63,17 +63,17 @@ public:
 //抽象工廠
 class IFactory {
 public:
-    virtual IUser* CreateUser() = 0;
-    virtual IDepartment* CreateDepartment() = 0;
+    virtual IUser *CreateUser() = 0;
+    virtual IDepartment *CreateDepartment() = 0;
 };
 
 //ACCESS 工廠
 class AccessFactory : public IFactory {
 public:
-    virtual IUser* CreateUser() {
+    virtual IUser *CreateUser() {
         return new CAccessUser();
     }
-    virtual IDepartment* CreateDepartment() {
+    virtual IDepartment *CreateDepartment() {
         return new CAccessDepartment();
     }
 };
@@ -81,19 +81,19 @@ public:
 //SQL 工廠
 class SqlFactory : public IFactory {
 public:
-    virtual IUser* CreateUser() {
+    virtual IUser *CreateUser() {
         return new CSqlUser();
     }
-    virtual IDepartment* CreateDepartment() {
+    virtual IDepartment *CreateDepartment() {
         return new CSqlDepartment();
     }
 };
 
 // 用戶端:
 int main() {
-    IFactory* factory = new SqlFactory();
-    IUser* user = factory->CreateUser();
-    IDepartment* depart = factory->CreateDepartment();
+    IFactory *factory = new SqlFactory();
+    IUser *user = factory->CreateUser();
+    IDepartment *depart = factory->CreateDepartment();
     user->GetUser();
     depart->GetDepartment();
     return 0;

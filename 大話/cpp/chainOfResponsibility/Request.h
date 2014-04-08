@@ -4,26 +4,26 @@
 
 namespace chainOfResponsibility {
 
-    class Request {
-    private:
-        std::string type;
-        std::string content;
-        int quanlity;
+class Request {
+private:
+    std::string type;
+    std::string content;
+    int quanlity;
 
-    public:
-        Request(std::string type);
+public:
+    Request(std::string type);
 
-        virtual std::string getType();
+    virtual std::string getType();
 
-        virtual void setType(std::string type);
+    virtual void setType(std::string type);
 
-        virtual std::string getContent();
+    virtual std::string getContent();
 
-        virtual void setContent(std::string content);
+    virtual void setContent(std::string content);
 
-        virtual int getQuanlity();
+    virtual int getQuanlity();
 
-        virtual void setQuanlity(int quanlity);
-    };
+    virtual void setQuanlity(int quanlity);
+};
 
 }

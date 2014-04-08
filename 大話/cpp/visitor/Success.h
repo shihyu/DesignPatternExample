@@ -6,13 +6,13 @@
 
 namespace visitor {
 
-    class Success : public Action {
+class Success : public Action {
 
-    public:
-        virtual void getManReflection(Man* m);
+public:
+    virtual void getManReflection(Man *m);
 
-        virtual void getWomanReaction(Woman* w);
+    virtual void getWomanReaction(Woman *w);
 
-    };
+};
 
 }

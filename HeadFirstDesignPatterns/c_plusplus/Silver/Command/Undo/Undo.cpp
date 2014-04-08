@@ -2,7 +2,7 @@
 
 using namespace HeadFirstDesignPatterns::Command::Undo;
 
-int main(int argc, char* argv[]) {
+int main(int argc, char *argv[]) {
     std::auto_ptr< RemoteControlWithUndo > remoteControl(
         new RemoteControlWithUndo());
     std::auto_ptr< Light > livingRoomLight(

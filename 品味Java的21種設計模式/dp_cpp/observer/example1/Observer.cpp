@@ -1,17 +1,12 @@
 #include "Observer.h"
 
-namespace cn
-{
-	namespace javass
-	{
-		namespace dp
-		{
-			namespace observer
-			{
-				namespace example1
-				{
-				}
-			}
-		}
-	}
+namespace cn {
+namespace javass {
+namespace dp {
+namespace observer {
+namespace example1 {
+}
+}
+}
+}
 }

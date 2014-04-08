@@ -2,7 +2,7 @@
 
 using namespace HeadFirstDesignPatterns::Strategy;
 
-int main(int argc, char* argv[]) {
+int main(int argc, char *argv[]) {
     std::auto_ptr< MallardDuck > mallard(new MallardDuck());
     std::auto_ptr< RubberDuck > rubberDuckie(new RubberDuck);
     std::auto_ptr< DecoyDuck > decoy(new DecoyDuck);

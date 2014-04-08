@@ -4,11 +4,11 @@
 
 namespace brige {
 
-    class MobileGame : public MobileSoft {
+class MobileGame : public MobileSoft {
 
-    public:
-        virtual void run();
+public:
+    virtual void run();
 
-    };
+};
 
 }

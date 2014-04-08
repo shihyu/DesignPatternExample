@@ -2,7 +2,7 @@
 
 namespace simpleFactory {
 
-    int OperationAdd::getResult() {
-        return a + b;
-    }
+int OperationAdd::getResult() {
+    return a + b;
+}
 }

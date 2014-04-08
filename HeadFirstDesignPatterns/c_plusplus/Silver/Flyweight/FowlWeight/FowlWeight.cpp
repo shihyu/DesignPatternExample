@@ -17,14 +17,14 @@ using namespace HeadFirstDesignPatterns::FlyWeight::FowlWeight;
 static const int MAX_BIRDS = 100;
 static const double MIN_WIEGHT = 0.1;
 
-bool compare(const Bird* lhs, const Bird* rhs) {
+bool compare(const Bird *lhs, const Bird *rhs) {
     return lhs->getWeight() < rhs->getWeight();
 }
 
-int main(int argc, char* argv[]) {
+int main(int argc, char *argv[]) {
     FowlFactory fowlFactory;
     //  Create a flock of mixed birds with random weights and tag them with a number
-    std::vector<  const Bird* > flock;
+    std::vector<  const Bird * > flock;
     flock.resize(MAX_BIRDS);
     srand(_getpid());
 
@@ -41,7 +41,7 @@ int main(int argc, char* argv[]) {
 
     //  Sort flock by ascending weight and display a journal
     std::sort(flock.begin(), flock.end(), compare);
-    std::vector< const Bird* >::const_iterator iterator = flock.begin();
+    std::vector< const Bird * >::const_iterator iterator = flock.begin();
 
     while (iterator != flock.end()) {
         std::cout << (*iterator)->toString().c_str();

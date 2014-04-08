@@ -17,8 +17,8 @@ public:
 
 class Fund {
 private:
-    Stock1* s1;
-    Stock2* s2;
+    Stock1 *s1;
+    Stock2 *s2;
 public:
     Fund();
 
@@ -61,7 +61,7 @@ void Stock2::sell() {
 }
 
 int main(void) {
-    Fund* fund = new Fund();
+    Fund *fund = new Fund();
     fund->method1();
     fund->method2();
     return 0;

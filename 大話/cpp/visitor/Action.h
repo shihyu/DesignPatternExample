@@ -5,11 +5,11 @@
 
 namespace visitor {
 
-    class Action {
+class Action {
 
-    public:
-        virtual void getManReflection(Man* m) = 0;
-        virtual void getWomanReaction(Woman* w) = 0;
-    };
+public:
+    virtual void getManReflection(Man *m) = 0;
+    virtual void getWomanReaction(Woman *w) = 0;
+};
 
 }

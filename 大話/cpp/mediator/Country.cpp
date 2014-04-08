@@ -2,15 +2,15 @@
 
 namespace mediator {
 
-    Country::Country(UnionNations* un) {
-        this->un = un;
-    }
+Country::Country(UnionNations *un) {
+    this->un = un;
+}
 
-    UnionNations* Country::getUn() {
-        return un;
-    }
+UnionNations *Country::getUn() {
+    return un;
+}
 
-    void Country::setUn(UnionNations* un) {
-        this->un = un;
-    }
+void Country::setUn(UnionNations *un) {
+    this->un = un;
+}
 }

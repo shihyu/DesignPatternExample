@@ -5,14 +5,14 @@
 
 namespace adapter {
 
-    class Center : public Player {
+class Center : public Player {
 
-    public:
-        Center(std::string name);
+public:
+    Center(std::string name);
 
-        virtual void jinggong();
+    virtual void jinggong();
 
-        virtual void fangshou();
-    };
+    virtual void fangshou();
+};
 
 }

@@ -4,20 +4,20 @@
 
 namespace singleton {
 
-    class Person {
+class Person {
 
-    private:
-        std::string name;
-        Person* child;
+private:
+    std::string name;
+    Person *child;
 
-        Person(std::string name);
+    Person(std::string name);
 
-    public:
-        virtual Person* createInstance();
+public:
+    virtual Person *createInstance();
 
-        virtual std::string getName();
+    virtual std::string getName();
 
-        virtual void setName(std::string name);
-    };
+    virtual void setName(std::string name);
+};
 
 }

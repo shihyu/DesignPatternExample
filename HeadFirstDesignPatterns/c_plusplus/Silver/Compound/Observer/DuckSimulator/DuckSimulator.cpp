@@ -4,12 +4,12 @@ using namespace HeadFirstDesignPatterns::Compound::Observer;
 
 int QuackCounter::_numberOfQuacks = 0;
 
-void simulate(const Quackable* duck) {
+void simulate(const Quackable *duck) {
     assert(duck);
     duck->quack();
 }
 
-int main(int argc, char* argv[]) {
+int main(int argc, char *argv[]) {
     std::auto_ptr< AbstractDuckFactory > duckFactory(new CountingDuckFactory());
     std::auto_ptr< Quackable > redheadDuck(duckFactory->createRedheadDuck());
     std::auto_ptr< Quackable > duckCall(duckFactory->createDuckCall());

@@ -1,17 +1,12 @@
 #include "Aggregate.h"
 
-namespace cn
-{
-	namespace javass
-	{
-		namespace dp
-		{
-			namespace iterator
-			{
-				namespace example6
-				{
-				}
-			}
-		}
-	}
+namespace cn {
+namespace javass {
+namespace dp {
+namespace iterator {
+namespace example6 {
+}
+}
+}
+}
 }

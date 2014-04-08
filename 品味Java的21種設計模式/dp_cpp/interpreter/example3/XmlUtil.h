@@ -2,30 +2,24 @@
 
 #include <string>
 
-namespace cn
-{
-	namespace javass
-	{
-		namespace dp
-		{
-			namespace interpreter
-			{
-				namespace example3
-				{
+namespace cn {
+namespace javass {
+namespace dp {
+namespace interpreter {
+namespace example3 {
 
-					using javax::xml::parsers::DocumentBuilder;
-					using javax::xml::parsers::DocumentBuilderFactory;
+using javax::xml::parsers::DocumentBuilder;
+using javax::xml::parsers::DocumentBuilderFactory;
 
-					using org::w3c::dom::Document;
+using org::w3c::dom::Document;
 
-					class XmlUtil
-					{
-					public:
-						static Document *getRoot(std::string filePathName) throw(Exception);
-					};
+class XmlUtil {
+public:
+    static Document *getRoot(std::string filePathName) throw(Exception);
+};
 
-				}
-			}
-		}
-	}
+}
+}
+}
+}
 }

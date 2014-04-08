@@ -28,9 +28,9 @@ public:
 //手機品牌
 class HandsetBrand {
 protected:
-    HandsetSoft* m_soft;
+    HandsetSoft *m_soft;
 public:
-    void SetHandsetSoft(HandsetSoft* temp) {
+    void SetHandsetSoft(HandsetSoft *temp) {
         m_soft = temp;
     }
     virtual void Run() = 0;
@@ -54,7 +54,7 @@ public:
 
 //用戶端
 int main() {
-    HandsetBrand* brand;
+    HandsetBrand *brand;
     brand = new HandsetBrandM();
     brand->SetHandsetSoft(new HandsetGame());
     brand->Run();

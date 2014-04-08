@@ -23,12 +23,12 @@ public:
 class CareTaker {
 
 private:
-    Memento* memento;
+    Memento *memento;
 
 public:
-    virtual Memento* getMemento();
+    virtual Memento *getMemento();
 
-    virtual void setMemento(Memento* memento);
+    virtual void setMemento(Memento *memento);
 };
 
 class GameRole {
@@ -64,9 +64,9 @@ public:
 
     virtual void show();
 
-    virtual Memento* createMemento();
+    virtual Memento *createMemento();
 
-    virtual void backupFromMemento(Memento* m);
+    virtual void backupFromMemento(Memento *m);
 };
 
 GameRole::GameRole(std::string name) {
@@ -124,21 +124,21 @@ void GameRole::show() {
     std::cout <<  "Defence: " + this->defence << std::endl;
 }
 
-Memento* GameRole::createMemento() {
+Memento *GameRole::createMemento() {
     return new Memento(this->vitality, this->attrack, this->defence);
 }
 
-void GameRole::backupFromMemento(Memento* m) {
+void GameRole::backupFromMemento(Memento *m) {
     this->vitality = m->getVitality();
     this->attrack = m->getAttrack();
     this->defence = m->getDefence();
 }
 
-Memento* CareTaker::getMemento() {
+Memento *CareTaker::getMemento() {
     return memento;
 }
 
-void CareTaker::setMemento(Memento* memento) {
+void CareTaker::setMemento(Memento *memento) {
     this->memento = memento;
 }
 
@@ -164,10 +164,10 @@ Memento::Memento(int vit, int attrack, int defence) {
 }
 
 int main() {
-    GameRole* mario = new GameRole("Mario");
+    GameRole *mario = new GameRole("Mario");
     mario->init();
     mario->show();
-    CareTaker* ct = new CareTaker();
+    CareTaker *ct = new CareTaker();
     ct->setMemento(mario->createMemento());
     mario->Fight();
     mario->show();

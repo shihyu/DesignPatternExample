@@ -2,10 +2,10 @@
 
 namespace brige {
 
-    class MobileSoft {
+class MobileSoft {
 
-    public:
-        virtual void run() = 0;
-    };
+public:
+    virtual void run() = 0;
+};
 
 }

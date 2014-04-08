@@ -16,7 +16,7 @@ public:
 
 class Expression {
 public:
-    virtual void interpret(PlayContext* context);
+    virtual void interpret(PlayContext *context);
 
     virtual void excute(std::string key, double value) = 0;
 
@@ -99,7 +99,7 @@ void PlayContext::setContext(std::string context) {
     this->context = context;
 }
 
-void Expression::interpret(PlayContext* context) {
+void Expression::interpret(PlayContext *context) {
     if (context->getContext().length() == 0) {
         return;
     } else {
@@ -113,10 +113,10 @@ void Expression::interpret(PlayContext* context) {
 }
 
 int main() {
-    PlayContext* context = new PlayContext();
+    PlayContext *context = new PlayContext();
     std::string content = "O 2 E 0.5 G 0.5 A 3 E 0.5 G 0.5 D 3 E 0.5 G 0.5 A 0.5 O 3 C 1 O 2 A 0.5 G 1 C 0.5 E 0.5 D 3 ";
     context->setContext(content);
-    Expression* exp = 0;
+    Expression *exp = 0;
     //Here we can define a factory to create the Expression.
     //because I want to focus on interpreter pattern so didn't do that.you can do it by yourself ,just enjoy this
 

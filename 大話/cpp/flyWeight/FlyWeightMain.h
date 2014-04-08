@@ -7,10 +7,10 @@
 
 namespace flyWeight {
 
-    class FlyWeightMain {
+class FlyWeightMain {
 
-        static void main(std::string args[]);
+    static void main(std::string args[]);
 
-    };
+};
 
 }

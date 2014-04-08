@@ -2,12 +2,12 @@
 
 namespace command {
 
-    class Barbecuer {
+class Barbecuer {
 
-    public:
-        virtual void bakeMutton();
+public:
+    virtual void bakeMutton();
 
-        virtual void bakeChickenWing();
-    };
+    virtual void bakeChickenWing();
+};
 
 }

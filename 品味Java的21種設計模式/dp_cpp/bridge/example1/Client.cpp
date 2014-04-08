@@ -1,8 +1,7 @@
 #include "Client.h"
 using namespace cn::javass::dp::bridge::example1;
 
-int main(std::string args[])
-{
+int main(std::string args[]) {
     Message *m = new CommonMessageSMS();
     m->send("aa", "au");
 

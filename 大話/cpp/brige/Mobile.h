@@ -5,24 +5,24 @@
 
 namespace brige {
 
-    class Mobile {
+class Mobile {
 
-    private:
-        MobileSoft* soft;
-        std::string brand;
+private:
+    MobileSoft *soft;
+    std::string brand;
 
-    public:
-        Mobile(std::string brand);
+public:
+    Mobile(std::string brand);
 
-        virtual MobileSoft* getSoft();
+    virtual MobileSoft *getSoft();
 
-        virtual void setSoft(MobileSoft* soft);
+    virtual void setSoft(MobileSoft *soft);
 
-        virtual std::string getBrand();
+    virtual std::string getBrand();
 
-        virtual void setBrand(std::string brand);
+    virtual void setBrand(std::string brand);
 
-        virtual void run() = 0;
-    };
+    virtual void run() = 0;
+};
 
 }

@@ -2,7 +2,7 @@
 
 using namespace HeadFirstDesignPatterns::Factory::Simple;
 
-int main(int argc, char* argv[]) {
+int main(int argc, char *argv[]) {
     SimplePizzaFactory factory;
     PizzaStore store(&factory);
     std::auto_ptr< Pizza>pizza(store.orderPizza("cheese"));

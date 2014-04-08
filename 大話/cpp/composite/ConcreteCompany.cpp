@@ -2,33 +2,33 @@
 
 namespace composite {
 
-    ConcreteCompany::ConcreteCompany(std::string name) : Company(name) {
-        InitializeInstanceFields();
-    }
+ConcreteCompany::ConcreteCompany(std::string name) : Company(name) {
+    InitializeInstanceFields();
+}
 
-    void ConcreteCompany::add(composite::Company* c) {
-        children.push_back(c);
-    }
+void ConcreteCompany::add(composite::Company *c) {
+    children.push_back(c);
+}
 
-    void ConcreteCompany::display(int depth) {
-        puts("-" + this->getName());
+void ConcreteCompany::display(int depth) {
+    puts("-" + this->getName());
 
-        for (std::vector<Company*>::const_iterator c = children.begin(); c != children.end(); ++c) {
-            for (int i = 0; i < depth; i++) {
-                std::cout::put("--");
-            }
-
-            (*c)->display(depth + 2);
+    for (std::vector<Company *>::const_iterator c = children.begin(); c != children.end(); ++c) {
+        for (int i = 0; i < depth; i++) {
+            std::cout::put("--");
         }
-    }
 
-    void ConcreteCompany::lineOfDuty() {
-        for (std::vector<Company*>::const_iterator c = children.begin(); c != children.end(); ++c) {
-            (*c)->lineOfDuty();
-        }
+        (*c)->display(depth + 2);
     }
+}
 
-    void ConcreteCompany::remove(composite::Company* c) {
-        children.remove(c);
+void ConcreteCompany::lineOfDuty() {
+    for (std::vector<Company *>::const_iterator c = children.begin(); c != children.end(); ++c) {
+        (*c)->lineOfDuty();
     }
+}
+
+void ConcreteCompany::remove(composite::Company *c) {
+    children.remove(c);
+}
 }

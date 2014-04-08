@@ -5,9 +5,9 @@
 
 namespace prototype {
 
-    class PrototypeMain {
+class PrototypeMain {
 
-        static void main(std::string args[]);
-    };
+    static void main(std::string args[]);
+};
 
 }

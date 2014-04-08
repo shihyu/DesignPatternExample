@@ -5,13 +5,13 @@
 
 namespace brige {
 
-    class NokiaMobile : public Mobile {
+class NokiaMobile : public Mobile {
 
-    public:
-        NokiaMobile(std::string brand);
+public:
+    NokiaMobile(std::string brand);
 
-        virtual void run();
+    virtual void run();
 
-    };
+};
 
 }

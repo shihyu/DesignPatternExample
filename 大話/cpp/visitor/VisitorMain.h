@@ -10,13 +10,13 @@
 
 namespace visitor {
 
-    class VisitorMain {
+class VisitorMain {
 
-        ///
-        ///   * <param name="args"> </param>
-        ///
-        static void main(std::string args[]);
+    ///
+    ///   * <param name="args"> </param>
+    ///
+    static void main(std::string args[]);
 
-    };
+};
 
 }

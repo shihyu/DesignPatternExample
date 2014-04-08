@@ -21,7 +21,7 @@ public:
 //代理類
 class ProxyClass : public Interface {
 private:
-    RealClass* m_realClass;
+    RealClass *m_realClass;
 public:
     virtual void Request() {
         m_realClass = new RealClass();
@@ -32,7 +32,7 @@ public:
 
 // 用戶端:
 int main() {
-    ProxyClass* test = new ProxyClass();
+    ProxyClass *test = new ProxyClass();
     test->Request();
     return 0;
 }

@@ -26,7 +26,7 @@ GumballMachine::GumballMachine(int numberGumballs) :
     }
 }
 
-int main(int argc, char* argv[]) {
+int main(int argc, char *argv[]) {
     std::auto_ptr< GumballMachine > gumballMachine(new GumballMachine(10));
     std::cout << gumballMachine->toString() << std::endl;
     gumballMachine->insertQuarter();

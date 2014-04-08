@@ -3,12 +3,12 @@
 class Person {
 private:
     std::string name;
-    Person* child;
+    Person *child;
 
     Person(std::string name);
 
 public:
-    virtual Person* createInstance();
+    virtual Person *createInstance();
 
     virtual std::string getName();
 
@@ -19,7 +19,7 @@ Person::Person(std::string name) {
     this->name = name;
 }
 
-Person* Person::createInstance() {
+Person *Person::createInstance() {
     if (child == 0) {
         child = new Person("lincoln");
     }
@@ -35,6 +35,6 @@ void Person::setName(std::string name) {
     this->name = name;
 }
 
-int main(int argc, char* argv[]) {
+int main(int argc, char *argv[]) {
     return 0;
 }

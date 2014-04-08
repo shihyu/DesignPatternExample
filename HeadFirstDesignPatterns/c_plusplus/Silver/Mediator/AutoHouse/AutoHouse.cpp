@@ -17,7 +17,7 @@ using namespace HeadFirstDesignPatterns::Mediator::AutoHouse;
 unsigned long interval = 12;    // length of day (in seconds)
 unsigned long iterations = 7;   // number of days to simulate
 
-int main(int argc, char* argv[]) {
+int main(int argc, char *argv[]) {
     if (argc > 1) {  // argument[1]=length of day (in seconds)
         std::stringstream(argv[1]) >> interval;
     }

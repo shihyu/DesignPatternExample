@@ -2,15 +2,15 @@
 
 namespace flyWeight {
 
-    User::User(std::string name) {
-        this->name = name;
-    }
+User::User(std::string name) {
+    this->name = name;
+}
 
-    std::string User::getName() {
-        return name;
-    }
+std::string User::getName() {
+    return name;
+}
 
-    void User::setName(std::string name) {
-        this->name = name;
-    }
+void User::setName(std::string name) {
+    this->name = name;
+}
 }

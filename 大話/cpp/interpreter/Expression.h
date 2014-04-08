@@ -5,13 +5,13 @@
 
 namespace interpreter {
 
-    class Expression {
+class Expression {
 
-    public:
-        virtual void interpret(PlayContext* context);
+public:
+    virtual void interpret(PlayContext *context);
 
-        virtual void excute(std::string key, double value) = 0;
+    virtual void excute(std::string key, double value) = 0;
 
-    };
+};
 
 }

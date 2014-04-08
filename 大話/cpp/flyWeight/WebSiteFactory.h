@@ -7,30 +7,30 @@
 namespace flyWeight {
 
 
-    class WebSiteFactory {
+class WebSiteFactory {
 
-    private:
-        Map<std::string, WebSite*>* flyWeights;
+private:
+    Map<std::string, WebSite *> *flyWeights;
 
-        //this is the key method ,it confirm that there is only one instance of the same website.
-    public:
-        virtual WebSite* getWebSiteCategory(std::string key);
+    //this is the key method ,it confirm that there is only one instance of the same website.
+public:
+    virtual WebSite *getWebSiteCategory(std::string key);
 
-        virtual int getWebSiteCount();
+    virtual int getWebSiteCount();
 
-    private:
-        bool initialized;
-        void InitializeInstanceFields() {
-            if (! initialized) {
-                flyWeights = std::map<std::string, WebSite*>();
-                initialized = true;
-            }
+private:
+    bool initialized;
+    void InitializeInstanceFields() {
+        if (! initialized) {
+            flyWeights = std::map<std::string, WebSite *>();
+            initialized = true;
         }
+    }
 
-    public:
-        WebSiteFactory() {
-            InitializeInstanceFields();
-        }
-    };
+public:
+    WebSiteFactory() {
+        InitializeInstanceFields();
+    }
+};
 
 }

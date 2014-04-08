@@ -6,15 +6,15 @@
 
 namespace adapter {
 
-    class Translator : public Player {
-    public:
-        Center* wjzf;
+class Translator : public Player {
+public:
+    Center *wjzf;
 
-        Translator(std::string name);
+    Translator(std::string name);
 
-        virtual void attrack();
+    virtual void attrack();
 
-        virtual void defence();
-    };
+    virtual void defence();
+};
 
 }

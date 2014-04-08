@@ -2,23 +2,23 @@
 
 namespace memento {
 
-    class Memento {
+class Memento {
 
-    private:
-        int vitality;
-        int attrack;
-        int defence;
+private:
+    int vitality;
+    int attrack;
+    int defence;
 
-    public:
-        virtual int getVitality();
+public:
+    virtual int getVitality();
 
-        virtual int getAttrack();
+    virtual int getAttrack();
 
-        virtual int getDefence();
+    virtual int getDefence();
 
-        Memento();
+    Memento();
 
-        Memento(int vit, int attrack, int defence);
-    };
+    Memento(int vit, int attrack, int defence);
+};
 
 }

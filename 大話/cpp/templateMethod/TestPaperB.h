@@ -4,11 +4,11 @@
 
 namespace templateMethod {
 
-    class TestPaperB : public TestPaper {
-    public:
-        virtual void answer1();
+class TestPaperB : public TestPaper {
+public:
+    virtual void answer1();
 
-        virtual void answer2();
-    };
+    virtual void answer2();
+};
 
 }

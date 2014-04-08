@@ -4,32 +4,26 @@
 #include "MessageImplementor.h"
 #include <string>
 
-namespace cn
-{
-	namespace javass
-	{
-		namespace dp
-		{
-			namespace bridge
-			{
-				namespace example6
-				{
-					///
-					/// <summary> * 特急消息 </summary>
-					/// 
-					class SpecialUrgencyMessage : public AbstractMessage
-					{
+namespace cn {
+namespace javass {
+namespace dp {
+namespace bridge {
+namespace example6 {
+///
+/// <summary> * 特急消息 </summary>
+///
+class SpecialUrgencyMessage : public AbstractMessage {
 
-					public:
-						SpecialUrgencyMessage(MessageImplementor *impl);
+public:
+    SpecialUrgencyMessage(MessageImplementor *impl);
 
-						virtual void hurry(std::string messageId);
+    virtual void hurry(std::string messageId);
 
-						virtual void sendMessage(std::string message, std::string toUser);
-					};
+    virtual void sendMessage(std::string message, std::string toUser);
+};
 
-				}
-			}
-		}
-	}
+}
+}
+}
+}
 }

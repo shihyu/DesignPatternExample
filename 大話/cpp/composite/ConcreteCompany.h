@@ -7,31 +7,31 @@
 namespace composite {
 
 
-    class ConcreteCompany : public Company {
+class ConcreteCompany : public Company {
 
-    private:
-        std::vector<Company*> children;
+private:
+    std::vector<Company *> children;
 
-    public:
-        ConcreteCompany(std::string name);
+public:
+    ConcreteCompany(std::string name);
 
-        virtual void add(composite::Company* c);
+    virtual void add(composite::Company *c);
 
-        virtual void display(int depth);
+    virtual void display(int depth);
 
-        virtual void lineOfDuty();
+    virtual void lineOfDuty();
 
-        virtual void remove(composite::Company* c);
+    virtual void remove(composite::Company *c);
 
 
-    private:
-        bool initialized;
-        void InitializeInstanceFields() {
-            if (! initialized) {
-                children = std::vector<Company*>();
-                initialized = true;
-            }
+private:
+    bool initialized;
+    void InitializeInstanceFields() {
+        if (! initialized) {
+            children = std::vector<Company *>();
+            initialized = true;
         }
-    };
+    }
+};
 
 }

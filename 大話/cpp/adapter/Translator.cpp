@@ -2,15 +2,15 @@
 
 namespace adapter {
 
-    Translator::Translator(std::string name) {
-        wjzf = new Center(name);
-    }
+Translator::Translator(std::string name) {
+    wjzf = new Center(name);
+}
 
-    void Translator::attrack() {
-        wjzf->jinggong();
-    }
+void Translator::attrack() {
+    wjzf->jinggong();
+}
 
-    void Translator::defence() {
-        wjzf->fangshou();
-    }
+void Translator::defence() {
+    wjzf->fangshou();
+}
 }

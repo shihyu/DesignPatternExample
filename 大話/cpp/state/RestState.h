@@ -5,11 +5,11 @@
 
 namespace state {
 
-    class RestState : public State {
+class RestState : public State {
 
-    public:
-        virtual void writeProgram(Work* w);
+public:
+    virtual void writeProgram(Work *w);
 
-    };
+};
 
 }

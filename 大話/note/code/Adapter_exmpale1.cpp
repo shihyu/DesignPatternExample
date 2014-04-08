@@ -19,7 +19,7 @@ public:
 
 class Adapter : public Target {
 private:
-    Adaptee* ada;
+    Adaptee *ada;
 public:
     virtual void Request() {
         ada->SpecificalRequest();
@@ -35,7 +35,7 @@ public:
 
 // 用戶端:
 int main() {
-    Adapter* ada = new Adapter();
+    Adapter *ada = new Adapter();
     ada->Request();
     delete ada;
     return 0;

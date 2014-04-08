@@ -2,17 +2,17 @@
 
 namespace adapter {
 
-    std::string Player::getName() {
-        return name;
-    }
+std::string Player::getName() {
+    return name;
+}
 
-    void Player::setName(std::string name) {
-        this->name = name;
-    }
+void Player::setName(std::string name) {
+    this->name = name;
+}
 
-    void Player::attrack() {
-    }
+void Player::attrack() {
+}
 
-    void Player::defence() {
-    }
+void Player::defence() {
+}
 }

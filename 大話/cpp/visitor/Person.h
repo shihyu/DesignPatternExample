@@ -4,9 +4,9 @@
 
 namespace visitor {
 
-    class Person {
-    public:
-        virtual void accept(Action* visitor) = 0;
-    };
+class Person {
+public:
+    virtual void accept(Action *visitor) = 0;
+};
 
 }

@@ -9,13 +9,13 @@
 
 namespace factoryMethod {
 
-    class FactoryMethodMain {
+class FactoryMethodMain {
 
-        ///
-        ///   <summary> * @lincoln liu </summary>
-        ///
-        static void main(std::string args[]);
+    ///
+    ///   <summary> * @lincoln liu </summary>
+    ///
+    static void main(std::string args[]);
 
-    };
+};
 
 }

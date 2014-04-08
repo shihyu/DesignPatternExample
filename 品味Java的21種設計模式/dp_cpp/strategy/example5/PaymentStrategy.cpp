@@ -1,17 +1,12 @@
 #include "PaymentStrategy.h"
 
-namespace cn
-{
-	namespace javass
-	{
-		namespace dp
-		{
-			namespace strategy
-			{
-				namespace example5
-				{
-				}
-			}
-		}
-	}
+namespace cn {
+namespace javass {
+namespace dp {
+namespace strategy {
+namespace example5 {
+}
+}
+}
+}
 }

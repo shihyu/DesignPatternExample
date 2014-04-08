@@ -2,7 +2,7 @@
 
 namespace factoryMethod {
 
-    LeiFeng* VolunteerFactory::createLeiFeng() {
-        return new Volunteer();
-    }
+LeiFeng *VolunteerFactory::createLeiFeng() {
+    return new Volunteer();
+}
 }

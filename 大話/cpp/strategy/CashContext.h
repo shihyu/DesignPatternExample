@@ -8,18 +8,18 @@
 
 namespace strategy {
 
-    class CashContext {
-    private:
-        CashSuper* cs;
+class CashContext {
+private:
+    CashSuper *cs;
 
-    public:
-        CashContext(std::string type);
+public:
+    CashContext(std::string type);
 
-        virtual CashSuper* getCs();
+    virtual CashSuper *getCs();
 
-        virtual void setCs(CashSuper* cs);
+    virtual void setCs(CashSuper *cs);
 
-        virtual double getCash(double money);
-    };
+    virtual double getCash(double money);
+};
 
 }

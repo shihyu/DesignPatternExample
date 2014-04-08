@@ -5,13 +5,13 @@
 
 namespace command {
 
-    class BakeMuttonCommand : public Command {
+class BakeMuttonCommand : public Command {
 
-    public:
-        BakeMuttonCommand(Barbecuer* bar);
+public:
+    BakeMuttonCommand(Barbecuer *bar);
 
-        virtual void excuteCommand();
+    virtual void excuteCommand();
 
-    };
+};
 
 }

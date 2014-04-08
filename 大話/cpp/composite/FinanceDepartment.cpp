@@ -2,20 +2,20 @@
 
 namespace composite {
 
-    FinanceDepartment::FinanceDepartment(std::string name) : Company(name) {
-    }
+FinanceDepartment::FinanceDepartment(std::string name) : Company(name) {
+}
 
-    void FinanceDepartment::add(composite::Company* c) {
-    }
+void FinanceDepartment::add(composite::Company *c) {
+}
 
-    void FinanceDepartment::display(int depth) {
-        puts("-" + this->getName());
-    }
+void FinanceDepartment::display(int depth) {
+    puts("-" + this->getName());
+}
 
-    void FinanceDepartment::lineOfDuty() {
-        puts(this->getName() + "All the things about Finance!");
-    }
+void FinanceDepartment::lineOfDuty() {
+    puts(this->getName() + "All the things about Finance!");
+}
 
-    void FinanceDepartment::remove(composite::Company* c) {
-    }
+void FinanceDepartment::remove(composite::Company *c) {
+}
 }

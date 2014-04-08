@@ -5,18 +5,18 @@
 
 namespace proxy {
 
-    class Pursuit : public GiveGift {
-    public:
-        SchoolGirl* mm;
+class Pursuit : public GiveGift {
+public:
+    SchoolGirl *mm;
 
-        Pursuit(SchoolGirl* mm);
+    Pursuit(SchoolGirl *mm);
 
-        virtual void giveChocolate();
+    virtual void giveChocolate();
 
-        virtual void giveDolls();
+    virtual void giveDolls();
 
-        virtual void giveFlowers();
+    virtual void giveFlowers();
 
-    };
+};
 
 }

@@ -2,12 +2,12 @@
 
 using namespace HeadFirstDesignPatterns::Compound::Adapter;
 
-void simulate(const Quackable* duck) {
+void simulate(const Quackable *duck) {
     assert(duck);
     duck->quack();
 }
 
-int main(int argc, char* argv[]) {
+int main(int argc, char *argv[]) {
     std::auto_ptr< Quackable > mallardDuck(new MallardDuck());
     std::auto_ptr< Quackable > redheadDuck(new RedheadDuck());
     std::auto_ptr< Quackable > duckCall(new DuckCall());

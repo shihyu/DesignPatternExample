@@ -2,12 +2,12 @@
 
 namespace proxy {
 
-    class GiveGift {
+class GiveGift {
 
-    public:
-        virtual void giveDolls() = 0;
-        virtual void giveFlowers() = 0;
-        virtual void giveChocolate() = 0;
-    };
+public:
+    virtual void giveDolls() = 0;
+    virtual void giveFlowers() = 0;
+    virtual void giveChocolate() = 0;
+};
 
 }
