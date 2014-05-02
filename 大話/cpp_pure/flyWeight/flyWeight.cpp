@@ -46,16 +46,18 @@ public:
 
 private:
     bool initialized;
+#if 0
     void InitializeInstanceFields() {
         if (! initialized) {
             flyWeights = std::map<std::string, WebSite*>();
             initialized = true;
         }
     }
+#endif
 
 public:
     WebSiteFactory() {
-        InitializeInstanceFields();
+        //InitializeInstanceFields();
     }
 };
 
@@ -77,15 +79,15 @@ void ConcreteWebSite::setName(std::string name) {
 
 WebSite* WebSiteFactory::getWebSiteCategory(std::string key) {
     // if (!flyWeights.containsKey(key)) {
-    if (flyWeights.find(key) != flyWeights.end()) {
-        flyWeights.insert(key, new ConcreteWebSite(key));
+    if (flyWeights.find(key) == flyWeights.end()) {
+        flyWeights.insert(std::pair<std::string, WebSite*>(key, new ConcreteWebSite(key)));
     }
 
-    return flyWeights->get(key);
+    return flyWeights.find(key)->second;
 }
 
 int WebSiteFactory::getWebSiteCount() {
-    return flyWeights->size();
+    return flyWeights.size();
 }
 
 User::User(std::string name) {
@@ -112,6 +114,7 @@ int main(void) {
     wb4->use(new User("Lincoln"));
     WebSite* wb5 = wf->getWebSiteCategory("Group");
     wb5->use(new User("Kenny"));
-    puts(wf->getWebSiteCount());
+    //puts(wf->getWebSiteCount());
     return 0;
 }
+
