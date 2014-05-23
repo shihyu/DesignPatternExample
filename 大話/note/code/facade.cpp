@@ -1,3 +1,5 @@
+/* 為子系統的一組介面提供一個一致。使用戶起來更加方便 */
+
 #include<iostream>
 #include <string>
 using namespace std;

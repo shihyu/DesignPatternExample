@@ -1,3 +1,8 @@
+/* GOOD ：定義了一個創建一系列相關或互依賴的介面,而無需指定它們具體類
+ * 用於交換產品系列，如 ACCESS ->SQL SERVER；
+ * 產品的具體類名被工廠實現分離
+ * */
+
 #include <string>
 #include <iostream>
 #include <vector>

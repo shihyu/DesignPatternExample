@@ -1,3 +1,5 @@
+/* GOOD: 把不變的代碼部分都轉移到父類中，將可用 virtual留到子類重留到子類重寫 */
+
 #include<iostream>
 #include <vector>
 #include <string>

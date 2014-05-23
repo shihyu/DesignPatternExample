@@ -1,3 +1,5 @@
+/* GOOD：保證一個類僅有一個實例，並提供一個訪問它的全域訪問點 */
+
 #include <iostream>
 #include <string>
 #include <vector>

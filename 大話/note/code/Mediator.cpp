@@ -1,3 +1,7 @@
+/* GOOD：用一個仲介物件來封裝一系列的物件交互，仲介者使各物件不需要顯示
+ * 的相互引用，從而降低耦合；而且可以獨立地改變它們之間的交互。
+ */
+
 #include <iostream>
 #include <string>
 #include <vector>

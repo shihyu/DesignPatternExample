@@ -1,3 +1,5 @@
+/* GOOD ：整體和部分可以被一致對待（如WORD 中復制一個文字、一段文字、一篇文章都是一樣的操作） */
+
 #include <iostream>
 #include <string>
 #include <vector>

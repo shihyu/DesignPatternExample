@@ -1,3 +1,5 @@
+/* GOOD：通常當一個語言需要解釋執行，並且你可以將該語言中的句子表示成為一個抽象的語法樹時，可以使用解譯器模式。*/
+
 #include <iostream>
 #include <string>
 #include <vector>

@@ -1,3 +1,5 @@
+/* GOOD：雙方都不適合修改的時候，可以考慮使用適配器模式 */
+
 #include <iostream>
 using namespace std;
 

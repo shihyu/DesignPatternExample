@@ -1,3 +1,7 @@
+/* 例二 （其實這個例子應該放在前面講的）
+ * GOOD：在當創建複雜物件的演算法應該獨立於該物件的組成部分以及它們的裝 * 配方式時適用。
+ * */
+
 #include <string>
 #include <iostream>
 #include <vector>

@@ -1,3 +1,5 @@
+/* GOOD: 用戶端只需要訪問Context 類, 而不用知道其他任何類資訊, 實現了低耦合 */
+
 #include <iostream>
 using namespace std;
 

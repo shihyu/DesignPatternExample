@@ -1,3 +1,8 @@
+/* GOOD: 修正了簡單工廠模式中不遵守開放-封閉原則
+ * 工廠方法把選擇判斷一到了用戶端去實現
+ * 如果想新增新功能就不用修改原來的類, 直接修改用戶端即可
+ */
+
 #include <string>
 #include <iostream>
 using namespace std;

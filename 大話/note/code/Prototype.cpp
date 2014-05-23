@@ -1,3 +1,7 @@
+/* GOOD：從一個物件再創建另外一個可定制的物件，而無需知道任何創建的細
+ * 節。並能提高創建的性能。 說白了就COPY 技術，把一個物件完整的COPY 出一份。
+ * */
+
 #include<iostream>
 #include <vector>
 #include <string>

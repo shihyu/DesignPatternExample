@@ -1,3 +1,5 @@
+/* GOOD：當一個物件的行為取決於它的狀態，並且它必須在運行時刻根據狀態改變它的行為時，可考慮用到狀態模式。*/
+
 #include <iostream>
 using namespace std;
 

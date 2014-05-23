@@ -1,3 +1,6 @@
+ /* GOOD ：定義了一種對多的關係, 讓多個觀察物件(公司員工)同時監聽一個主題物件（秘書），主題物件狀態發生變化時，會通知所有的觀察者，使它們能夠更新自己。
+  */
+
 #include <string>
 #include <iostream>
 #include <vector>

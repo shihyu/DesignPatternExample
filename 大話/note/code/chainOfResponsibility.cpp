@@ -1,3 +1,7 @@
+/* GOOD：使多個物件都有機會處理請求，從而避免請求的發送者和接收者之間的
+ * 耦合關係。將這個物件連成一條鏈，並沿著這條鏈傳遞該請求，直到有一個物件處理為止。
+ */
+
 #include <iostream>
 #include <string>
 #include <vector>
