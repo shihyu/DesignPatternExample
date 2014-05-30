@@ -1,0 +1,13 @@
+1. vim SConstruct
+
+內容Program('main', Glob('*.cpp'))
+
+2. 然後在這個目錄下執行命令：
+scons
+
+scons: Reading SConscript files ...
+scons: done reading SConscript files.
+scons: Building targets ...
+cc -o hello.o -c hello.c
+cc -o hello hello.o
+scons: done building targets.

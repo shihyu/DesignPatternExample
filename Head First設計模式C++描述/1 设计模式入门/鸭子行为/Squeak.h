@@ -1,5 +1,5 @@
 #pragma once
-#include "quackbehavior.h"
+#include "./QuackBehavior.h"
 
 //æﬂÃÂﬂ…ﬂ…Ω–¿‡
 class Squeak :
