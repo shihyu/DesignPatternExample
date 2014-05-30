@@ -6,17 +6,16 @@
 #include "currentconditiondisplay.h"
 
 //测试
-int main()
-{
-	//建立主题对象
-	WeatherData weatherData;
+int main() {
+    //建立主题对象
+    WeatherData weatherData;
 
-	//建立观察者对象
-	CurrentConditionDisplay currentDisplay(&weatherData);
+    //建立观察者对象
+    CurrentConditionDisplay currentDisplay(&weatherData);
 
-	weatherData.setMeasurements(80, 65, 30.4);
-	weatherData.setMeasurements(82, 70, 29.2);
-	weatherData.setMeasurements(78, 90, 29.2);
+    weatherData.setMeasurements(80, 65, 30.4);
+    weatherData.setMeasurements(82, 70, 29.2);
+    weatherData.setMeasurements(78, 90, 29.2);
 
-	return 0;
+    return 0;
 }

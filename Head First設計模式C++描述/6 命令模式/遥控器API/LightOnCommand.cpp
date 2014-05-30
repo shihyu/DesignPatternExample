@@ -1,15 +1,12 @@
 #include "LightOnCommand.h"
 
-LightOnCommand::LightOnCommand(Light l)
-{
-	light = l;
+LightOnCommand::LightOnCommand(Light l) {
+    light = l;
 }
 
-LightOnCommand::~LightOnCommand(void)
-{
+LightOnCommand::~LightOnCommand(void) {
 }
 
-void LightOnCommand::execute()
-{
-	light.on();
+void LightOnCommand::execute() {
+    light.on();
 }

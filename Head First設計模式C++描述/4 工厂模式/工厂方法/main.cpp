@@ -8,19 +8,18 @@
 using namespace std;
 
 //测试
-int main()
-{
-	//建立两个不同的店
-	NYPizzaStore nyStore;
-	ChicagoPizzaStore chicagoStore;
+int main() {
+    //建立两个不同的店
+    NYPizzaStore nyStore;
+    ChicagoPizzaStore chicagoStore;
 
-	Pizza *pizza = nyStore.orderPizza("cheese");
-	cout << "Ethan ordered a " << pizza->getName() << "\n" << endl;
-	delete pizza;
+    Pizza* pizza = nyStore.orderPizza("cheese");
+    cout << "Ethan ordered a " << pizza->getName() << "\n" << endl;
+    delete pizza;
 
-	pizza = chicagoStore.orderPizza("cheese");
-	cout << "Joel ordered a " << pizza->getName() << "\n" << endl;
-	delete pizza;
+    pizza = chicagoStore.orderPizza("cheese");
+    cout << "Joel ordered a " << pizza->getName() << "\n" << endl;
+    delete pizza;
 
-	return 0;
+    return 0;
 }

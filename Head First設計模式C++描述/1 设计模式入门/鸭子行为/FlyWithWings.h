@@ -1,5 +1,5 @@
 #pragma once
-#include "flybehavior.h"
+#include "FlyBehavior.h"
 
 //具体飞行行为
 class FlyWithWings :

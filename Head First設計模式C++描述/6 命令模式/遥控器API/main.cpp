@@ -5,18 +5,17 @@
 #include "lightOnCommand.h"
 
 //测试
-int main()
-{
-	//遥控器就是调用者
-	SimpleRemoteControl remote;
-	//电灯是请求的接收者
-	Light light;
-	//创建命令，将接收者传给它
-	LightOnCommand lightOn(light);
+int main() {
+    //遥控器就是调用者
+    SimpleRemoteControl remote;
+    //电灯是请求的接收者
+    Light light;
+    //创建命令，将接收者传给它
+    LightOnCommand lightOn(light);
 
-	//把命令传给调用者
-	remote.setCommand(&lightOn);
-	remote.buttonWasPressed();
+    //把命令传给调用者
+    remote.setCommand(&lightOn);
+    remote.buttonWasPressed();
 
-	return 0;
+    return 0;
 }

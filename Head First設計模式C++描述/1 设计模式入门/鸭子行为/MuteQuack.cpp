@@ -1,14 +1,11 @@
 #include "MuteQuack.h"
 
-MuteQuack::MuteQuack(void)
-{
+MuteQuack::MuteQuack(void) {
 }
 
-void MuteQuack::quack()
-{
-	cout << "<< Silence >>" << endl;
+void MuteQuack::quack() {
+    cout << "<< Silence >>" << endl;
 }
 
-MuteQuack::~MuteQuack(void)
-{
+MuteQuack::~MuteQuack(void) {
 }

@@ -1,15 +1,12 @@
 #include "Espresso.h"
 
-Espresso::Espresso(void)
-{
-	description = "Espresso";
+Espresso::Espresso(void) {
+    description = "Espresso";
 }
 
-double Espresso::cost()
-{
-	return 1.99;
+double Espresso::cost() {
+    return 1.99;
 }
 
-Espresso::~Espresso(void)
-{
+Espresso::~Espresso(void) {
 }

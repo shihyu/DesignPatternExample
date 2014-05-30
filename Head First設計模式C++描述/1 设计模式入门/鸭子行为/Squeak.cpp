@@ -1,14 +1,11 @@
 #include "Squeak.h"
 
-Squeak::Squeak(void)
-{
+Squeak::Squeak(void) {
 }
 
-void Squeak::quack()
-{
-	cout << "Squeak" << endl;
+void Squeak::quack() {
+    cout << "Squeak" << endl;
 }
 
-Squeak::~Squeak(void)
-{
+Squeak::~Squeak(void) {
 }

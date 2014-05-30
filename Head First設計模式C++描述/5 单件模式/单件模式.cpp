@@ -5,33 +5,30 @@
 #include <iostream>
 using namespace std;
 
-class Singleton
-{
+class Singleton {
 private:
-        static Singleton* uniqueInstance;
-        Singleton();         //默认构造器私有
-        Singleton(const Singleton &);   //拷贝构造器私有
-        Singleton& operator=(const Singleton &);   //赋值操作符私有
-        ~Singleton();
+    static Singleton* uniqueInstance;
+    Singleton();         //默认构造器私有
+    Singleton(const Singleton&);    //拷贝构造器私有
+    Singleton& operator=(const Singleton&);    //赋值操作符私有
+    ~Singleton();
 
 public:
-        static Singleton& getInstance();
-        static void destroyInstance();    //相当丑陋的函数, 不过最简单的实现也就这样
+    static Singleton& getInstance();
+    static void destroyInstance();    //相当丑陋的函数, 不过最简单的实现也就这样
 };
 
 Singleton* Singleton::uniqueInstance = NULL;  //静态变量初始化
 
-Singleton& Singleton::getInstance()
-{
-        if (uniqueInstance == NULL)
-        {
-                uniqueInstance = new Singleton;
-        }
-        return *uniqueInstance;
+Singleton& Singleton::getInstance() {
+    if (uniqueInstance == NULL) {
+        uniqueInstance = new Singleton;
+    }
+
+    return *uniqueInstance;
 }
 
-void Singleton::destroyInstance()
-{
-        delete uniqueInstance;
-        uniqueInstance = NULL;
+void Singleton::destroyInstance() {
+    delete uniqueInstance;
+    uniqueInstance = NULL;
 }

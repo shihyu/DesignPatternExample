@@ -1,14 +1,11 @@
 #include "Beverage.h"
 
-Beverage::Beverage(void): description("Unknown Beverage")
-{
+Beverage::Beverage(void): description("Unknown Beverage") {
 }
 
-string Beverage::getDescription()
-{
-	return description;
+string Beverage::getDescription() {
+    return description;
 }
 
-Beverage::~Beverage(void)
-{
+Beverage::~Beverage(void) {
 }

@@ -1,14 +1,11 @@
 #include "FlyWithWings.h"
 
-FlyWithWings::FlyWithWings(void)
-{
+FlyWithWings::FlyWithWings(void) {
 }
 
-void FlyWithWings::fly()
-{
-	cout << "I'm flying!!" << endl;
+void FlyWithWings::fly() {
+    cout << "I'm flying!!" << endl;
 }
 
-FlyWithWings::~FlyWithWings(void)
-{
+FlyWithWings::~FlyWithWings(void) {
 }

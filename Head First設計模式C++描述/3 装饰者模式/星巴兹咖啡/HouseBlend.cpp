@@ -1,15 +1,12 @@
 #include "HouseBlend.h"
 
-HouseBlend::HouseBlend(void)
-{
-	description = "House Blend Coffee.";
+HouseBlend::HouseBlend(void) {
+    description = "House Blend Coffee.";
 }
 
-double HouseBlend::cost()
-{
-	return .89;
+double HouseBlend::cost() {
+    return .89;
 }
 
-HouseBlend::~HouseBlend(void)
-{
+HouseBlend::~HouseBlend(void) {
 }

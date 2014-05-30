@@ -1,5 +1,5 @@
 #pragma once
-#include "quackbehavior.h"
+#include "QuackBehavior.h"
 
 //具体呱呱叫行为
 class Quack :

@@ -11,20 +11,19 @@
 
 using namespace std;
 
-int main()
-{
-	Beverage* beverage = new Espresso;   //订一杯无调料的Espresso
-	cout << beverage->getDescription() << " $" << beverage->cost() << endl;
+int main() {
+    Beverage* beverage = new Espresso;   //订一杯无调料的Espresso
+    cout << beverage->getDescription() << " $" << beverage->cost() << endl;
 
-	//本例没有建立DarkRoast类
+    //本例没有建立DarkRoast类
 
-	Beverage* beverage3 = new HouseBlend;
-	beverage3 = new Mocha(beverage3);   //用Mocha装饰
-	beverage3 = new Mocha(beverage3);   //用第二个Mocha装饰
-	cout << beverage3->getDescription() << " $" << beverage3->cost() << endl; 
+    Beverage* beverage3 = new HouseBlend;
+    beverage3 = new Mocha(beverage3);   //用Mocha装饰
+    beverage3 = new Mocha(beverage3);   //用第二个Mocha装饰
+    cout << beverage3->getDescription() << " $" << beverage3->cost() << endl;
 
-	delete beverage3;
-	delete beverage;
+    delete beverage3;
+    delete beverage;
 
-	return 0;
+    return 0;
 }

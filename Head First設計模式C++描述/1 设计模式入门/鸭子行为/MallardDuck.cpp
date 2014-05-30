@@ -1,19 +1,16 @@
 #include "MallardDuck.h"
 
-MallardDuck::MallardDuck(void)
-{
-	//ÊµÀý»¯ÐÐÎª
-	quackBehavior = new Quack;
-	flyBehavior = new FlyWithWings;
+MallardDuck::MallardDuck(void) {
+    //å®žä¾‹åŒ–è¡Œä¸º
+    quackBehavior = new Quack;
+    flyBehavior = new FlyWithWings;
 }
 
-void MallardDuck::display()
-{
-	cout << "I'm a real Mallard Duck" << endl;
+void MallardDuck::display() {
+    cout << "I'm a real Mallard Duck" << endl;
 }
 
-MallardDuck::~MallardDuck(void)
-{
-	delete quackBehavior;
-	delete flyBehavior;
+MallardDuck::~MallardDuck(void) {
+    delete quackBehavior;
+    delete flyBehavior;
 }

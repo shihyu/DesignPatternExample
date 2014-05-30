@@ -1,8 +1,8 @@
 #pragma once
 
 #include <iostream>
-#include "flybehavior.h"
-#include "quackbehavior.h"
+#include "FlyBehavior.h"
+#include "QuackBehavior.h"
 
 using namespace std;
 

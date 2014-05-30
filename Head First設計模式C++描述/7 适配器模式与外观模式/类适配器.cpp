@@ -7,96 +7,82 @@
 using namespace std;
 
 //Duck类为适配目标(Target)
-class Duck
-{
+class Duck {
 public:
-	virtual void quack() = 0;
-	virtual void fly() = 0;
+    virtual void quack() = 0;
+    virtual void fly() = 0;
 };
 
 //具体鸭子(绿头鸭)
-class MallardDuck : public Duck
-{
+class MallardDuck : public Duck {
 public:
-	void quack()
-	{
-		cout << "Quack" << endl;
-	}
-	void fly()
-	{
-		cout << "I'm flying" << endl;
-	}
+    void quack() {
+        cout << "Quack" << endl;
+    }
+    void fly() {
+        cout << "I'm flying" << endl;
+    }
 };
 
 //Turkey类为被适配者(Adaptee)
-class Turkey
-{
+class Turkey {
 public:
-	virtual void gobble() = 0;
-	virtual void fly() = 0;
+    virtual void gobble() = 0;
+    virtual void fly() = 0;
 };
 
 //具体Turkey
-class WildTurkey: public Turkey
-{
+class WildTurkey: public Turkey {
 public:
-	void gobble()
-	{
-		cout << "Gobble gobble" << endl;
-	}
-	void fly()
-	{
-		cout << "I'm flying a short distance" << endl;
-	}
+    void gobble() {
+        cout << "Gobble gobble" << endl;
+    }
+    void fly() {
+        cout << "I'm flying a short distance" << endl;
+    }
 };
 
 //适配器(Adapter), 只能针对具体类进行适配
-class TurkeyAdapter: public Duck, WildTurkey
-{
+class TurkeyAdapter: public Duck, WildTurkey {
 public:
-	// 实现目标接口
-	void quack()
-	{
-		gobble();
-	}
+    // 实现目标接口
+    void quack() {
+        gobble();
+    }
 
-	void fly()
-	{
-		for (int i=0; i<5; i++)
-		{
-			WildTurkey::fly();
-		}
-	}
+    void fly() {
+        for (int i = 0; i < 5; i++) {
+            WildTurkey::fly();
+        }
+    }
 };
 
 //测试
-void testDuck(Duck* duck)
-{
-	duck->quack();
-	duck->fly();
+void testDuck(Duck* duck) {
+    duck->quack();
+    duck->fly();
 }
 
-int main()
-{
-	Duck* duck = new MallardDuck;
+int main() {
+    Duck* duck = new MallardDuck;
 
-	WildTurkey* turkey = new WildTurkey;
-	Duck* turkeyAdapter = new TurkeyAdapter;
+    WildTurkey* turkey = new WildTurkey;
+    Duck* turkeyAdapter = new TurkeyAdapter;
 
-	cout << "The Turkey says..." << endl;
-	turkey->gobble();
-	turkey->fly();
+    cout << "The Turkey says..." << endl;
+    turkey->gobble();
+    turkey->fly();
 
-	cout << "\nThe Duck says..." << endl;
-	testDuck(duck);
+    cout << "\nThe Duck says..." << endl;
+    testDuck(duck);
 
-	cout << "\nThe TurkeyAdapter says..." << endl;
-	testDuck(turkeyAdapter);
+    cout << "\nThe TurkeyAdapter says..." << endl;
+    testDuck(turkeyAdapter);
 
-	delete turkeyAdapter;
-	delete turkey;
-	delete duck;
+    delete turkeyAdapter;
+    delete turkey;
+    delete duck;
 
-	return 0;
+    return 0;
 }
 

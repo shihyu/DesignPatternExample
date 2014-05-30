@@ -1,7 +1,7 @@
 #pragma once
-#include "duck.h"
-#include "flywithwings.h"
-#include "quack.h"
+#include "Duck.h"
+#include "FlyWithWings.h"
+#include "Quack.h"
 
 //具体客户类
 class MallardDuck :

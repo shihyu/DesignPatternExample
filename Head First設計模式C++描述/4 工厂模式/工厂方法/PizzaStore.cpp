@@ -1,21 +1,18 @@
 #include "PizzaStore.h"
 
-PizzaStore::PizzaStore(void)
-{
+PizzaStore::PizzaStore(void) {
 }
 
-PizzaStore::~PizzaStore(void)
-{
+PizzaStore::~PizzaStore(void) {
 }
 
-Pizza* PizzaStore::orderPizza(string type)
-{
-	Pizza* pizza = createPizza(type);
+Pizza* PizzaStore::orderPizza(string type) {
+    Pizza* pizza = createPizza(type);
 
-	pizza->prepare();
-	pizza->bake();
-	pizza->cut();
-	pizza->box();
+    pizza->prepare();
+    pizza->bake();
+    pizza->cut();
+    pizza->box();
 
-	return pizza;
+    return pizza;
 }

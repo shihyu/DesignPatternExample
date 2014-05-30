@@ -1,14 +1,11 @@
 #include "FlyNoWay.h"
 
-FlyNoWay::FlyNoWay(void)
-{
+FlyNoWay::FlyNoWay(void) {
 }
 
-void FlyNoWay::fly()
-{
-	cout << "I can't fly" << endl;
+void FlyNoWay::fly() {
+    cout << "I can't fly" << endl;
 }
 
-FlyNoWay::~FlyNoWay(void)
-{
+FlyNoWay::~FlyNoWay(void) {
 }
