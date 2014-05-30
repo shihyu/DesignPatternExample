@@ -1,0 +1,100 @@
+Component.h
+class Component
+{
+public: 
+	Component(){}
+	virtual ~Component(){}
+public:
+	virtual void Operation() = 0;
+protected:
+private:
+};
+---------------------
+Composite.h
+#include "Component.h" 
+#include <vector> 
+using namespace std;
+
+class Composite:public Component
+{
+public:
+	Composite(){}//vector<Component*>::iterator itend = comVec.begin(); 
+	~Composite(){}
+public:
+	//调出所有操作
+	void Operation()
+	{
+		vector<Component*>::iterator comIter = comVec.begin();
+		for(;comIter != comVec.end();comIter++)
+		{
+			(*comIter)->Operation();
+		}
+	}
+//添加组件
+	void Add(Component* com)
+	{
+		comVec.push_back(com);
+	}
+	//移除组件
+	void Remove(Component* com)
+	{
+		comVec.erase(&com);
+	}
+	//得到组件
+	Component* GetChild(int index)
+	{
+		return comVec[index];
+	}
+protected:
+private:
+	vector<Component*> comVec;
+};
+-------------------------------
+Leaf.h
+#include "Component.h"
+#include <iostream>
+using namespace std;
+
+class LeafA:public Component
+{
+public:
+	LeafA(){}
+	~LeafA(){}
+	void Operation()
+	{
+		cout<<"组成操作A....."<<endl;
+	}
+protected:
+private:
+};
+
+class LeafB:public Component
+{
+public:
+	LeafB(){}
+	~LeafB(){}
+	void Operation()
+	{
+		cout<<"组成操作B....."<<endl;
+	}
+protected:
+private:
+};
+-------------------------------
+main
+#include "Component.h" 
+#include "Composite.h" 
+#include "Leaf.h" 
+#include <iostream> 
+using namespace std;
+int main(int argc, char* argv[])
+{
+	Composite* com=new Composite();
+	com->Add(new LeafA());
+	com->Add(new LeafB());
+	com->Operation();
+	Component* ll = com->GetChild(0);
+	ll->Operation();
+	//printf("Hello World!\n");
+	return 0;
+}

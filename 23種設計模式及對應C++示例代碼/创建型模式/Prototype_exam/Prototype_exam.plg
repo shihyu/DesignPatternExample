@@ -1,0 +1,48 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: Prototype_exam - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP1A2.tmp" with contents
+[
+/nologo /MLd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /Fp"Debug/Prototype_exam.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"G:\ 模式\Prototype_exam\Prototype_exam.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP1A2.tmp" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP1A3.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:console /incremental:yes /pdb:"Debug/Prototype_exam.pdb" /debug /machine:I386 /out:"Debug/Prototype_exam.exe" /pdbtype:sept 
+".\Debug\Prototype.obj"
+".\Debug\Prototype_exam.obj"
+".\Debug\StdAfx.obj"
+]
+Creating command line "link.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP1A3.tmp"
+<h3>Output Window</h3>
+Compiling...
+Prototype_exam.cpp
+G:\ 模式\Prototype_exam\Prototype_exam.cpp(21) : error C2259: 'Prototype' : cannot instantiate abstract class due to following members:
+        g:\ 模式\prototype_exam\prototype.h(16) : see declaration of 'Prototype'
+G:\ 模式\Prototype_exam\Prototype_exam.cpp(21) : warning C4259: 'class Prototype *__thiscall Prototype::Clone(void) const' : pure virtual function was not defined
+        g:\ 模式\prototype_exam\prototype.h(19) : see declaration of 'Clone'
+G:\ 模式\Prototype_exam\Prototype_exam.cpp(21) : warning C4259: 'void __thiscall Prototype::show(void)' : pure virtual function was not defined
+        g:\ 模式\prototype_exam\prototype.h(20) : see declaration of 'show'
+G:\ 模式\Prototype_exam\Prototype_exam.cpp(21) : error C2259: 'Prototype' : cannot instantiate abstract class due to following members:
+        g:\ 模式\prototype_exam\prototype.h(16) : see declaration of 'Prototype'
+G:\ 模式\Prototype_exam\Prototype_exam.cpp(21) : warning C4259: 'class Prototype *__thiscall Prototype::Clone(void) const' : pure virtual function was not defined
+        g:\ 模式\prototype_exam\prototype.h(19) : see declaration of 'Clone'
+G:\ 模式\Prototype_exam\Prototype_exam.cpp(21) : warning C4259: 'void __thiscall Prototype::show(void)' : pure virtual function was not defined
+        g:\ 模式\prototype_exam\prototype.h(20) : see declaration of 'show'
+G:\ 模式\Prototype_exam\Prototype_exam.cpp(21) : error C2248: 'Prototype::Prototype' : cannot access protected member declared in class 'Prototype'
+        g:\ 模式\prototype_exam\prototype.h(30) : see declaration of 'Prototype::Prototype'
+执行 cl.exe 时出错.
+
+
+
+<h3>Results</h3>
+Prototype_exam.exe - 1 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

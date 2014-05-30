@@ -1,0 +1,206 @@
+简单工厂,工厂方法和抽象工厂的区别 看了网络上很多关于设计模式的方法,有的模式看起来相似,但本质还是区别很大的.像简单工厂,工厂方法和抽象工厂就有很明显的区别. 
+  有一个比较好理解的例子,在这跟大家介绍下: 
+  1.如果一个后花园只种蔬菜类,那么就用简单工厂就可以了. 
+  2.如果后花园蔬菜品种繁多.得用工厂方法才可以,把共有的东西抽象出来. 
+  3.如果要扩大后花园的规模,比如一个在北方,一个在南方,这样工厂方法就无法实现了,就应当用抽象工厂,把各种各样的植物,又组成一个后花园. 
+所以我个人认为,简单工厂是一个工厂只生产一类的产品,面对的是具体的类,工厂方法是可以生产不同的产品,把公共的方法抽象出来,然后进行创建各种各样的产品.抽象工厂把几种产品划出共同的东西,把相互依赖的对象抽象出来,只要实现这些接口就可以得到不同的产品. 
+具体例子: 
+ 1.简单工厂: 
+using System; 
+public interface ICar 
+{ 
+    void run(); 
+} 
+
+public class BMWCar : ICar 
+{ 
+    public void run() 
+    { 
+        Console.WriteLine("BMWCar run"); 
+    } 
+} 
+
+public class BenzCar : ICar 
+{ 
+    public void run() 
+    { 
+        Console.WriteLine("BenzCar run"); 
+    } 
+} 
+
+public class Driver 
+{ 
+    public static ICar DriverCar(string carType) 
+    { 
+        switch (carType) 
+        { 
+            case "BMWCar": return new BMWCar(); 
+            case "BenzCar": return new BenzCar(); 
+            default: throw new Exception(); 
+       } 
+    } 
+} 
+
+public class Client 
+{ 
+    public static void Main() 
+    { 
+        ICar myCar = Driver.DriverCar("BenzCar"); 
+        myCar.run(); 
+        Console.Read(); 
+    } 
+} 
+
+心得:优点是只要实现共有的接口就可以实现不同车跑的方式.但缺点就是要判断哪一种车,造成要修改Driver 类
+2.工厂方法: 
+using System; 
+public interface ICar 
+{ 
+    void run(); 
+} 
+
+public class BMWCar : ICar 
+{ 
+    public void run() 
+    { 
+        Console.WriteLine("BMWCar run"); 
+    } 
+} 
+
+public class BenzCar : ICar 
+{ 
+    public void run() 
+    { 
+        Console.WriteLine("BenzCar run"); 
+    } 
+} 
+public abstract class Driver 
+{ 
+    public abstract ICar DriverCar(); 
+} 
+
+public class BMWDriver : Driver 
+{ 
+    public override ICar  DriverCar() 
+    { 
+        return new BMWCar(); 
+    } 
+
+} 
+public class BenzDriver : Driver 
+{ 
+    public  override ICar DriverCar() 
+    { 
+        return new BenzCar(); 
+    } 
+} 
+
+class Client 
+{ 
+    public static void Main() 
+    { 
+        Driver myDriver = new BenzDriver(); 
+        ICar myCar = myDriver.DriverCar(); 
+        myCar.run(); 
+        Console.Read(); 
+    } 
+}
+
+心得:优点是符合了开放-封闭原则(OCP),从整体上还看不出什么缺点.
+
+3.抽象工厂: 
+
+using System; 
+
+public interface IBusinessCar 
+{ 
+    void run(); 
+} 
+
+public interface ISportCar 
+{ 
+void run(); 
+} 
+
+public class BMWBusinessCar : IBusinessCar 
+{ 
+    public void run() 
+    { 
+        Console.WriteLine("BMWCar run"); 
+    } 
+
+
+}
+
+public class BenzBusinessCar : IBusinessCar 
+{ 
+    public void run() 
+    { 
+        Console.WriteLine("BenzBusinessCar run"); 
+    } 
+} 
+
+public class BMWSportCar:ISportCar 
+{ 
+public void run() 
+{ 
+Console.WriteLine("BMWSportCar run"); 
+} 
+} 
+
+public class BenzSportCar:ISportCar 
+{ 
+public void run() 
+{ 
+
+
+Console.WriteLine("BenzSportCar run"); 
+} 
+} 
+
+public interface IDriver 
+{ 
+IBusinessCar BusinessCarDriver(); 
+ISportCar SportCarDriver(); 
+} 
+
+public class BMWDriver:IDriver 
+{ 
+public IBusinessCar BusinessCarDriver() 
+{ 
+return new BMWBusinessCar(); 
+} 
+public ISportCar SportCarDriver() 
+{ 
+return new BMWSportCar(); 
+} 
+} 
+
+public class BenzDriver:IDriver 
+{ 
+public IBusinessCar BusinessCarDriver() 
+{ 
+return new BenzBusinessCar(); 
+} 
+
+public ISportCar SportCarDriver() 
+{ 
+return new BenzSportCar(); 
+} 
+} 
+
+ 
+
+class Client 
+{ 
+    public static void Main() 
+    { 
+        IDriver myDriver =new BenzDriver(); 
+        ISportCar myCar = myDriver.SportCarDriver(); 
+        myCar.run(); 
+        Console.Read(); 
+    } 
+
+}
+
+心得:抽象方法似乎达到了完美境界.把开奔驰的司机和开宝马的司机的公共方法抽象出来,并对不同的司机创建不同的类,到时候不管是开什么车的司机随你添加.它们唯一的共同点都是开车.
