@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "气象站和布告板", "气象站和布告板.vcproj", "{F3FBAA68-F329-42EF-A86B-0B690755371C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F3FBAA68-F329-42EF-A86B-0B690755371C}.Debug|Win32.ActiveCfg = Debug|Win32
+		{F3FBAA68-F329-42EF-A86B-0B690755371C}.Debug|Win32.Build.0 = Debug|Win32
+		{F3FBAA68-F329-42EF-A86B-0B690755371C}.Release|Win32.ActiveCfg = Release|Win32
+		{F3FBAA68-F329-42EF-A86B-0B690755371C}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

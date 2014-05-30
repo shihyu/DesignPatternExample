@@ -1,5 +1,0 @@
-#written by FileProperties
-#Thu Jan 24 15:45:01 CST 2002
-day=20
-year=2000
-month=11

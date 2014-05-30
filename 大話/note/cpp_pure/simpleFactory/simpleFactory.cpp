@@ -1,5 +1,5 @@
 #include <string>
-#include <cstdlib>
+#nclude <cstdlib>
 #include <iostream>
 
 class Operation {
@@ -25,12 +25,13 @@ public:
     static Operation *createOperation(wchar_t operate);
 
 };
+                                                   
 
 class OperationSub : public Operation {
 public:
     virtual int getResult();
 };
-
+        
 int OperationAdd::getResult() {
     return a + b;
 }
@@ -57,7 +58,7 @@ Operation *OperationFactory::createOperation(wchar_t operate) {
 
 int Operation::getA() {
     return a;
-}
+}     
 
 void Operation::setA(int a) {
     this->a = a;
@@ -73,7 +74,7 @@ void Operation::setB(int b) {
 
 int Operation::getResult() {
     return 0;
-}
+}  
 
 int main() {
     Operation *operAdd = OperationFactory::createOperation('+');

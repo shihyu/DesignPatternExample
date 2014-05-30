@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "4 工厂模式", "4 工厂模式.vcproj", "{A4884F28-51A5-4CD1-88BD-68FEF7B48C87}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A4884F28-51A5-4CD1-88BD-68FEF7B48C87}.Debug|Win32.ActiveCfg = Debug|Win32
+		{A4884F28-51A5-4CD1-88BD-68FEF7B48C87}.Debug|Win32.Build.0 = Debug|Win32
+		{A4884F28-51A5-4CD1-88BD-68FEF7B48C87}.Release|Win32.ActiveCfg = Release|Win32
+		{A4884F28-51A5-4CD1-88BD-68FEF7B48C87}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
